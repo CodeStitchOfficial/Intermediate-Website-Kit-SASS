@@ -1,0 +1,131 @@
+/* PAGE-SPECIFIC STYLES FOR THE REVIEWS PAGE */
+
+/*-- -------------------------- -->
+<---           Reviews          -->
+<--- -------------------------- -*/
+
+/* Mobile */
+@media only screen and (min-width: 0em) {
+	#reviews {
+		padding-top: calc(120 / 16 * 1rem);
+		padding-bottom: calc(50 / 16 * 1rem);
+		margin: auto;
+
+		.container {
+			width: 96%;
+			max-width: calc(1320 / 16 * 1rem);
+		}
+
+		.review {
+			padding: calc(64 / 16 * 1rem) calc(30 / 16 * 1rem) calc(18 / 16 * 1rem) calc(30 / 16 * 1rem);
+			box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
+			width: 100%;
+			max-width: calc(410 / 16 * 1rem);
+			margin: auto;
+			margin-bottom: calc(100 / 16 * 1rem);
+			border-radius: calc(5 / 16 * 1rem);
+			position: relative;
+			background: #fff;
+			display: flex;
+			flex-direction: column;
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+
+			.profile {
+				display: block;
+				height: calc(99 / 16 * 1rem);
+				width: calc(99 / 16 * 1rem);
+				margin-left: 0;
+				border-radius: 50%;
+				margin-bottom: calc(16 / 16 * 1rem);
+				position: absolute;
+				left: calc(30 / 16 * 1rem);
+				top: calc(-51 / 16 * 1rem);
+			}
+
+			p {
+				line-height: 24/18;
+				margin-bottom: calc(28 / 16 * 1rem);
+				text-align: left;
+			}
+
+			.star-group {
+				border-top: 1px solid #e7e7e7;
+				padding-top: calc(16 / 16 * 1rem);
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				flex-wrap: nowrap;
+				margin-top: auto;
+
+				.name {
+					color: #1a1a1a;
+					line-height: calc(24 / 16 * 1rem);
+					text-align: left;
+					font-weight: bold;
+					display: block;
+				}
+
+				.desc {
+					color: #575757;
+					font-weight: 400;
+					display: block;
+				}
+
+				img {
+					display: block;
+					width: calc(91 / 16 * 1rem);
+					height: calc(15 / 16 * 1rem);
+					margin: 0;
+				}
+			}
+		}
+	}
+}
+
+/* Tablet */
+@media only screen and (min-width: 48em) {
+	#reviews {
+		padding-top: calc(150 / 16 * 1rem);
+		padding-bottom: calc(50 / 16 * 1rem);
+
+		.container {
+			font-size: min(1.4vw, 1em);
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			padding: 0;
+			column-gap: calc(30 / 16 * 1rem);
+		}
+
+		.review {
+			margin: 0;
+			margin-bottom: calc(150 / 16 * 1rem);
+
+			&:last-of-type {
+				margin-bottom: calc(150 / 16 * 1rem);
+			}
+		}
+	}
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0em) {
+	body.dark-mode {
+		#reviews {
+			.review {
+				background: var(--medium);
+
+				.name {
+					color: #fff;
+				}
+
+				.desc {
+					color: #fff;
+					opacity: 0.7;
+				}
+			}
+		}
+	}
+}

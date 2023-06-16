@@ -1,0 +1,27 @@
+<!-- ============================================ -->
+<!--                Featured Posts                -->
+<!-- ============================================ -->
+
+<div class="blog-sidebar">
+  <!--Featured-->
+  <div class="blog-featured-group">
+    <span class="blog-header">Featured Posts</span>
+    {%- for post in collections.featured | reverse -%}
+      <a class="blog-feature" href="{{ post.url }}">
+        <picture class="blog-featureImage">
+          <img
+                    src="{{ post.data.image }}"
+                    alt="{{ post.data.imageAlt }}"
+                    width="60"
+                    height="60"
+                    decoding="async">
+        </picture>
+        <div class="content-group">
+          <h3 class="feature-h3">{{ post.data.title }}</h3>
+          <span class="feature-date">{{ post.date | postDate }}</span>
+        </div>
+      </a>
+    {%- endfor -%}
+  </div>
+  <!--Add anything else in the sidebar below-->
+</div>

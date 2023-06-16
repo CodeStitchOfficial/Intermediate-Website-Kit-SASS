@@ -1,0 +1,107 @@
+/* PAGE-SPECIFIC STYLES FOR THE PROJECTS PAGE */
+
+/*-- -------------------------- -->
+<---          Gallery           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px - Contains hover animation */
+@media only screen and (min-width: 0em) {
+	#gallery {
+		/* Centers button */
+		text-align: center;
+		padding: var(--sectionPadding);
+		position: relative;
+		/* Prevents overflow from the image going off screen */
+		overflow: hidden;
+		.cs-container {
+			width: 100%;
+			max-width: calc(1322 / 16 * 1em);
+			margin: auto;
+		}
+
+		.cs-image-group {
+			/* used rem so it doesn't scale with the font size of on parent */
+			font-size: min(1.1vw, 1em);
+			width: 100%;
+			max-width: calc(1322 / 16 * 1em);
+			padding: 0;
+			margin: 0 auto calc(60 / 16 * 1rem);
+			display: flex;
+			justify-content: center;
+			align-items: flex-start;
+			gap: calc(30 / 16 * 1em);
+		}
+
+		.cs-row {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+			gap: calc(30 / 16 * 1em);
+		}
+
+		.cs-picture {
+			position: relative;
+			display: block;
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+			}
+		}
+
+		.cs-row-1 {
+			.cs-picture1 {
+				width: calc(420 / 16 * 1em);
+				height: calc(567 / 16 * 1em);
+			}
+
+			.cs-picture2 {
+				width: calc(420 / 16 * 1em);
+				height: calc(629 / 16 * 1em);
+			}
+
+			.cs-picture3 {
+				width: calc(420 / 16 * 1em);
+				height: calc(512 / 16 * 1em);
+			}
+		}
+
+		.cs-row-2 {
+			.cs-picture1 {
+				width: calc(420 / 16 * 1em);
+				height: calc(492 / 16 * 1em);
+			}
+
+			.cs-picture2 {
+				width: calc(420 / 16 * 1em);
+				height: calc(517 / 16 * 1em);
+			}
+
+			.cs-picture3 {
+				width: calc(420 / 16 * 1em);
+				height: calc(629 / 16 * 1em);
+			}
+		}
+
+		.cs-row-3 {
+			.cs-picture1 {
+				width: calc(420 / 16 * 1em);
+				height: calc(625 / 16 * 1em);
+			}
+
+			.cs-picture2 {
+				width: calc(420 / 16 * 1em);
+				height: calc(452 / 16 * 1em);
+			}
+
+			.cs-picture3 {
+				width: calc(420 / 16 * 1em);
+				height: calc(629 / 16 * 1em);
+			}
+		}
+	}
+}

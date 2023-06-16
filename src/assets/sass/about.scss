@@ -1,0 +1,205 @@
+/* PAGE-SPECIFIC STYLES FOR THE ABOUT PAGE */
+
+/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0em) {
+	#sbs {
+		padding: var(--sectionPadding);
+
+		.cs-container {
+			width: 100%;
+			max-width: calc(1280 / 16 * 1rem);
+			margin: auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			row-gap: calc(40 / 16 * 1rem);
+		}
+
+		.cs-left {
+			/* scaling the font size with the view width */
+			font-size: min(2.31vw, 0.7em);
+			/* using ems so we can use font size to scale the whole section */
+			width: calc(631 / 16 * 1em);
+			height: calc(636 / 16 * 1em);
+			position: relative;
+		}
+
+		.cs-picture {
+			border-radius: calc(24 / 16 * 1em);
+			/* clips img tag corners */
+			overflow: hidden;
+			position: absolute;
+			display: block;
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				/* makes image act like a background image */
+				object-fit: cover;
+			}
+		}
+
+		.cs-picture1 {
+			width: calc(522 / 16 * 1em);
+			height: calc(581 / 16 * 1em);
+			left: 0;
+			top: 0;
+		}
+
+		.cs-picture2 {
+			width: calc(414 / 16 * 1em);
+			height: calc(400 / 16 * 1em);
+			background-color: #fff;
+			box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 40px;
+			/* 6px - 12px */
+			border: clamp(0.375em, 1.5vw, 0.75em) solid #fff;
+			right: 0;
+			bottom: 0;
+		}
+
+		.cs-right {
+			margin: auto;
+			max-width: calc(542 / 16 * 1rem);
+		}
+
+		.cs-topper {
+			text-align: left;
+			margin-bottom: calc(4 / 16 * 1rem);
+		}
+
+		.cs-title {
+			text-align: left;
+			max-width: calc(800 / 16 * 1rem);
+		}
+
+		.cs-text {
+			text-align: left;
+			max-width: calc(750 / 16 * 1rem);
+			margin-bottom: calc(16 / 16 * 1rem);
+			color: var(--bodyTextColor);
+
+			&:last-of-type {
+				margin-bottom: calc(32 / 16 * 1rem);
+			}
+		}
+
+		.cs-flex-group {
+			/* 16px - 32px */
+			padding: clamp(1rem, 3vw, 2rem);
+			background-color: #f7f7f7;
+			border-radius: calc(16 / 16 * 1rem);
+			position: relative;
+		}
+
+		.cs-flex-p {
+			/* 14px - 16px */
+			font-size: clamp(0.875rem, 1.5vw, 1rem);
+			line-height: 1.5em;
+			margin: 0 0 calc(16 / 16 * 1rem);
+			color: #353535;
+		}
+
+		.cs-name {
+			font-size: calc(16 / 16 * 1rem);
+			line-height: 1.2em;
+			text-transform: uppercase;
+			font-weight: bold;
+			margin: 0 0 calc(4 / 16 * 1rem);
+			color: var(--headerColor);
+			display: block;
+		}
+
+		.cs-job {
+			font-size: calc(14 / 16 * 1rem);
+			line-height: 1.5em;
+			color: #353535;
+			display: block;
+		}
+
+		.cs-quote-icon {
+			/* 60px - 136px */
+			width: clamp(3.75rem, 10vw, 8.5rem);
+			height: auto;
+			position: absolute;
+			bottom: calc(0 / 16 * 1rem);
+			/* 16px - 32px */
+			right: clamp(1rem, 4vw, 2rem);
+		}
+
+		.cs-button-solid {
+			margin-top: calc(32 / 16 * 1rem);
+		}
+	}
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64em) {
+	#sbs {
+		.cs-container {
+			flex-flow: row;
+			justify-content: space-between;
+			gap: calc(52 / 16 * 1rem);
+		}
+
+		.cs-left {
+			font-size: min(1.2vw, 1em);
+			flex: none;
+		}
+
+		.cs-right {
+			margin: 0;
+		}
+	}
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0em) {
+	body.dark-mode {
+		#sbs {
+			.cs-left {
+				&:before,
+				&:after {
+					background: var(--accent);
+				}
+			}
+
+			.cs-picture2 {
+				background-color: var(--dark);
+				/* 6px - 12px */
+				border: clamp(0.375em, 1.5vw, 0.75em) solid var(--dark);
+			}
+
+			.cs-topper {
+				color: var(--primaryLight);
+			}
+
+			.cs-title,
+			.cs-text,
+			.cs-h3,
+			.cs-flex-p,
+			.cs-name {
+				color: var(--bodyTextColorWhite);
+			}
+
+			.cs-flex-group {
+				background-color: var(--accent);
+			}
+
+			.cs-job {
+				color: var(--bodyTextColorWhite);
+				opacity: 0.8;
+			}
+
+			.cs-quote-icon {
+				opacity: 0.2;
+			}
+		}
+	}
+}

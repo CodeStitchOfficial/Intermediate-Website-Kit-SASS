@@ -1,0 +1,123 @@
+/* DARK MODE AND TOGGLE STYLES */
+
+/*-- -------------------------- -->
+<---      Core Dark Styles      -->
+<--- -------------------------- -*/
+
+/* Mobile */
+@media only screen and (min-width: 0em) {
+	// Dark Mode Color Scheme
+	:root {
+		--dark: #082032;
+		--medium: #2c394b;
+		--accent: #334756;
+	}
+
+	body.dark-mode {
+		background-color: var(--dark);
+
+		p,
+		li,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			color: #fff;
+		}
+
+		// hide all light classes
+		.light {
+			display: none;
+		}
+
+		// show all dark classes
+		.dark {
+			display: block !important;
+		}
+	}
+
+	.dark {
+		display: none;
+	}
+}
+
+/*-- -------------------------- -->
+<---      Dark Mode Toggle      -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+	body.dark-mode {
+		#dark-mode-toggle {
+			.cs-sun {
+				transform: translate(-50%, -50%);
+				opacity: 1;
+			}
+
+			.cs-moon {
+				transform: translate(-50%, -150%);
+				opacity: 0;
+				fill: #fff;
+			}
+		}
+	}
+
+	#dark-mode-toggle {
+		display: block;
+		position: absolute;
+		top: calc(10 / 16 * 1rem);
+		right: calc(70 / 16 * 1rem);
+		width: calc(48 / 16 * 1rem);
+		height: calc(48 / 16 * 1rem);
+		background: transparent;
+		border: none;
+		overflow: hidden;
+		padding: 0;
+		z-index: 1000;
+
+		img,
+		svg {
+			//center image inside button
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: calc(20 / 16 * 1rem);
+			height: calc(20 / 16 * 1rem);
+			pointer-events: none;
+		}
+
+		.cs-moon {
+			z-index: 2;
+			// Transition properties
+			transition: transform 0.3s, opacity 0.3s;
+
+			// fill: yellow; --> uncomment to change the color of the moon if needed
+		}
+
+		.cs-sun {
+			z-index: 1;
+			// Transition property
+			transform: translate(-50%, 100%);
+			opacity: 0;
+			transition: transform 0.3s, opacity 0.3s;
+		}
+	}
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+	#dark-mode-toggle {
+		position: relative;
+		transform: none;
+		top: auto;
+		right: auto;
+		margin: 0;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}

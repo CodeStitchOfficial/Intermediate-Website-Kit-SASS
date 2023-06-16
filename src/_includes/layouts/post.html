@@ -1,0 +1,74 @@
+---
+preloadCSS: '/css/blog.css'
+eleventyComputed:
+    title: '{{ title }}'
+    description: '{{ description }}'
+    preloadImg: '{{ image }}'
+    permalink: '/blog/{{ title | slug }}/index.html'
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/css/blog.css">
+{% endblock %}
+
+{% block body %}
+    <!-- ============================================ -->
+    <!--                    LANDING                   -->
+    <!-- ============================================ -->
+
+    <section id="int-hero">
+        <picture>
+            <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
+            <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
+            <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
+        </picture>
+    </section>
+
+    <!-- ============================================ -->
+    <!--              Main Blog Content               -->
+    <!-- ============================================ -->
+
+    <div class="blog-container main-content-wrapper">
+        <!--Main content -->
+        <div class="main-content">
+            <!-- ============================================ -->
+            <!--                  Blog Article                -->
+            <!-- ============================================ -->
+
+            <article class="blog-article">
+                <!--Main Article Image-->
+                <picture class="blog-mainImage">
+                    <img src="{{ image }}" alt="{{ imageAlt }}" width="795" height="400" decoding="async" />
+                </picture>
+
+                <!--Article Info-->
+                <div class="article-group">
+                    <h1 class="blog-h1">{{ title }}</h1>
+                    <div class="blog-authorGroup">
+                        <!--Author Image-->
+                        <picture class="blog-author-img">
+                            <img
+                            src="/assets/svgs/profile.svg"
+                            alt="house"
+                            width="32"
+                            height="32"
+                            decoding="async">
+                        </picture>
+                        <span class="blog-author">{{ author }}</span>
+                        <span aria-hidden="true" class="blog-dot"></span>
+                        <!--Blog Date-->
+                        <span class="blog-date">{{ date | postDate }}</span>
+                    </div>
+                </div>
+                <section id="blog-content">
+                    {{ content | safe }}
+                </section>
+            </article>
+        </div>
+        <!-- End .main-content -->
+
+        {% include 'components/featured-post.html' %}
+    </div>
+{% endblock %}
