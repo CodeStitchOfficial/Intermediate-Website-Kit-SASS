@@ -1,15 +1,15 @@
 {
-	"name": "Code Stitch Web Designs",
-	"email": "help@codestitch.app",
-	"phoneForTel": "555-779-4407",
-	"phoneFormatted": "(555) 779-4407",
-	"address": {
-		"lineOne": "First Address Line",
-		"lineTwo": "Second Address Line",
-		"city": "Denver",
-		"state": "CO",
-		"zip": "80206",
-		"mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
-	},
-	"domain": "www.codestitch.app"
+  "name": "LogoIpsum",
+  "email": "email.entreprise@mail.com",
+  "phoneForTel": "0611223344",
+  "phoneFormatted": "06 11 22 33 44",
+  "address": {
+    "lineOne": "4 rue Pyrène",
+    "lineTwo": null,
+    "city": "Foix",
+    "state": "Ariège",
+    "zip": "09000",
+    "mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
+  },
+  "domain": "nom-entreprise.com"
 }

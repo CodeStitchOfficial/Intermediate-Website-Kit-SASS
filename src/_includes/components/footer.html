@@ -7,26 +7,26 @@
         <div class="left-section">
             <a class="logo" href="/"><img loading="lazy" decoding="async" src="/assets/svgs/logo-white.svg" alt="logo" width="264" height="78"></a>
             <p>
-                Extra content if you need it, if not you can delete this whole p tag. I usually do.
+                Contenu supplémentaire ici si besoin
             </p>
         </div>
         <div class="right-section">
             <div class="lists">
                 <ul>
                     <li>
-                        <h2>Information</h2>
+                        <h2>Informations</h2>
                     </li>
                     <li>
-                        <a href="/">Home</a>
+                        <a href="/">Accueil</a>
                     </li>
                     <li>
-                        <a href="/about">About Us</a>
+                        <a href="/a-propos">À Propos</a>
                     </li>
                     <li>
-                        <a href="/projects">Projects</a>
+                        <a href="/projets">Projets</a>
                     </li>
                     <li>
-                        <a href="/testimonials">Reviews</a>
+                        <a href="/avis">Avis</a>
                     </li>
                     <li>
                         <a href="/contact">Contact</a>
@@ -48,20 +48,22 @@
                     <li>
                         <a href="/contact">
                             {{client.address.lineOne}}<br>
-                            {{client.address.lineTwo}}<br>
+                            {% if client.address.lineTwo is not null %}
+                                {{client.address.lineTwo}}<br>
+                            {% endif %}
                             {{client.address.city}}
-                            {{client.address.state}}
+                            {# {{client.address.state}} #}
                             {{client.address.zip}}
                         </a>
                     </li>
                     <li>
                         <a href="tel:{{client.phoneForTel}}">
-                            T:
+                            Tél :
                             {{client.phoneFormatted}}
                         </a>
                     </li>
                     <li>
-                        <a href="mailto:{{client.email}}">Click to Email</a>
+                        <a href="mailto:{{client.email}}">Envoyer un e-mail</a>
                     </li>
                 </ul>
             </div>
@@ -69,9 +71,10 @@
     </div>
 
     <div class="credit">
-        <span>Designed and Hand Coded by</span>
-        <a href="/" target="_blank" rel="noopener">Your Company Name</a>
+        <span>Développé et conçu par</span>
+        <a href="https://clm-roig.github.io/" target="_blank" rel="noopener">Clément ROIG</a>
+        &nbsp;|&nbsp;
         <span class="copyright">
-            Copyright 2023 - Present</span>
+            Copyright 2023 - Présent</span>
     </div>
 </footer>

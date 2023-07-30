@@ -18,7 +18,7 @@ permalink: 'contact/'
     <!-- ============================================ -->
 
     <section id="int-hero">
-        <h1 id="home-h">Contact Us</h1>
+        <h1 id="home-h">Contact</h1>
         <picture>
             <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
             <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
@@ -35,50 +35,52 @@ permalink: 'contact/'
             <form id="cs-form" name="Contact Form" method="post">
                 <div class="cs-content">
                     <span class="cs-topper">Contact</span>
-                    <h2 class="cs-title">Get in Touch</h2>
+                    <h2 class="cs-title">Nous contacter</h2>
                     <p class="cs-text">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus elementum ullamcorper ipsum porttitor aliquam. Id magna urna ultrices odio pulvinar. Sed ut.
                     </p>
                 </div>
                 <label>
-                    Name
-                    <input required type="text" id="name" name="name" placeholder="Name">
+                    Nom
+                    <input required type="text" id="name" name="name" placeholder="Nom">
                 </label>
                 <label>
-                    Email
-                    <input required type="text" id="email" name="email" placeholder="Email">
+                    E-mail
+                    <input required type="text" id="email" name="email" placeholder="E-mail">
                 </label>
                 <label>
-                    Phone
-                    <input required type="text" id="phone" name="phone" placeholder="Phone">
+                    Téléphone
+                    <input required type="text" id="phone" name="phone" placeholder="Téléphone">
                 </label>
                 <label>
-                    How Did You Find Us
-                    <input type="text" id="find" name="find-us" placeholder="How did you find us?">
+                    Comment nous avez-vous trouvés ?
+                    <input type="text" id="find" name="find-us" placeholder="Réseaux sociaux, bouche à oreille...">
                 </label>
                 <label class="cs-label-message">
                     Message
-                    <textarea required name="Message" id="message" placeholder="Write message..."></textarea>
+                    <textarea required name="Message" id="message" placeholder="Écrivez votre message..."></textarea>
                 </label>
-                <button class="cs-button-solid" type="submit">Submit Message</button>
+                <button class="cs-button-solid" type="submit">Envoyer</button>
             </form>
             <div class="cs-right-section">
                 <!--Email-->
-                <span class="cs-header">Email</span>
+                <span class="cs-header">E-mail</span>
                 <a class="cs-link" href="mailto:{{client.email}}">{{client.email}}</a>
                 <!--Phone-->
-                <span class="cs-header">Phone</span>
+                <span class="cs-header">Téléphone</span>
                 <a class="cs-link" href="tel:{{client.phoneForTel}}">{{client.phoneFormatted}}</a>
                 <!--Address-->
-                <span class="cs-header">Address</span>
+                <span class="cs-header">Adresse</span>
                 <a class="cs-link" href="{{client.address.mapLink}}">
-                    {{client.address.lineOne}},
-                    <br />
-                    {{client.address.lineTwo}},
-                    <br />
+                    {{client.address.lineOne}}
+                    <br/>
+                    {% if client.address.lineTwo is not null %}
+                        {{client.address.lineTwo}}
+                        <br/>
+                    {% endif %}
                     <span class="cs-block">
                         {{client.address.city}}
-                        {{client.address.state}}
+                        {# {{client.address.state}} #}
                         {{client.address.zip}}
                     </span>
                 </a>
