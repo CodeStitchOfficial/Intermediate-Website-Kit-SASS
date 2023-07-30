@@ -1,0 +1,14 @@
+{
+  "folders": [
+    {
+      "path": "..\\"
+    }
+  ],
+  "settings": {},
+  "extensions": {
+    "recommendations": [
+      "ronnidc.nunjucks",
+      "okitavera.vscode-nunjucks-formatter"
+    ]
+  }
+}
