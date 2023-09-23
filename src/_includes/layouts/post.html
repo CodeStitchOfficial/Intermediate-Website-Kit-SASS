@@ -1,5 +1,5 @@
 ---
-preloadCSS: '/css/blog.css'
+preloadCSS: '/assets/css/blog.css'
 eleventyComputed:
     title: '{{ title }}'
     description: '{{ description }}'
@@ -10,7 +10,7 @@ eleventyComputed:
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <link rel="stylesheet" href="/css/blog.css">
+    <link rel="stylesheet" href="/assets/css/blog.css">
 {% endblock %}
 
 {% block body %}
