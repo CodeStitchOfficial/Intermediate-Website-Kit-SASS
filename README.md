@@ -238,7 +238,11 @@ a Navigation + Dropdown Stitch is being used. Navigations will render as outline
 ```
 
 > Should you wish to use your own method of rendering the navigation, you can still take advantage of applying the "active" class styles by using a smaller amount of Nunjucks code within the class attribute of the link:
-> {{ 'cs-active' if 'about' == page.fileSlug }}
+```
+<li class="cs-li">
+  <a href="/about" class="cs-li-link {{ 'cs-active' if 'about' == page.fileSlug }}">About</a>
+</li>
+```
 > In this case, if the page slug is "about", the .cs-active class will be applied. You're welcome to adjust the page slug value to whatever you require ("blog", "/", "services", etc)
 > For dropdowns, you can use a similar philosophy on the parent dropdown's class attribute, checking to see if any of the child pages are active before applying the styles. An example of this is shown below:
 
