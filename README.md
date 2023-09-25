@@ -199,7 +199,77 @@ The header navigation in the project is powered by the `eleventyNavigation` fron
 a Navigation + Dropdown Stitch is being used. Navigations will render as outlined in `order`, smallest to largest.
 
 > If you wish to use an alternative Navigation stitch, you are welcome to swap out the .cs-ul-wrapper div in the Stitch for the one in the Starter Kit. This
-> will allow you to continue to reap the benefits of eleventyNavigation
+> will allow you to continue to reap the benefits of eleventyNavigation. You can find the .cs-ul-wrapper div below
+
+```
+<div class="cs-ul-wrapper">
+    <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+        {% set navPages = collections.all | eleventyNavigation %}
+        {# Loop through all pages with a eleventyNavigation in the frontmatter #}
+        {% for entry in navPages %}
+            {# Define a hasChild variable to make it easier to test what links are dropdowns#}
+            {% set hasChild = entry.children.length %}
+
+            {# If this page is a dropdown, give it the appropriate classes, icons and accessibility attributes#}
+            <li class="cs-li {% if hasChild %} cs-dropdown {% endif %}" {% if hasChild %} tabindex="0"{% endif %}>
+
+                {# Similarly, if the link is active, apply the necessary classes #}
+                <a href="{{ entry.url }}" class="cs-li-link {% if entry.url == page.url %} cs-active {% endif %}">
+                    {{ entry.key }}
+                    {% if hasChild %}
+                        <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
+                    {% endif %}
+                </a>
+
+                {# Dropdowns have another ul/li set up within the parent li. Render in the same way as a normal link #}
+                {% if hasChild %}
+                    <ul class="cs-drop-ul">
+                        {% for child in entry.children %}
+                            <li class="cs-drop-li">
+                                <a href="{{ child.url }}" class="cs-li-link cs-drop-link">{{ child.key }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+```
+
+> Should you wish to use your own method of rendering the navigation, you can still take advantage of applying the "active" class styles by using a smaller amount of Nunjucks code within the class attribute of the link:
+> {{ 'cs-active' if 'about' == page.fileSlug }}
+> In this case, if the page slug is "about", the .cs-active class will be applied. You're welcome to adjust the page slug value to whatever you require ("blog", "/", "services", etc)
+> For dropdowns, you can use a similar philosophy on the parent dropdown's class attribute, checking to see if any of the child pages are active before applying the styles. An example of this is shown below:
+
+```
+<li class="nav-link cs-li cs-dropdown">
+  <span class="cs-li-link nav-link
+    {{ 'cs-active' if 'annapolis-custom-closets' == page.fileSlug }}
+    {{ 'cs-active' if 'bowie-custom-closets' == page.fileSlug }}
+    {{ 'cs-active' if 'severna-park-custom-closets' == page.fileSlug }}
+    {{ 'cs-active' if 'odenton-custom-closets' == page.fileSlug }}
+  ">
+    Areas Served
+    <img class="cs-drop-icon" src="/assets/images/down.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
+  </span>
+  <ul class="cs-drop-ul">
+    <li class="cs-drop-li">
+      <a href="/annapolis-custom-closets" class="cs-drop-link">Annapolis</a>
+    </li>
+    <li class="cs-drop-li">
+      <a href="/bowie-custom-closets" class="cs-drop-link">Bowie</a>
+    </li>
+    <li class="cs-drop-li">
+      <a href="/severna-park-custom-closets" class="cs-drop-link">Severna Park</a>
+    </li>
+    <li class="cs-drop-li">
+      <a href="/odenton-custom-closets" class="cs-drop-link">Odenton</a>
+    </li>
+  </ul>
+</li>
+```
+> In the above example, we're checking to see if the active page slug matches any of the four that are listed (annapolis, bowie, severna or odenton) and applying the .cs-active style to the parent if it does.
 
 Below the front matter is the page content, split into three sections. `{% extends "layouts/base.html" %}` is the first, which defines what page layout is being
 used. Note that {% extends %} defaults to looking in the `_includes` directory, as outlined in `.eleventy.js`.
