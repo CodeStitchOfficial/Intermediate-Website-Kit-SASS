@@ -293,13 +293,13 @@
             h2 {
                 font-size: calc(32 / 16 * 1em);
                 font-weight: 700;
-                line-height: 27/20em;
+                line-height: calc(27 / 20 * 1em);
                 text-align: center;
-                margin-bottom: 13/20em;
+                margin-bottom: calc(13 / 20 * 1em);
                 color: #1a1a1a;
             }
             p {
-                line-height: 24/18em;
+                line-height: calc(24 / 18 * 1em);
                 text-align: center;
                 width: 100%;
                 opacity: 0.7;

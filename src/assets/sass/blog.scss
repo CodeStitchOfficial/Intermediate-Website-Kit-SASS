@@ -175,7 +175,7 @@
         }
 
         h1 {
-            font-size: 64/30rem;
+            font-size: calc(64 / 30 * 1rem);
             text-align: center;
             width: 96%;
             max-width: calc(500 / 16 * 1rem);
