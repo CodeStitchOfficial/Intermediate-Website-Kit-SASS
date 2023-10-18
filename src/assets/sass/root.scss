@@ -1004,7 +1004,7 @@
         }
 
         h1 {
-            font-size: 64/30rem;
+            font-size: calc(64 / 30 * 1rem);
             text-align: center;
             width: 96%;
             max-width: calc(500 / 16 * 1rem);
@@ -1098,7 +1098,7 @@
         .title {
             font-size: min(9vw, 3rem);
             font-weight: 900;
-            line-height: 58/48;
+            line-height: calc(58 / 48 * 1rem);
             text-align: center;
             margin-bottom: calc(36 / 16 * 1rem);
             color: #fff;
@@ -1217,10 +1217,10 @@
 
             p {
                 font-size: calc(14 / 16 * 1rem);
-                line-height: 27/14;
+                line-height: calc(27 / 14 * 1rem);
                 text-align: center;
                 width: 100%;
-                width: 307/14rem;
+                width: calc(307 / 14 * 1rem);
                 margin: auto;
                 color: #fff;
                 opacity: 0.9;
@@ -1265,7 +1265,7 @@
                         opacity: 0.9;
 
                         a {
-                            line-height: 21/18em;
+                            line-height: calc(21 / 18 * 1em);
                             text-decoration: none;
                             color: #fff;
                             transition: color 0.3s;
@@ -1277,7 +1277,7 @@
                     h2 {
                         font-size: calc(18 / 16 * 1rem);
                         font-weight: bold;
-                        line-height: 21/18em;
+                        line-height: calc(21 / 18 * 1em);
                         text-transform: uppercase;
                         margin-bottom: calc(37 / 16 * 1rem);
                         color: #fff;
