@@ -302,6 +302,8 @@ this admin panel, and is the very system that your clients can use to manage the
 intuitive, but feel free to experiment with using this panel first. With this kit, you can add _featured_ to the comma-separated list of tags to have them show
 up as so in the frontend.
 
+Should you wish to extend the "Featured Articles" functionality to group similar pieces of content in additional ways, you are welcome to add more tags as you see fit. Post "groups" can then be accessed under the `collections` object. For example, in `_includes/components/featured-post.html`, you can see that the featured posts are rendered by looping over the `collections.featured` array, which contains all the posts with the "featured" tag. You can then use a similar way to render your own collections, by accessing the applicably named collection array as shown.
+
 <a name="deployment"></a>
 
 ## Deployment
