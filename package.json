@@ -4,13 +4,13 @@
     "description": "",
     "main": "index.js",
     "scripts": {
+        "watch:sass": "sass --watch src/assets/sass:./src/assets/css",
+        "build:sass": "sass src/assets/sass:./src/assets/css",
         "watch:eleventy": "cross-env ELEVENTY_ENV=DEV eleventy --serve",
         "build:eleventy": "cross-env ELEVENTY_ENV=PROD eleventy",
-        "build:sass": "sass --style=compressed src/assets/sass:./public/assets/css",
-        "watch:sass": "sass --watch src/assets/sass:./public/assets/css",
         "watch:cms": "npx decap-server",
         "start": "del-cli ./public --force && npm-run-all --parallel watch:*",
-        "build": "npm-run-all --parallel build:*"
+        "build": "run-s build:*"
     },
     "repository": {
         "type": "git",

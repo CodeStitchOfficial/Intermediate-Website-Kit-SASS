@@ -19,8 +19,6 @@ module.exports = function (eleventyConfig) {
         return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
     });
 
-    console.log(process.env.ELEVENTY_ENV);
-
     return {
         dir: {
             input: "src",
