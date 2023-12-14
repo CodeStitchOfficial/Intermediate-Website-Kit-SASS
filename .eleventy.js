@@ -16,7 +16,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(pluginEleventyNavigation);
 
     // adds a minifier when `npm run build` is run, so code is only minified in production
-    if (process.env.ELEVENTY_ENV === "PROD") {
+    if (configServer.isProduction) {
         eleventyConfig.addPlugin(pluginMinifier);
     }
 
