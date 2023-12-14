@@ -42,7 +42,8 @@
 The intermediate starter kits build off the beginner kits, mainly by including a pre-configured <a href="https://www.11ty.dev">Eleventy</a> environment, which
 allows for repeated components, centralized data and greater room to scale as your clients grow. On top of this, a blog has been provided through
 <a href="https://decapcms.org/">Decap CMS</a> to allow your clients to manage their content on their own. This can easily be adapted to anything which requires
-changing content, such as menus, job listing boards, portfolios and much more.
+changing content, such as menus, job listing boards, portfolios and much more. A few additional plugins have also been included to improve developer experience,
+providing HTML/CSS/JS minification, JS bundling and automatic sitemap generation
 
 An example website has also been provided, with easy substitution of website sections possible through the use of <a href="https://codestitch.app/">CodeStitch's
 vanilla component library</a>. This kit aims to get any project off the ground in as little time as possible, with deployment being possible in as little as two
@@ -52,14 +53,13 @@ minutes - including CMS hosting.
 
 ## Prerequisites
 
-Only the vanilla web technologies are *required* before using this kit, with some familiarity with Eleventy and Templating Languages also recommended, but not essential. A lot of the leg-work for the non-vanilla technologies has been done for you. If you would like to read up on some of these things, we recommend the following resources:
+Only the vanilla web technologies are _required_ before using this kit, with some familiarity with Eleventy and Templating Languages also recommended, but not essential. A lot of the leg-work for the non-vanilla technologies has been done for you. If you would like to read up on some of these things, we recommend the following resources:
 
 1. If you've never used Nunjucks before, [this excellent article by Hyunbin](https://hyunbinseo.medium.com/nunjucks-settings-for-vs-code-a0da0dc66b95) explains how to set up VSCode to best support Nunjucks, including formatting, syntax highlighting and Emmet.
 2. The [Nunjucks Documentation](https://mozilla.github.io/nunjucks/) provides a complete overview of the Nunjucks syntax - the templating language of choice for this kit. Highly recommended to make the most of this kit.
 3. A more applied article about leveraging Nunjucks/Eleventy to make your code modular can be [found here](https://www.webstoemp.com/blog/modular-code-nunjucks-eleventy/), courtesy of Webstoemp.
 4. The [Eleventy Documentation](https://www.11ty.dev/docs/) is also good to read up on, but not recommended for this kit, as only the simplest features of Eleventy is being used, with most of the configuration already being done for you. Providing you stick to the file structure and guidelines presented in this template, you won't actually need any Eleventy knowledge.
 5. [Decap CMS' docs](https://decapcms.org/docs/intro/) can also be found should you wish to extend the CMS beyond what's in this kit
-
 
 <a name="fileStructure"></a>
 
@@ -83,13 +83,13 @@ Only the vanilla web technologies are *required* before using this kit, with som
 │   │   ├── js/
 │   │   ├── sass/
 │   │   └── svgs/
+|   ├── config/
 │   ├── content/
 │   │   ├── blog/
 │   │   └── pages/
 │   ├── _redirects
 │   ├── index.html
 │   ├── robots.txt
-│   └── sitemap.xml
 ├── .eleventy.js
 └── netlify.toml
 ```
@@ -111,11 +111,12 @@ Only the vanilla web technologies are *required* before using this kit, with som
 -   includes/ - For reusable code across the project. Split into page-wide layouts and smaller, intra-page components.
 -   admin/ - DecapCMS' folder. Includes a config file and index.html entry point.
 -   assets/ - Non-HTML files. Images, scripts and styles.
+-   config/ - Configuration files for eleventy and plugins. This kit provides code minification, no-client-JS bundling and automatic sitemap generation, working out-of-the-box for you.
 -   content/ - Pages or data to render pages from, such as the blog.
 -   \_redirects - To configure redirects. Read more on <a href="https://docs.netlify.com/routing/redirects/">Netlify</a>
 -   index.html - Home page
 -   robots.txt - Instructions for site crawlers. Learn more, and generate your own, <a href="https://en.ryte.com/free-tools/robots-txt-generator/">here</a>
--   sitemap.xml - A map of the pages on the domain. Create your own after deployment <a href="https://www.xml-sitemaps.com/">here</a>
+-   sitemap.html - A placeholder for the sitemap plugin to generate a sitemap for you on build
 
 <a name="gettingStarted"></a>
 
@@ -132,7 +133,7 @@ Running `npm start` will start a development server, begin SASS preprocessing an
 /public directory will be deleted, clearing out any stale files that may have been deleted in the last build.
 
 Next, it is recommended to update `_data/client.json` with some new information about this project. Through the power of templating, the
-project's `<head>` and contact information will automatically be filled out, providing a first peek into some of the benefits of SSGs.
+project's `<head>` and contact information will automatically be filled out, providing a first peek into some of the benefits of SSGs. Please ensure the correct file protocol (usually "https://") is used for the client's domain
 
 Finally, you can find all of CodeStitches `:root` variables, as well as .cs-topper, .cs-title and .cs-text, within the `root` stylesheet. Feel free to adjust these, or use our Content Flair micro-stitches, to update site-wide styles quickly.
 
@@ -238,11 +239,13 @@ a Navigation + Dropdown Stitch is being used. Navigations will render as outline
 ```
 
 > Should you wish to use your own method of rendering the navigation, you can still take advantage of applying the "active" class styles by using a smaller amount of Nunjucks code within the class attribute of the link:
+
 ```
 <li class="cs-li">
   <a href="/about" class="cs-li-link {{ 'cs-active' if 'about' == page.fileSlug }}">About</a>
 </li>
 ```
+
 > In this case, if the page slug is "about", the .cs-active class will be applied. You're welcome to adjust the page slug value to whatever you require ("blog", "/", "services", etc)
 > For dropdowns, you can use a similar philosophy on the parent dropdown's class attribute, checking to see if any of the child pages are active before applying the styles. An example of this is shown below:
 
@@ -273,6 +276,7 @@ a Navigation + Dropdown Stitch is being used. Navigations will render as outline
   </ul>
 </li>
 ```
+
 > In the above example, we're checking to see if the active page slug matches any of the four that are listed (annapolis, bowie, severna or odenton) and applying the .cs-active style to the parent if it does.
 
 Below the front matter is the page content, split into three sections. `{% extends "layouts/base.html" %}` is the first, which defines what page layout is being
@@ -308,7 +312,7 @@ Should you wish to extend the "Featured Articles" functionality to group similar
 
 ## Deployment
 
-1. Ensure the sitemap, robots.txt and \_redirects have been filled out. Instructions and tools for how to do so can be found in the File Structure section
+1. Ensure the robots.txt and \_redirects have been filled out. The sitemap will be automatically generated at build-time for you. Instructions and tools for how to do so can be found in the File Structure section
 2. Navigate to your Netlify Admin Panel, click _Add new site | Import an existing project_
 3. Follow the instructions to connect your GitHub repository to Netlify. Most of the site settings should be done for you, thanks to `netlify.toml`
 4. Once deployed, click on _Identity_ in the top navigation, then click _Enable Identity_
