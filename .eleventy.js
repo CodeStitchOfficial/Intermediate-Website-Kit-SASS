@@ -1,7 +1,9 @@
 // imports
 const pluginEleventyNavigation = require("@11ty/eleventy-navigation");
 const pluginMinifier = require("@sherby/eleventy-plugin-files-minifier");
+const pluginSitemap = require("@quasibit/eleventy-plugin-sitemap");
 const configCssExtension = require("./src/config/cssExtension");
+const configSitemap = require("./src/config/sitemap");
 const filterPostDate = require("./src/config/postDate");
 
 module.exports = function (eleventyConfig) {
@@ -17,6 +19,8 @@ module.exports = function (eleventyConfig) {
         eleventyConfig.addPlugin(pluginMinifier);
     }
 
+    eleventyConfig.addPlugin(pluginSitemap, configSitemap);
+
     // passthroughs allow non-template (html, njk) files to be put into /public
     // here, we individually specify what folders are passed through. this prevents sass files from being deployed unnecessarily
     eleventyConfig.addPassthroughCopy("./src/assets/css");
@@ -30,7 +34,6 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./src/admin");
     eleventyConfig.addPassthroughCopy("./src/_redirects");
     eleventyConfig.addPassthroughCopy({ "./src/robots.txt": "/robots.txt" });
-    eleventyConfig.addPassthroughCopy({ "./src/sitemap.xml": "/sitemap.xml" });
 
     // normally, 11ty will render dates on blog posts in full JSDate format (Fri Dec 02 18:00:00 GMT-0600)
     // this filter allows dates to be converted into a normal, locale format. view the docs to learn more (https://moment.github.io/luxon/api-docs/index.html#datetime)
