@@ -28,6 +28,7 @@
         "@11ty/eleventy-navigation": "^0.3.5"
     },
     "dependencies": {
+        "@sherby/eleventy-plugin-files-minifier": "^1.1.1",
         "cross-env": "^7.0.3",
         "decap-server": "^3.0.1",
         "del-cli": "^5.0.0",

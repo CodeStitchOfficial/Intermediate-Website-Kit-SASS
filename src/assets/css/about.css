@@ -1,1 +1,170 @@
-@media only screen and (min-width: 0em){#sbs{padding:var(--sectionPadding)}#sbs .cs-container{width:100%;max-width:80rem;margin:auto;display:flex;flex-direction:column;justify-content:center;align-items:center;row-gap:2.5rem}#sbs .cs-left{font-size:min(2.31vw,.7em);width:39.4375em;height:39.75em;position:relative}#sbs .cs-picture{border-radius:1.5em;display:block;position:absolute;overflow:hidden}#sbs .cs-picture img{width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0}#sbs .cs-picture1{width:32.625em;height:36.3125em;top:0;left:0}#sbs .cs-picture2{width:25.875em;height:25em;background-color:#fff;box-shadow:rgba(0,0,0,.1) 0px 0px 40px;border:clamp(.375em,1.5vw,.75em) solid #fff;right:0;bottom:0}#sbs .cs-right{max-width:33.875rem;margin:auto}#sbs .cs-topper{text-align:left;margin-bottom:.25rem}#sbs .cs-title{text-align:left;max-width:50rem}#sbs .cs-text{text-align:left;max-width:46.875rem;margin-bottom:1rem;color:var(--bodyTextColor)}#sbs .cs-text:last-of-type{margin-bottom:2rem}#sbs .cs-flex-group{padding:clamp(1rem,3vw,2rem);background-color:#f7f7f7;border-radius:1rem;position:relative}#sbs .cs-flex-p{font-size:clamp(.875rem,1.5vw,1rem);line-height:1.5em;margin:0 0 1rem;color:#353535}#sbs .cs-name{font-size:1rem;font-weight:bold;line-height:1.2em;text-transform:uppercase;margin:0 0 .25rem;color:var(--headerColor);display:block}#sbs .cs-job{font-size:.875rem;line-height:1.5em;color:#353535;display:block}#sbs .cs-quote-icon{width:clamp(3.75rem,10vw,8.5rem);height:auto;position:absolute;right:clamp(1rem,4vw,2rem);bottom:0rem}#sbs .cs-button-solid{margin-top:2rem}}@media only screen and (min-width: 64em){#sbs .cs-container{flex-flow:row;justify-content:space-between;gap:3.25rem}#sbs .cs-left{font-size:min(1.2vw,1em);flex:none}#sbs .cs-right{margin:0}}@media only screen and (min-width: 0em){body.dark-mode #sbs .cs-left:before,body.dark-mode #sbs .cs-left:after{background:var(--accent)}body.dark-mode #sbs .cs-picture2{background-color:var(--dark);border:clamp(.375em,1.5vw,.75em) solid var(--dark)}body.dark-mode #sbs .cs-topper{color:var(--primaryLight)}body.dark-mode #sbs .cs-title,body.dark-mode #sbs .cs-text,body.dark-mode #sbs .cs-h3,body.dark-mode #sbs .cs-flex-p,body.dark-mode #sbs .cs-name{color:var(--bodyTextColorWhite)}body.dark-mode #sbs .cs-flex-group{background-color:var(--accent)}body.dark-mode #sbs .cs-job{color:var(--bodyTextColorWhite);opacity:.8}body.dark-mode #sbs .cs-quote-icon{opacity:.2}}/*# sourceMappingURL=about.css.map */
+/* PAGE-SPECIFIC STYLES FOR THE ABOUT PAGE */
+/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0em) {
+  #sbs {
+    padding: var(--sectionPadding);
+  }
+  #sbs .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2.5rem;
+  }
+  #sbs .cs-left {
+    /* scaling the font size with the view width */
+    font-size: min(2.31vw, 0.7em);
+    /* using ems so we can use font size to scale the whole section */
+    width: 39.4375em;
+    height: 39.75em;
+    position: relative;
+  }
+  #sbs .cs-picture {
+    border-radius: 1.5em;
+    display: block;
+    position: absolute;
+    /* clips img tag corners */
+    overflow: hidden;
+  }
+  #sbs .cs-picture img {
+    width: 100%;
+    height: 100%;
+    /* makes image act like a background image */
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #sbs .cs-picture1 {
+    width: 32.625em;
+    height: 36.3125em;
+    top: 0;
+    left: 0;
+  }
+  #sbs .cs-picture2 {
+    width: 25.875em;
+    height: 25em;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 40px;
+    /* 6px - 12px */
+    border: clamp(0.375em, 1.5vw, 0.75em) solid #fff;
+    right: 0;
+    bottom: 0;
+  }
+  #sbs .cs-right {
+    max-width: 33.875rem;
+    margin: auto;
+  }
+  #sbs .cs-topper {
+    text-align: left;
+    margin-bottom: 0.25rem;
+  }
+  #sbs .cs-title {
+    text-align: left;
+    max-width: 50rem;
+  }
+  #sbs .cs-text {
+    text-align: left;
+    max-width: 46.875rem;
+    margin-bottom: 1rem;
+    color: var(--bodyTextColor);
+  }
+  #sbs .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+  #sbs .cs-flex-group {
+    /* 16px - 32px */
+    padding: clamp(1rem, 3vw, 2rem);
+    background-color: #f7f7f7;
+    border-radius: 1rem;
+    position: relative;
+  }
+  #sbs .cs-flex-p {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    margin: 0 0 1rem;
+    color: #353535;
+  }
+  #sbs .cs-name {
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    margin: 0 0 0.25rem;
+    color: var(--headerColor);
+    display: block;
+  }
+  #sbs .cs-job {
+    font-size: 0.875rem;
+    line-height: 1.5em;
+    color: #353535;
+    display: block;
+  }
+  #sbs .cs-quote-icon {
+    /* 60px - 136px */
+    width: clamp(3.75rem, 10vw, 8.5rem);
+    height: auto;
+    position: absolute;
+    /* 16px - 32px */
+    right: clamp(1rem, 4vw, 2rem);
+    bottom: 0rem;
+  }
+  #sbs .cs-button-solid {
+    margin-top: 2rem;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64em) {
+  #sbs .cs-container {
+    flex-flow: row;
+    justify-content: space-between;
+    gap: 3.25rem;
+  }
+  #sbs .cs-left {
+    font-size: min(1.2vw, 1em);
+    flex: none;
+  }
+  #sbs .cs-right {
+    margin: 0;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0em) {
+  body.dark-mode #sbs .cs-left:before, body.dark-mode #sbs .cs-left:after {
+    background: var(--accent);
+  }
+  body.dark-mode #sbs .cs-picture2 {
+    background-color: var(--dark);
+    /* 6px - 12px */
+    border: clamp(0.375em, 1.5vw, 0.75em) solid var(--dark);
+  }
+  body.dark-mode #sbs .cs-topper {
+    color: var(--primaryLight);
+  }
+  body.dark-mode #sbs .cs-title,
+  body.dark-mode #sbs .cs-text,
+  body.dark-mode #sbs .cs-h3,
+  body.dark-mode #sbs .cs-flex-p,
+  body.dark-mode #sbs .cs-name {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #sbs .cs-flex-group {
+    background-color: var(--accent);
+  }
+  body.dark-mode #sbs .cs-job {
+    color: var(--bodyTextColorWhite);
+    opacity: 0.8;
+  }
+  body.dark-mode #sbs .cs-quote-icon {
+    opacity: 0.2;
+  }
+}
+
+/*# sourceMappingURL=about.css.map */

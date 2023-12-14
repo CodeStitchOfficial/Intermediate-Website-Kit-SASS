@@ -1,10 +1,21 @@
 // imports
 const pluginEleventyNavigation = require("@11ty/eleventy-navigation");
+const pluginMinifier = require("@sherby/eleventy-plugin-files-minifier");
+const configCssExtension = require("./src/config/cssExtension");
 const filterPostDate = require("./src/config/postDate");
 
 module.exports = function (eleventyConfig) {
+    // setting up CSS as an eleventy template extension (not supported in base 11ty)
+    eleventyConfig.addTemplateFormats("css");
+    eleventyConfig.addExtension("css", configCssExtension);
+
     // adds the official eleventy navigation plugin for a scalable navigation
     eleventyConfig.addPlugin(pluginEleventyNavigation);
+
+    // adds a minifier when `npm run build` is run, so code is only minified in production
+    if (process.env.ELEVENTY_ENV === "PROD") {
+        eleventyConfig.addPlugin(pluginMinifier);
+    }
 
     // passthroughs allow non-template (html, njk) files to be put into /public
     // here, we individually specify what folders are passed through. this prevents sass files from being deployed unnecessarily
