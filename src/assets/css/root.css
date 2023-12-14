@@ -914,7 +914,7 @@
   #cta .title {
     font-size: min(9vw, 3rem);
     font-weight: 900;
-    line-height: 1.2083333333rem;
+    line-height: 1.2083333333em;
     text-align: center;
     margin-bottom: 2.25rem;
     color: #fff;
