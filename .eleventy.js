@@ -4,6 +4,7 @@ const pluginMinifier = require("@sherby/eleventy-plugin-files-minifier");
 const pluginSitemap = require("@quasibit/eleventy-plugin-sitemap");
 const configCssExtension = require("./src/config/cssExtension");
 const configSitemap = require("./src/config/sitemap");
+const configServer = require("./src/config/server");
 const filterPostDate = require("./src/config/postDate");
 
 module.exports = function (eleventyConfig) {
@@ -21,13 +22,14 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addPlugin(pluginSitemap, configSitemap);
 
+    eleventyConfig.setServerOptions(configServer);
+
     // passthroughs allow non-template (html, njk) files to be put into /public
     // here, we individually specify what folders are passed through. this prevents sass files from being deployed unnecessarily
     eleventyConfig.addPassthroughCopy("./src/assets/css");
     eleventyConfig.addPassthroughCopy("./src/assets/favicons");
     eleventyConfig.addPassthroughCopy("./src/assets/fonts");
     eleventyConfig.addPassthroughCopy("./src/assets/images");
-    eleventyConfig.addPassthroughCopy("./src/assets/js");
     eleventyConfig.addPassthroughCopy("./src/assets/svgs");
 
     // other important files are passed through. this allows the CMS, redirects, robots.txt and sitemap to be present in the deployed project
