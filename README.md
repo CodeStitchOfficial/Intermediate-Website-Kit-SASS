@@ -29,6 +29,7 @@
     -   [Source Files and Folders](#sourceFilesAndFolders)
 -   [Getting Started](#gettingStarted)
 -   [Expanding the Project](#expandingTheProject)
+    -   [A Word on JavaScript](#javascript)
     -   [Reusing Code](#reusingCode)
     -   [Adding More Pages](#addingMorePages)
     -   [Navigation via Front Matter](#navigationViaFrontMatter)
@@ -144,6 +145,18 @@ Finally, you can find all of CodeStitches `:root` variables, as well as .cs-topp
 Aimed towards freelancers, this kit was made with scalability and flexibility in mind, suiting a range of websites and client needs. As such, it is your choice
 whether you'd rather make small tweaks to the existing site, or clear all the page content and build a site all over again. Outlined below are some best
 practices for when it comes to building on top of this kit:
+
+<a name="javascript"></a>
+
+### A word on JavaScript
+
+By default, the kit is set up to bundle, minify and serve JavaScript under a single app.js bundle. This is powered by esbuild, and is configured in the `config/scripts.11ty.js` file. If you're following the CodeStitch workflow, the amount of JS included in a project is minimal, so it's advised to create a new file per script needed and import it into the app.js file as done with the `dark.js` and `nav.js` files. This means that all JS is loaded when a user lands on the page and is cached for future use.
+
+However, some users may want to load different pieces of JS on a per-page basis, splitting the scripts up as they see fit. Out of the box, no JS will be passed through to `/public` as we're relying on esbuild to bundle and move it over. For these situations, there are a couple of things we can do
+
+1. Add an additional entry point to the `config/scripts.11ty.js` entryPoints array, using the same path structure as shown with app.js in the file. This will create a separate JS file to be used in a new `<script>` tag.
+
+2. Delete the `config/scripts.11ty.js` and `assets/app.js` files and add a new JavaScript passthrough (`eleventyConfig.addPassthroughCopy("./src/assets/js")`) in `.eleventy.js`. This will also stop minification, but JS won't be built in anyway.
 
 <a name="reusingCode"></a>
 
