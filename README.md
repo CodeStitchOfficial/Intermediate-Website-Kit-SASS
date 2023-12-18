@@ -29,7 +29,6 @@
     -   [Source Files and Folders](#sourceFilesAndFolders)
 -   [Getting Started](#gettingStarted)
 -   [Expanding the Project](#expandingTheProject)
-    -   [A Word on JavaScript](#javascript)
     -   [Reusing Code](#reusingCode)
     -   [Adding More Pages](#addingMorePages)
     -   [Navigation via Front Matter](#navigationViaFrontMatter)
@@ -44,7 +43,7 @@ The intermediate starter kits build off the beginner kits, mainly by including a
 allows for repeated components, centralized data and greater room to scale as your clients grow. On top of this, a blog has been provided through
 <a href="https://decapcms.org/">Decap CMS</a> to allow your clients to manage their content on their own. This can easily be adapted to anything which requires
 changing content, such as menus, job listing boards, portfolios and much more. A few additional plugins have also been included to improve developer experience,
-providing HTML/CSS/JS minification, JS bundling and automatic sitemap generation
+providing HTML/CSS minification and automatic sitemap generation
 
 An example website has also been provided, with easy substitution of website sections possible through the use of <a href="https://codestitch.app/">CodeStitch's
 vanilla component library</a>. This kit aims to get any project off the ground in as little time as possible, with deployment being possible in as little as two
@@ -81,7 +80,6 @@ Only the vanilla web technologies are _required_ before using this kit, with som
 │   │   ├── favicons/
 │   │   ├── fonts/
 │   │   ├── images/
-│   │   ├── js/
 │   │   ├── sass/
 │   │   └── svgs/
 |   ├── config/
@@ -112,7 +110,7 @@ Only the vanilla web technologies are _required_ before using this kit, with som
 -   includes/ - For reusable code across the project. Split into page-wide layouts and smaller, intra-page components.
 -   admin/ - DecapCMS' folder. Includes a config file and index.html entry point.
 -   assets/ - Non-HTML files. Images, scripts and styles.
--   config/ - Configuration files for eleventy and plugins. This kit provides code minification, no-client-JS bundling and automatic sitemap generation, working out-of-the-box for you.
+-   config/ - Configuration files for eleventy and plugins. This kit provides code minification and automatic sitemap generation, working out-of-the-box for you.
 -   content/ - Pages or data to render pages from, such as the blog.
 -   \_redirects - To configure redirects. Read more on <a href="https://docs.netlify.com/routing/redirects/">Netlify</a>
 -   index.html - Home page
@@ -145,18 +143,6 @@ Finally, you can find all of CodeStitches `:root` variables, as well as .cs-topp
 Aimed towards freelancers, this kit was made with scalability and flexibility in mind, suiting a range of websites and client needs. As such, it is your choice
 whether you'd rather make small tweaks to the existing site, or clear all the page content and build a site all over again. Outlined below are some best
 practices for when it comes to building on top of this kit:
-
-<a name="javascript"></a>
-
-### A word on JavaScript
-
-By default, the kit is set up to bundle, minify and serve JavaScript under a single app.js bundle. This is powered by esbuild, and is configured in the `config/scripts.11ty.js` file. If you're following the CodeStitch workflow, the amount of JS included in a project is minimal, so it's advised to create a new file per script needed and import it into the app.js file as done with the `dark.js` and `nav.js` files. This means that all JS is loaded when a user lands on the page and is cached for future use.
-
-However, some users may want to load different pieces of JS on a per-page basis, splitting the scripts up as they see fit. Out of the box, no JS will be passed through to `/public` as we're relying on esbuild to bundle and move it over. For these situations, there are a couple of things we can do
-
-1. Add an additional entry point to the `config/scripts.11ty.js` entryPoints array, using the same path structure as shown with app.js in the file. This will create a separate JS file to be used in a new `<script>` tag.
-
-2. Delete the `config/scripts.11ty.js` and `assets/app.js` files and add a new JavaScript passthrough (`eleventyConfig.addPassthroughCopy("./src/assets/js")`) in `.eleventy.js`. This will also stop minification, but JS won't be built in anyway.
 
 <a name="reusingCode"></a>
 

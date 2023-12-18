@@ -37,12 +37,13 @@ module.exports = function (eleventyConfig) {
     // END SERVER
 
     // PASSTHROUGHS - "Pass through" source files to /public, without being processed by eleventy
-    // Individually specify what asset folders are passed through. SASS is processed by it's compiler into ./src and passed through as a template for minification. JS is bundled separately
+    // Individually specify what asset folders are passed through. SASS is processed by it's compiler into ./src and passed through as a template for minification
     eleventyConfig.addPassthroughCopy("./src/assets/css");
     eleventyConfig.addPassthroughCopy("./src/assets/favicons");
     eleventyConfig.addPassthroughCopy("./src/assets/fonts");
     eleventyConfig.addPassthroughCopy("./src/assets/images");
     eleventyConfig.addPassthroughCopy("./src/assets/svgs");
+    eleventyConfig.addPassthroughCopy("./src/assets/js");
 
     // Other required folders are passed through
     eleventyConfig.addPassthroughCopy("./src/admin");
