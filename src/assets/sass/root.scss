@@ -29,11 +29,13 @@
     // Text styles - can be replaced using CodeStitch's "Content Flair" Stitches
     .cs-topper {
         font-size: var(--topperFontSize);
-        font-weight: 700;
         line-height: 1.2em;
         text-transform: uppercase;
+        text-align: inherit;
         letter-spacing: 0.1em;
-        color: var(--secondary);
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: 0.25rem;
         display: block;
     }
 
@@ -41,7 +43,9 @@
         font-size: var(--headerFontSize);
         font-weight: 900;
         line-height: 1.2em;
-        margin: 0 auto calc(16 / 16 * 1rem);
+        text-align: inherit;
+        max-width: 43.75rem;
+        margin: 0 0 1rem 0;
         color: var(--headerColor);
         position: relative;
     }
@@ -49,8 +53,10 @@
     .cs-text {
         font-size: var(--bodyFontSize);
         line-height: 1.5em;
+        text-align: inherit;
         width: 100%;
-        margin: 0 auto;
+        max-width: 40.625rem;
+        margin: 0;
         color: var(--bodyTextColor);
     }
 
