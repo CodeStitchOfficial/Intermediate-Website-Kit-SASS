@@ -56,6 +56,11 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter("postDate", filterPostDate);
     // END FILTERS
 
+    // SHORTCODES - Output data using JS at build-time
+    // Gets the current year, which can be outputted with {% year %}. Used for the footer copyright. Updates with every build.
+    eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+    // END SHORTCODES
+
     return {
         dir: {
             input: "src",
