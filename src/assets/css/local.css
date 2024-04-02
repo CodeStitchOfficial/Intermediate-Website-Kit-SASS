@@ -1,555 +1,416 @@
-/* PAGE-SPECIFIC STYLES FOR THE HOME PAGE */
 /*-- -------------------------- -->
-<---       Side By Side         -->
+<---         CS-Content         -->
 <--- -------------------------- -*/
+
+
+/* Mobile */
+@media only screen and (min-width: 0rem) {
+  #cs-content-831 {
+      /* set text align to left if content needs to be left aligned */
+      text-align: center;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      /* centers content horizontally, set to flex-start to left align */
+      align-items: center;
+      margin-top: 5rem;
+      /* margin-bottom: 1rem; */
+  }
+}
+.cs-topper {
+  /* 16px - 20px */
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0 0 1rem 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.25rem;
+  position: relative;
+}
+.cs-topper:before {
+  /* decorative line */
+  content: "";
+  /* 16px - 32px */
+  width: clamp(1rem, 3vw, 2rem);
+  height: 2px;
+  background: var(--secondary);
+  opacity: 1;
+  position: relative;
+  display: block;
+}
+
+                              
+
+                              
+/*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
 /* Mobile - 360px */
-@media only screen and (min-width: 0em) {
-  #sbs {
-    padding: var(--sectionPadding);
-  }
-  #sbs .cs-container {
-    width: 100%;
-    max-width: 80rem;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 2.5rem;
-  }
-  #sbs .cs-left {
-    /* scaling the font size with the view width */
-    font-size: min(2.31vw, 0.7em);
-    /* using ems so we can use font size to scale the whole section */
-    width: 39.4375em;
-    height: 39.75em;
-    position: relative;
-  }
-  #sbs .cs-picture {
-    border-radius: 1.5em;
-    display: block;
-    position: absolute;
-    /* clips img tag corners */
-    overflow: hidden;
-  }
-  #sbs .cs-picture img {
-    width: 100%;
-    height: 100%;
-    /* makes image act like a background image */
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  #sbs .cs-picture1 {
-    width: 32.625em;
-    height: 36.3125em;
-    top: 0;
-    left: 0;
-  }
-  #sbs .cs-picture2 {
-    width: 25.875em;
-    height: 25em;
-    background-color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 40px;
-    /* 6px - 12px */
-    border: clamp(0.375em, 1.5vw, 0.75em) solid #fff;
-    right: 0;
-    bottom: 0;
-  }
-  #sbs .cs-right {
-    max-width: 33.875rem;
-    margin: auto;
-  }
-  #sbs .cs-topper {
-    text-align: left;
-    margin-bottom: 0.25rem;
-  }
-  #sbs .cs-title {
-    text-align: left;
-    max-width: 50rem;
-  }
-  #sbs .cs-text {
-    text-align: left;
-    max-width: 46.875rem;
-    margin-bottom: 1rem;
-  }
-  #sbs .cs-text:last-of-type {
-    margin-bottom: 2rem;
-  }
-  #sbs .cs-flex-group {
-    /* 16px - 32px */
-    padding: clamp(1rem, 3vw, 2rem);
-    background-color: #f7f7f7;
-    border-radius: 1rem;
-    position: relative;
-  }
-  #sbs .cs-flex-p {
-    /* 14px - 16px */
-    font-size: clamp(0.875rem, 1.5vw, 1rem);
-    line-height: 1.5em;
-    margin: 0 0 1rem;
-    color: #353535;
-  }
-  #sbs .cs-name {
-    font-size: 1rem;
-    font-weight: bold;
-    line-height: 1.2em;
-    text-transform: uppercase;
-    margin: 0 0 0.25rem;
-    color: var(--headerColor);
-    display: block;
-  }
-  #sbs .cs-job {
-    font-size: 0.875rem;
-    line-height: 1.5em;
-    color: #353535;
-    display: block;
-  }
-  #sbs .cs-quote-icon {
-    /* 60px - 136px */
-    width: clamp(3.75rem, 10vw, 8.5rem);
-    height: auto;
-    position: absolute;
-    /* 16px - 32px */
-    right: clamp(1rem, 4vw, 2rem);
-    bottom: 0rem;
-  }
-  #sbs .cs-button-solid {
-    margin-top: 2rem;
-  }
-}
-/* Desktop - 1024px */
-@media only screen and (min-width: 64em) {
-  #sbs .cs-container {
-    flex-flow: row;
-    justify-content: space-between;
-    gap: 3.25rem;
-  }
-  #sbs .cs-left {
-    font-size: min(1.2vw, 1em);
-    flex: none;
-  }
-  #sbs .cs-right {
-    margin: 0;
-  }
-}
-/* Dark Mode */
-@media only screen and (min-width: 0em) {
-  body.dark-mode #sbs .cs-left:before, body.dark-mode #sbs .cs-left:after {
-    background: var(--accent);
-  }
-  body.dark-mode #sbs .cs-picture2 {
-    background-color: var(--dark);
-    /* 6px - 12px */
-    border: clamp(0.375em, 1.5vw, 0.75em) solid var(--dark);
-  }
-  body.dark-mode #sbs .cs-topper {
-    color: var(--primaryLight);
-  }
-  body.dark-mode #sbs .cs-title,
-  body.dark-mode #sbs .cs-text,
-  body.dark-mode #sbs .cs-h3,
-  body.dark-mode #sbs .cs-flex-p,
-  body.dark-mode #sbs .cs-name {
-    color: var(--bodyTextColorWhite);
-  }
-  body.dark-mode #sbs .cs-flex-group {
-    background-color: var(--accent);
-  }
-  body.dark-mode #sbs .cs-job {
-    color: var(--bodyTextColorWhite);
-    opacity: 0.8;
-  }
-  body.dark-mode #sbs .cs-quote-icon {
-    opacity: 0.2;
+@media only screen and (min-width: 0rem) {
+  #services-1646 {
+      /* padding: var(--sectionPadding); */
+      /* background-color: #f7f7f7; */
+      margin-top: 3rem;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .cs-container {
+          width: 100%;
+          max-width: calc(1280 / 16 * 1rem);
+          margin: auto;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          /* 16px - 20px */
+          gap: clamp(1rem, 2vw, 1.25rem);
+      }
+
+      .cs-content {
+          width: 100%;
+          /* 32px - 80px top & bottom */
+          /* 16px - 80px left & right */
+          padding: clamp(2rem, 6vw, 5rem) clamp(1rem, 5vw, 5rem);
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          /* left aligns content, center it horizontally by setting to center */
+          align-items: center;
+          /* left aligns content, center it horizontally by setting to center */
+          text-align: center;
+          background-color: #fff;
+      }
+
+      .cs-title {
+          color: var(--headerColor);
+      }
+
+      .cs-text {
+          /* 28px - 40px */
+          margin-bottom: clamp(1.75rem, 3.9vw, 2.5rem);
+          color: var(--bodyTextColor);
+      }
+
+      .cs-button-solid {
+          font-size: calc(16 / 16 * 1rem);
+          text-align: center;
+          /* 46px - 56px */
+          line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+          font-weight: 700;
+          text-decoration: none;
+          min-width: calc(147 / 16 * 1rem);
+          margin: 0;
+          /* prevents padding from adding to the width */
+          box-sizing: border-box;
+          padding: 0 calc(24 / 16 * 1rem);
+          color: #fff;
+          background-color: var(--primary);
+          display: inline-block;
+          position: relative;
+          z-index: 1;
+          transition: color 0.3s;
+
+          &:before {
+              content: "";
+              width: 0%;
+              height: 100%;
+              background: #000;
+              opacity: 1;
+              position: absolute;
+              top: 0;
+              left: 0;
+              z-index: -1;
+              transition: width 0.3s;
+          }
+  
+          &:hover {
+              color: #fff;
+          }
+  
+          &:hover:before {
+              width: 100%;
+          }
+      }
+
+      .cs-card-group {
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          display: grid;
+          grid-template-columns: repeat(12, 1fr);
+          justify-content: center;
+          /* 16px - 20px */
+          gap: clamp(1rem, 2.5vw, 1.25rem);
+      }
+
+      .cs-item {
+          list-style: none;
+          /* .cs-h3 and .cs-item-text both use text-align: inherit, so change the below to affect the whole item */
+          text-align: left;
+          width: 100%;
+          margin: 0;
+          box-sizing: border-box;
+          /* 16px - 32px */
+          padding: clamp(1rem, 3vw, 2rem);
+          box-sizing: border-box;
+          background-color: #fff;
+          display: flex;
+          flex-direction: column;
+          transition: border-color 0.3s;
+          gap: calc(24 / 16 * 1rem);
+          grid-column: span 12;
+
+          &:hover {
+              border-color: var(--primary);
+          }
+      }
+
+      .cs-icon {
+          width: calc(48 / 16 * 1rem);
+          height: auto;
+          display: block;
+      }
+
+      .cs-h3 {
+          font-size: calc(20 / 16 * 1rem);
+          text-align: inherit;
+          line-height: 1.2em;
+          margin: 0;
+          margin-bottom: calc(12 / 16 * 1rem);
+          color: var(--headerColor);
+          transition: color 0.3s;
+      }
+
+      .cs-item-text {
+          /* 14px - 16px */
+          font-size: clamp(0.875rem, 1.5vw, 1rem);
+          text-align: inherit;
+          line-height: 1.5em;
+          margin: 0;
+          color: var(--bodyTextColor);
+      }
   }
 }
-/*-- -------------------------- -->
-<---       Side By Side         -->
-<--- -------------------------- -*/
-/* Mobile - 360px */
-@media only screen and (min-width: 0em) {
-  #sbs-r {
-    padding: var(--sectionPadding);
-  }
-  #sbs-r .cs-container {
-    width: 100%;
-    max-width: 80rem;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 2.5rem;
-  }
-  #sbs-r .cs-left {
-    /* scaling the font size with the view width */
-    font-size: min(2.31vw, 0.7em);
-    /* using ems so we can use font size to scale the whole section */
-    width: 39.4375em;
-    height: 39.75em;
-    position: relative;
-  }
-  #sbs-r .cs-picture {
-    border-radius: 1.5em;
-    display: block;
-    position: absolute;
-    /* clips img tag corners */
-    overflow: hidden;
-  }
-  #sbs-r .cs-picture img {
-    width: 100%;
-    height: 100%;
-    /* makes image act like a background image */
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  #sbs-r .cs-picture1 {
-    width: 32.625em;
-    height: 36.3125em;
-    top: 0;
-    right: 0;
-  }
-  #sbs-r .cs-picture2 {
-    width: 25.875em;
-    height: 25em;
-    background-color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 40px;
-    /* 6px - 12px */
-    border: clamp(0.375em, 1.5vw, 0.75em) solid #fff;
-    bottom: 0;
-    left: 0;
-  }
-  #sbs-r .cs-right {
-    max-width: 33.875rem;
-    margin: auto;
-  }
-  #sbs-r .cs-topper {
-    text-align: left;
-    margin-bottom: 0.25rem;
-  }
-  #sbs-r .cs-title {
-    text-align: left;
-    max-width: 50rem;
-  }
-  #sbs-r .cs-text {
-    text-align: left;
-    max-width: 46.875rem;
-    margin-bottom: 1rem;
-  }
-  #sbs-r .cs-text:last-of-type {
-    margin-bottom: 2rem;
-  }
-  #sbs-r .cs-flex-group {
-    /* 16px - 32px */
-    padding: clamp(1rem, 3vw, 2rem);
-    background-color: #f7f7f7;
-    border-radius: 1rem;
-    position: relative;
-  }
-  #sbs-r .cs-flex-p {
-    /* 14px - 16px */
-    font-size: clamp(0.875rem, 1.5vw, 1rem);
-    line-height: 1.5em;
-    margin: 0 0 1rem;
-    color: #353535;
-  }
-  #sbs-r .cs-name {
-    font-size: 1rem;
-    font-weight: bold;
-    line-height: 1.2em;
-    text-transform: uppercase;
-    margin: 0 0 0.25rem;
-    color: var(--headerColor);
-    display: block;
-  }
-  #sbs-r .cs-job {
-    font-size: 0.875rem;
-    line-height: 1.5em;
-    color: #353535;
-    display: block;
-  }
-  #sbs-r .cs-quote-icon {
-    /* 60px - 136px */
-    width: clamp(3.75rem, 10vw, 8.5rem);
-    height: auto;
-    position: absolute;
-    /* 16px - 32px */
-    right: clamp(1rem, 4vw, 2rem);
-    bottom: 0rem;
-  }
-}
-/* Desktop - 1024px */
-@media only screen and (min-width: 64em) {
-  #sbs-r .cs-container {
-    flex-flow: row;
-    justify-content: space-between;
-    gap: 3.25rem;
-  }
-  #sbs-r .cs-left {
-    font-size: min(1.2vw, 1em);
-    /* sends it to the right */
-    order: 2;
-    flex: none;
-  }
-  #sbs-r .cs-right {
-    margin: 0;
-  }
-}
-/* Dark Mode */
-@media only screen and (min-width: 0em) {
-  body.dark-mode #sbs-r .cs-left:before, body.dark-mode #sbs-r .cs-left:after {
-    background: var(--accent);
-  }
-  body.dark-mode #sbs-r .cs-picture2 {
-    background-color: var(--dark);
-    /* 6px - 12px */
-    border: clamp(0.375em, 1.5vw, 0.75em) solid var(--dark);
-  }
-  body.dark-mode #sbs-r .cs-topper {
-    color: var(--primaryLight);
-  }
-  body.dark-mode #sbs-r .cs-title,
-  body.dark-mode #sbs-r .cs-text,
-  body.dark-mode #sbs-r .cs-h3,
-  body.dark-mode #sbs-r .cs-flex-p,
-  body.dark-mode #sbs-r .cs-name {
-    color: var(--bodyTextColorWhite);
-  }
-  body.dark-mode #sbs-r .cs-flex-group {
-    background-color: var(--accent);
-  }
-  body.dark-mode #sbs-r .cs-job {
-    color: var(--bodyTextColorWhite);
-    opacity: 0.8;
-  }
-  body.dark-mode #sbs-r .cs-quote-icon {
-    opacity: 0.2;
-  }
-}
-/*-- -------------------------- -->
-<---          Gallery           -->
-<--- -------------------------- -*/
-/* Mobile - 360px - Contains hover animation */
-@media only screen and (min-width: 0em) {
-  #gallery {
-    /* Centers button */
-    text-align: center;
-    padding: var(--sectionPadding);
-    position: relative;
-    /* Prevents overflow from the image going off screen */
-    overflow: hidden;
-  }
-  #gallery .cs-container {
-    width: 100%;
-    max-width: 82.625em;
-    margin: auto;
-  }
-  #gallery .cs-topper {
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  #gallery .cs-title {
-    text-align: center;
-    max-width: 38.8125rem;
-    margin-bottom: 2.5rem;
-  }
-  #gallery .cs-image-group {
-    /* used rem so it doesn't scale with the font size of on parent */
-    font-size: min(1.1vw, 1em);
-    width: 100%;
-    max-width: 82.625em;
-    margin: 0 auto 3.75rem;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 1.875em;
-  }
-  #gallery .cs-row {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 1.875em;
-  }
-  #gallery .cs-picture {
-    display: block;
-    position: relative;
-  }
-  #gallery .cs-picture img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  #gallery .cs-row-1 .cs-picture1 {
-    width: 26.25em;
-    height: 35.4375em;
-  }
-  #gallery .cs-row-1 .cs-picture2 {
-    width: 26.25em;
-    height: 39.3125em;
-  }
-  #gallery .cs-row-1 .cs-picture3 {
-    width: 26.25em;
-    height: 32em;
-  }
-  #gallery .cs-row-2 .cs-picture1 {
-    width: 26.25em;
-    height: 30.75em;
-  }
-  #gallery .cs-row-2 .cs-picture2 {
-    width: 26.25em;
-    height: 32.3125em;
-  }
-  #gallery .cs-row-2 .cs-picture3 {
-    width: 26.25em;
-    height: 39.3125em;
-  }
-  #gallery .cs-row-3 .cs-picture1 {
-    width: 26.25em;
-    height: 39.0625em;
-  }
-  #gallery .cs-row-3 .cs-picture2 {
-    width: 26.25em;
-    height: 28.25em;
-  }
-  #gallery .cs-row-3 .cs-picture3 {
-    width: 26.25em;
-    height: 39.3125em;
-  }
-}
-/* Dark mode */
-@media only screen and (min-width: 0em) {
-  body.dark-mode #gallery .cs-title {
-    color: var(--bodyTextColorWhite);
-  }
-}
-/*-- -------------------------- -->
-<---          Reviews           -->
-<--- -------------------------- -*/
-/* Mobile - 360px */
-@media only screen and (min-width: 0em) {
-  #reviews {
-    /* Centers the button */
-    text-align: center;
-    padding: var(--sectionPadding);
-  }
-  #reviews .cs-container {
-    width: 100%;
-    max-width: 69rem;
-    margin: auto;
-  }
-  #reviews .cs-topper {
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  #reviews .cs-title {
-    text-align: center;
-    max-width: 43.75rem;
-  }
-  #reviews .cs-text {
-    text-align: center;
-    max-width: 40.625rem;
-    /* 88px - 104px */
-    margin-bottom: clamp(5.5em, 10.2vw, 6.5em);
-  }
-  #reviews .cs-card-group {
-    /* 48px - 64px */
-    margin: 0 auto clamp(3rem, 5vw, 4rem);
-    padding: 0;
-  }
-  #reviews .cs-item {
-    text-align: left;
-    list-style: none;
-    width: 100%;
-    max-width: 33.875rem;
-    margin: 0 auto 4rem;
-    /* Prevents padding from affecting height & width */
-    box-sizing: border-box;
-    /* Padding L & R - 16px - 32px */
-    padding: 3.75rem clamp(1rem, 3.2vw, 2rem) 0;
-    /* 32px - 40px */
-    padding-bottom: clamp(2rem, 5.4vw, 2.5rem);
-    background: #fff;
-    box-shadow: 0px 20px 39px 0px rgba(0, 0, 0, 0.05);
-    border-radius: 0.25rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    position: relative;
-  }
-  #reviews .cs-item:last-of-type {
-    margin-bottom: 0;
-  }
-  #reviews .cs-item-img {
-    width: 5rem;
-    height: 5rem;
-    position: absolute;
-    top: -2.5rem;
-  }
-  #reviews .cs-item-p {
-    font-size: 1rem;
-    line-height: 1.5em;
-    margin: 0 0 1.25rem;
-    padding-bottom: 1.25rem;
-    color: var(--bodyTextColor);
-    border-bottom: 1px solid #e8e9ec;
-  }
-  #reviews .cs-reviewer {
-    font-size: 1rem;
-    font-weight: 700;
-    line-height: 1.5em;
-    width: 40%;
-    margin: 0 auto 0 0;
-    color: var(--headerColor);
-    display: block;
-  }
-  #reviews .cs-desc {
-    font-size: 0.875rem;
-    font-weight: 400;
-    color: var(#353535);
-    display: block;
-  }
-  #reviews .cs-item-stars {
-    width: 6rem;
-    height: 1rem;
-  }
-}
+
 /* Tablet - 768px */
-@media only screen and (min-width: 48em) {
-  #reviews .cs-card-group {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-  }
-  #reviews .cs-item {
-    /* reset margin so it won't interfere with flexbox */
-    margin: 0;
-  }
-}
-/* Dark Mode */
-@media only screen and (min-width: 0em) {
-  body.dark-mode #reviews .cs-title,
-  body.dark-mode #reviews .cs-text,
-  body.dark-mode #reviews .cs-item-p,
-  body.dark-mode #reviews .cs-reviewer {
-    color: var(--bodyTextColorWhite);
-  }
-  body.dark-mode #reviews .cs-item {
-    background: var(--medium);
-  }
-  body.dark-mode #reviews .cs-desc {
-    color: var(--primaryLight);
+@media only screen and (min-width: 48rem) {
+  #services-1646 {
+      .cs-container {
+          flex-direction: row;
+          align-items: stretch;
+      }
+
+      .cs-content {
+          width: 44%;
+          max-width: calc(522 / 16 * 1rem);
+          align-self: stretch;
+          flex: none;
+      }
+
+      .cs-item {
+          grid-column: span 6;
+      }
   }
 }
+                                                                
+/*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #services-1169 {
+      background-color: #fff;
+      padding: var(--sectionPadding);
+
+      .cs-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: auto;
+          /* changes to 1440px at large desktop */
+          max-width: calc(824 / 16 * 1rem);
+          width: 100%;
+          /* 48px - 64px */
+          gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-content {
+          display: flex;
+          flex-direction: column;
+          /* centers content horizontally, set to flex-start to left align */
+          align-items: center;
+          width: 100%;
+          /* set text align to left if content needs to be left aligned */
+          text-align: center;
+      }
+
+      .cs-title {
+          max-width: 20ch;
+      }
+
+      .cs-card-group {
+          display: grid;
+          align-items: stretch;
+          grid-template-columns: repeat(12, 1fr);
+          margin: 0;
+          width: 100%;
+          padding: 0;
+          /* 16px - 20px */
+          gap: clamp(1rem, 2vw, 1.25rem);
+      }
+
+      .cs-item {
+          z-index: 1;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          background-color: #f7f7f7;
+          width: 100%;
+          list-style: none;
+          text-align: left;
+          grid-column: span 12;
+          max-width: calc(400 / 16 * 1rem);
+          margin: 0 auto;
+
+          &:hover {
+              .cs-picture {
+                  img {
+                      transform: scale(1.2);
+                  }
+              }
+
+              .cs-h3,
+              .cs-link {
+                  color: var(--primary);
+              }
+
+              .cs-arrow {
+                  filter: initial;
+              }
+          }
+      }
+
+      .cs-picture {
+          position: relative;
+          display: block;
+          /* 180px - 240px */
+          height: clamp(11.25rem, 24vw, 15rem);
+          width: 100%;
+          /* clips the image from overflowing parent on hover */
+          overflow: hidden;
+
+          img {
+              z-index: -1;
+              position: absolute;
+              top: 0;
+              left: 0;
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+              transition: transform 0.65s;
+          }
+      }
+
+      .cs-info {
+          display: flex;
+          flex-direction: column;
+          padding: calc(24 / 16 * 1rem);
+      }
+
+      .cs-h3 {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          width: 100%;
+          /* prevents padding and border from affecting height and width */
+          box-sizing: border-box;
+          /* 20px - 25px */
+          font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+          line-height: 1.5em;
+          font-weight: 700;
+          color: var(--headerColor);
+          transition: background-color 0.3s;
+          text-align: inherit;
+          margin: 0 0 calc(12 / 16 * 1rem) 0;
+          transition: color 0.3s;
+      }
+
+      .cs-item-text {
+          width: 100%;
+          /* prevents padding and border from affecting height and width */
+          box-sizing: border-box;
+          font-size: clamp(0.875rem, 1.5vw, 1rem);
+          line-height: 1.5em;
+          color: var(--bodyTextColor);
+          text-align: inherit;
+          margin: 0;
+      }
+
+      .cs-link {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          text-decoration: none;
+          font-size: calc(16 / 16 * 1rem);
+          line-height: 1.2em;
+          font-weight: 700;
+          color: var(--headerColor);
+          text-align: inherit;
+          margin-top: calc(20 / 16 * 1rem);
+          transition: color 0.3s;
+
+          &:hover {
+              .cs-arrow {
+                  transform: translateX(0.25rem);
+              }
+          }
+      }
+
+      .cs-arrow {
+          filter: grayscale(1) brightness(0);
+          display: block;
+          height: auto;
+          width: calc(20 / 16 * 1rem);
+          transition:
+              filter 0.3s,
+              transform 0.3s;
+      }
+  }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #services-1169 {
+      .cs-container {
+          max-width: calc(944 / 16 * 1rem);
+      }
+      .cs-item {
+          grid-column: span 4;
+          max-width: initial;
+      }
+  }
+}
+
+/* Large Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+  #services-1169 {
+      .cs-container {
+          max-width: calc(1440 / 16 * 1rem);
+      }
+  }
+}
+
+                              
+
 
 /*# sourceMappingURL=local.css.map */

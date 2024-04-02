@@ -1,0 +1,106 @@
+---
+title: 'Services'
+description: 'Services page to show the services that are provided'
+preloadImg: '/assets/images/comp.jpg'
+permalink: 'service/'
+eleventyNavigation:
+    key: Services
+    order: 400
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/service.css">
+{% endblock %}
+
+{% block body %}
+
+
+
+
+<section id="RTsbs-1447">
+    <div class="cs-container">
+        <picture class="cs-picture">
+            <source media="(max-width: 600px)" srcset="/assets/images/code1.png">
+            <source media="(min-width: 601px)" srcset="/assets/images/code1.png">
+            <img loading="lazy" decoding="async" src="/assets/images/code1.png" alt="computer-code" width="650" height="600" aria-hidden="true">
+        </picture>
+        <div class="cs-content">
+            {# <span class="cs-topper">Giving Back</span> #}
+            <h2 class="cs-title">Web Design & Development Done Differently</h2>
+            <p class="cs-text">
+                What sets us apart in the development realm is our approach: we steer clear of WordPress, frameworks, or page builders. Instead, we dive deep into the code, crafting it meticulously line by line. This method grants us unparalleled control over design, while ensuring lightning-fast website performance, thanks to the absence of bulky or messy code that typically slows things down.
+            </p>
+            <p class="cs-text">
+                Handcrafted websites outshine the majority of WordPress sites and drag-and-drop page builders, often at a fraction of the cost. In the online arena, speed and organization are paramount, and that's where we excel.
+            </p>    
+        </div>
+    </div>
+</section>
+
+
+
+
+<section id="RTsbsr-1447">
+    <div class="cs-container">
+        <picture class="cs-picture">
+            <source media="(max-width: 600px)" srcset="/assets/images/code2.png">
+            <source media="(min-width: 601px)" srcset="/assets/images/code2.png">
+            <img loading="lazy" decoding="async" src="/assets/images/code2.png" alt="computer-code" width="650" height="600" aria-hidden="true">
+        </picture>
+        <div class="cs-content">
+            <h2 class="cs-title">Search Engine Optimization For 2024</h2>
+            <p class="cs-text">
+                If anyone promises to land you on Google's front page within three months, it's a red flag! Unless your website received a spotlight from a powerhouse like The New York Times, climbing to the top of search results typically requires years of effort.
+                </br>
+                </br>
+                Here are some cutting-edge search engine optimization strategies we're offering for 2024:
+            </p>
+
+<ul id="list-1405" class="cs-ul">
+    <li class="cs-li">
+        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/black-check.svg" alt="checkmark" width="24" height="24">
+Crafting Content and Blogs Centered Around Keywords
+    </li>
+    <li class="cs-li">
+        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/black-check.svg" alt="checkmark" width="24" height="24">
+Prioritizing Mobile-First Optimization for Superior User Experience
+    </li>
+    <li class="cs-li">
+        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/black-check.svg" alt="checkmark" width="24" height="24">
+Ensuring Full Responsiveness Across Mobile, Tablet, and Desktop Platforms
+    </li>
+    <li class="cs-li">
+        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/black-check.svg" alt="checkmark" width="24" height="24">
+Implementing Clean and Organized Code Structures to Aid Web Crawlers
+    </li>
+</ul>
+                                     
+        </div>
+    </div>
+</section>
+
+
+
+<section id="RTsbst-1447">
+    <div class="cs-container">
+        <picture class="cs-picture">
+            <source media="(max-width: 600px)" srcset="/assets/images/code3.png">
+            <source media="(min-width: 601px)" srcset="/assets/images/code3.png">
+            <img loading="lazy" decoding="async" src="/assets/images/code3.png" alt="computer-code" width="650" height="600" aria-hidden="true">
+        </picture>
+        <div class="cs-content">
+            {# <span class="cs-topper">Giving Back</span> #}
+            <h2 class="cs-title">Logos, Graphic Design, & Branding</h2>
+            <p class="cs-text">
+Additionally, we provide logo and graphic design services through our in-house graphic designer. Whether you seek a revamp for your current logo or envision a completely new design to bolster your business's brand identity, we're here to assist you.            </p>  
+        </div>
+    </div>
+</section>
+                                          
+                                
+
+{% include 'components/cta.html' %}
+
+{% endblock %}

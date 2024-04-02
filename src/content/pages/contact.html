@@ -1,7 +1,7 @@
 ---
 title: 'Contact'
-description: 'Meta description for the page'
-preloadImg: '/assets/images/cabinets2.jpg'
+description: 'Contact page for contact information'
+preloadImg: '/assets/images/comp.jpg'
 permalink: 'contact/'
 ---
 
@@ -12,84 +12,135 @@ permalink: 'contact/'
 {% endblock %}
 
 {% block body %}
-
-    <!-- ============================================ -->
-    <!--                    LANDING                   -->
-    <!-- ============================================ -->
+   
 
     <section id="int-hero">
         <h1 id="home-h">Contact Us</h1>
         <picture>
-            <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-            <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
+            <source media="(max-width: 600px)" srcset="/assets/images/screen.jpg">
+            <source media="(min-width: 601px)" srcset="/assets/images/screen.jpg">
+            <img aria-hidden="true" decoding="async" src="/assets/images/screen.jpg" alt="computer screen" loading="eager" width="2500" height="1667">
         </picture>
     </section>
 
-    <!-- ============================================ -->
-    <!--                Contact Form                  -->
-    <!-- ============================================ -->
 
-    <section id="cs-contact">
-        <div class="cs-container">
-            <form id="cs-form" name="Contact Form" method="post">
-                <div class="cs-content">
-                    <span class="cs-topper">Contact</span>
-                    <h2 class="cs-title">Get in Touch</h2>
-                    <p class="cs-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus elementum ullamcorper ipsum porttitor aliquam. Id magna urna ultrices odio pulvinar. Sed ut.
-                    </p>
-                </div>
-                <label>
-                    Name
-                    <input required type="text" id="name" name="name" placeholder="Name">
-                </label>
-                <label>
-                    Email
-                    <input required type="text" id="email" name="email" placeholder="Email">
-                </label>
-                <label>
-                    Phone
-                    <input required type="text" id="phone" name="phone" placeholder="Phone">
-                </label>
-                <label>
-                    How Did You Find Us
-                    <input type="text" id="find" name="find-us" placeholder="How did you find us?">
-                </label>
-                <label class="cs-label-message">
-                    Message
-                    <textarea required name="Message" id="message" placeholder="Write message..."></textarea>
-                </label>
-                <button class="cs-button-solid" type="submit">Submit Message</button>
-            </form>
-            <div class="cs-right-section">
-                <!--Email-->
-                <span class="cs-header">Email</span>
-                <a class="cs-link" href="mailto:{{client.email}}">{{client.email}}</a>
-                <!--Phone-->
-                <span class="cs-header">Phone</span>
-                <a class="cs-link" href="tel:{{client.phoneForTel}}">{{client.phoneFormatted}}</a>
-                <!--Address-->
-                <span class="cs-header">Address</span>
-                <a class="cs-link" href="{{client.address.mapLink}}">
-                    {{client.address.lineOne}},
-                    <br />
-                    {{client.address.lineTwo}},
-                    <br />
-                    <span class="cs-block">
-                        {{client.address.city}}
-                        {{client.address.state}}
-                        {{client.address.zip}}
-                    </span>
-                </a>
 
-                <!-- Background Image-->
-                <picture class="cs-bg-picture">
-                    <source media="(min-width: 601px)" srcset="/assets/images/skyscraper.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/skyscraper.jpg" alt="building" loading="lazy" width="2500" height="1667">
-                </picture>
 
-            </div>
+<section id="contact-1389">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Contact Us</span>
+            <h2 class="cs-title">Get in Touch</h2>
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <picture class="cs-icon-wrapper">
+                        <img aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/phone-76.svg" alt="phone icon" class="cs-icon" width="40" height="40" decoding="async">
+                    </picture>
+                    <div class="cs-flex-group">
+                        <span class="cs-header">Phone</span>
+                        <a href="tel:888-4565-789
+                        " class="cs-link">+1 (604) 763 2030
+                        </a>
+                    </div>
+                </li>
+                <li class="cs-li">
+                    <picture class="cs-icon-wrapper">
+                        <img aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mail-76.svg" alt="address icon" class="cs-icon" width="40" height="40" decoding="async">
+                    </picture>
+                    <div class="cs-flex-group">
+                        <span class="cs-header">Email</span>
+                        <a href="mailto:Email@stitch.com" class="cs-link">contact@umbia.ca</a>
+                    </div>
+                </li>
+            </ul>
         </div>
-    </section>
+        <!--Form-->
+        <form class="cs-form" id="cs-form-1389" name="Contact Form" method="post">
+            <label class="cs-label">
+                <input class="cs-input" required type="text" id="name-1389" name="name" placeholder="Your Name">
+            </label>
+            <label class="cs-label cs-email">
+                <input class="cs-input" required type="email" id="email-1389" name="email" placeholder="Your Email Address">
+            </label>
+            <label class="cs-label cs-phone">
+                <input class="cs-input" required type="number" id="phone-1389" name="phone" placeholder="Your Phone Number">
+            </label>
+            <label class="cs-label">
+                <textarea class="cs-input cs-textarea" required name="Message" id="message-1389" placeholder="Type your Message Here ..."></textarea>
+            </label>
+            <button class="cs-button-solid cs-submit" type="submit">Submit</button>
+        </form>
+    </div>
+</section>
+
+
+
+<section id="faq">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Asked questions</span>
+            <h2 class="cs-title">Frequently Asked Questions</h2>
+        </div>
+        <ul class="cs-faq-group">
+            <!-- Active class added as default -->
+            <li class="cs-faq-item active">
+                <button class="cs-button">
+                    <span class="cs-number">1</span>
+                    <span class="cs-button-text">
+                        What is your cancellation policy?
+                    </span>
+                </button>
+                <p class="cs-item-p">
+                    asdawsd asdasdas dasdas das dasd
+                </p>
+            </li>
+            <li class="cs-faq-item">
+                <button class="cs-button">
+                    <span class="cs-number">2</span>
+                    <span class="cs-button-text">
+                        What is your cancellation policy?
+                    </span>
+                </button>
+                <p class="cs-item-p">
+                    asdawsd asdasdadw adawsd aws daswda 
+                </p>
+            </li>
+            <li class="cs-faq-item">
+                <button class="cs-button">
+                    <span class="cs-number">3</span>
+                    <span class="cs-button-text">
+                        What is your cancellation policy?
+                    </span>
+                </button>
+                <p class="cs-item-p">
+                    asdaWSd awsd asd awwdawd asd awsd asd  
+                </p>
+            </li>
+            <li class="cs-faq-item">
+                <button class="cs-button">
+                    <span class="cs-number">4</span>
+                    <span class="cs-button-text">
+                        What is your cancellation policy?
+                    </span>
+                </button>
+                <p class="cs-item-p">
+                    asdaWSd asd asda wsdawdawd asd 
+                </p>
+            </li>
+        </ul>
+    </div>
+    <!--Grey Swirl -->
+    <img class="cs-floater" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/swirl-grey.svg" alt="" loading="lazy" decoding="async" width="685" height="685" aria-hidden="true">
+</section>
+<script>
+    const faqItems = Array.from(document.querySelectorAll('.cs-faq-item'));
+        for (const item of faqItems) {
+            const onClick = () => {
+            item.classList.toggle('active')
+        }
+        item.addEventListener('click', onClick)
+        }
+                                
+</script>                             
+                                
 {% endblock %}

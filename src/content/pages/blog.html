@@ -1,7 +1,7 @@
 ---
 title: 'Blog'
-description: 'Meta description for the page'
-preloadImg: '/assets/images/cabinets2.jpg'
+description: 'Blog page for all the posts'
+preloadImg: '/assets/images/comp.jpg'
 permalink: 'blog/'
 eleventyNavigation:
     key: Blog
@@ -15,36 +15,24 @@ eleventyNavigation:
 {% endblock %}
 
 {% block body %}
-    <!-- ============================================ -->
-    <!--                    LANDING                   -->
-    <!-- ============================================ -->
 
     <section id="int-hero">
         <h1 id="home-h">Blog</h1>
         <picture>
-            <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-            <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
+            <source media="(max-width: 600px)" srcset="/assets/images/comp.jpg">
+            <source media="(min-width: 601px)" srcset="/assets/images/comp.jpg">
+            <img aria-hidden="true" decoding="async" src="/assets/images/comp.jpg" alt="office background" loading="eager" width="2500" height="1667">
         </picture>
     </section>
 
-    <!-- ============================================ -->
-    <!--              Main Blog Content               -->
-    <!-- ============================================ -->
 
     <div class="blog-container main-content-wrapper">
-        <!--Main content -->
         <div class="main-content">
-            <!-- ============================================ -->
-            <!--                 Blog Articles                -->
-            <!-- ============================================ -->
-
             {% if collections.post | length == 0 %}
                 <h1>No Recent Posts</h1>
             {% else %}
                 {%- for post in collections.post | reverse -%}
                     <article class="recent-articles">
-                        <!--Main Article Image-->
                         <picture class="blog-mainImage">
                             <img
                             src="{{ post.data.image }}"
@@ -53,10 +41,8 @@ eleventyNavigation:
                             height="400"
                             decoding="async" />
                         </picture>
-                        <!--Article Info-->
                         <div class="article-group">
                             <div class="blog-authorGroup">
-                                <!--Author Image-->
                                 <picture class="blog-author-img">
                                     <img
                                     src="/assets/svgs/profile.svg"
@@ -67,7 +53,6 @@ eleventyNavigation:
                                 </picture>
                                 <span class="blog-author">{{ post.data.author }}</span>
                                 <span aria-hidden="true" class="blog-dot"></span>
-                                <!--Blog Date-->
                                 <span class="blog-date">{{ post.date | postDate }}</span>
                             </div>
                             <h2 class="blog-h1">
@@ -85,4 +70,6 @@ eleventyNavigation:
 
         {% include 'components/featured-post.html' %}
     </div>
+
+{% include 'components/cta.html' %}
 {% endblock %}

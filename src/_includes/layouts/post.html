@@ -14,10 +14,7 @@ eleventyComputed:
 {% endblock %}
 
 {% block body %}
-    <!-- ============================================ -->
-    <!--                    LANDING                   -->
-    <!-- ============================================ -->
-
+  
     <section id="int-hero">
         <picture>
             <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
@@ -26,28 +23,17 @@ eleventyComputed:
         </picture>
     </section>
 
-    <!-- ============================================ -->
-    <!--              Main Blog Content               -->
-    <!-- ============================================ -->
-
     <div class="blog-container main-content-wrapper">
-        <!--Main content -->
         <div class="main-content">
-            <!-- ============================================ -->
-            <!--                  Blog Article                -->
-            <!-- ============================================ -->
-
+    
             <article class="blog-article">
-                <!--Main Article Image-->
                 <picture class="blog-mainImage">
                     <img src="{{ image }}" alt="{{ imageAlt }}" width="795" height="400" decoding="async" />
                 </picture>
 
-                <!--Article Info-->
                 <div class="article-group">
                     <h1 class="blog-h1">{{ title }}</h1>
                     <div class="blog-authorGroup">
-                        <!--Author Image-->
                         <picture class="blog-author-img">
                             <img
                             src="/assets/svgs/profile.svg"
@@ -58,7 +44,6 @@ eleventyComputed:
                         </picture>
                         <span class="blog-author">{{ author }}</span>
                         <span aria-hidden="true" class="blog-dot"></span>
-                        <!--Blog Date-->
                         <span class="blog-date">{{ date | postDate }}</span>
                     </div>
                 </div>
@@ -67,7 +52,6 @@ eleventyComputed:
                 </section>
             </article>
         </div>
-        <!-- End .main-content -->
 
         {% include 'components/featured-post.html' %}
     </div>

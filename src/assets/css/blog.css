@@ -1,4 +1,3 @@
-/* PAGE-SPECIFIC STYLES FOR THE BLOG AND ARTICLE PAGES */
 /*-- -------------------------- -->
 <---        Core Styles         -->
 <--- -------------------------- -*/
@@ -318,7 +317,6 @@
     text-decoration: none;
     min-width: 9.375rem;
     margin: auto;
-    /* prevents padding from adding to the width */
     box-sizing: border-box;
     padding: 0 1.5rem;
     color: #fff;
@@ -654,7 +652,6 @@
     margin: auto;
   }
   #cs-footer .cs-logo-group {
-    /* takes up all the space, lets the other ul's wrap below it */
     width: 100%;
     position: relative;
   }
