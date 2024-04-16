@@ -6,15 +6,6 @@
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0em) {
-    body,
-    html,
-    * {
-        font-size: 100%;
-        margin: 0;
-        box-sizing: border-box;
-        padding: 0;
-    }
-
     .blog-container {
         width: 94%;
         max-width: calc(1120 / 16 * 1em);
