@@ -19,38 +19,47 @@
                 </div>
             </button>
             <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
-            <!-- This also allows for easy substitution of CodeStitch navigations. Just replace the .cs-ul-wrapper in the new navigation with this one -->
+            {# This also allows for easy substitution of CodeStitch navigations. Just replace the .cs-ul-wrapper in the new navigation with this one to have full eleventyNavigation support #}
             <div class="cs-ul-wrapper">
                 <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
                     {% set navPages = collections.all | eleventyNavigation %}
+
                     {# Loop through all pages with a eleventyNavigation in the frontmatter #}
                     {% for entry in navPages %}
-                        {# Define a hasChild variable to make it easier to test what links are dropdowns#}
+
+                        {# Define a hasChild variable to make it easier to test what navigation items are have child dropdown pages #}
                         {% set hasChild = entry.children.length %}
 
-                        {# If this page is a dropdown, give it the appropriate classes, icons and accessibility attributes#}
-                        <li class="cs-li {% if hasChild %} cs-dropdown {% endif %}" {% if hasChild %} tabindex="0"{% endif %}>
+                        {# Check the frontmatter for hideOnMobile/hideOnDesktop. Form a list of classes to be joined when the item is rendered #}
+                        {% set hideClasses = [] %}
+                        {% if entry.hideOnMobile %}
+                            {% set hideClasses = (hideClasses.push("cs-hide-on-mobile"), hideClasses) %}
+                        {% endif %}
+                        {% if entry.hideOnDesktop %}
+                            {% set hideClasses = (hideClasses.push("cs-hide-on-desktop"), hideClasses) %}
+                        {% endif %}
 
-                            {# Similarly, if the link is active, apply the necessary classes #}
-                            {% if entry.url %}
-                                <a href="{{ entry.url }}" class="cs-li-link {% if entry.url == page.url %} cs-active {% endif %}">
-                                    {{ entry.key }}
-                                    {% if hasChild %}
-                                        <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
-                                    {% endif %}
-                                </a>
+                        {# If this page is a dropdown, give it the appropriate classes, icons and accessibility attributes #}
+                        <li class="cs-li {% if hasChild %} cs-dropdown {% endif %} {{ hideClasses | join(" ") }}" {% if hasChild %} tabindex="0" aria-expanded="false" {% endif %}>
 
-                            {% else %}
-                                <span class="cs-li-link {% if entry.url == page.url %} cs-active {% endif %}">
-                                    {{ entry.key }}
-                                    {% if hasChild %}
-                                        <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
-                                    {% endif %}
-                                </span>
-                            {% endif %}
-
-                            {# Dropdowns have another ul/li set up within the parent li. Render in the same way as a normal link #}
+                            {# If the page has child dropdown pages, render it as a <span> tag with the appropriate dropdown HTML #}
                             {% if hasChild %}
+
+                                {# Check to see if the user's current page is one of the child pages. If so, apply the cs-active class to the dropdown parent #}
+                                {% set activeClass = "" %}
+                                {% for child in entry.children %}
+                                    {% if child.url == page.url %}
+                                        {% set activeClass = "cs-active" %}
+                                    {% endif %}
+                                {% endfor %}
+
+                                {# Render the <span> with the active class, dropdown icon and child links #}
+                                <span class="cs-li-link {{ activeClass }}">
+                                    {{ entry.key }}
+                                    <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
+                                </span>
+
+                                {# Dropdowns have another ul/li set up within the parent li, which gets rendered in the same way as a normal link #}
                                 <ul class="cs-drop-ul">
                                     {% for child in entry.children %}
                                         <li class="cs-drop-li">
@@ -58,6 +67,11 @@
                                         </li>
                                     {% endfor %}
                                 </ul>
+                            {% else %}
+                                {# Normal pages are rendered as <a> tags, in the normal way you'd expect #}
+                                <a href="{{ entry.url }}" class="cs-li-link {% if entry.url == page.url %} cs-active {% endif %}">
+                                    {{ entry.key }}
+                                </a>
                             {% endif %}
                         </li>
                     {% endfor %}

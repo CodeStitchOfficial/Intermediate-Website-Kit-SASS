@@ -12,12 +12,12 @@
         <link rel="canonical" href="{{ client.domain }}{{ page.url }}">
 
         <!--Social Media Display-->
-        <meta property="og:title" content="{{ title }}" />
-        <meta property="og:description" content="{{ description }}" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="{{ client.domain }}{{ page.url }}" />
-        <meta property="og:image" content="/assets/images/logo-small.png" />
-        <meta property="og:image:secure_url" content="/assets/images/logo-small.png" />
+        <meta property="og:title" content="{{ title }}"/>
+        <meta property="og:description" content="{{ description }}"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="{{ client.domain }}{{ page.url }}"/>
+        <meta property="og:image" content="/assets/images/logo-small.png"/>
+        <meta property="og:image:secure_url" content="/assets/images/logo-small.png"/>
 
         <!--Favicons-->
         <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
@@ -34,38 +34,18 @@
 
         <!-- Preload an image - tag not rendered if preloadImg is blank to stop console errors -->
         {% if preloadImg != '' %}
-            <link rel="preload" as="image" href="{{ preloadImg }}" />
+            <link rel="preload" as="image" href="{{ preloadImg }}"/>
         {% endif %}
 
         <!-- Sitewide Stylesheets and Scripts -->
         <link rel="stylesheet" href="/assets/css/root.css">
         <link rel="stylesheet" href="/assets/css/dark.css">
-        <script defer src="/assets/js/nav.js"></script>
         <script defer src="/assets/js/dark.js"></script>
+        <script defer src="/assets/js/nav.js"></script>
 
         {% block head %}{% endblock %}
 
-        <!--For home page, use service keywords for the title, including location for SEO.
-        Other pages should just include the page name.
-        
-        EXAMPLE:
-        Home page - House Painting Contractors | Painters and Co. | TestCity, WA
-        About Page - About us | Painters and Co.
-        -->
-        <title>
-            {% if page.url == '/'%}
-                {{ title }}
-                |
-                {{ client.name }}
-                |
-                {{ client.address.city }},
-                {{ client.address.state }}
-            {% else %}
-                {{ title }}
-                |
-                {{ client.name }}
-            {% endif %}
-        </title>
+        <title>{{ title }}</title>
     </head>
     <body>
         <!--Screen reader skip main nav-->

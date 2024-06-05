@@ -1,12 +1,14 @@
 ---
 title: 'Page title for <title> and OG tags'
-description: 'Description for <meta> and OG tags'
+description: 'Description for <meta> description and OG tags'
 preloadImg: '/assets/images/imagename.format'
-permalink: '/page-path'
+permalink: 'page-path/'
 eleventyNavigation:
     key: Name to appear in navigation
-    parent: Delete, or put another page's key here to create a dropdown
     order: 1000
+    parent: Optional - Put another page's "key" here to create a dropdown
+    hideOnMobile: Optional - set to "true" to hide on devices from, and below, 1023px
+    hideOnDesktop: Optional - set to "true" to hide on devices above, and including, 1024px
 ---
 
 {% extends "layouts/base.html" %}
@@ -16,5 +18,5 @@ eleventyNavigation:
 {% endblock %}
 
 {% block body %}
-    <!-- Page HTML goes here, without a <main> wrapper -->
+    <!-- Page HTML goes here, without a <main> wrapper. The <main> tag is already presented in layouts/base.html -->
 {% endblock %}
