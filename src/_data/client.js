@@ -1,4 +1,4 @@
-{
+module.exports = {
     "name": "Code Stitch Web Designs",
     "email": "help@codestitch.app",
     "phoneForTel": "555-779-4407",
@@ -11,5 +11,10 @@
         "zip": "80206",
         "mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
     },
-    "domain": "https://www.codestitch.app"
-}
+    "socials": {
+        "facebook": "https://www.facebook.com/",
+        "instagram": "https://www.instagram.com/",
+    },
+    //! Make sure you include the file protocol (e.g. https://) and that NO TRAILING SLASH is included
+    "domain": "https://www.example.com"
+};

@@ -5,7 +5,7 @@
 <--- -------------------------- -*/
 
 /* CodeStitch Root and Helpers */
-@media only screen and (min-width: 0em) {
+@media only screen and (min-width: 0rem) {
     // Website colors
     :root {
         --primary: #ffba19;
@@ -73,6 +73,7 @@
         font-size: calc(16 / 16 * 1rem);
         line-height: calc(50 / 16 * 1em);
         font-weight: bold;
+
         // Transition Properties
         color: #000;
         transition: color 0.3s;
@@ -102,11 +103,25 @@
             transition: width 0.3s;
         }
     }
+
+    .cs-hide-on-mobile {
+        display: none;
+    }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    .cs-hide-on-mobile {
+        display: block;
+    }
+
+    .cs-hide-on-desktop {
+        display: none;
+    }
 }
 
 /* Fonts and general styles */
-@media only screen and (min-width: 0em) {
-
+@media only screen and (min-width: 0rem) {
     body,
     html {
         margin: 0;
@@ -181,11 +196,8 @@
         font-family: "Roboto";
         font-weight: 400;
         font-display: swap;
-        src: local(""),
-            url("/assets/fonts/roboto-v29-latin-regular.woff2") format("woff2"),
-            /* Chrome 26+, Opera 23+, Firefox 39+ */
-                url("/assets/fonts/roboto-v29-latin-regular.woff")
-                format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        src: local(""), url("/assets/fonts/roboto-v29-latin-regular.woff2") format("woff2"),
+            /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
     }
     /* roboto-700 - latin */
     @font-face {
@@ -193,10 +205,8 @@
         font-family: "Roboto";
         font-weight: 700;
         font-display: swap;
-        src: local(""),
-            url("/assets/fonts/roboto-v29-latin-700.woff2") format("woff2"),
-            /* Chrome 26+, Opera 23+, Firefox 39+ */
-                url("/assets/fonts/roboto-v29-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        src: local(""), url("/assets/fonts/roboto-v29-latin-700.woff2") format("woff2"),
+            /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
     }
     /* roboto-900 - latin */
     @font-face {
@@ -204,10 +214,8 @@
         font-family: "Roboto";
         font-weight: 900;
         font-display: swap;
-        src: local(""),
-            url("/assets/fonts/roboto-v29-latin-900.woff2") format("woff2"),
-            /* Chrome 26+, Opera 23+, Firefox 39+ */
-                url("/assets/fonts/roboto-v29-latin-900.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        src: local(""), url("/assets/fonts/roboto-v29-latin-900.woff2") format("woff2"),
+            /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-900.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
     }
 }
 
@@ -462,8 +470,7 @@
             width: auto;
             overflow: scroll;
             /* 28px - 40px */
-            padding: calc(48 / 16 * 1rem) clamp(1.75rem, 3vw, 2.5rem)
-                calc(32 / 16 * 1rem) calc(70 / 16 * 1rem);
+            padding: calc(48 / 16 * 1rem) clamp(1.75rem, 3vw, 2.5rem) calc(32 / 16 * 1rem) calc(70 / 16 * 1rem);
             gap: calc(20 / 16 * 1rem);
         }
 
@@ -558,7 +565,6 @@
         }
 
         &.cs-active {
-
             .cs-ul-wrapper {
                 opacity: 1;
                 transform: scaleX(1);
@@ -618,7 +624,11 @@
                 position: relative;
                 transition: opacity 0.3s;
             }
-            &.cs-active {
+
+            &.cs-active,
+            &:hover,
+            &:focus,
+            &:focus-within {
                 .cs-drop-ul {
                     visibility: visible;
                     opacity: 1;
@@ -658,8 +668,7 @@
             box-sizing: border-box;
             overflow: hidden;
             padding: 0 calc(24 / 16 * 1rem) 0 calc(24 / 16 * 1rem);
-            transition: padding 0.3s, margin 0.3s, height 0.3s, opacity 0.3s,
-                transform 0.3s, visibility 0.3s;
+            transition: padding 0.3s, margin 0.3s, height 0.3s, opacity 0.3s, transform 0.3s, visibility 0.3s;
             gap: calc(12 / 16 * 1rem);
             transform-origin: top right;
         }
@@ -684,7 +693,10 @@
     #cs-navigation {
         .cs-dropdown {
             position: relative;
-            &:hover {
+
+            &:hover,
+            &:focus,
+            &:focus-within {
                 cursor: pointer;
                 .cs-drop-ul {
                     visibility: visible;
@@ -965,7 +977,7 @@
 <--- -------------------------- -*/
 
 /* Mobile */
-@media only screen and (min-width: 0em) {
+@media only screen and (min-width: 0rem) {
     #int-hero {
         z-index: 1;
         position: relative;
@@ -1032,7 +1044,7 @@
 }
 
 /* Tablet */
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 48rem) {
     #int-hero {
         font-size: 100%;
 
@@ -1043,7 +1055,7 @@
 }
 
 /* Small Desktop */
-@media only screen and (min-width: 64em) {
+@media only screen and (min-width: 64rem) {
     #int-hero {
         background-attachment: fixed;
         min-height: calc(300 / 16 * 1rem);
@@ -1059,7 +1071,7 @@
 <--- -------------------------- -*/
 
 /* Mobile */
-@media only screen and (min-width: 0em) {
+@media only screen and (min-width: 0rem) {
     #cta {
         position: relative;
         padding: calc(50 / 16 * 1rem) 0;
@@ -1122,7 +1134,7 @@
 }
 
 /* Small Desktop */
-@media only screen and (min-width: 64em) {
+@media only screen and (min-width: 64rem) {
     #cta {
         padding: calc(168 / 16 * 1rem) 0;
     }
@@ -1179,7 +1191,7 @@
 }
 
 /* Dark Mode */
-@media only screen and (min-width: 0em) {
+@media only screen and (min-width: 0rem) {
     body.dark-mode {
         #cta {
             &:after {
@@ -1194,7 +1206,7 @@
 <--- -------------------------- -*/
 
 /* Mobile */
-@media only screen and (min-width: 0em) {
+@media only screen and (min-width: 0rem) {
     #footer {
         background: #1c1c1c;
         padding: calc(84 / 16 * 1rem) 0 calc(20 / 16 * 1rem);
@@ -1223,7 +1235,6 @@
                 opacity: 0.9;
                 margin: auto;
                 width: 100%;
-                width: calc(307 / 14 * 1rem);
                 font-size: calc(14 / 16 * 1rem);
                 line-height: calc(27 / 14 * 1rem);
                 color: #fff;
@@ -1343,7 +1354,7 @@
 }
 
 /* Small Desktop */
-@media only screen and (min-width: 64em) {
+@media only screen and (min-width: 64rem) {
     #footer {
         font-size: min(1.2vw, 1em);
         .container {
@@ -1378,14 +1389,13 @@
             margin: 0;
             max-width: none;
             width: calc(609 / 16 * 1rem);
+
             .lists {
                 margin: 0;
                 max-width: calc(769 / 16 * 1rem);
-                max-width: initial;
                 width: 96%;
 
                 ul {
-
                     li {
                         a {
                             position: relative;
@@ -1434,7 +1444,7 @@
 }
 
 /* Dark Mode */
-@media only screen and (min-width: 0em) {
+@media only screen and (min-width: 0rem) {
     body.dark-mode {
         #footer {
             background: #061623;

@@ -7,7 +7,7 @@
   <h3 align="center">Intermediate Starter Kit (SASS)</h3>
 
   <p align="center">
-    Introducing the official intermediate starter kit, presented by CodeStitch. This kit includes a pre-configured Eleventy setup that utilizes Nunjucks templating, along with a seamless integration of Decap CMS, providing an easy way to manage a blog. Everything is ready to go right from the start, offering a fantastic introduction to the advantages of a Static Site Generator, complete with SASS preprocessing.
+    Introducing the Intermediate Website Kit, presented by CodeStitch. This kit includes a pre-configured Eleventy environment with Nunjucks templating, along with seamless integration of Decap CMS. This setup allows you to quickly start a project while providing your client with a blog for content management. Everything is ready to go right from the start, offering a fantastic introduction to the advantages of a Static Site Generator, complete with SASS preprocessing.
     <br/>
     <br/>
     <a href="https://github.com/CodeStitchOfficial/Intermediate-Website-Kit-LESS">LESS Starter Kit</a>
@@ -22,160 +22,261 @@
 
 ## Table of Contents
 
--   [Overview](#overview)
--   [Prerequisites](#prerequisites)
--   [File Structure](#fileStructure)
-    -   [Root Files and Folders](#rootFilesAndFolders)
-    -   [Source Files and Folders](#sourceFilesAndFolders)
--   [Getting Started](#gettingStarted)
--   [Expanding the Project](#expandingTheProject)
-    -   [Reusing Code](#reusingCode)
-    -   [Adding More Pages](#addingMorePages)
-    -   [Navigation via Front Matter](#navigationViaFrontMatter)
-    -   [Configuring the CMS](#configuringTheCms)
--   [Deployment](#deployment)
+-   <a href="#overview">Overview</a>
+-   <a href="#prerequisites">Prerequisites</a>
+    -   <a href="#must-knows">Must Knows</a>
+    -   <a href="#good-to-knows">Good-to-knows</a>
+-   <a href="#quick-start-guide">Quick Start Guide</a>
+-   <a href="#explanation-of-file-structure">Explanation of File Structure</a>
+    -   <a href="#root-files">Root Files</a>
+        -   <a href="#eleventyjs">.eleventy.js</a>
+        -   <a href="#netlifytoml">netlify.toml</a>
+        -   <a href="#packagejson-and-package-lockjson">package.json and package-lock.json</a>
+    -   <a href="#nodemodules">node_modules/</a>
+    -   <a href="#public">public/</a>
+    -   <a href="#src">src/</a>
+        -   <a href="#_data">\_data/</a>
+        -   <a href="#_includes">\_includes</a>
+    -   <a href="#admin">admin/</a>
+    -   <a href="#assets">assets/</a>
+    -   <a href="#config">config/</a>
+    -   <a href="#content">content/</a>
+    -   <a href="#root-src-files">Root src/ Files</a>
+        -   <a href="#redirects">\_redirects</a>
+        -   <a href="#indexhtml">index.html</a>
+        -   <a href="#robotshtml">robots.html</a>
+        -   <a href="#sitemaphtml">sitemap.html</a>
+-   <a href="#deployment">Deployment</a>
 
 <a name="overview"></a>
 
 ## Overview
 
-The intermediate starter kits build off the beginner kits, mainly by including a pre-configured <a href="https://www.11ty.dev">Eleventy</a> environment, which
-allows for repeated components, centralized data and greater room to scale as your clients grow. On top of this, a blog has been provided through
-<a href="https://decapcms.org/">Decap CMS</a> to allow your clients to manage their content on their own. This can easily be adapted to anything which requires
-changing content, such as menus, job listing boards, portfolios and much more. A few additional plugins have also been included to improve developer experience,
-providing HTML/CSS minification and automatic sitemap generation
+The Intermediate Website Kit builds off the beginner kits, mainly by including a pre-configured [Eleventy](https://www.11ty.dev) environment. This setup allows for reusable components, centralized data, and greater scalability as your clients grow. Additionally, a blog has been provided through [Decap CMS](https://decapcms.org/), enabling your clients to manage their own content. This can easily be adapted to various use cases, such as menus, job listing boards, portfolios, and more. A few additional plugins have also been included to enhance the developer experience, offering HTML/CSS minification, JS bundling/minification, and automatic sitemap generation.
 
-An example website has also been provided, with easy substitution of website sections possible through the use of <a href="https://codestitch.app/">CodeStitch's
-vanilla component library</a>. This kit aims to get any project off the ground in as little time as possible, with deployment being possible in as little as two
-minutes - including CMS hosting.
+An example website is also provided, with easy substitution of website sections through the use of [CodeStitch's vanilla component library](https://codestitch.app/). This kit aims to get any project off the ground as quickly as possible, with deployment achievable in as little as two minutes, including CMS hosting.
 
 <a name="prerequisites"></a>
 
 ## Prerequisites
 
-Only the vanilla web technologies are _required_ before using this kit, with some familiarity with Eleventy and Templating Languages also recommended, but not essential. A lot of the leg-work for the non-vanilla technologies has been done for you. If you would like to read up on some of these things, we recommend the following resources:
+<a name="must-knows"></a>
 
-1. If you've never used Nunjucks before, [this excellent article by Hyunbin](https://hyunbinseo.medium.com/nunjucks-settings-for-vs-code-a0da0dc66b95) explains how to set up VSCode to best support Nunjucks, including formatting, syntax highlighting and Emmet.
-2. The [Nunjucks Documentation](https://mozilla.github.io/nunjucks/) provides a complete overview of the Nunjucks syntax - the templating language of choice for this kit. Highly recommended to make the most of this kit.
-3. A more applied article about leveraging Nunjucks/Eleventy to make your code modular can be [found here](https://www.webstoemp.com/blog/modular-code-nunjucks-eleventy/), courtesy of Webstoemp.
-4. The [Eleventy Documentation](https://www.11ty.dev/docs/) is also good to read up on, but not recommended for this kit, as only the simplest features of Eleventy is being used, with most of the configuration already being done for you. Providing you stick to the file structure and guidelines presented in this template, you won't actually need any Eleventy knowledge.
-5. [Decap CMS' docs](https://decapcms.org/docs/intro/) can also be found should you wish to extend the CMS beyond what's in this kit
+### Must Knows
 
-<a name="fileStructure"></a>
+_Knowledge requirements before using the kit_
 
-## File Structure
+-   HTML/CSS
+-   Beginner-level JS
+-   Familiarity with working in a NodeJS-powered project (handling dependencies with npm, source vs built files, etc)
+-   Familiarity with templating languages (this kit uses Nunjucks)
+
+<a name="good-to-knows"></a>
+
+### Good-to-knows
+
+_Not required for light-medium kit usage, but helpful if you want to customise the kit beyond base functionality_
+
+-   Nunjucks ([Docs found here](https://mozilla.github.io/nunjucks/))
+    -   If you've never used Nunjucks before, [this excellent article by Hyunbin](https://hyunbinseo.medium.com/nunjucks-settings-for-vs-code-a0da0dc66b95) explains how to set up VSCode to best support Nunjucks, including formatting, syntax highlighting and Emmet.
+-   Eleventy ([Docs found here](https://www.11ty.dev/docs/)). Key topics include:
+    -   [The Data Cascade](https://www.11ty.dev/docs/data-cascade/)
+    -   [Layouts](https://www.11ty.dev/docs/layouts/)
+    -   [Permalinks](https://www.11ty.dev/docs/permalinks/)
+    -   [Passthroughs](https://www.11ty.dev/docs/copy/)
+-   Decap CMS ([Docs found here](https://decapcms.org/docs/intro/))
+
+<a name="quick-start-guide"></a>
+
+## Quick Start Guide
+
+1.  At the top of this repository page, click the **Use This Template** button to create a new repository.
+2.  Follow the instructions to create a new repository from the starter kit.
+3.  Clone the repository locally to your computer and open it in VS Code.
+4.  Run `npm install` to install all dependencies.
+5.  After the installation is complete, run `npm start` to start the development server.
+6.  Fill out the `./src/_data/client.js` file with the appropriate information for your client.
+7.  Adjust the `:root` variables in `./src/assets/[sass or less]/root.[scss or less]`
+8.  Modify the website files (use `./src`, NOT `./public`) as needed. Use the template file in `content/pages/_template.txt` to get started, or modify the existing pages.
+9.  Deploy using your preferred hosting provider.
+
+<a name="explanation-of-file-structure"></a>
+
+## Explaination of File Structure
+
+This documentation will explain all the files and directories in the starter kit, from root inwards, top to bottom. By the end, you should have a full understanding of all files and directories, and be fully equipped to adapt the kit to your needs.
 
 ```
 .
 ├── public/
 ├── src/
-│   ├── _data/
-│   │   └── client.json
-│   ├── _includes/
-│   │   ├── components/
-│   │   └── layouts/
-│   ├── admin/
-│   │   └── config.yml
-│   ├── assets/
-│   │   ├── favicons/
-│   │   ├── fonts/
-│   │   ├── images/
-│   │   ├── sass/
-│   │   └── svgs/
-|   ├── config/
-│   ├── content/
-│   │   ├── blog/
-│   │   └── pages/
-│   ├── _redirects
-│   ├── index.html
-│   ├── robots.txt
+│ ├── _data/
+│ │ └── client.js
+│ ├── _includes/
+│ │ ├── components/
+│ │ └── layouts/
+│ ├── admin/
+│ │ └── config.yml
+│ ├── assets/
+│ │ ├── css/
+│ │ ├── favicons/
+│ │ ├── fonts/
+│ │ ├── images/
+│ │ ├── js/
+│ │ ├── sass or less/
+│ │ └── svgs/
+| ├── config/
+│ ├── content/
+│ │ ├── blog/
+│ │ └── pages/
+│ ├── _redirects
+│ ├── index.html
+│ ├── robots.txt
 ├── .eleventy.js
 └── netlify.toml
+└── package-lock.json
+└── package.json
 ```
 
-<a name="rootFilesAndFolders"></a>
+<a name="root-files"></a>
 
-### Root Files and Folders
+### Root Files
 
--   public/ - Built, ready to deploy files live here. Do not work in here, only your hosting provider needs to make use of this folder.
--   src/ - Raw, source code. The folder you work in.
--   .eleventy.js - Eleventy config file, already set up for you.
--   netlify.toml - Netlify config file for a seamless deployment.
+<a name="eleventyjs"></a>
 
-<a name="sourceFilesAndFolders"></a>
+#### .eleventy.js
 
-### Source Files and Folders
+The heart of the kit, the `.eleventy.js` file configures the Eleventy static site generator to work as needed. Here, we're able to define settings that control how files are processed, set up filters/shortcodes to modify data at build time, define which languages are used, and set up third-party plugins to add additional functionality to the kit.
 
--   data/ - Global data accessible across the project. Fill out client.json before you begin.
--   includes/ - For reusable code across the project. Split into page-wide layouts and smaller, intra-page components.
--   admin/ - DecapCMS' folder. Includes a config file and index.html entry point.
--   assets/ - Non-HTML files. Images, scripts and styles.
--   config/ - Configuration files for eleventy and plugins. This kit provides code minification and automatic sitemap generation, working out-of-the-box for you.
--   content/ - Pages or data to render pages from, such as the blog.
--   \_redirects - To configure redirects. Read more on <a href="https://docs.netlify.com/routing/redirects/">Netlify</a>
--   index.html - Home page
--   robots.txt - Instructions for site crawlers. Learn more, and generate your own, <a href="https://en.ryte.com/free-tools/robots-txt-generator/">here</a>
--   sitemap.html - A placeholder for the sitemap plugin to generate a sitemap for you on build
+The `.eleventy.js` file is well-documented, with all necessary extra documentation provided for extra reading if desired. A full list of functionalities added via `.eleventy.js` is given below:
 
-<a name="gettingStarted"></a>
+-   Sets up CSS and JS as template languages, allowing modification at build time by Eleventy. JS is bundled and minified by esbuild.
+-   Adds the following plugins:
+    -   [Eleventy Navigation](https://github.com/11ty/eleventy-navigation) - Allows the option to define navigation data within the template front matter.
+    -   [Eleventy Sitemap](https://www.npmjs.com/package/@quasibit/eleventy-plugin-sitemap) - Automatically generates a sitemap from all files in `./src/content`.
+    -   [Eleventy Minification](https://github.com/benjaminrancourt/eleventy-plugin-files-minifier) - Minifies HTML and CSS (only run in production - when `npm run build` is executed).
+-   Passes through all assets (in `./src/assets`) without modification by Eleventy.
+-   Adds date formatting filters and a year shortcode.
+-   Sets some basic server options.
 
-## Getting Started
+<a name="netlifytoml"></a>
 
-1. At the top right of the <a href="https://github.com/CodeStitchOfficial/Intermediate-Website-Kit-SASS">GitHub Repository</a>, click the green _Use this template_ button,
-   then click _Create a new repository_.
-2. Follow the instructions to create a new repository, using this repo as a template.
-3. When created, clone the repository to your local machine.
-4. Run `npm install` to install all dependencies.
-5. Run `npm start` to start the project and spin up a development server on `localhost:8080`.
+#### netlify.toml
 
-Running `npm start` will start a development server, begin SASS preprocessing and start up the CMS (accessible by visiting the `/admin` path). Beforehand, the
-/public directory will be deleted, clearing out any stale files that may have been deleted in the last build.
+The kit is made to support deployment to Netlify out-of-the-box, enabled through this `netlify.toml` file. Here, some basic configuration is used to define the `public/` directory as serving the built website files, as well as adding a Google Lighthouse plugin to show Lighthouse scores in Netlify.
 
-Next, it is recommended to update `_data/client.json` with some new information about this project. Through the power of templating, the
-project's `<head>` and contact information will automatically be filled out, providing a first peek into some of the benefits of SSGs. Please ensure the correct file protocol (usually "https://") is used for the client's domain
+<a name="packagejson-and-package-lockjson"></a>
 
-Finally, you can find all of CodeStitches `:root` variables, as well as .cs-topper, .cs-title and .cs-text, within the `root` stylesheet. Feel free to adjust these, or use our Content Flair micro-stitches, to update site-wide styles quickly.
+#### package.json and package-lock.json
 
-<a name="expandingTheProject"></a>
+Standard NodeJS package files, containing the dependencies needed for the project to work. The only things worth noting are the `watch:eleventy` and `build:eleventy` scripts in `package.json`. When `npm start` is used, the `watch:eleventy` script is run, which contains an environment variable (`ELEVENTY_ENV=DEV`). When `npm run build` is used, the `ELEVENTY_ENV` variable is set to `PROD`.
 
-## Expanding the Project
+You may notice around the project (e.g., `./src/config/server.js` and `.eleventy.js`) that there is reference to an `isProduction` variable. This is used to control some functionality that is only run while the website is "in production". For example, when `npm run build` is used, we can assume the website is deployed to a live domain, so we can do things like minify the code. This allows comments to be shown in the dev tools while you're actively working on the site but have them removed, and the code minified, for the smallest file sizes and most efficiency when you deploy it.
 
-Aimed towards freelancers, this kit was made with scalability and flexibility in mind, suiting a range of websites and client needs. As such, it is your choice
-whether you'd rather make small tweaks to the existing site, or clear all the page content and build a site all over again. Outlined below are some best
-practices for when it comes to building on top of this kit:
+You shouldn't have to worry about this, however, as all the initial setup has been done for you. It's still good to know if you wish to expand the kit to add production-only functionality.
 
-<a name="reusingCode"></a>
+<a name="nodemodules"></a>
 
-### Reusing Code
+### node_modules/
 
-The main advantage to using an SSG is it brings components, popularized by JavaScript-heavy frameworks like React or Vue, to vanilla HTML. As Nunjucks is being
-used, componentization can be achieved through an <a href="https://mozilla.github.io/nunjucks/templating.html#include">include</a>, if the component is truly
-static, or through a <a href="https://mozilla.github.io/nunjucks/templating.html#macro">macro</a>, if the component needs to change slightly between instances.
+This directory contains the code for all the dependencies that power this kit. It comes as standard with any NodeJS-powered project, much like the `package.json` and `package-lock.json` files. You can safely ignore this directory in your day-to-day work.
 
-For example, there is a call to action at the bottom of most pages. As the text content or styles don't need to change, `{% include "components/cta.html"}` was
-used. If this wasn't the case, and we wanted the CTA text to change, we'd start to think about using a macro instead.
+<a name="public"></a>
 
-Note that due to the `_includes` directory being specified in the return section of `.eleventy.js`, we only need to include the directory and file when using
-`{% include %}`.
+### public/
 
-<a name="addingMorePages"></a>
+All files that have been processed and built by Eleventy are stored here. These are the files that your users will be served and see when they visit the website. It's helpful to look into this directory to debug any issues that may appear in your project, but take care not to actively work in this directory. Any changes you make here will be overwritten the next time the project is run with what's contained in `src/`.
 
-### Adding More Pages
+It's also good to understand how it works when a user goes to a domain. If a user goes to [www.example.com](http://www.example.com), the server will look for an `index.html` file at the root of the directory. If they then navigate to [www.example.com/about](http://www.example.com/about), the server will serve the `index.html` file in the /about directory. This is why you'll see a number of directories, all with "index.html" files contained within. If you're expecting a file to be present but you're getting 404 errors when navigating to the appropriate path, check to see if the correct directory/file is being written.
 
-Thanks to Eleventy Navigation, adding new pages is as simple as following the provided template in src/content/pages/\_template.txt:
+<a name="src"></a>
+
+### src/
+
+<a name="_data"></a>
+
+#### \_data/
+
+This directory contains data files that are accessible within any template throughout the project. Out of the box, the kit only contains a `client.js` file, which holds some information you may wish to define for a client. It's important to fill this file out with the correct information for your client, as many HTML meta tags, the sitemap, and robots.txt all use data from this file.
+
+Consider adding the client's contact details, address, and social media information to this file. Examples have been provided in the kit. This way, you can access the client's information from a single source of truth. If a client changes their email address, you can update it in the `client.js` file and have it reflect across the website without needing to search through multiple files or use Find and Replace.
+
+As an example, we have defined the client's email address under the `email` key. In the footer (`./src/_includes/components/footer.html`), we can use `{{ client.email }}` to access this value and output "help@codestitch.app". The format for outputting the data is `{{ [FILENAME].[KEY] }}`. If we wanted to add another file for pricing information, we could create a file (`_data/pricing.json`), then use `{{ pricing.price }}` to render the price.
+
+In Eleventy, this is known as "Global Data". You can read more about Global Data [here](https://www.11ty.dev/docs/data-global/), with more information about how this works in the context of the Data Cascade [here](https://www.11ty.dev/docs/data-cascade/).
+
+<a name="_includes"></a>
+
+#### \_includes
+
+The `_includes` directory contains pieces of HTML code that you want to share between multiple pages. This code could be small components (a button or a loading spinner), larger sections (header, footer, or a stitch from [CodeStitch](https://codestitch.app/)), or a layout containing a reusable `<head>` element with all necessary meta tags.
+
+By default, the kit has two sub-directories in `_includes` - one for components and one for layouts.
+
+Components can be used on one, none, or many pages. For example, we've set up a header and a footer that we load on all pages (through `_includes/layouts/base.html`). If you want to make a change to the header or footer, you can do so within `_includes/components`, and this change will be reflected across all pages. This is done by using `{% include "components/header.html" %}`. If you want to adjust some of the data within the component (e.g., a button that has the same structure/core styles but different CTA text), you should look into using a [Nunjucks Macro](https://mozilla.github.io/nunjucks/templating#macro), which you can [import](https://mozilla.github.io/nunjucks/templating#import) where needed.
+
+Layouts define the wider page structure. The main one used in this kit is `base.html`, which contains the document type declaration, `<head>` tag with associated `<meta>` tags (using data in `_data/client.js` and the page front matter), a `<body>` with a `<main>` tag and skip-to-content link, and calls to the header and footer. All pages use `base.html`. This has been configured to work automatically, so you shouldn't need much additional work. For the blog, we have also created a `post.html` layout (which also uses the `base.html` file, through Nunjucks' `{% extends %}`) that we use to render the blog article pages.
+
+<a name="admin"></a>
+
+#### admin/
+
+The `admin/` directory sets up [Decap CMS](https://decapcms.org/) to be used within the project. It's configured as a blog that a client can access by navigating to the `/admin/` path on the deployed site, where they can create, update, and delete blog posts whenever they want. This modifies the markdown files in the source code, which will trigger a rebuild in Netlify, incorporating the new blog data. After about one minute, the client can see the new blog post on the website.
+
+Decap CMS has been chosen due to its open-source nature, good UX/DX, and stability. Very little training is required on the client's end to get it to work - the interface is clean and operates without trouble. It works through an `index.html` file in the `admin/` directory that contains a CDN script for the CMS. This `index.html` file is processed as an Eleventy template, added to `/public/admin`, and the CMS is loaded when navigating to the `/admin` path.
+
+The CMS is configured through a `config.yml` file, as per the Decap documentation. If you wish to use the blog as-is, you shouldn't need to make any changes here. If you want to extend the kit and modify the CMS for your own needs, we recommend referring to the Decap documentation for guidance on how to do so.
+
+<a name="assets"></a>
+
+#### assets/
+
+All other non-content files are stored in `assets/`, which is set up in `.eleventy.js` to be passed through to `public/`. A brief overview of each of the folders within `assets/`, and any relevant notes, is provided below:
+
+-   `css/` - SASS/LESS files from the `less/` or `sass/` directories are built into `css/`. From here, the CSS is processed as an Eleventy template, where we minify the code (production only), and pass it through to `public/`. **Do not** make CSS changes here - instead, use the SASS or LESS asset directory (depending on which kit you're using).
+-   `favicons/` - Any favicon files can be stored here. We recommend using [this tool](https://realfavicongenerator.net/) to generate favicons for all devices.
+-   `fonts/` - If you have any non-standard fonts you wish to locally host, you can put the files here. You can use [this tool](https://gwfh.mranftl.com/fonts) to download font files to be stored in `fonts/`, as well as generate the code to be put in your `root.scss` or `root.less` file.
+-   `images/` - Any images can go here. No processing will occur.
+-   `js/` - Put any JavaScript in this directory. It will be processed, bundled, and minified by esbuild.
+-   `sass/` or `less/` - Depending on whether you're using the SASS or LESS version of the kit, you'll find your preprocessor files in one of these directories. Make your changes to styling here, not in `assets/css`
+-   `svgs/` - A separate directory for SVGs. This makes it easier to bulk-compress SVGs separate from `images/` if you're using a tool like [compressor.io](https://compressor.io/).
+
+<a name="config"></a>
+
+#### config/
+
+All configurations for Eleventy are held in this directory. This includes settings for plugins, extensions, filters, and shortcodes, among other things.
+
+Unless you are confident in your Eleventy abilities, we recommend not making any changes to the files in this directory, as they have all been carefully configured to work without modification. If you are confident enough to make changes, you likely don't need a README to tell you what you're doing!
+
+<a name="content"></a>
+
+#### content/
+
+Any files that are built into HTML pages are held in `content/`. This includes standalone informational pages (held in `pages/`) and the blog markdown posts, which use the `post.html` layout (that in turn uses `base.html` through [Eleventy layout chaining](https://www.11ty.dev/docs/layout-chaining/) and [Nunjucks template inheritance](https://mozilla.github.io/nunjucks/templating#block)) to form the blog posts controlled by the CMS.
+
+You're welcome to modify any of these pages or create your own. If you wish to create your own pages, a template can be found in `pages/content/_template.txt`. Copy this file, paste it, rename it to an HTML file, and follow the structure shown in the template. This template contains some code at the top, wrapped between "---"s, which is called the front matter. This contains data specific to this page, which is used within the layout to set the `<title>` tag, `<meta>` description tag, among other things. This data will overwrite any data contained elsewhere in the [Eleventy Data Cascade](https://www.11ty.dev/docs/data-cascade/).
+
+A copy of the default front matter can be found below:
 
 ```
 ---
 title: 'Page title for <title> and OG tags'
-description: 'Description for <meta> and OG tags'
+description: 'Description for <meta> description and OG tags'
 preloadImg: '/assets/images/imagename.format'
-permalink: '/page-path'
+permalink: 'page-path/'
 eleventyNavigation:
     key: Name to appear in navigation
-    parent: Delete, or put another page's key here to create a dropdown
     order: 1000
+    parent: Optional - Put another page's "key" here to create a dropdown
+    hideOnMobile: Optional - set to "true" to hide on devices from, and below, 1023px
+    hideOnDesktop: Optional - set to "true" to hide on devices above, and including, 1024px
 ---
+```
 
+Under the front matter, there is some more code:
+
+```
 {% extends "layouts/base.html" %}
 
 {% block head %}
@@ -187,136 +288,56 @@ eleventyNavigation:
 {% endblock %}
 ```
 
-Starting from the top, you can see some data enclosed in --- tags. This is known as the page's front matter, which provides additional data to when it comes to
-rendering your pages. This includes the pages title, description and path name. If there are any images above-the-fold, specify them in `preloadImg` to gain a
-slight performance boost, or just leave it empty.
+The first line, `{% extends "layouts/base.html" %}`, denotes the layout we should use. In the case of this kit, we're using the layout in `_includes/layouts/base.html`. Any code between the `{% block head %} ... {% endblock %}` will be inserted in the `<head>` of the document. This can be useful to insert stylesheets and scripts which you only want to load on this particular page. The page HTML content can be provided within the `{% block body %} ... {% endblock %}`. This will be inserted in the `<body>` of the HTML document, within a `<main>` tag.
 
-<a name="navigationViaFrontMatter"></a>
+Blocks are a Nunjucks feature, which you can read more about [here](https://mozilla.github.io/nunjucks/templating#block).
 
-### Navigation via Front Matter
+As mentioned, blog files are held in `content/blog`, with the CMS configured to add new posts as markdown files to this directory. As we can't define things like the layout, tags, permalink, or CSS preloads in the individual markdown files, a [directory data file](https://www.11ty.dev/docs/data-template-dir/) is used in `/blog/` to define this.
 
-The header navigation in the project is powered by the `eleventyNavigation` front matter data. If a `parent` is specified, a dropdown will be created, providing
-a Navigation + Dropdown Stitch is being used. Navigations will render as outlined in `order`, smallest to largest.
+A similar directory data file (`content.json`) is used in the `content/` directory to define a "sitemap" tag. This adds all pages in `content/` to the sitemap [collection](https://www.11ty.dev/docs/collections/), which renders our sitemap automatically for us.
 
-> If you wish to use an alternative Navigation stitch, you are welcome to swap out the .cs-ul-wrapper div in the Stitch for the one in the Starter Kit. This
-> will allow you to continue to reap the benefits of eleventyNavigation. You can find the .cs-ul-wrapper div below
+<a name="root-src-files"></a>
 
-```
-<div class="cs-ul-wrapper">
-    <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
-        {% set navPages = collections.all | eleventyNavigation %}
-        {# Loop through all pages with a eleventyNavigation in the frontmatter #}
-        {% for entry in navPages %}
-            {# Define a hasChild variable to make it easier to test what links are dropdowns#}
-            {% set hasChild = entry.children.length %}
+#### Root src/ Files
 
-            {# If this page is a dropdown, give it the appropriate classes, icons and accessibility attributes#}
-            <li class="cs-li {% if hasChild %} cs-dropdown {% endif %}" {% if hasChild %} tabindex="0"{% endif %}>
+<a name="redirects"></a>
 
-                {# Similarly, if the link is active, apply the necessary classes #}
-                <a href="{{ entry.url }}" class="cs-li-link {% if entry.url == page.url %} cs-active {% endif %}">
-                    {{ entry.key }}
-                    {% if hasChild %}
-                        <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
-                    {% endif %}
-                </a>
+##### \_redirects
 
-                {# Dropdowns have another ul/li set up within the parent li. Render in the same way as a normal link #}
-                {% if hasChild %}
-                    <ul class="cs-drop-ul">
-                        {% for child in entry.children %}
-                            <li class="cs-drop-li">
-                                <a href="{{ child.url }}" class="cs-li-link cs-drop-link">{{ child.key }}</a>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                {% endif %}
-            </li>
-        {% endfor %}
-    </ul>
-</div>
-```
+Set up any redirect rules here. More information can be found in the [Netlify Docs](https://docs.netlify.com/routing/redirects/).
 
-> Should you wish to use your own method of rendering the navigation, you can still take advantage of applying the "active" class styles by using a smaller amount of Nunjucks code within the class attribute of the link:
+<a name="indexhtml"></a>
 
-```
-<li class="cs-li">
-  <a href="/about" class="cs-li-link {{ 'cs-active' if 'about' == page.fileSlug }}">About</a>
-</li>
-```
+##### index.html
 
-> In this case, if the page slug is "about", the .cs-active class will be applied. You're welcome to adjust the page slug value to whatever you require ("blog", "/", "services", etc)
-> For dropdowns, you can use a similar philosophy on the parent dropdown's class attribute, checking to see if any of the child pages are active before applying the styles. An example of this is shown below:
+The home page. Treat it as if it were any other page in `content/pages`.
 
-```
-<li class="nav-link cs-li cs-dropdown">
-  <span class="cs-li-link nav-link
-    {{ 'cs-active' if 'annapolis-custom-closets' == page.fileSlug }}
-    {{ 'cs-active' if 'bowie-custom-closets' == page.fileSlug }}
-    {{ 'cs-active' if 'severna-park-custom-closets' == page.fileSlug }}
-    {{ 'cs-active' if 'odenton-custom-closets' == page.fileSlug }}
-  ">
-    Areas Served
-    <img class="cs-drop-icon" src="/assets/images/down.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
-  </span>
-  <ul class="cs-drop-ul">
-    <li class="cs-drop-li">
-      <a href="/annapolis-custom-closets" class="cs-drop-link">Annapolis</a>
-    </li>
-    <li class="cs-drop-li">
-      <a href="/bowie-custom-closets" class="cs-drop-link">Bowie</a>
-    </li>
-    <li class="cs-drop-li">
-      <a href="/severna-park-custom-closets" class="cs-drop-link">Severna Park</a>
-    </li>
-    <li class="cs-drop-li">
-      <a href="/odenton-custom-closets" class="cs-drop-link">Odenton</a>
-    </li>
-  </ul>
-</li>
-```
+<a name="robotshtml"></a>
 
-> In the above example, we're checking to see if the active page slug matches any of the four that are listed (annapolis, bowie, severna or odenton) and applying the .cs-active style to the parent if it does.
+##### robots.html
 
-Below the front matter is the page content, split into three sections. `{% extends "layouts/base.html" %}` is the first, which defines what page layout is being
-used. Note that {% extends %} defaults to looking in the `_includes` directory, as outlined in `.eleventy.js`.
+Set up as an HTML file so we can use the domain in `_data/client.js` to automatically create a `robots.txt` file in `/public`. We do this by setting the permalink to `/robots.txt`. Unless you need to block crawlers from other pages (we've already blocked `/admin` for you), you shouldn't need to touch this file.
 
-Nunjucks template inheritance has been selected over Eleventy's _layout_ front matter data. This is so we can make use of `{% block %}`'s to insert any
-page-specific head tags within `{% block head %}`. For example, any page specific stylesheets or scripts can go here to prevent them from being loaded across
-the whole website.
+<a name="sitemaphtml"></a>
 
-A similar block is used for the main body content. Looking into `_includes/base.html`, we can see that `{% block body %}` is wrapped in a `<main>` tag, so you
-won't need to use this in the page HTML. This also allows the _Skip to Main Content_ button to work too - a nice accessibility box to check.
+##### sitemap.html
 
-<a name="configuringTheCms"></a>
-
-### Configuring the CMS
-
-Within the `src/` directory, you'll find an `admin/` folder which contains the configuration for the blog, alongside an entry `index.html` file, which you
-shouldn't need to worry about. While this project is set up to work with a blog out of the box, you are welcome to make changes to the `config.yaml` file using
-<a href="https://decapcms.org/docs/add-to-your-site/#configuration">Decap CMS'</a> documentation.
-
-Blog content lives in `/src/content/blog` in the form of markdown files, with a front matter similar to that of the pages. The blog post layout, tags and
-permalinks are defined in the `blog.json` file in the same directory, while all blog-related media lives in `src/assets/images/blog`.
-
-When `npm start` is run, a proxy server for the CMS is spun up on `localhost:8081`. That can often mean you run into errors if `localhost:8080` is already
-taken, so look out for that. You can locally access the blog via navigating to the /admin path. All blog content can be easily created, updated and deleted via
-this admin panel, and is the very system that your clients can use to manage their website without your involvement. Everything on the blog should be fairly
-intuitive, but feel free to experiment with using this panel first. With this kit, you can add _featured_ to the comma-separated list of tags to have them show
-up as so in the frontend.
-
-Should you wish to extend the "Featured Articles" functionality to group similar pieces of content in additional ways, you are welcome to add more tags as you see fit. Post "groups" can then be accessed under the `collections` object. For example, in `_includes/components/featured-post.html`, you can see that the featured posts are rendered by looping over the `collections.featured` array, which contains all the posts with the "featured" tag. You can then use a similar way to render your own collections, by accessing the applicably named collection array as shown.
+Similar to `robots.html`, a `.html` file is used to generate a `sitemap.xml` file. It uses all HTML files that have a "sitemap" tag applied, which should be all pages in `content/`.
 
 <a name="deployment"></a>
 
 ## Deployment
 
-1. Ensure the robots.txt and \_redirects have been filled out. The sitemap will be automatically generated at build-time for you. Instructions and tools for how to do so can be found in the File Structure section
-2. Navigate to your Netlify Admin Panel, click _Add new site | Import an existing project_
-3. Follow the instructions to connect your GitHub repository to Netlify. Most of the site settings should be done for you, thanks to `netlify.toml`
-4. Once deployed, click on _Identity_ in the top navigation, then click _Enable Identity_
-5. Invite yourself, and the client, to the site
-6. While in the Identity tab, click the "Settings and usage" button to open the settings options. Then, do the following:
-    - Find "Registration Preferences", click "Edit Settings" and set registration from _Public_ to _Invite Only_
-    - Find "Enable Providers" and add a provider. We recommend Google, so the client can login with Google in 1 click.
-    - Find "Git Gateway" and enable it
+When you're happy with your website, you can deploy it to your hosting provider of choice. As this kit uses Netlify, we have outlined some instructions below:
+
+1.  Sign in to or create an account with [Netlify](https://www.netlify.com/).
+2.  Go to [https://app.netlify.com](https://app.netlify.com), click **Sites** on the left-hand navigation, then click **Add new site**, and choose **Import an existing project**.
+3.  Choose to deploy your project with GitHub. Follow the steps to link Netlify and GitHub.
+4.  Find your project in the list of repositories.
+5.  Everything should be already configured, thanks to the `netlify.toml` file. Click **Deploy [PROJECT NAME]**.
+6.  Check to see if your site deploys without error. The site should be live, but we still need to set up the CMS.
+7.  Go to **Site Configuration > Identity**, and select **Enable Identity service**.
+8.  Under **Registration preferences**, select **Open** or **Invite only**. In most cases, you want only invited users to access your CMS, but if you're just experimenting, you can leave it open for convenience.
+9.  If you'd like to allow one-click login with services like Google and GitHub, check the boxes next to the services you'd like to use under **External providers**.
+10. Scroll down to **Services > Git Gateway**, and click **Enable Git Gateway**. This authenticates with your Git host and generates an API access token. In this case, we're leaving the **Roles** field blank, which means any logged-in user may access the CMS. For information on changing this, check the [Netlify Identity documentation](https://www.netlify.com/docs/identity/).
+11. Test the CMS by navigating to `/admin` on the deployed website

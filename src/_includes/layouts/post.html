@@ -1,12 +1,3 @@
----
-preloadCSS: '/assets/css/blog.css'
-eleventyComputed:
-    title: '{{ title }}'
-    description: '{{ description }}'
-    preloadImg: '{{ image }}'
-    permalink: '/blog/{{ title | slug }}/index.html'
----
-
 {% extends "layouts/base.html" %}
 
 {% block head %}
@@ -40,7 +31,7 @@ eleventyComputed:
             <article class="blog-article">
                 <!--Main Article Image-->
                 <picture class="blog-mainImage">
-                    <img src="{{ image }}" alt="{{ imageAlt }}" width="795" height="400" decoding="async" />
+                    <img src="{{ image }}" alt="{{ imageAlt }}" width="795" height="400" decoding="async"/>
                 </picture>
 
                 <!--Article Info-->
