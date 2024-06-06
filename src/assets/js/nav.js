@@ -21,6 +21,26 @@ function toggleMenu() {
     ariaExpanded(CShamburgerMenu);
 }
 
+// Clicking on the hamburger opens the menu
+CShamburgerMenu.addEventListener('click', toggleMenu);
+
+// Add event listener to the entire navigation header to handle clicks on the pseudo-element
+CSnavbarMenu.addEventListener('click', function (event) {
+    if (event.target === CSnavbarMenu && CSnavbarMenu.classList.contains('cs-active')) {
+        toggleMenu();
+    }
+});
+
+// Add event listeners to each navigation link so the navigation is closed when you click on internal anchor links
+const navLinks = document.querySelectorAll('.cs-li-link');
+navLinks.forEach(link => {
+    link.addEventListener('click', function () {
+        if (CSnavbarMenu.classList.contains('cs-active')) {
+            toggleMenu();
+        }
+    });
+});
+
 // Add event listeners to each dropdown element for accessibility
 const dropdownElements = document.querySelectorAll(".cs-dropdown");
 dropdownElements.forEach(element => {
@@ -55,10 +75,8 @@ dropdownElements.forEach(element => {
 });
 
 // If you press Escape and the hamburger menu is open, close it
-CShamburgerMenu.addEventListener('click', toggleMenu);
 document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && CShamburgerMenu.classList.contains("cs-active")) {
         toggleMenu();
     }
-})
-
+});
