@@ -523,7 +523,7 @@
     position: relative;
     transition: opacity 0.3s;
   }
-  #cs-navigation .cs-dropdown.cs-active .cs-drop-ul, #cs-navigation .cs-dropdown:hover .cs-drop-ul, #cs-navigation .cs-dropdown:focus .cs-drop-ul, #cs-navigation .cs-dropdown:focus-within .cs-drop-ul {
+  #cs-navigation .cs-dropdown.cs-active .cs-drop-ul, #cs-navigation .cs-dropdown:hover .cs-drop-ul {
     visibility: visible;
     opacity: 1;
     transform: scale(1);
@@ -531,7 +531,7 @@
     height: auto;
     padding: 1.5rem;
   }
-  #cs-navigation .cs-dropdown.cs-active .cs-drop-link, #cs-navigation .cs-dropdown:hover .cs-drop-link, #cs-navigation .cs-dropdown:focus .cs-drop-link, #cs-navigation .cs-dropdown:focus-within .cs-drop-link {
+  #cs-navigation .cs-dropdown.cs-active .cs-drop-link, #cs-navigation .cs-dropdown:hover .cs-drop-link {
     opacity: 1;
   }
   #cs-navigation .cs-drop-icon {
@@ -576,15 +576,15 @@
   #cs-navigation .cs-dropdown {
     position: relative;
   }
-  #cs-navigation .cs-dropdown:hover, #cs-navigation .cs-dropdown:focus, #cs-navigation .cs-dropdown:focus-within {
+  #cs-navigation .cs-dropdown.cs-active, #cs-navigation .cs-dropdown:hover {
     cursor: pointer;
   }
-  #cs-navigation .cs-dropdown:hover .cs-drop-ul, #cs-navigation .cs-dropdown:focus .cs-drop-ul, #cs-navigation .cs-dropdown:focus-within .cs-drop-ul {
+  #cs-navigation .cs-dropdown.cs-active .cs-drop-ul, #cs-navigation .cs-dropdown:hover .cs-drop-ul {
     visibility: visible;
     opacity: 1;
     transform: scaleY(1);
   }
-  #cs-navigation .cs-dropdown:hover .cs-drop-li, #cs-navigation .cs-dropdown:focus .cs-drop-li, #cs-navigation .cs-dropdown:focus-within .cs-drop-li {
+  #cs-navigation .cs-dropdown.cs-active .cs-drop-li, #cs-navigation .cs-dropdown:hover .cs-drop-li {
     opacity: 1;
     transform: translateY(0);
   }

@@ -1,9 +1,8 @@
-// add classes for mobile navigation toggling
 var CSbody = document.querySelector('body');
 const CSnavbarMenu = document.querySelector('#cs-navigation');
 const CShamburgerMenu = document.querySelector('#cs-navigation .cs-toggle');
 
-// checks the value of aria expanded on the cs-ul and changes it accordingly whether it is expanded or not
+// Function to toggle the aria-expanded attribute between 'true' and 'false' for the supplied element
 function ariaExpanded(element) {
     const isExpanded = element.getAttribute('aria-expanded');
     if (isExpanded === "false") {
@@ -13,6 +12,7 @@ function ariaExpanded(element) {
     };
 };
 
+// Function to toggle the hamburger menu open or closed
 function toggleMenu() {
     CShamburgerMenu.classList.toggle('cs-active');
     CSnavbarMenu.classList.toggle('cs-active');
@@ -21,17 +21,40 @@ function toggleMenu() {
     ariaExpanded(CShamburgerMenu);
 }
 
+// Add event listeners to each dropdown element for accessibility
 const dropdownElements = document.querySelectorAll(".cs-dropdown");
 dropdownElements.forEach(element => {
-    element.addEventListener("focusin", function (event) {
-        ariaExpanded(element);
+    element.addEventListener("focusout", function (event) {
+        // If the focus has moved outside the dropdown, remove the active class from the dropdown and adjust aria-expanded attribute
+        if (!element.contains(event.relatedTarget)) {
+            element.classList.remove("cs-active");
+            ariaExpanded(element);
+        }
     });
 
-    element.addEventListener("focusout", function (event) {
-        ariaExpanded(element);
+    element.addEventListener("keydown", function (event) {
+        // If the dropdown is active, stop the event from propagating. This is so we can use Escape to close the dropdown, then press it again to close the hamburger menu (if needed)
+        if (element.classList.contains("cs-active")) {
+            event.stopPropagation();
+        }
+
+        // Pressing Enter or Space will toggle the dropdown and adjust the aria-expanded attribute
+        if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+
+            element.classList.toggle("cs-active");
+            ariaExpanded(element);
+        };
+
+        // Pressing Escape will remove the active class from the dropdown. The stopPropagation above will stop the hamburger menu from closing
+        if (event.key === "Escape") {
+            element.classList.remove("cs-active");
+            ariaExpanded(element);
+        }
     });
 });
 
+// If you press Escape and the hamburger menu is open, close it
 CShamburgerMenu.addEventListener('click', toggleMenu);
 document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && CShamburgerMenu.classList.contains("cs-active")) {
