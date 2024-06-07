@@ -6,12 +6,12 @@
     <div class="cs-container">
         <!--Nav Logo-->
         <a href="/" class="cs-logo" aria-label="back to home">
-            <img src="/assets/svgs/logo-black.svg" alt="logo" width="210" height="29" aria-hidden="true" decoding="async">
+            <img src="/assets/svgs/logo-black.svg" alt="" width="210" height="29" aria-hidden="true" decoding="async">
         </a>
         <!--Navigation List-->
         <nav class="cs-nav" role="navigation">
             <!--Mobile Nav Toggle-->
-            <button class="cs-toggle" aria-label="mobile menu toggle">
+            <button class="cs-toggle" id="mobile-menu-toggle" aria-expanded="false" aria-controls="cs-expanded-ul" aria-label="mobile menu toggle">
                 <div class="cs-box" aria-hidden="true">
                     <span class="cs-line cs-line1" aria-hidden="true"></span>
                     <span class="cs-line cs-line2" aria-hidden="true"></span>
@@ -21,7 +21,7 @@
             <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
             {# This also allows for easy substitution of CodeStitch navigations. Just replace the .cs-ul-wrapper in the new navigation with this one to have full eleventyNavigation support #}
             <div class="cs-ul-wrapper">
-                <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                <ul id="cs-expanded" class="cs-ul">
                     {% set navPages = collections.all | eleventyNavigation %}
 
                     {# Loop through all pages with a eleventyNavigation in the frontmatter #}
@@ -40,9 +40,9 @@
                         {% endif %}
 
                         {# If this page is a dropdown, give it the appropriate classes, icons and accessibility attributes #}
-                        <li class="cs-li {% if hasChild %} cs-dropdown {% endif %} {{ hideClasses | join(" ") }}" {% if hasChild %} tabindex="0" aria-expanded="false" {% endif %}>
+                        <li class="cs-li {% if hasChild %} cs-dropdown {% endif %} {{ hideClasses | join(" ") }}">
 
-                            {# If the page has child dropdown pages, render it as a <span> tag with the appropriate dropdown HTML #}
+                            {# If the page has child dropdown pages, render it as a <button> tag with the appropriate dropdown HTML #}
                             {% if hasChild %}
 
                                 {# Check to see if the user's current page is one of the child pages. If so, apply the cs-active class to the dropdown parent #}
@@ -53,14 +53,19 @@
                                     {% endif %}
                                 {% endfor %}
 
-                                {# Render the <span> with the active class, dropdown icon and child links #}
-                                <span class="cs-li-link {{ activeClass }}">
+                                {# Render the <button> with the active class, dropdown icon and child links #}
+                                <button 
+                                    class="cs-li-link cs-dropdown-button {{ activeClass }}"
+                                    aria-expanded="false"
+                                    aria-controls="dropdown-{{ entry.key }}"
+                                    aria-label="dropdown-{{ entry.key }}"
+                                >
                                     {{ entry.key }}
                                     <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
-                                </span>
+                                </button>
 
                                 {# Dropdowns have another ul/li set up within the parent li, which gets rendered in the same way as a normal link #}
-                                <ul class="cs-drop-ul">
+                                <ul class="cs-drop-ul" id="dropdown-{{ entry.key }}">
                                     {% for child in entry.children %}
                                         <li class="cs-drop-li">
                                             <a href="{{ child.url }}" class="cs-li-link cs-drop-link">{{ child.key }}</a>
@@ -69,7 +74,7 @@
                                 </ul>
                             {% else %}
                                 {# Normal pages are rendered as <a> tags, in the normal way you'd expect #}
-                                <a href="{{ entry.url }}" class="cs-li-link {% if entry.url == page.url %} cs-active {% endif %}">
+                                <a href="{{ entry.url }}" class="cs-li-link {% if entry.url == page.url %} cs-active {% endif %}" {% if entry.url == page.url %} aria-current="page" {% endif %}>
                                     {{ entry.key }}
                                 </a>
                             {% endif %}

@@ -523,7 +523,8 @@
     position: relative;
     transition: opacity 0.3s;
   }
-  #cs-navigation .cs-dropdown.cs-active .cs-drop-ul, #cs-navigation .cs-dropdown:hover .cs-drop-ul {
+  /* Geoffrey - removed the hover declaration as it caused the mobile dropdown menu not to close on 2nd click */
+  #cs-navigation .cs-dropdown.cs-active .cs-drop-ul{
     visibility: visible;
     opacity: 1;
     transform: scale(1);
@@ -531,8 +532,16 @@
     height: auto;
     padding: 1.5rem;
   }
-  #cs-navigation .cs-dropdown.cs-active .cs-drop-link, #cs-navigation .cs-dropdown:hover .cs-drop-link {
+  /* Geoffrey - removed the hover declaration as it caused the mobile dropdown menu not to close on 2nd click */
+  #cs-navigation .cs-dropdown.cs-active .cs-drop-link {
     opacity: 1;
+  }
+  #cs-navigation .cs-dropdown-button {
+    background-color: transparent;
+    border: none;
+    appearance: none;
+    font-family: inherit;
+    cursor: pointer;
   }
   #cs-navigation .cs-drop-icon {
     position: absolute;
@@ -587,6 +596,14 @@
   #cs-navigation .cs-dropdown.cs-active .cs-drop-li, #cs-navigation .cs-dropdown:hover .cs-drop-li {
     opacity: 1;
     transform: translateY(0);
+  }
+  #cs-navigation .cs-dropdown-button {
+    background-color: transparent;
+    border: none;
+    appearance: none;
+    font-size: inherit;
+    font-family: inherit;
+    cursor: pointer;
   }
   #cs-navigation .cs-drop-icon {
     display: inline-block;
@@ -677,6 +694,11 @@
   }
   #cs-navigation .cs-li-link.cs-drop-link:hover {
     background-color: #f7f7f7;
+  }
+  /* Geoffrey - Focus style on desktop was not consistent and sometimes difficult to see */
+  #cs-navigation .cs-li-link.cs-drop-link:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: -4px;
   }
   #cs-navigation .cs-li-link.cs-drop-link:before {
     display: none;
