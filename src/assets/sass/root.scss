@@ -625,8 +625,7 @@
                 transition: opacity 0.3s;
             }
 
-            &.cs-active,
-            &:hover {
+            &.cs-active {
                 .cs-drop-ul {
                     visibility: visible;
                     opacity: 1;
@@ -640,6 +639,15 @@
                     opacity: 1;
                 }
             }
+        }
+
+        .cs-dropdown-button {
+            border: none;
+            background-color: transparent;
+            font-family: inherit;
+            font-size: inherit;
+            cursor: pointer;
+            appearance: none;
         }
 
         .cs-drop-icon {
@@ -706,6 +714,15 @@
                     transform: translateY(0);
                 }
             }
+        }
+
+        .cs-dropdown-button {
+            border: none;
+            background-color: transparent;
+            font-family: inherit;
+            font-size: inherit;
+            cursor: pointer;
+            appearance: none;
         }
 
         .cs-drop-icon {
@@ -803,6 +820,11 @@
 
                 &:hover {
                     background-color: #f7f7f7;
+                }
+
+                &:focus-visible {
+                    outline: 2px solid currentColor;
+                    outline-offset: -4px;
                 }
 
                 &:before {
