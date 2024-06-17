@@ -13,7 +13,7 @@
             <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
             {# This also allows for easy substitution of CodeStitch navigations. Just replace the .cs-ul-wrapper in the new navigation with this one to have full eleventyNavigation support #}
             <div id="desktop-navigation" class="cs-ul-wrapper">
-                <ul id="" class="cs-ul">
+                <ul class="cs-ul">
                     {% set navPages = collections.all | eleventyNavigation %}
 
                     {# Loop through all pages with a eleventyNavigation in the frontmatter #}
@@ -82,7 +82,7 @@
             <img class="cs-sun" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsun.svg" decoding="async" alt="moon" width="15" height="15">
         </button>
         <!--Mobile Nav Toggle-->
-        <button class="cs-toggle" id="mobile-menu-toggle" aria-expanded="false" aria-controls="cs-expanded" aria-label="mobile menu toggle">
+        <button class="cs-toggle" id="mobile-menu-toggle" aria-expanded="false" aria-controls="mobile-navigation" aria-label="mobile menu toggle">
             <div class="cs-box" aria-hidden="true">
                 <span class="cs-line cs-line1" aria-hidden="true"></span>
                 <span class="cs-line cs-line2" aria-hidden="true"></span>
@@ -92,7 +92,7 @@
     </div>
     <!-- Mobile navigation -->
     <div id="mobile-navigation" class="cs-ul-wrapper">
-        <ul id="cs-expanded" class="cs-ul ">
+        <ul class="cs-ul ">
             {% set navPages = collections.all | eleventyNavigation %}
 
             {# Loop through all pages with a eleventyNavigation in the frontmatter #}
@@ -128,15 +128,15 @@
                         <button 
                             class="cs-li-link cs-dropdown-button {{ activeClass }}"
                             aria-expanded="false"
-                            aria-controls="dropdown-{{ entry.key }}"
-                            aria-label="dropdown-{{ entry.key }}"
+                            aria-controls="mobile-dropdown-{{ entry.key }}"
+                            aria-label="mobile-dropdown-{{ entry.key }}"
                         >
                             {{ entry.key }}
                             <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
                         </button>
 
                         {# Dropdowns have another ul/li set up within the parent li, which gets rendered in the same way as a normal link #}
-                        <ul class="cs-drop-ul" id="dropdown-{{ entry.key }}">
+                        <ul class="cs-drop-ul" id="mobile-dropdown-{{ entry.key }}">
                             {% for child in entry.children %}
                                 <li class="cs-drop-li">
                                     <a href="{{ child.url }}" class="cs-li-link cs-drop-link">{{ child.key }}</a>
