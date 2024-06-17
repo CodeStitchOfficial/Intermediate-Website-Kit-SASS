@@ -326,7 +326,9 @@
             overflow: hidden;
         }
     }
-
+    #desktop-navigation {
+        display: none;
+    }
     #cs-navigation {
         z-index: 10000;
         position: fixed;
@@ -450,6 +452,7 @@
             left: auto;
             right: 0;
             opacity: 0;
+            visibility:hidden;
             transform: scaleX(0);
             background-color: #fff;
             height: 100vh;
@@ -567,6 +570,7 @@
         &.cs-active {
             .cs-ul-wrapper {
                 opacity: 1;
+                visibility:visible;
                 transform: scaleX(1);
                 transition-delay: 0.2s;
             }
@@ -865,6 +869,9 @@
 
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
+    #mobile-navigation {
+        display: none;
+    }
     #cs-navigation {
         z-index: 10000;
         position: fixed;
