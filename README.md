@@ -37,7 +37,7 @@
     -   <a href="#src">src/</a>
         -   <a href="#_data">\_data/</a>
         -   <a href="#_includes">\_includes</a>
-                -   <a href="#nav-auto">Navigations - Rendering Automatically</a>
+                -  <a href="#nav-auto">Navigations - Rendering Automatically</a>
                 -   <a href="#nav-manual">Navigations - Rendering Manually</a>
     -   <a href="#admin">admin/</a>
     -   <a href="#assets">assets/</a>
