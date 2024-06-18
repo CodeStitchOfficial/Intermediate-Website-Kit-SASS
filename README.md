@@ -37,6 +37,8 @@
     -   <a href="#src">src/</a>
         -   <a href="#_data">\_data/</a>
         -   <a href="#_includes">\_includes</a>
+                -   <a href="#nav-auto">Navigations - Rendering Automatically</a>
+                -   <a href="#nav-manual">Navigations - Rendering Manually</a>
     -   <a href="#admin">admin/</a>
     -   <a href="#assets">assets/</a>
     -   <a href="#config">config/</a>
@@ -207,7 +209,7 @@ In Eleventy, this is known as "Global Data". You can read more about Global Data
 
 <a name="_includes"></a>
 
-#### \_includes
+#### \_includes/
 
 The `_includes` directory contains pieces of HTML code that you want to share between multiple pages. This code could be small components (a button or a loading spinner), larger sections (header, footer, or a stitch from [CodeStitch](https://codestitch.app/)), or a layout containing a reusable `<head>` element with all necessary meta tags.
 
@@ -216,6 +218,38 @@ By default, the kit has two sub-directories in `_includes` - one for components 
 Components can be used on one, none, or many pages. For example, we've set up a header and a footer that we load on all pages (through `_includes/layouts/base.html`). If you want to make a change to the header or footer, you can do so within `_includes/components`, and this change will be reflected across all pages. This is done by using `{% include "components/header.html" %}`. If you want to adjust some of the data within the component (e.g., a button that has the same structure/core styles but different CTA text), you should look into using a [Nunjucks Macro](https://mozilla.github.io/nunjucks/templating#macro), which you can [import](https://mozilla.github.io/nunjucks/templating#import) where needed.
 
 Layouts define the wider page structure. The main one used in this kit is `base.html`, which contains the document type declaration, `<head>` tag with associated `<meta>` tags (using data in `_data/client.js` and the page front matter), a `<body>` with a `<main>` tag and skip-to-content link, and calls to the header and footer. All pages use `base.html`. This has been configured to work automatically, so you shouldn't need much additional work. For the blog, we have also created a `post.html` layout (which also uses the `base.html` file, through Nunjucks' `{% extends %}`) that we use to render the blog article pages.
+
+<a name="nav-auto"></a>
+
+##### Navigations - Rendering Automatically
+
+One thing you may notice in the `\_includes/header.html` file is the vast amount of Nunjucks code in the `cs-ul-wrapper` element. This is code that makes use of the `eleventyNavigation` object and keys in the frontmatter of all pages that are, by default, added to the kit. This is part of the Eleventy Navigation plugin, which allows us to create scalable navigation menus without having to constantly add new list items and dropdowns to the header whenever a new page is made. If you make a new page using the `\_template.txt` file in `content/pages`, you will be guided to add this information into the front matter, where the navigation will be remade with the new page data automatically.
+
+If you wish to use this kit, and benefit from this way of doing navigations but want to swap out the navigation for another one in the CodeStitch template library, you can copy the `cs-ul-wrapper` `<div>` element that's found in the kit and replace the `cs-ul-wrapper` in the new stitch. As the class system is the same with all Stitches, the auto-rendering functionality, including the application of active-style classes and dropdowns (if a "dropdown" Stitch is used) will remain the same.
+
+<a name="nav-manual"></a>
+
+##### Navigations - Rendering Manually
+
+Some developers may wish to continue with the "old school" way of rendering navigations and add the HTML for new navigation links to the header individually. This is fine to do too.
+
+One issue that you may run into, however, is the addition of the `cs-active` class to the page that the user is currently on. As the same navigation element is being rendered on all pages, manually adding the `cs-active` class to one of the navigation items will cause that item to be "activated" between all pages.
+
+To get around this, you will need to manually add some Nunjucks code to each of the navigation items to check the page the user is on and add `cs-active` if that particular page is being viewed. That code would look like this:
+
+```
+<a href="/contact" class="cs-li-link {% if page.url == '/contact/' %} cs-active {% endif %}">
+    Contact
+</a>
+```
+
+Note the if-check in the `class` attribute of the anchor element. Here, we're checking if `page.url` (the page we're currently on) matches the permalink of the navigation item. Make sure both leading and trailing slashes are used. If this were for the home page, we'd just check for "/", like so:
+
+```
+<a href="/" class="cs-li-link {% if page.url == '/' %} cs-active {% endif %}">
+    Home
+</a>
+```
 
 <a name="admin"></a>
 
