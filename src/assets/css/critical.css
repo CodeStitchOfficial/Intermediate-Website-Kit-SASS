@@ -4,14 +4,14 @@
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #hero-1618 {
+  #hero-1619 {
     padding: var(--sectionPadding);
     /* 200px - 300px - leaving extra space for the navigation */
     padding-top: clamp(12.5rem, 31.95vw, 18.75rem);
     position: relative;
     z-index: 1;
   }
-  #hero-1618 .cs-container {
+  #hero-1619 .cs-container {
     width: 100%;
     max-width: 80rem;
     margin: auto;
@@ -22,7 +22,7 @@
     /* 60px - 180px */
     gap: clamp(3.75rem, 13vw, 11.25rem);
   }
-  #hero-1618 .cs-content {
+  #hero-1619 .cs-content {
     /* set text align to left if content needs to be left aligned */
     text-align: left;
     width: 100%;
@@ -32,7 +32,7 @@
     /* centers content horizontally, set to flex-start to left align */
     align-items: flex-start;
   }
-  #hero-1618 .cs-topper {
+  #hero-1619 .cs-topper {
     /* 13px - 16px */
     font-size: clamp(0.8125rem, 1.5vw, 1rem);
     line-height: 1.2em;
@@ -48,12 +48,12 @@
     gap: 0.5rem;
     position: relative;
   }
-  #hero-1618 .cs-chevron {
+  #hero-1619 .cs-chevron {
     --chevronColor: var(--primary);
     width: 3rem;
     height: auto;
   }
-  #hero-1618 .cs-title {
+  #hero-1619 .cs-title {
     /* 39px - 61px */
     font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
     font-weight: 700;
@@ -64,7 +64,7 @@
     color: #fff;
     position: relative;
   }
-  #hero-1618 .cs-text {
+  #hero-1619 .cs-text {
     /* 16px - 20px */
     font-size: clamp(1rem, 1.95vw, 1.25rem);
     line-height: 1.5em;
@@ -75,7 +75,7 @@
     margin: 0 0 2.5rem 0;
     color: #fff;
   }
-  #hero-1618 .cs-button-solid {
+  #hero-1619 .cs-button-solid {
     font-size: 1rem;
     /* 46px - 56px */
     line-height: clamp(2.875rem, 5.5vw, 3.5rem);
@@ -89,7 +89,7 @@
     position: relative;
     z-index: 1;
   }
-  #hero-1618 .cs-button-solid:before {
+  #hero-1619 .cs-button-solid:before {
     content: '';
     position: absolute;
     display: block;
@@ -102,10 +102,10 @@
     z-index: -1;
     transition: width .3s;
   }
-  #hero-1618 .cs-button-solid:hover:before {
+  #hero-1619 .cs-button-solid:hover:before {
     width: 100%;
   }
-  #hero-1618 .cs-card-group {
+  #hero-1619 .cs-card-group {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -114,7 +114,7 @@
     /* 16px - 20px */
     gap: clamp(1rem, 2.3vw, 1.25rem);
   }
-  #hero-1618 .cs-item {
+  #hero-1619 .cs-item {
     width: 100%;
     text-align: left;
     list-style: none;
@@ -134,12 +134,12 @@
     position: relative;
     z-index: 1;
   }
-  #hero-1618 .cs-icon {
+  #hero-1619 .cs-icon {
     width: 3rem;
     height: auto;
     margin: 0 0 1.5rem 0;
   }
-  #hero-1618 .cs-h3 {
+  #hero-1619 .cs-h3 {
     /* 20px - 25px */
     font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
     line-height: 1.2em;
@@ -148,7 +148,7 @@
     margin: 0 0 1rem 0;
     color: var(--headerColor);
   }
-  #hero-1618 .cs-item-text {
+  #hero-1619 .cs-item-text {
     /* 14px - 16px */
     font-size: clamp(0.875rem, 1.5vw, 1rem);
     line-height: 1.5em;
@@ -157,7 +157,7 @@
     padding: 0;
     color: var(--bodyTextColor);
   }
-  #hero-1618 .cs-background {
+  #hero-1619 .cs-background {
     width: 100%;
     height: 55%;
     display: block;
@@ -166,7 +166,7 @@
     left: 0;
     z-index: -2;
   }
-  #hero-1618 .cs-background:before {
+  #hero-1619 .cs-background:before {
     /* Overlay */
     content: '';
     width: 100%;
@@ -181,7 +181,7 @@
     /* prevents the cursor from interacting with it */
     pointer-events: none;
   }
-  #hero-1618 .cs-background img {
+  #hero-1619 .cs-background img {
     position: absolute;
     top: 0;
     left: 0;
@@ -194,31 +194,37 @@
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-  #hero-1618 {
+  #hero-1619 {
     padding-bottom: 0;
   }
-  #hero-1618 .cs-container {
+  #hero-1619 .cs-container {
     align-items: flex-start;
   }
-  #hero-1618 .cs-content {
+  #hero-1619 .cs-content {
     text-align: left;
     margin-left: 0;
     align-items: flex-start;
   }
-  #hero-1618 .cs-item {
-    grid-column: span 4;
+  #hero-1619 .cs-item {
+    grid-column: span 6;
   }
-  #hero-1618 .cs-background {
+  #hero-1619 .cs-background {
     height: 87%;
   }
-  #hero-1618 .cs-background:before {
+  #hero-1619 .cs-background:before {
     background: linear-gradient(90deg, #111926 21.41%, rgba(17, 25, 38, 0.72) 34.98%, rgba(17, 25, 38, 0) 62.53%);
     opacity: 1;
   }
 }
+/* Large Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+  #hero-1619 .cs-item {
+    grid-column: span 3;
+  }
+}
 /* Large Desktop Parallax Effect - 100px */
 @media only screen and (min-width: 100rem) {
-  #hero-1618 .cs-background {
+  #hero-1619 .cs-background {
     background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting7.jpg");
     background-size: cover;
     background-position: center;
@@ -226,105 +232,30 @@
     /* creates the parallax effect */
     background-attachment: fixed;
   }
-  #hero-1618 .cs-background img {
+  #hero-1619 .cs-background img {
     display: none;
   }
 }
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #hero-1619 .cs-item {
+    background-color: var(--medium);
+  }
+  body.dark-mode #hero-1619 .cs-h3,
+  body.dark-mode #hero-1619 .cs-item-text {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #hero-1619 .cs-icon {
+    filter: grayscale(1) brightness(1000%);
+  }
+  body.dark-mode #hero-1619 .cs-text {
+    opacity: .8;
+  }
+  body.dark-mode #hero-1619 .cs-background {
+    background-color: #000;
+  }
+  body.dark-mode #hero-1619 .cs-background img {
+    opacity: .5;
+  }
+}
                                 
-/*-- -------------------------- -->
-<---          Services          -->
-<--- -------------------------- -*/
-/* Mobile */
-@media only screen and (min-width: 0rem) {
-  .services {
-    z-index: 100;
-    position: relative;
-    border-top: 0.375em solid var(--primary);
-    border-radius: 0.3125em;
-    margin: auto;
-    margin-top: -10.4375em;
-    margin-bottom: 3.125em;
-    background: #fff;
-    max-width: 82.5em;
-    width: 90%;
-    padding: 3.125em 1.25em;
-    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
-  }
-  .services .card {
-    display: block;
-    margin: auto;
-    margin-bottom: 3.125em;
-    max-width: 22.3125em;
-    width: 100%;
-  }
-  .services .card picture {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    margin: auto;
-    margin-bottom: 1.4375em;
-    background: var(--primary);
-    height: 5.5em;
-    width: 5.5em;
-  }
-  .services .card picture img {
-    height: 3em;
-    width: 3em;
-  }
-  .services .card h2 {
-    margin-bottom: 0.65em;
-    font-size: 2em;
-    line-height: 1.35em;
-    font-weight: 700;
-    color: #1a1a1a;
-    text-align: center;
-  }
-  .services .card p {
-    opacity: 0.7;
-    width: 100%;
-    line-height: 1.3333333333em;
-    text-align: center;
-  }
-  .services .card:last-of-type {
-    margin-bottom: 0;
-  }
-}
-/* Inbetween */
-@media only screen and (min-width: 768px) {
-  .services {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 98%;
-    font-size: min(1.8vw, 1em);
-  }
-  .services .card {
-    margin: 0;
-    max-width: 20.3125em;
-  }
-}
-/* Large Desktop */
-@media only screen and (min-width: 1300px) {
-  .services {
-    padding: 3.125em 5em;
-  }
-  .services .card {
-    max-width: 22.3125em;
-  }
-}
-/* Dark mode */
-@media only screen and (min-width: 0rem) {
-  body.dark-mode #services {
-    background: var(--medium);
-  }
-  body.dark-mode #services picture {
-    background: var(--primaryDark);
-  }
-  body.dark-mode #services h2 {
-    font-weight: bold;
-    color: #fff;
-  }
-}
-
-/*# sourceMappingURL=critical.css.map */
