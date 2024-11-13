@@ -27,6 +27,7 @@
     -   <a href="#must-knows">Must Knows</a>
     -   <a href="#good-to-knows">Good-to-knows</a>
 -   <a href="#quick-start-guide">Quick Start Guide</a>
+-   <a href="#formatting">Formatting</a>
 -   <a href="#explanation-of-file-structure">Explanation of File Structure</a>
     -   <a href="#root-files">Root Files</a>
         -   <a href="#eleventyjs">.eleventy.js</a>
@@ -101,6 +102,12 @@ _Not required for light-medium kit usage, but helpful if you want to customise t
 7.  Adjust the `:root` variables in `./src/assets/[sass or less]/root.[scss or less]`
 8.  Modify the website files (use `./src`, NOT `./public`) as needed. Use the template file in `content/pages/_template.txt` to get started, or modify the existing pages.
 9.  Deploy using your preferred hosting provider.
+
+<a name="formatting"></a>
+
+## Formatting
+
+This template leverages Prettier to format all project files, with configuration settings located in the `.prettierrc` file. Since Prettier doesn’t natively support Nunjucks, we use the Jinja template formatter as an alternative, as recommended in this [guide](https://saneef.com/blog/format-nunjucks-files-with-prettier/).
 
 <a name="explanation-of-file-structure"></a>
 
