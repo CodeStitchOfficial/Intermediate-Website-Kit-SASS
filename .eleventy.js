@@ -13,7 +13,6 @@ const configServer = require("./src/config/server");
 const filterPostDate = require("./src/config/postDate");
 const isProduction = configServer.isProduction;
 
-
 module.exports = function (eleventyConfig) {
     /**=====================================================================
           EXTENSIONS - Recognising non-default languages as templates 
@@ -37,7 +36,6 @@ module.exports = function (eleventyConfig) {
                                 END EXTENSIONS
     =======================================================================*/
 
-
     /**=====================================================================
                   PLUGINS - Adds additional eleventy functionality 
     =======================================================================*/
@@ -51,14 +49,14 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(pluginEleventyNavigation);
 
     /**
-     *  AUTOMATIC SITEMAP GENERATION 
+     *  AUTOMATIC SITEMAP GENERATION
      *  Automatically generate a sitemap, using the domain in _data/client.json
      *  https://www.npmjs.com/package/@quasibit/eleventy-plugin-sitemap
      */
     eleventyConfig.addPlugin(pluginSitemap, configSitemap);
 
     /**
-     *  MINIFIER 
+     *  MINIFIER
      *  When in production ("npm run build" is ran), minify all HTML, CSS, JSON, XML, XSL and webmanifest files.
      *  https://github.com/benjaminrancourt/eleventy-plugin-files-minifier
      */
@@ -69,17 +67,13 @@ module.exports = function (eleventyConfig) {
                                 END PLUGINS
     =======================================================================*/
 
-
     /**======================================================================
        PASSTHROUGHS - Copy source files to /public with no 11ty processing
     ========================================================================*/
     /** https://www.11ty.dev/docs/copy/ */
 
     eleventyConfig.addPassthroughCopy("./src/assets", {
-        filter: [
-            "**/*",
-            "!**/*.js"
-        ]
+        filter: ["**/*", "!**/*.js"],
     });
     eleventyConfig.addPassthroughCopy("./src/admin");
     eleventyConfig.addPassthroughCopy("./src/_redirects");

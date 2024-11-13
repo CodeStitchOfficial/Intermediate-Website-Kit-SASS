@@ -1,8 +1,9 @@
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <link rel="stylesheet" href="/assets/css/blog.css">
+    <link rel="stylesheet" href="/assets/css/blog.css" />
 
+    <!-- prettier-ignore-start -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -31,6 +32,7 @@
             {% if tags %}"articleSection": "{{ tags }}"{% endif %}
         }
     </script>
+    <!-- prettier-ignore-end -->
 {% endblock %}
 
 {% block body %}
@@ -40,9 +42,23 @@
 
     <section id="int-hero">
         <picture>
-            <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-            <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
+            <source
+                media="(max-width: 600px)"
+                srcset="/assets/images/cabinets2-m.jpg"
+            />
+            <source
+                media="(min-width: 601px)"
+                srcset="/assets/images/cabinets2.jpg"
+            />
+            <img
+                aria-hidden="true"
+                decoding="async"
+                src="/assets/images/cabinets2.jpg"
+                alt="kitchen cabinets"
+                loading="eager"
+                width="2500"
+                height="1667"
+            />
         </picture>
     </section>
 
@@ -60,7 +76,13 @@
             <article class="blog-article">
                 <!--Main Article Image-->
                 <picture class="blog-mainImage">
-                    <img src="{{ image }}" alt="{{ imageAlt }}" width="795" height="400" decoding="async"/>
+                    <img
+                        src="{{ image }}"
+                        alt="{{ imageAlt }}"
+                        width="795"
+                        height="400"
+                        decoding="async"
+                    />
                 </picture>
 
                 <!--Article Info-->
@@ -70,11 +92,12 @@
                         <!--Author Image-->
                         <picture class="blog-author-img">
                             <img
-                            src="/assets/svgs/profile.svg"
-                            alt="house"
-                            width="32"
-                            height="32"
-                            decoding="async">
+                                src="/assets/svgs/profile.svg"
+                                alt="house"
+                                width="32"
+                                height="32"
+                                decoding="async"
+                            />
                         </picture>
                         <span class="blog-author">{{ author }}</span>
                         <span aria-hidden="true" class="blog-dot"></span>
@@ -82,9 +105,7 @@
                         <span class="blog-date">{{ date | postDate }}</span>
                     </div>
                 </div>
-                <section id="blog-content">
-                    {{ content | safe }}
-                </section>
+                <section id="blog-content">{{ content | safe }}</section>
             </article>
         </div>
         <!-- End .main-content -->

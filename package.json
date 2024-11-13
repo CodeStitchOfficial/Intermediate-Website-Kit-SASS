@@ -1,43 +1,43 @@
 {
-  "name": "starter-kit-v4",
-  "version": "1.1.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "format": "prettier --write '**/*.{html,css,scss,js,json,md}'",
-    "watch:sass": "sass --watch src/assets/sass:./src/assets/css",
-    "build:sass": "sass src/assets/sass:./src/assets/css",
-    "watch:eleventy": "cross-env ELEVENTY_ENV=DEV eleventy --serve",
-    "build:eleventy": "cross-env ELEVENTY_ENV=PROD eleventy",
-    "watch:cms": "npx decap-server",
-    "start": "del-cli ./public --force && npm-run-all --parallel watch:*",
-    "build": "run-s build:*"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/CodeStitchOfficial/Intermediate-Website-Kit-SASS.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/CodeStitchOfficial/Intermediate-Website-Kit-SASS/issues"
-  },
-  "homepage": "https://github.com/CodeStitchOfficial/Intermediate-Website-Kit-SASS#readme",
-  "dependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "@11ty/eleventy-navigation": "^0.3.5",
-    "@quasibit/eleventy-plugin-sitemap": "^2.2.0",
-    "@sherby/eleventy-plugin-files-minifier": "^1.1.1",
-    "cross-env": "^7.0.3",
-    "decap-server": "^3.0.1",
-    "del-cli": "^5.0.0",
-    "esbuild": "^0.21.4",
-    "npm-run-all": "^4.1.5",
-    "sass": "^1.77.4"
-  },
-  "devDependencies": {
-    "prettier": "^3.3.3",
-    "prettier-plugin-jinja-template": "^2.0.0"
-  }
+    "name": "starter-kit-v4",
+    "version": "1.1.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "format": "prettier --write '**/*.{html,css,scss,js,json,md}'",
+        "watch:sass": "sass --watch src/assets/sass:./src/assets/css",
+        "build:sass": "sass src/assets/sass:./src/assets/css",
+        "watch:eleventy": "cross-env ELEVENTY_ENV=DEV eleventy --serve",
+        "build:eleventy": "cross-env ELEVENTY_ENV=PROD eleventy",
+        "watch:cms": "npx decap-server",
+        "start": "del-cli ./public --force && npm-run-all --parallel watch:*",
+        "build": "run-s build:*"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/CodeStitchOfficial/Intermediate-Website-Kit-SASS.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/CodeStitchOfficial/Intermediate-Website-Kit-SASS/issues"
+    },
+    "homepage": "https://github.com/CodeStitchOfficial/Intermediate-Website-Kit-SASS#readme",
+    "dependencies": {
+        "@11ty/eleventy": "^2.0.1",
+        "@11ty/eleventy-navigation": "^0.3.5",
+        "@quasibit/eleventy-plugin-sitemap": "^2.2.0",
+        "@sherby/eleventy-plugin-files-minifier": "^1.1.1",
+        "cross-env": "^7.0.3",
+        "decap-server": "^3.0.1",
+        "del-cli": "^5.0.0",
+        "esbuild": "^0.21.4",
+        "npm-run-all": "^4.1.5",
+        "sass": "^1.77.4"
+    },
+    "devDependencies": {
+        "prettier": "^3.3.3",
+        "prettier-plugin-jinja-template": "^2.0.0"
+    }
 }

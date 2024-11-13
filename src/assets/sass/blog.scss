@@ -853,7 +853,9 @@
             background-color: #4e4b66;
             height: calc(24 / 16 * 1rem);
             width: calc(24 / 16 * 1rem);
-            transition: transform 0.3s, background-color 0.3s;
+            transition:
+                transform 0.3s,
+                background-color 0.3s;
 
             &:hover {
                 transform: translateY(calc(-3 / 16 * 1rem));

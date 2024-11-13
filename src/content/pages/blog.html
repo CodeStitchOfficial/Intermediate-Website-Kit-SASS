@@ -1,8 +1,8 @@
 ---
-title: 'Blog | Code Stitch Web Designs'
-description: 'Meta description for the page'
-preloadImg: '/assets/images/cabinets2.jpg'
-permalink: 'blog/'
+title: "Blog | Code Stitch Web Designs"
+description: "Meta description for the page"
+preloadImg: "/assets/images/cabinets2.jpg"
+permalink: "blog/"
 eleventyNavigation:
     key: Blog
     order: 500
@@ -11,7 +11,7 @@ eleventyNavigation:
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <link rel="stylesheet" href="/assets/css/blog.css">
+    <link rel="stylesheet" href="/assets/css/blog.css" />
 {% endblock %}
 
 {% block body %}
@@ -22,9 +22,23 @@ eleventyNavigation:
     <section id="int-hero">
         <h1 id="home-h">Blog</h1>
         <picture>
-            <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-            <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
+            <source
+                media="(max-width: 600px)"
+                srcset="/assets/images/cabinets2-m.jpg"
+            />
+            <source
+                media="(min-width: 601px)"
+                srcset="/assets/images/cabinets2.jpg"
+            />
+            <img
+                aria-hidden="true"
+                decoding="async"
+                src="/assets/images/cabinets2.jpg"
+                alt="kitchen cabinets"
+                loading="eager"
+                width="2500"
+                height="1667"
+            />
         </picture>
     </section>
 
@@ -47,11 +61,12 @@ eleventyNavigation:
                         <!--Main Article Image-->
                         <picture class="blog-mainImage">
                             <img
-                            src="{{ post.data.image }}"
-                            alt="{{ post.data.imageAlt }}"
-                            width="795"
-                            height="400"
-                            decoding="async"/>
+                                src="{{ post.data.image }}"
+                                alt="{{ post.data.imageAlt }}"
+                                width="795"
+                                height="400"
+                                decoding="async"
+                            />
                         </picture>
                         <!--Article Info-->
                         <div class="article-group">
@@ -59,24 +74,30 @@ eleventyNavigation:
                                 <!--Author Image-->
                                 <picture class="blog-author-img">
                                     <img
-                                    src="/assets/svgs/profile.svg"
-                                    alt="house"
-                                    width="32"
-                                    height="32"
-                                    decoding="async"/>
+                                        src="/assets/svgs/profile.svg"
+                                        alt="house"
+                                        width="32"
+                                        height="32"
+                                        decoding="async"
+                                    />
                                 </picture>
-                                <span class="blog-author">{{ post.data.author }}</span>
-                                <span aria-hidden="true" class="blog-dot"></span>
+                                <span class="blog-author"
+                                    >{{ post.data.author }}</span
+                                >
+                                <span
+                                    aria-hidden="true"
+                                    class="blog-dot"
+                                ></span>
                                 <!--Blog Date-->
-                                <span class="blog-date">{{ post.date | postDate }}</span>
+                                <span class="blog-date"
+                                    >{{ post.date | postDate }}</span
+                                >
                             </div>
-                            <h2 class="blog-h1">
-                                {{ post.data.title }}
-                            </h2>
-                            <p class="blog-desc">
-                                {{ post.data.description }}
-                            </p>
-                            <a href="{{ post.url }}" class="blog-link">Continue Reading</a>
+                            <h2 class="blog-h1">{{ post.data.title }}</h2>
+                            <p class="blog-desc">{{ post.data.description }}</p>
+                            <a href="{{ post.url }}" class="blog-link"
+                                >Continue Reading</a
+                            >
                         </div>
                     </article>
                 {%- endfor -%}

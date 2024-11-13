@@ -196,8 +196,12 @@
         font-family: "Roboto";
         font-weight: 400;
         font-display: swap;
-        src: local(""), url("/assets/fonts/roboto-v29-latin-regular.woff2") format("woff2"),
-            /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        src:
+            local(""),
+            url("/assets/fonts/roboto-v29-latin-regular.woff2") format("woff2"),
+            /* Chrome 26+, Opera 23+, Firefox 39+ */
+                url("/assets/fonts/roboto-v29-latin-regular.woff")
+                format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
     }
     /* roboto-700 - latin */
     @font-face {
@@ -205,8 +209,11 @@
         font-family: "Roboto";
         font-weight: 700;
         font-display: swap;
-        src: local(""), url("/assets/fonts/roboto-v29-latin-700.woff2") format("woff2"),
-            /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        src:
+            local(""),
+            url("/assets/fonts/roboto-v29-latin-700.woff2") format("woff2"),
+            /* Chrome 26+, Opera 23+, Firefox 39+ */
+                url("/assets/fonts/roboto-v29-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
     }
     /* roboto-900 - latin */
     @font-face {
@@ -214,8 +221,11 @@
         font-family: "Roboto";
         font-weight: 900;
         font-display: swap;
-        src: local(""), url("/assets/fonts/roboto-v29-latin-900.woff2") format("woff2"),
-            /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-900.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        src:
+            local(""),
+            url("/assets/fonts/roboto-v29-latin-900.woff2") format("woff2"),
+            /* Chrome 26+, Opera 23+, Firefox 39+ */
+                url("/assets/fonts/roboto-v29-latin-900.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
     }
 }
 
@@ -285,7 +295,9 @@
         .cs-moon {
             z-index: 2;
             // Transition properties
-            transition: transform 0.3s, opacity 0.3s;
+            transition:
+                transform 0.3s,
+                opacity 0.3s;
 
             // fill: yellow; --> uncomment to change the color of the moon if needed
         }
@@ -295,7 +307,9 @@
             opacity: 0;
             // Transition property
             transform: translate(-50%, 100%);
-            transition: transform 0.3s, opacity 0.3s;
+            transition:
+                transform 0.3s,
+                opacity 0.3s;
         }
     }
 }
@@ -420,7 +434,10 @@
 
         .cs-line1 {
             top: 0;
-            transition: transform 0.5s, top 0.3s, left 0.3s;
+            transition:
+                transform 0.5s,
+                top 0.3s,
+                left 0.3s;
             animation-duration: 0.7s;
             animation-timing-function: ease;
             animation-direction: normal;
@@ -431,7 +448,10 @@
         .cs-line2 {
             top: 50%;
             transform: translateX(-50%) translateY(-50%);
-            transition: top 0.3s, left 0.3s, transform 0.5s;
+            transition:
+                top 0.3s,
+                left 0.3s,
+                transform 0.5s;
             animation-duration: 0.7s;
             animation-timing-function: ease;
             animation-direction: normal;
@@ -440,7 +460,9 @@
 
         .cs-line3 {
             bottom: 0;
-            transition: bottom 0.3s, opacity 0.3s;
+            transition:
+                bottom 0.3s,
+                opacity 0.3s;
         }
 
         .cs-ul-wrapper {
@@ -455,7 +477,9 @@
             background-color: #fff;
             height: 100vh;
             overflow: hidden;
-            transition: transform 0.4s, opacity 0.3s;
+            transition:
+                transform 0.4s,
+                opacity 0.3s;
             box-shadow: inset rgba(0, 0, 0, 0.2) 0px 8px 24px;
             transform-origin: top right;
         }
@@ -471,7 +495,8 @@
             width: auto;
             overflow: scroll;
             /* 28px - 40px */
-            padding: calc(48 / 16 * 1rem) clamp(1.75rem, 3vw, 2.5rem) calc(32 / 16 * 1rem) calc(70 / 16 * 1rem);
+            padding: calc(48 / 16 * 1rem) clamp(1.75rem, 3vw, 2.5rem)
+                calc(32 / 16 * 1rem) calc(70 / 16 * 1rem);
             gap: calc(20 / 16 * 1rem);
         }
 
@@ -482,7 +507,9 @@
             margin-right: 0;
             width: 100%;
             list-style: none;
-            transition: transform 0.6s, opacity 0.9s;
+            transition:
+                transform 0.6s,
+                opacity 0.9s;
             text-align: right;
 
             &:nth-of-type(1) {
@@ -560,7 +587,9 @@
             background: rgba(0, 0, 0, 0.6);
             height: 100vh;
             width: 0%;
-            transition: width 0.5s, opacity 0.3s;
+            transition:
+                width 0.5s,
+                opacity 0.3s;
             -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
         }
@@ -676,7 +705,13 @@
             box-sizing: border-box;
             overflow: hidden;
             padding: 0 calc(24 / 16 * 1rem) 0 calc(24 / 16 * 1rem);
-            transition: padding 0.3s, margin 0.3s, height 0.3s, opacity 0.3s, transform 0.3s, visibility 0.3s;
+            transition:
+                padding 0.3s,
+                margin 0.3s,
+                height 0.3s,
+                opacity 0.3s,
+                transform 0.3s,
+                visibility 0.3s;
             gap: calc(12 / 16 * 1rem);
             transform-origin: top right;
         }
@@ -748,7 +783,10 @@
             min-width: calc(200 / 16 * 1rem);
             overflow: hidden;
             padding: 0;
-            transition: transform 0.3s, visibility 0.3s, opacity 0.3s;
+            transition:
+                transform 0.3s,
+                visibility 0.3s,
+                opacity 0.3s;
             box-shadow: rgba(149, 157, 165, 0.2) 0px 10px 16px;
             transform-origin: top;
         }
@@ -763,7 +801,9 @@
             text-decoration: none;
             font-size: calc(16 / 16 * 1rem);
             color: var(--bodyTextColor);
-            transition: opacity 0.6s, transform 0.6s;
+            transition:
+                opacity 0.6s,
+                transform 0.6s;
 
             &:nth-of-type(1) {
                 transition-delay: 0.05s;
@@ -818,7 +858,9 @@
                 font-size: calc(16 / 16 * 1rem);
                 line-height: 1.5em;
                 color: var(--bodyTextColor);
-                transition: color 0.3s, background-color 0.3s;
+                transition:
+                    color 0.3s,
+                    background-color 0.3s;
 
                 &:hover {
                     background-color: #f7f7f7;
