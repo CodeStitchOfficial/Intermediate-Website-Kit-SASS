@@ -6,7 +6,10 @@ const hamburgerMenu = document.querySelector("#cs-navigation .cs-toggle");
 // Function to toggle the aria-expanded attribute
 function toggleAriaExpanded(element) {
     const isExpanded = element.getAttribute("aria-expanded");
-    element.setAttribute("aria-expanded", isExpanded === "false" ? "true" : "false");
+    element.setAttribute(
+        "aria-expanded",
+        isExpanded === "false" ? "true" : "false",
+    );
 }
 
 // Function to toggle the menu open or closed
@@ -22,7 +25,10 @@ hamburgerMenu.addEventListener("click", toggleMenu);
 
 // Add click event listener to the navbar menu to handle clicks on the pseudo-element
 navbarMenu.addEventListener("click", function (event) {
-    if (event.target === navbarMenu && navbarMenu.classList.contains("cs-active")) {
+    if (
+        event.target === navbarMenu &&
+        navbarMenu.classList.contains("cs-active")
+    ) {
         toggleMenu();
     }
 });
@@ -38,7 +44,7 @@ function toggleDropdown(element) {
 
 // Add event listeners to each dropdown element for accessibility
 const dropdownElements = document.querySelectorAll(".cs-dropdown");
-dropdownElements.forEach(element => {
+dropdownElements.forEach((element) => {
     let escapePressed = false;
 
     element.addEventListener("focusout", function (event) {
@@ -48,7 +54,7 @@ dropdownElements.forEach(element => {
             return;
         }
 
-        // If the focus has moved outside the dropdown, remove the active class from the dropdown 
+        // If the focus has moved outside the dropdown, remove the active class from the dropdown
         if (!element.contains(event.relatedTarget)) {
             element.classList.remove("cs-active");
             const dropdownButton = element.querySelector(".cs-dropdown-button");
@@ -86,7 +92,7 @@ dropdownElements.forEach(element => {
 
 // Pressing Enter will redirect to the href
 const dropdownLinks = document.querySelectorAll(".cs-drop-li > .cs-li-link");
-dropdownLinks.forEach(link => {
+dropdownLinks.forEach((link) => {
     link.addEventListener("keydown", function (event) {
         if (event.key === "Enter") {
             window.location.href = this.href;
@@ -96,7 +102,10 @@ dropdownLinks.forEach(link => {
 
 // If you press Escape and the hamburger menu is open, close it
 document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && hamburgerMenu.classList.contains("cs-active")) {
+    if (
+        event.key === "Escape" &&
+        hamburgerMenu.classList.contains("cs-active")
+    ) {
         toggleMenu();
     }
 });
