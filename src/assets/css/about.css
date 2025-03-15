@@ -4,168 +4,167 @@
 <--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #sbs {
-        padding: var(--sectionPadding);
-    }
-    #sbs .cs-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
-        max-width: 80rem;
-        width: 100%;
-        row-gap: 2.5rem;
-    }
-    #sbs .cs-left {
-        position: relative;
-        height: 39.75em;
-        /* using ems so we can use font size to scale the whole section */
-        width: 39.4375em;
-        /* scaling the font size with the view width */
-        font-size: min(2.31vw, 0.7em);
-    }
-    #sbs .cs-picture {
-        position: absolute;
-        display: block;
-        border-radius: 1.5em;
-        /* clips img tag corners */
-        overflow: hidden;
-    }
-    #sbs .cs-picture img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        /* makes image act like a background image */
-        object-fit: cover;
-    }
-    #sbs .cs-picture1 {
-        top: 0;
-        left: 0;
-        height: 36.3125em;
-        width: 32.625em;
-    }
-    #sbs .cs-picture2 {
-        bottom: 0;
-        right: 0;
-        /* 6px - 12px */
-        border: clamp(0.375em, 1.5vw, 0.75em) solid #fff;
-        background-color: #fff;
-        height: 25em;
-        width: 25.875em;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 40px;
-    }
-    #sbs .cs-right {
-        margin: auto;
-        max-width: 33.875rem;
-    }
-    #sbs .cs-topper {
-        margin-bottom: 0.25rem;
-        text-align: left;
-    }
-    #sbs .cs-title {
-        max-width: 50rem;
-        text-align: left;
-    }
-    #sbs .cs-text {
-        margin-bottom: 1rem;
-        max-width: 46.875rem;
-        color: var(--bodyTextColor);
-        text-align: left;
-    }
-    #sbs .cs-text:last-of-type {
-        margin-bottom: 2rem;
-    }
-    #sbs .cs-flex-group {
-        position: relative;
-        border-radius: 1rem;
-        background-color: #f7f7f7;
-        /* 16px - 32px */
-        padding: clamp(1rem, 3vw, 2rem);
-    }
-    #sbs .cs-flex-p {
-        margin: 0 0 1rem;
-        /* 14px - 16px */
-        font-size: clamp(0.875rem, 1.5vw, 1rem);
-        line-height: 1.5em;
-        color: #353535;
-    }
-    #sbs .cs-name {
-        display: block;
-        margin: 0 0 0.25rem;
-        text-transform: uppercase;
-        font-size: 1rem;
-        line-height: 1.2em;
-        font-weight: bold;
-        color: var(--headerColor);
-    }
-    #sbs .cs-job {
-        display: block;
-        font-size: 0.875rem;
-        line-height: 1.5em;
-        color: #353535;
-    }
-    #sbs .cs-quote-icon {
-        position: absolute;
-        bottom: 0rem;
-        /* 16px - 32px */
-        right: clamp(1rem, 4vw, 2rem);
-        height: auto;
-        /* 60px - 136px */
-        width: clamp(3.75rem, 10vw, 8.5rem);
-    }
-    #sbs .cs-button-solid {
-        margin-top: 2rem;
-    }
+  #sbs {
+    padding: var(--sectionPadding);
+  }
+  #sbs .cs-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    max-width: 80rem;
+    width: 100%;
+    row-gap: 2.5rem;
+  }
+  #sbs .cs-left {
+    position: relative;
+    height: 39.75em;
+    /* using ems so we can use font size to scale the whole section */
+    width: 39.4375em;
+    /* scaling the font size with the view width */
+    font-size: min(2.31vw, 0.7em);
+  }
+  #sbs .cs-picture {
+    position: absolute;
+    display: block;
+    border-radius: 1.5em;
+    /* clips img tag corners */
+    overflow: hidden;
+  }
+  #sbs .cs-picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* makes image act like a background image */
+    object-fit: cover;
+  }
+  #sbs .cs-picture1 {
+    top: 0;
+    left: 0;
+    height: 36.3125em;
+    width: 32.625em;
+  }
+  #sbs .cs-picture2 {
+    bottom: 0;
+    right: 0;
+    /* 6px - 12px */
+    border: clamp(0.375em, 1.5vw, 0.75em) solid #fff;
+    background-color: #fff;
+    height: 25em;
+    width: 25.875em;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 40px;
+  }
+  #sbs .cs-right {
+    margin: auto;
+    max-width: 33.875rem;
+  }
+  #sbs .cs-topper {
+    margin-bottom: 0.25rem;
+    text-align: left;
+  }
+  #sbs .cs-title {
+    max-width: 50rem;
+    text-align: left;
+  }
+  #sbs .cs-text {
+    margin-bottom: 1rem;
+    max-width: 46.875rem;
+    color: var(--bodyTextColor);
+    text-align: left;
+  }
+  #sbs .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+  #sbs .cs-flex-group {
+    position: relative;
+    border-radius: 1rem;
+    background-color: #f7f7f7;
+    /* 16px - 32px */
+    padding: clamp(1rem, 3vw, 2rem);
+  }
+  #sbs .cs-flex-p {
+    margin: 0 0 1rem;
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    color: #353535;
+  }
+  #sbs .cs-name {
+    display: block;
+    margin: 0 0 0.25rem;
+    text-transform: uppercase;
+    font-size: 1rem;
+    line-height: 1.2em;
+    font-weight: bold;
+    color: var(--headerColor);
+  }
+  #sbs .cs-job {
+    display: block;
+    font-size: 0.875rem;
+    line-height: 1.5em;
+    color: #353535;
+  }
+  #sbs .cs-quote-icon {
+    position: absolute;
+    bottom: 0rem;
+    /* 16px - 32px */
+    right: clamp(1rem, 4vw, 2rem);
+    height: auto;
+    /* 60px - 136px */
+    width: clamp(3.75rem, 10vw, 8.5rem);
+  }
+  #sbs .cs-button-solid {
+    margin-top: 2rem;
+  }
 }
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
-    #sbs .cs-container {
-        flex-flow: row;
-        justify-content: space-between;
-        gap: 3.25rem;
-    }
-    #sbs .cs-left {
-        font-size: min(1.2vw, 1em);
-        flex: none;
-    }
-    #sbs .cs-right {
-        margin: 0;
-    }
+  #sbs .cs-container {
+    flex-flow: row;
+    justify-content: space-between;
+    gap: 3.25rem;
+  }
+  #sbs .cs-left {
+    font-size: min(1.2vw, 1em);
+    flex: none;
+  }
+  #sbs .cs-right {
+    margin: 0;
+  }
 }
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
-    body.dark-mode #sbs .cs-left:before,
-    body.dark-mode #sbs .cs-left:after {
-        background: var(--accent);
-    }
-    body.dark-mode #sbs .cs-picture2 {
-        /* 6px - 12px */
-        border: clamp(0.375em, 1.5vw, 0.75em) solid var(--dark);
-        background-color: var(--dark);
-    }
-    body.dark-mode #sbs .cs-topper {
-        color: var(--primaryLight);
-    }
-    body.dark-mode #sbs .cs-title,
-    body.dark-mode #sbs .cs-text,
-    body.dark-mode #sbs .cs-h3,
-    body.dark-mode #sbs .cs-flex-p,
-    body.dark-mode #sbs .cs-name {
-        color: var(--bodyTextColorWhite);
-    }
-    body.dark-mode #sbs .cs-flex-group {
-        background-color: var(--accent);
-    }
-    body.dark-mode #sbs .cs-job {
-        opacity: 0.8;
-        color: var(--bodyTextColorWhite);
-    }
-    body.dark-mode #sbs .cs-quote-icon {
-        opacity: 0.2;
-    }
+  body.dark-mode #sbs .cs-left:before, body.dark-mode #sbs .cs-left:after {
+    background: var(--accent);
+  }
+  body.dark-mode #sbs .cs-picture2 {
+    /* 6px - 12px */
+    border: clamp(0.375em, 1.5vw, 0.75em) solid var(--dark);
+    background-color: var(--dark);
+  }
+  body.dark-mode #sbs .cs-topper {
+    color: var(--primaryLight);
+  }
+  body.dark-mode #sbs .cs-title,
+  body.dark-mode #sbs .cs-text,
+  body.dark-mode #sbs .cs-h3,
+  body.dark-mode #sbs .cs-flex-p,
+  body.dark-mode #sbs .cs-name {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #sbs .cs-flex-group {
+    background-color: var(--accent);
+  }
+  body.dark-mode #sbs .cs-job {
+    opacity: 0.8;
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #sbs .cs-quote-icon {
+    opacity: 0.2;
+  }
 }
 
 /*# sourceMappingURL=about.css.map */

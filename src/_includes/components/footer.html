@@ -2,83 +2,92 @@
 <!--                   Footer                     -->
 <!-- ============================================ -->
 
-<footer id="footer">
-    <div class="container">
-        <div class="left-section">
-            <a class="logo" href="/"
-                ><img
-                    loading="lazy"
-                    decoding="async"
-                    src="/assets/svgs/logo-white.svg"
-                    alt="logo"
-                    width="264"
-                    height="78"
-            /></a>
-            <p>
-                Extra content if you need it, if not you can delete this whole p
-                tag. I usually do.
-            </p>
-        </div>
-        <div class="right-section">
-            <div class="lists">
-                <ul>
-                    <li>
-                        <h2>Information</h2>
-                    </li>
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-                    <li>
-                        <a href="/about">About Us</a>
-                    </li>
-                    <li>
-                        <a href="/projects">Projects</a>
-                    </li>
-                    <li>
-                        <a href="/reviews">Reviews</a>
-                    </li>
-                    <li>
-                        <a href="/contact">Contact</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <h2>Services</h2>
-                    </li>
-                    <li>Service1</li>
-                    <li>Service2</li>
-                    <li>Service4</li>
-                    <li>Service5</li>
-                </ul>
-                <ul>
-                    <li>
-                        <h2>Contact</h2>
-                    </li>
-                    <li>
-                        <a href="/contact">
-                            {{ client.address.lineOne }}<br />
-                            {{ client.address.lineTwo }}<br />
-                            {{ client.address.city }}
-                            {{ client.address.state }}
-                            {{ client.address.zip }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="tel:{{ client.phoneForTel }}">
-                            T: {{ client.phoneFormatted }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="mailto:{{ client.email }}">Click to Email</a>
-                    </li>
-                </ul>
+<footer id="cs-footer-1293">
+    <div class="cs-container">      
+        <!-- Logo Group -->
+        <div class="cs-logo-group">
+            <div class="nm-logo">
+                <a aria-label="go back to home" class="cs-logo" href="">
+                    <img class="cs-logo-img" aria-hidden="true" loading="lazy" decoding="async" src="../../assets/images/Neva Masquerade_Logo Color Dark Vertical.svg" alt="logo" width="240">
+                </a>
+            </div>
+            <div class="nm-contact">
+                <p class="cs-text">
+                    We planning, designing, financing, and executing projects.
+                </p>
+                <a href="mailto:info@mail.com" class="cs-link">
+                    <img class="cs-link-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/thick-mail.svg" alt="icon" width="24" height="24">
+                    hi@stitchconstruction.com
+                </a>
             </div>
         </div>
+        <!-- Links -->
+        <ul class="cs-nav">
+            <li class="cs-nav-li">
+                <span class="cs-header">Services</span>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="">Email Marketing</a>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="">Brandings</a>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="">Campaign</a>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="">Offline</a>
+            </li>
+        </ul>
+        <ul class="cs-nav">
+            <li class="cs-nav-li">
+                <span class="cs-header">About</span>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="">Our Story</a>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="">Benefits</a>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="">Team</a>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="">Career</a>
+            </li>
+        </ul>
+        <ul class="cs-nav">
+            <li class="cs-nav-li">
+                <span class="cs-header">Contact</span>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="">Facebook</a>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="">Instagram</a>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="">LinkedIn</a>
+            </li>
+        </ul>
+        <ul class="cs-nav">
+            <li class="cs-nav-li">
+                <span class="cs-header">Help</span>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="">FAQ</a>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="">Contact us</a>
+            </li>
+        </ul>
     </div>
-
-    <div class="credit">
-        <span>Designed and Hand Coded by</span>
-        <a href="/" target="_blank" rel="noopener">Your Company Name</a>
-        <span class="copyright"> Copyright {% year %} - Present</span>
+    <div class="cs-bottom">
+        <span class="cs-copyright">Copyright© 2023. 
+            <a class="cs-copyright-link" href="">Stitch Construction.</a>
+            All Right Reserved.
+        </span>
+        <a href="" class="cs-copyright-link">Terms of Service</a>
+        <a href="" class="cs-copyright-link">Privacy Policy</a>
     </div>
 </footer>
