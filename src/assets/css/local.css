@@ -5,7 +5,7 @@
 @media only screen and (min-width: 0rem) {
   #RPsbs-576,
   #RPsbsr-576 {
-    background-color: var(--primary);
+    background: var(--primary);
   }
   #RPsbs-576 .cs-container,
   #RPsbsr-576 .cs-container {
@@ -46,11 +46,25 @@
   #RPsbsr-576 .cs-text {
     margin-bottom: 1rem;
     color: var(--textLight);
-    opacity: 0.8;
   }
   #RPsbs-576 .cs-text:last-of-type,
   #RPsbsr-576 .cs-text:last-of-type {
     margin-bottom: 2rem;
+  }
+  #RPsbs-576 .nm-featured-link,
+  #RPsbsr-576 .nm-featured-link {
+    font-family: "Baskerville", Georgia, serif;
+    color: var(--primary100);
+    text-decoration: none;
+    /* &:visited {
+        color: var(--accent100);
+    } */
+  }
+  #RPsbs-576 .nm-featured-link:hover,
+  #RPsbsr-576 .nm-featured-link:hover {
+    color: var(--primary200);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
   }
   #RPsbs-576 .cs-picture,
   #RPsbsr-576 .cs-picture {
@@ -137,7 +151,16 @@
 @media only screen and (min-width: 48rem) {
   body.dark-mode #RPsbs-576 .cs-container:before,
   body.dark-mode #RPsbsr-576 .cs-container:before {
-    opacity: 0.5;
+    background: var(--medium);
+  }
+  body.dark-mode #RPsbs-576 .cs-picture:before,
+  body.dark-mode #RPsbsr-576 .cs-picture:before {
+    background: var(--accent);
+  }
+  body.dark-mode #RPsbs-576 .nm-button-outline,
+  body.dark-mode #RPsbsr-576 .nm-button-outline {
+    border: 2px solid var(--primary400);
+    background-color: var(--medium);
   }
 }
 /*-- -------------------------- -->
@@ -211,10 +234,10 @@
 @media only screen and (min-width: 0rem) {
   #steps-585 {
     padding: var(--sectionPadding);
-    background-color: var(--secondary);
+    background-color: var(--secondary200);
   }
   #steps-585 .cs-topper {
-    color: var(--accent400);
+    color: var(--accent500);
   }
   #steps-585 .cs-container {
     width: 100%;
@@ -248,7 +271,7 @@
     min-height: 18.125rem;
     /* 16px - 24px left & right */
     padding: 1rem clamp(1rem, 1.8vw, 1.5rem);
-    border-bottom: 1px solid var(--textDark);
+    border-bottom: 1px solid var(--accent500);
     /* prevents padding and border from affecting height and width */
     box-sizing: border-box;
     display: flex;
@@ -281,7 +304,7 @@
     line-height: 1.2em;
     /* auto pushes against other elements in a flexbox, this one forces it to be at the bottom of the flexbox */
     margin: auto 0 0 0;
-    color: var(--accent400);
+    color: var(--accent500);
     display: block;
   }
 }
@@ -308,13 +331,16 @@
   }
   #steps-585 .cs-item {
     border-bottom: none;
-    border-right: 1px solid var(--textDark);
+    border-right: 1px solid var(--accent500);
   }
 }
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
+  body.dark-mode #steps-585 {
+    background-color: var(--medium);
+  }
   body.dark-mode #steps-585 .cs-topper {
-    color: var(--textLight);
+    color: var(--secondary200);
   }
   body.dark-mode #steps-585 .cs-title {
     color: var(--textLight);
@@ -326,9 +352,11 @@
     color: var(--textLight);
     opacity: 0.8;
   }
-  body.dark-mode #steps-585 .cs-h3,
-  body.dark-mode #steps-585 .cs-number {
+  body.dark-mode #steps-585 .cs-h3 {
     color: var(--textLight);
+  }
+  body.dark-mode #steps-585 .cs-number {
+    color: var(--secondary300);
   }
 }
 /*-- -------------------------- -->
@@ -343,6 +371,7 @@
     position: relative;
     z-index: 1;
     transform-style: preserve-3d;
+    background: var(--primary);
   }
   #pricing-2063 .cs-topper {
     color: var(--secondary);
@@ -532,7 +561,8 @@
     content: "";
     width: 100%;
     height: 100%;
-    background: var(--primary);
+    background: var(--primary600);
+    opacity: 0.4;
     position: absolute;
     top: 0;
     left: 0;
@@ -607,50 +637,449 @@
 }
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
+  body.dark-mode #pricing-2063 .cs-topper {
+    color: var(--secondary);
+  }
   body.dark-mode #pricing-2063 .cs-title,
   body.dark-mode #pricing-2063 .cs-text,
-  body.dark-mode #pricing-2063 .cs-name,
-  body.dark-mode #pricing-2063 .cs-tag,
-  body.dark-mode #pricing-2063 .cs-price,
-  body.dark-mode #pricing-2063 .cs-duration,
   body.dark-mode #pricing-2063 .cs-item-text,
-  body.dark-mode #pricing-2063 .cs-li {
+  body.dark-mode #pricing-2063 .cs-li,
+  body.dark-mode #pricing-2063 .cs-name {
     color: var(--textLight);
   }
-  body.dark-mode #pricing-2063 .cs-text,
-  body.dark-mode #pricing-2063 .cs-item-text {
+  body.dark-mode #pricing-2063 .cs-price {
+    color: var(--textLight);
+    opacity: 0.8;
+  }
+  body.dark-mode #pricing-2063 .cs-duration {
+    color: var(--textLight);
     opacity: 0.8;
   }
   body.dark-mode #pricing-2063 .cs-item {
-    background-color: var(--dark);
-    border-color: rgba(255, 255, 255, 0.2);
+    background-color: var(--medium);
     position: relative;
     z-index: 1;
-  }
-  body.dark-mode #pricing-2063 .cs-item:before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: #000;
-    opacity: 0.2;
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-  }
-  body.dark-mode #pricing-2063 .cs-package {
-    border-color: rgba(255, 255, 255, 0.2);
-  }
-  body.dark-mode #pricing-2063 .cs-button-transparent {
-    color: var(--textLight);
-    border-color: var(--textLight);
   }
   body.dark-mode #pricing-2063 .cs-exclusive {
     background-color: var(--dark);
   }
   body.dark-mode #pricing-2063 .cs-background::before {
     background: var(--dark);
+    opacity: 0.7;
+  }
+}
+/*-- -------------------------- -->
+<---            FAQ             -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #faq-2066 {
+    padding: var(--sectionPadding);
+    overflow: hidden;
+    position: relative;
+  }
+  #faq-2066 .cs-topper {
+    color: var(--accent500);
+  }
+  #faq-2066 .cs-container {
+    width: 100%;
+    max-width: 44rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+    position: relative;
+    z-index: 1;
+  }
+  #faq-2066 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #faq-2066 .cs-flex-group {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+  }
+  #faq-2066 .cs-button-group {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-self: stretch;
+  }
+  #faq-2066 .cs-option {
+    /* 16px - 20px */
+    font-family: "Baskerville SC", "Georgia", serif;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    letter-spacing: 1px;
+    /* 50px - 72px */
+    line-height: 1.2em;
+    /* prevents border from affecting height and width */
+    box-sizing: border-box;
+    padding: 0.75rem;
+    border: none;
+    background-color: var(--primary100);
+    color: var(--textDark);
+    position: relative;
+    z-index: 1;
+  }
+  #faq-2066 .cs-option:before {
+    /* background color */
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    opacity: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: opacity 0.3s;
+  }
+  #faq-2066 .cs-option:hover:hover {
+    cursor: pointer;
+    color: var(--textLight);
+  }
+  #faq-2066 .cs-option:hover:hover:before {
     opacity: 0.8;
+  }
+  #faq-2066 .cs-option.cs-active {
+    color: var(--textLight);
+    background: var(--primary400);
+  }
+  #faq-2066 .cs-option.cs-active:before {
+    opacity: 1;
+  }
+  #faq-2066 .cs-wrapper {
+    position: relative;
+  }
+  #faq-2066 .cs-faq-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    transform-style: preserve-3d;
+    perspective: 900px;
+    transition: transform 0.7s, opacity 0.3s, visibility 0.5s, top 0.3s, left 0.3s;
+    /* makes the transfrom scaling orgin the top left corner, dictates the direction by which the scale transforms animate towards */
+    transform-origin: top;
+  }
+  #faq-2066 .cs-faq-group.cs-hidden {
+    /* prevents the mouse from interacting with it */
+    pointer-events: none;
+    /* hidden galleries have a 0 opacity, and we animate the opacity to 1 when they become active */
+    opacity: 0;
+    /* by using visibility:hidden instead of display:none, we can see the animations from the opacity and transforms, display:none won't render animations. */
+    visibility: hidden;
+    position: absolute;
+    /* this top and left value help control the animation, by setting it to position absolute and left 0, the FAQ won't fly off screen to the left, it will stop its position to be at the left edge of the .cs-flex-group (left: 0). Same for the bottom:0 value, the FAQ won't go past that position when it animates */
+    top: 0;
+    left: 0;
+    /* prevents the hidden galleries from overflowing the section, and makes a nice animations to transition to and from */
+    transform: scaleY(0);
+  }
+  #faq-2066 .cs-faq-group.cs-hidden .cs-faq-item {
+    opacity: 0;
+    transform: rotateX(270deg);
+  }
+  #faq-2066 .cs-faq-item {
+    list-style: none;
+    width: 100%;
+    /* clips all corners of the button that overlap the rounded border */
+    overflow: hidden;
+    opacity: 1;
+    border-bottom: 1px solid var(--accent400);
+    top: 0;
+    transform: rotateX(0deg);
+    transition: transform 0.6s, opacity 0.3s;
+  }
+  #faq-2066 .cs-faq-item:nth-of-type(2) {
+    transition-delay: 0.1s;
+  }
+  #faq-2066 .cs-faq-item:nth-of-type(3) {
+    transition-delay: 0.2s;
+  }
+  #faq-2066 .cs-faq-item:nth-of-type(4) {
+    transition-delay: 0.3s;
+  }
+  #faq-2066 .cs-faq-item:nth-of-type(5) {
+    transition-delay: 0.4s;
+  }
+  #faq-2066 .cs-faq-item:nth-of-type(6) {
+    transition-delay: 0.5s;
+  }
+  #faq-2066 .cs-faq-item:nth-of-type(7) {
+    transition-delay: 0.6s;
+  }
+  #faq-2066 .cs-faq-item:nth-of-type(8) {
+    transition-delay: 0.7s;
+  }
+  #faq-2066 .cs-faq-item:nth-of-type(9) {
+    transition-delay: 0.8s;
+  }
+  #faq-2066 .cs-faq-item:nth-of-type(10) {
+    transition-delay: 0.9s;
+  }
+  #faq-2066 .cs-faq-item:last-of-type {
+    border-bottom: none;
+  }
+  #faq-2066 .cs-faq-item.active .cs-button {
+    color: var(--accent400);
+  }
+  #faq-2066 .cs-faq-item.active .cs-button:before {
+    background-color: var(--accent200);
+    transform: rotate(315deg);
+  }
+  #faq-2066 .cs-faq-item.active .cs-button:after {
+    background-color: var(--accent200);
+    transform: rotate(-315deg);
+  }
+  #faq-2066 .cs-faq-item.active .cs-item-p {
+    height: auto;
+    /* 20px - 24px bottom */
+    /* 16px - 24px left & right */
+    padding: 0 0 1.5rem 0;
+    opacity: 1;
+  }
+  #faq-2066 .cs-button {
+    /* 16px - 20px */
+    font-family: "Baskerville", "Georgia", serif;
+    font-size: clamp(1.25rem, 2vw, 1.75rem);
+    font-weight: 400;
+    line-height: 1.2em;
+    text-align: left;
+    width: 100%;
+    padding: 1.5rem 0;
+    background-color: transparent;
+    color: var(--textDark);
+    border: none;
+    display: block;
+    position: relative;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  #faq-2066 .cs-button:hover {
+    cursor: pointer;
+  }
+  #faq-2066 .cs-button:before {
+    /* left line */
+    content: "";
+    width: 0.5rem;
+    height: 0.125rem;
+    background-color: var(--accent200);
+    opacity: 1;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 1.5rem;
+    transform: rotate(45deg);
+    transition: transform 0.5s;
+    /* animate the transform from the left side of the x axis, and the center of the y */
+    transform-origin: left center;
+  }
+  #faq-2066 .cs-button:after {
+    /* right line */
+    content: "";
+    width: 0.5rem;
+    height: 0.125rem;
+    background-color: var(--accent200);
+    opacity: 1;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 1.3125rem;
+    transform: rotate(-45deg);
+    transition: transform 0.5s;
+    /* animate the transform from the right side of the x axis, and the center of the y */
+    transform-origin: right center;
+  }
+  #faq-2066 .cs-button-text {
+    width: 80%;
+    display: block;
+  }
+  #faq-2066 .cs-item-p {
+    /* 14px - 16px */
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    line-height: 1.5em;
+    width: 90%;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    /* clips the text so it doesn't show up */
+    overflow: hidden;
+    color: var(--textDark);
+    opacity: 0;
+    transition: opacity 0.3s, padding-bottom 0.3s;
+  }
+  #faq-2066 .cs-cta {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    /* 32px - 40px */
+    padding: clamp(2rem, 4vw, 2.5rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  #faq-2066 .cs-cta:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--secondary);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: opacity 0.3s;
+  }
+  #faq-2066 .cs-flex {
+    display: flex;
+    flex-direction: column;
+  }
+  #faq-2066 .cs-cta-title {
+    font-size: 1.9375rem;
+    font-weight: 900;
+    line-height: 1.2em;
+    margin: 0 0 1rem 0;
+    color: var(--textDark);
+  }
+  #faq-2066 .cs-cta-text {
+    font-size: 1rem;
+    line-height: 1.5em;
+    margin: 0 0 2rem 0;
+    color: var(--textDark);
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #faq-2066 .cs-container {
+    max-width: 80rem;
+  }
+  #faq-2066 .cs-button-group {
+    flex-direction: row;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #faq-2066 .cs-option {
+    padding: 0.75rem 1.5rem;
+  }
+  #faq-2066 .cs-cta {
+    text-align: left;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+  }
+  #faq-2066 .cs-cta-text {
+    margin: 0;
+  }
+  #faq-2066 .cs-button-solid {
+    flex-shrink: 0;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #faq-2066 {
+    background-color: var(--dark);
+  }
+  body.dark-mode #faq-2066 .cs-title,
+  body.dark-mode #faq-2066 .cs-item-p,
+  body.dark-mode #faq-2066 .cs-text {
+    color: var(--textLight);
+  }
+  body.dark-mode #faq-2066 .cs-text, body.dark-mode #faq-2066 .cs-cta-text {
+    opacity: 0.8;
+  }
+  body.dark-mode #faq-2066 .cs-topper {
+    color: var(--secondary);
+  }
+  body.dark-mode #faq-2066 .cs-option {
+    background-color: var(--primary600);
+    color: var(--textLight);
+  }
+  body.dark-mode #faq-2066 .cs-option.cs-active, body.dark-mode #faq-2066 .cs-option:hover {
+    background-color: var(--medium);
+    color: var(--textLight);
+  }
+  body.dark-mode #faq-2066 .cs-item {
+    background-color: var(--medium);
+  }
+  body.dark-mode #faq-2066 .cs-faq-item {
+    transition: border-color 0.3s, transform 0.6s;
+    border-color: var(--primary);
+  }
+  body.dark-mode #faq-2066 .cs-faq-item.active .cs-button {
+    color: var(--primary100);
+  }
+  body.dark-mode #faq-2066 .cs-faq-item.active .cs-button:before, body.dark-mode #faq-2066 .cs-faq-item.active .cs-button:after {
+    background-color: var(--accent100);
+  }
+  body.dark-mode #faq-2066 .cs-faq-item.active .cs-item-p {
+    /* 20px - 24px */
+    padding-top: clamp(1.25rem, 1.3vw, 1.5rem);
+  }
+  body.dark-mode #faq-2066 .cs-faq-item:nth-of-type(2) {
+    transition-delay: 0.1s;
+  }
+  body.dark-mode #faq-2066 .cs-faq-item:nth-of-type(3) {
+    transition-delay: 0.2s;
+  }
+  body.dark-mode #faq-2066 .cs-faq-item:nth-of-type(4) {
+    transition-delay: 0.3s;
+  }
+  body.dark-mode #faq-2066 .cs-faq-item:nth-of-type(5) {
+    transition-delay: 0.4s;
+  }
+  body.dark-mode #faq-2066 .cs-faq-item:nth-of-type(6) {
+    transition-delay: 0.5s;
+  }
+  body.dark-mode #faq-2066 .cs-faq-item:nth-of-type(7) {
+    transition-delay: 0.6s;
+  }
+  body.dark-mode #faq-2066 .cs-faq-item:nth-of-type(8) {
+    transition-delay: 0.7s;
+  }
+  body.dark-mode #faq-2066 .cs-faq-item:nth-of-type(9) {
+    transition-delay: 0.8s;
+  }
+  body.dark-mode #faq-2066 .cs-faq-item:nth-of-type(10) {
+    transition-delay: 0.9s;
+  }
+  body.dark-mode #faq-2066 .cs-button {
+    background-color: var(--dark);
+    color: var(--textLight);
+  }
+  body.dark-mode #faq-2066 .cs-button:before, body.dark-mode #faq-2066 .cs-button:after {
+    background-color: var(--accent100);
+  }
+  body.dark-mode #faq-2066 .cs-cta-title, body.dark-mode #faq-2066 .cs-cta-text {
+    color: var(--textLight);
+  }
+  body.dark-mode #faq-2066 .cs-cta:before {
+    background-color: var(--medium);
+    opacity: 0.8;
+  }
+  body.dark-mode #faq-2066 .cs-graphic {
+    display: none;
   }
 }
 

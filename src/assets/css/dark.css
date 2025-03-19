@@ -5,9 +5,9 @@
 /* Mobile */
 @media only screen and (min-width: 0rem) {
   :root {
-    --dark: #082032;
-    --medium: #2c394b;
-    --accent: #334756;
+    --dark: #071219;
+    --medium: #122633;
+    --accent: #294759;
   }
   body.dark-mode {
     background-color: var(--dark);
@@ -20,13 +20,23 @@
   body.dark-mode h4,
   body.dark-mode h5,
   body.dark-mode h6 {
-    color: #fff;
+    color: var(--textLight);
   }
   body.dark-mode .light {
     display: none;
   }
   body.dark-mode .dark {
     display: block !important;
+  }
+  body.dark-mode .cs-topper {
+    color: var(--secondary);
+  }
+  body.dark-mode .cs-button-solid {
+    background-color: var(--primary400);
+    color: var(--textLight);
+  }
+  body.dark-mode .cs-button-solid:before {
+    background-color: var(--accent500);
   }
   .dark {
     display: none;

@@ -8,9 +8,9 @@
 @media only screen and (min-width: 0rem) {
     // Dark Mode Color Scheme
     :root {
-        --dark: #082032;
-        --medium: #2c394b;
-        --accent: #334756;
+        --dark: #071219;
+        --medium: #122633;
+        --accent: #294759;
     }
 
     body.dark-mode {
@@ -24,7 +24,7 @@
         h4,
         h5,
         h6 {
-            color: #fff;
+            color: var(--textLight);
         }
 
         // hide all light classes
@@ -35,6 +35,19 @@
         // show all dark classes
         .dark {
             display: block !important;
+        }
+
+        .cs-topper {
+            color: var(--secondary);
+        }
+
+        .cs-button-solid {
+            background-color: var(--primary400);
+            color: var(--textLight);
+
+            &:before {
+                background-color: var(--accent500);
+            }
         }
     }
 

@@ -9,13 +9,17 @@
     // Website colors
     :root {
         --primary100: #c5d9e5;
+        --primary200: #9bb9cc;
+        --primary400: #486a80;
         --primary: #294759;
         --primary600: #122633;
         --primary700: #071219;
         --secondary: #e5dbd1;
+        --secondary200: #ccb7a5;
         --secondary300: #a6917e;
         --secondary500: #59493b;
         --secondary600: #33281f;
+        --accent100: #e5bbb8;
         --accent200: #cc948f;
         --accent300: #a66963;
         --accent400: #804540;
@@ -85,13 +89,13 @@
         font-family: 'Contralto Small', "Arial Narrow", sans-serif;
         text-decoration: none;
         text-transform: uppercase;
-        font-size: calc(18 / 16 * 1rem);
-        line-height: calc(50 / 16 * 1em);
+        font-size: calc(16 / 16 * 1rem);
+        line-height: calc(48 / 16 * 1em);
         letter-spacing: 3px;
         font-weight: 600;
 
         // Transition Properties
-        color: var(--bodyTextColor);
+        color: var(--textDark);
         transition: color 0.3s;
         transition-delay: 0.1s;
         text-align: center;
@@ -123,6 +127,58 @@
         color: var(--textLight);
     }
 
+    .nm-button-outline {
+        z-index: 1;
+        position: relative;
+        display: inline-block;
+        background-color: var(--primary);
+        border: 2px solid var(--primary100);
+        width: auto;
+        padding: 0 calc(30 / 16 * 1rem);
+        font-family: 'Contralto Small', "Arial Narrow", sans-serif;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: calc(16 / 16 * 1rem);
+        line-height: calc(48 / 16 * 1em);
+        letter-spacing: 3px;
+        font-weight: 600;
+
+        // Transition Properties
+        color: var(--textLight);
+        transition: color 0.3s, border 0.3s;
+        transition-delay: 0.1s;
+        text-align: center;
+
+        &:hover {
+            &:before {
+                width: 100%;
+                border: none;
+            }
+        }
+
+        &:before {
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "";
+            opacity: 1;
+            display: block;
+            background-color: var(--primary400);
+            border: none;
+            height: 100%;
+
+            //Transition properties
+            width: 0;
+            transition: width 0.3s;
+        }
+    }
+
+    .nm-button-solid:hover {
+        color: var(--textLight);
+        border: none;
+    }
+
     .cs-hide-on-mobile {
         display: none;
     }
@@ -148,7 +204,7 @@
         padding: 0;
         font-family: "Contralto Small", "Arial Narrow", sans-serif;
         font-size: 100%;
-        color: var(--bodyTextColor);
+        color: var(--textDark);
     }
 
     *,
@@ -192,6 +248,22 @@
     p,
     li {
         color: var(--textDark);
+    }
+
+    ul {
+        margin-top: -.5rem;
+        margin-bottom: 1rem;
+        margin-left: 1rem;
+    }
+
+    li {
+        color: var(--textLight);
+        font-size: 1.1rem;
+        font-family: 'Contralto Small', 'Arial Narrow', sans-serif;
+        list-style-image: url(../svgs/diamond.svg);
+        list-style-position: outside;
+        padding-left: .5em;
+        margin-bottom: .25rem;
     }
 
     a,
@@ -407,7 +479,7 @@
     body.dark-mode {
         #button-box-838 {
             .cs-button-transparent {
-                color: var(--bodyTextColorWhite);
+                color: var(--textLight);
             }
         }
     }
@@ -461,6 +533,7 @@
 
         .cs-moon {
             z-index: 2;
+            fill: var(--textLight);
             // Transition properties
             transition:
                 transform 0.3s,
@@ -518,7 +591,7 @@
         padding: calc(12 / 16 * 1rem) calc(16 / 16 * 1rem);
         /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
         font-family: "Baskerville SC", Georgia, serif;
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
 
         .cs-container {
             display: flex;
@@ -534,8 +607,8 @@
             align-items: center;
             margin: 0 auto 0 0;
             height: 100%;
-            max-width: calc(146 / 16 * 1rem);
-            width: 40%;
+            max-width: calc(300 / 16 * 1rem);
+            width: 70%;
             /* prevents padding from affecting height and width */
             box-sizing: border-box;
             padding: 0;
@@ -822,6 +895,7 @@
             .cs-li-link {
                 position: relative;
                 transition: opacity 0.3s;
+                font-family: "Baskerville SC", Georgia, serif;
             }
 
             &.cs-active {
@@ -955,7 +1029,7 @@
                 transform 0.3s,
                 visibility 0.3s,
                 opacity 0.3s;
-            box-shadow: rgba(149, 157, 165, 0.2) 0px 10px 16px;
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 16px;
             transform-origin: top;
         }
 
@@ -1086,7 +1160,7 @@
         box-sizing: border-box;
         padding: 0 calc(16 / 16 * 1rem);
         /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 24px;
 
         .cs-container {
             display: flex;
@@ -1111,7 +1185,7 @@
             margin: 0 auto 0 0;
             height: calc(65 / 16 * 1rem);
             max-width: calc(350 / 16 * 1rem);
-            width: 18.4%;
+            width: 25%;
             padding: 0;
 
             img {
@@ -1148,7 +1222,7 @@
             text-decoration: none;
             font-family: "Baskerville SC", Georgia, serif;
             /* 14px - 16px */
-            font-size: clamp(0.875rem, 1vw, 1rem);
+            font-size: clamp(1rem, 2vw, 1.25rem);
             line-height: 1.5em;
             color: var(--textLight);
             &:hover {
@@ -1475,7 +1549,7 @@
         }
 
         .cs-title, .cs-topper, .cs-text {
-            color: var(--textDark);
+            color: var(--textLight);
         }
 
         .cs-title {
@@ -1497,6 +1571,8 @@
         }
 
         .cs-input {
+            font-family: 'Contralto Small', 'Arial Narrow', sans-serif;
+            font-weight: 300;
             font-size: calc(16 / 16 * 1rem);
             width: 100%;
             height: clamp(2.875rem, 5.5vw, 3.5rem);
@@ -1505,6 +1581,7 @@
             padding-left: calc(20 / 16 * 1rem);
             border: none;
             background-color: var(--textLight);
+            color: var(--textDark);
             /* prevents padding from adding to width and height */
             box-sizing: border-box;
             display: block;
@@ -1513,40 +1590,7 @@
             }
         }
 
-        .cs-button-solid {
-            font-size: calc(16 / 16 * 1rem);
-            /* 46px - 56px */
-            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-            text-decoration: none;
-            font-weight: 700;
-            text-align: center;
-            margin: 0;
-            min-width: calc(150 / 16 * 1rem);
-            padding: 0 calc(24 / 16 * 1rem);
-            display: inline-block;
-            position: relative;
-            z-index: 1;
-            /* prevents padding from adding to the width */
-            box-sizing: border-box;
-
-            &:before {
-                content: "";
-                position: absolute;
-                height: 100%;
-                width: 0%;
-                opacity: 1;
-                top: 0;
-                left: 0;
-                z-index: -1;
-                transition: width 0.3s;
-            }
-
-            &:hover {
-                &:before {
-                    width: 100%;
-                }
-            }
-        }
+       
 
         .cs-submit {
             width: 100%;
@@ -1575,6 +1619,8 @@
                 content: "";
                 width: 100%;
                 height: 100%;
+                background: #19130d;
+                opacity: 0.6;
                 position: absolute;
                 display: block;
                 top: 0;
@@ -1638,7 +1684,7 @@
 /* Large Desktop 1300px - Parallax Scroll */
 @media only screen and (min-width: 81.25rem) {
     #cta-1612 {
-        background: url("../../assets/images/Light.svg");
+        background: url("../images/cta-background.webp");
         background-size: cover;
         background-position: center 20%;
         background-repeat: no-repeat;
@@ -1650,6 +1696,7 @@
         }
     }
 }
+                                
 
 /*-- -------------------------- -->
 <---          Footer            -->
@@ -1683,6 +1730,9 @@
             position: relative;
             display: flex;
             flex-direction: row;
+            flex-flow: wrap;
+            justify-content: center;
+            align-items: center;
             column-gap: 2rem;
         }
 
@@ -1855,6 +1905,12 @@
             width: 30%;
             max-width: calc(384/16 * 1rem);
             margin-right: auto;
+            margin-left: 1rem;
+            flex-wrap: nowrap;
+        }
+
+        .cs-logo {
+            padding-left: 2rem;
         }
 
         .cs-nav {
@@ -1911,7 +1967,11 @@
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
         #cs-footer-1293 {
-            background-color: rgba(0, 0, 0, 0.6);
+            background: var(--dark);
+            
+            .cs-header {
+                color: var(--secondary);
+            }
         }
     }
 }

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="svg822" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" version="1.1" viewBox="0 0 30 30">
+  <!-- Generator: Adobe Illustrator 29.1.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 142)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #fffaf0;
+      }
+    </style>
+  </defs>
+  <g id="_x3C_defs">
+    <inkscape:path-effect id="path-effect4637" copies_to_360="true" effect="copy_rotate" fuse_paths="false" is_visible="true" num_copies="8" origin="15,15" rotation_angle="60" starting_angle="0" starting_point="20,15"/>
+    <inkscape:path-effect id="path-effect894" copies_to_360="true" effect="copy_rotate" fuse_paths="false" is_visible="true" num_copies="6" origin="15,15" rotation_angle="60" starting_angle="0" starting_point="20,15"/>
+    <inkscape:path-effect id="path-effect880" effect="show_handles" handles="true" is_visible="true" nodes="true" original_path="true" scale_nodes_and_handles="10"/>
+    <inkscape:path-effect id="path-effect878" effect="simplify" helper_size="5" is_visible="true" simplify_individual_paths="false" simplify_just_coalesce="false" smooth_angles="0" steps="1" threshold="0.002"/>
+    <inkscape:path-effect id="path-effect876" effect="sketch" ends_tolerance="0.1;1" is_visible="true" nbiter_approxstrokes="5" nbtangents="5" parallel_offset="5;1" strokelength="100" strokelength_rdm="0.3;1" strokeoverlap="0.3" strokeoverlap_rdm="0.3;1" tgt_places_rdmness="1;1" tgtlength="100" tgtlength_rdm="0.3;1" tgtscale="10" tremble_frequency="1" tremble_size="5;1"/>
+    <inkscape:path-effect id="path-effect874" effect="spiro" is_visible="true"/>
+    <inkscape:path-effect id="path-effect870" effect="fill_between_strokes" is_visible="true" linkedpath="" reversesecond="false" secondpath=""/>
+    <inkscape:path-effect id="path-effect868" effect="ellipse_5pts" is_visible="true"/>
+    <inkscape:path-effect id="path-effect866" effect="attach_path"/>
+    <inkscape:path-effect id="path-effect864" bendpath="m 14,293.5625 h 2" effect="bend_path" is_visible="true" prop_scale="1" scale_y_rel="false" vertical="false"/>
+    <inkscape:path-effect id="path-effect862" effect="bounding_box" is_visible="true" linkedpath="" visualbounds="false"/>
+  </g>
+  <sodipodi:namedview id="base" bordercolor="#666666" borderopacity="1.0" inkscape:current-layer="layer1" inkscape:cx="9.5611294" inkscape:cy="9.4248027" inkscape:document-units="px" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:window-height="713" inkscape:window-maximized="1" inkscape:window-width="1366" inkscape:window-x="0" inkscape:window-y="0" inkscape:zoom="11.313709" pagecolor="#ffffff" showgrid="true" showguides="false" units="px">
+    <inkscape:grid id="grid816" type="xygrid"/>
+  </sodipodi:namedview>
+  <g id="layer1" inkscape:groupmode="layer" inkscape:label="Layer 1">
+    <path id="path866" class="st0" d="M10.2,4c-4.4,1.9-7.2,6.2-7.2,11,0,6.6,5.4,12,12,12,4.7,0,8.9-2.7,10.9-7-1.5.7-3.1,1-4.8,1-6.6,0-12-5.4-12-12,0-1.7.4-3.4,1.1-5Z" inkscape:connector-curvature="0"/>
+  </g>
+</svg>

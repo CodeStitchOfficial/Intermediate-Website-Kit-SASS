@@ -5,14 +5,11 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #hero-288 {
-    /* centers button */
-    text-align: center;
     /* 116px - 164px top */
     /* 60px - 100px  bottom */
     padding: clamp(7.25rem, 16.82vw, 10.25rem) 1rem clamp(3.75rem, 7.82vw, 6.25rem);
     position: relative;
     background-color: var(--secondary);
-    z-index: -2;
   }
   #hero-288 .cs-container {
     width: 100%;
@@ -31,7 +28,7 @@
   }
   #hero-288 .cs-title {
     /* 39px - 61px */
-    font-size: clamp(2.4375rem, 5vw, 3.8125rem);
+    font-size: clamp(2.5rem, 5vw, 3.25rem);
     line-height: 1.1em;
     text-align: center;
     max-width: 43.75rem;
@@ -42,7 +39,6 @@
   #hero-288 .cs-text {
     /* 16px - 20px */
     font-size: clamp(1rem, 1.5vw, 1.25rem);
-    font-weight: 300;
     line-height: 1.3em;
     text-align: center;
     width: 100%;
@@ -64,6 +60,7 @@
     overflow: hidden;
     display: block;
     position: relative;
+    z-index: 2;
   }
   #hero-288 .cs-picture img {
     position: absolute;
@@ -83,7 +80,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: -1;
+    z-index: 1;
   }
   #hero-288 .cs-waves img {
     position: absolute;
@@ -129,6 +126,9 @@
 }
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
+  body.dark-mode #hero-288 {
+    background-color: var(--medium);
+  }
   body.dark-mode #hero-288 .cs-title,
   body.dark-mode #hero-288 .cs-text {
     color: var(--textLight);
@@ -148,13 +148,14 @@
     margin: auto;
     position: relative;
     z-index: 10;
+    background: var(--secondary600);
   }
   #services-2175:before {
     /* background color */
     content: "";
     width: 100vw;
     height: 100%;
-    background: var(--secondary500);
+    background: var(--secondary600);
     opacity: 1;
     position: absolute;
     display: block;
@@ -203,7 +204,7 @@
     gap: 1rem;
   }
   #services-2175 .cs-icon {
-    width: 2rem;
+    width: 4rem;
     height: auto;
   }
   #services-2175 .cs-h3 {
@@ -257,6 +258,9 @@
 }
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
+  body.dark-mode #services-2175 {
+    background-color: var(--primary);
+  }
   body.dark-mode #services-2175:before {
     background-color: rgba(0, 0, 0, 0.6);
   }

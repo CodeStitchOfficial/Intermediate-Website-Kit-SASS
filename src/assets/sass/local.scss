@@ -6,7 +6,7 @@
 @media only screen and (min-width: 0rem) {
     #RPsbs-576,
     #RPsbsr-576 {
-        background-color: var(--primary);
+        background: var(--primary);
 
         .cs-container {
             width: 100%;
@@ -46,9 +46,25 @@
         .cs-text {
             margin-bottom: calc(16 / 16 * 1rem);
             color: var(--textLight);
-            opacity: 0.8;
             &:last-of-type {
                 margin-bottom: calc(32 / 16 * 1rem);
+            }
+        }
+
+        .nm-featured-link {
+            font-family: 'Baskerville', Georgia, serif;
+            color: var(--primary100);
+            text-decoration: none;
+
+
+            /* &:visited {
+                color: var(--accent100);
+            } */
+
+            &:hover {
+                color: var(--primary200);
+                text-decoration: underline;
+                text-underline-offset: .2em;
             }
         }
 
@@ -141,12 +157,25 @@
         #RPsbs-576,
         #RPsbsr-576 {
             .cs-container {
+                
                 &:before {
-                    opacity: 0.5;
+                    background: var(--medium);
                 }
+            }
+            
+            .cs-picture {
+                &:before {
+                background: var(--accent);
+                }
+            }
+
+            .nm-button-outline {
+                border: 2px solid var(--primary400);
+                background-color: var(--medium);
             }
         }
     }
+    
 }
 
 /*-- -------------------------- -->
@@ -240,10 +269,10 @@
 @media only screen and (min-width: 0rem) {
     #steps-585 {
         padding: var(--sectionPadding);
-        background-color: var(--secondary);
+        background-color: var(--secondary200);
 
         .cs-topper {
-            color: var(--accent400);
+            color: var(--accent500);
         }
 
         .cs-container {
@@ -281,7 +310,7 @@
             min-height: calc(290 / 16 * 1rem);
             /* 16px - 24px left & right */
             padding: calc(16 / 16 * 1rem) clamp(1rem, 1.8vw, 1.5rem);
-            border-bottom: 1px solid var(--textDark);
+            border-bottom: 1px solid var(--accent500);
             /* prevents padding and border from affecting height and width */
             box-sizing: border-box;
             display: flex;
@@ -317,7 +346,7 @@
             line-height: 1.2em;
             /* auto pushes against other elements in a flexbox, this one forces it to be at the bottom of the flexbox */
             margin: auto 0 0 0;
-            color: var(--accent400);
+            color: var(--accent500);
             display: block;
         }
     }
@@ -353,8 +382,9 @@
 
         .cs-item {
             border-bottom: none;
-            border-right: 1px solid var(--textDark);
+            border-right: 1px solid var(--accent500);
         }
+        
     }
 }
 
@@ -362,8 +392,10 @@
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
         #steps-585 {
+            background-color: var(--medium);
+
             .cs-topper {
-                color: var(--textLight);
+                color: var(--secondary200);
             }
             .cs-title {
                 color: var(--textLight);
@@ -378,9 +410,12 @@
                 opacity: 0.8;
             }
 
-            .cs-h3,
-            .cs-number {
+            .cs-h3 {
                 color: var(--textLight);
+            }
+            
+            .cs-number {
+                color: var(--secondary300);
             }
         }
     }
@@ -399,6 +434,7 @@
         position: relative;
         z-index: 1;
         transform-style: preserve-3d;
+        background: var(--primary);
 
         .cs-topper {
             color: var(--secondary);
@@ -615,7 +651,8 @@
                 content: "";
                 width: 100%;
                 height: 100%;
-                background: var(--primary);
+                background: var(--primary600);
+                opacity: 0.4;
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -712,48 +749,32 @@
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
         #pricing-2063 {
+            .cs-topper {
+                color: var(--secondary);
+            }
+            
             .cs-title,
             .cs-text,
-            .cs-name,
-            .cs-tag,
-            .cs-price,
-            .cs-duration,
             .cs-item-text,
-            .cs-li {
+            .cs-li,
+            .cs-name {
                 color: var(--textLight);
             }
 
-            .cs-text,
-            .cs-item-text {
+            .cs-price {
+                color: var(--textLight);
+                opacity: 0.8;
+            }
+            
+            .cs-duration {
+                color: var(--textLight);
                 opacity: 0.8;
             }
 
             .cs-item {
-                background-color: var(--dark);
-                border-color: rgba(255, 255, 255, 0.2);
+                background-color: var(--medium);
                 position: relative;
                 z-index: 1;
-
-                &:before {
-                    content: '';
-                    width: 100%;
-                    height: 100%;
-                    background: #000;
-                    opacity: .2;
-                    position: absolute;
-                    display: block;
-                    top: 0;
-                    left: 0;
-                }
-            }
-
-            .cs-package {
-                border-color: rgba(255, 255, 255, .2);
-            }
-
-            .cs-button-transparent {
-                color: var(--textLight);
-                border-color: var(--textLight);
             }
 
             .cs-exclusive {
@@ -763,9 +784,504 @@
             .cs-background {
                 &::before {
                     background: var(--dark);
-                    opacity: 0.8;
+                    opacity: 0.7;
                 }
             }
         }
     }
+} 
+
+/*-- -------------------------- -->
+<---            FAQ             -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #faq-2066 {
+        padding: var(--sectionPadding);
+        overflow: hidden;
+        position: relative;
+
+        .cs-topper {
+            color: var(--accent500);
+        }
+        
+        .cs-container {
+            width: 100%;
+            max-width: calc(704/16 * 1rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+            position: relative;
+            z-index: 1;
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: center;
+        }
+
+        .cs-flex-group {
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: calc(32/16 * 1rem);
+            position: relative;
+        }
+
+        .cs-button-group {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            align-content: flex-start;
+            flex-wrap: wrap;
+            gap: calc(12/16 * 1rem);
+            align-self: stretch;
+        }
+
+        .cs-option {
+            /* 16px - 20px */
+            font-family: 'Baskerville SC', 'Georgia', serif;
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            letter-spacing: 1px;
+            /* 50px - 72px */
+            line-height: 1.2em;
+            /* prevents border from affecting height and width */
+            box-sizing: border-box;
+            padding: calc(12/16 * 1rem);
+            border: none;
+            background-color: var(--primary100);
+            color: var(--textDark);
+            position: relative;
+            z-index: 1;
+
+            &:before {
+                /* background color */
+                content: "";
+                width: 100%;
+                height: 100%;
+                background: var(--primary);
+                opacity: 0;
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                transition: opacity 0.3s;
+            }
+
+            &:hover {
+                &:hover {
+                    cursor: pointer;
+                    color: var(--textLight);
+
+                    &:before {
+                        opacity: .8;
+                    }
+                }
+            }
+
+            &.cs-active {
+                color: var(--textLight);
+                background: var(--primary400);
+
+                &:before {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .cs-wrapper {
+            position: relative;
+        }
+
+        .cs-faq-group {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: calc(8/16 * 1rem);
+            transform-style: preserve-3d;
+            perspective: 900px;
+            transition:
+                transform 0.7s,
+                opacity 0.3s,
+                visibility 0.5s,
+                top 0.3s,
+                left 0.3s;
+            /* makes the transfrom scaling orgin the top left corner, dictates the direction by which the scale transforms animate towards */
+            transform-origin: top;
+
+            &.cs-hidden {
+                /* prevents the mouse from interacting with it */
+                pointer-events: none;
+                /* hidden galleries have a 0 opacity, and we animate the opacity to 1 when they become active */
+                opacity: 0;
+                /* by using visibility:hidden instead of display:none, we can see the animations from the opacity and transforms, display:none won't render animations. */
+                visibility: hidden;
+                position: absolute;
+                /* this top and left value help control the animation, by setting it to position absolute and left 0, the FAQ won't fly off screen to the left, it will stop its position to be at the left edge of the .cs-flex-group (left: 0). Same for the bottom:0 value, the FAQ won't go past that position when it animates */
+                top: 0;
+                left: 0;
+                /* prevents the hidden galleries from overflowing the section, and makes a nice animations to transition to and from */
+                transform: scaleY(0);
+
+                .cs-faq-item {
+                    opacity: 0;
+                    transform: rotateX(270deg);
+                }
+            }
+        }
+
+        .cs-faq-item {
+            list-style: none;
+            width: 100%;
+            /* clips all corners of the button that overlap the rounded border */
+            overflow: hidden;
+            opacity: 1;
+            border-bottom: 1px solid var(--accent400);
+            top: 0;
+            transform: rotateX(0deg);
+            transition:
+                transform 0.6s,
+                opacity 0.3s;
+
+            &:nth-of-type(2) {
+                transition-delay: 0.1s;
+            }
+            &:nth-of-type(3) {
+                transition-delay: 0.2s;
+            }
+            &:nth-of-type(4) {
+                transition-delay: 0.3s;
+            }
+            &:nth-of-type(5) {
+                transition-delay: 0.4s;
+            }
+            &:nth-of-type(6) {
+                transition-delay: 0.5s;
+            }
+            &:nth-of-type(7) {
+                transition-delay: 0.6s;
+            }
+            &:nth-of-type(8) {
+                transition-delay: 0.7s;
+            }
+            &:nth-of-type(9) {
+                transition-delay: 0.8s;
+            }
+            &:nth-of-type(10) {
+                transition-delay: 0.9s;
+            }
+
+            &:last-of-type {
+                border-bottom: none;
+            }
+
+            &.active {
+                .cs-button {
+                    color: var(--accent400);
+                    &:before {
+                        background-color: var(--accent200);
+                        transform: rotate(315deg);
+                    }
+                    &:after {
+                        background-color: var(--accent200);
+                        transform: rotate(-315deg);
+                    }
+                }
+                .cs-item-p {
+                    height: auto;
+                    /* 20px - 24px bottom */
+                    /* 16px - 24px left & right */
+                    padding: 0 0 calc(24/16 * 1rem) 0;
+                    opacity: 1;
+                }
+            }
+        }
+
+        .cs-button {
+            /* 16px - 20px */
+            font-family: 'Baskerville', 'Georgia', serif;
+            font-size: clamp(1.25rem, 2vw, 1.75rem);
+            font-weight: 400;
+            line-height: 1.2em;
+            text-align: left;
+            width: 100%;
+            padding: calc(24/16 * 1rem) 0;
+            background-color: transparent;
+            color: var(--textDark);
+            border: none;
+            display: block;
+            position: relative;
+            transition:
+                background-color 0.3s,
+                color 0.3s;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &:before {
+                /* left line */
+                content: "";
+                width: calc(8/16 * 1rem);
+                height: calc(2/16 * 1rem);
+                background-color: var(--accent200);
+                opacity: 1;
+                display: block;
+                position: absolute;
+                top: 50%;
+                right: calc(24/16 * 1rem);
+                transform: rotate(45deg);
+                transition: transform 0.5s;
+                /* animate the transform from the left side of the x axis, and the center of the y */
+                transform-origin: left center;
+            }
+
+            &:after {
+                /* right line */
+                content: "";
+                width: calc(8/16 * 1rem);
+                height: calc(2/16 * 1rem);
+                background-color: var(--accent200);
+                opacity: 1;
+                display: block;
+                position: absolute;
+                top: 50%;
+                right: calc(21/16 * 1rem);
+                transform: rotate(-45deg);
+                transition: transform 0.5s;
+                /* animate the transform from the right side of the x axis, and the center of the y */
+                transform-origin: right center;
+            }
+        }
+
+        .cs-button-text {
+            width: 80%;
+            display: block;
+        }
+
+        .cs-item-p {
+            /* 14px - 16px */
+            font-size: clamp(1rem, 1.5vw, 1.25rem);
+            line-height: 1.5em;
+            width: 90%;
+            height: 0;
+            margin: 0;
+            padding: 0;
+            /* clips the text so it doesn't show up */
+            overflow: hidden;
+            color: var(--textDark);
+            opacity: 0;
+            transition:
+                opacity 0.3s,
+                padding-bottom 0.3s;
+        }
+
+        .cs-cta {
+            text-align: center;
+            width: 100%;
+            margin: 0;
+            /* 32px - 40px */
+            padding: clamp(2rem, 4vw, 2.5rem);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+
+            &:before {
+                content: "";
+                width: 100%;
+                height: 100%;
+                background: var(--secondary);
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                transition: opacity 0.3s;
+            }
+        }
+
+        .cs-flex {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cs-cta-title {
+            font-size: calc(31/16 * 1rem);
+            font-weight: 900;
+            line-height: 1.2em;
+            margin: 0 0 calc(16/16 * 1rem) 0;
+            color: var(--textDark);
+        }
+
+        .cs-cta-text {
+            font-size: calc(16/16 * 1rem);
+            line-height: 1.5em;
+            margin: 0 0 calc(32/16 * 1rem) 0;
+            color: var(--textDark);
+        }
+    }
 }
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #faq-2066 {
+        .cs-container {
+            max-width: calc(1280/16 * 1rem);
+        }
+
+        .cs-button-group {
+            flex-direction: row;
+        }
+    }
+}
+
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #faq-2066 {
+        .cs-option {
+            padding: calc(12/16 * 1rem) calc(24/16 * 1rem);
+        }
+
+        .cs-cta {
+            text-align: left;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: calc(64/16 * 1rem);
+        }
+
+        .cs-cta-text {
+            margin: 0;
+        }
+
+        .cs-button-solid {
+            flex-shrink: 0;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #faq-2066 {
+            background-color: var(--dark);
+
+            .cs-title,
+            .cs-item-p,
+            .cs-text {
+                color: var(--textLight);
+            }
+
+            .cs-text, .cs-cta-text {
+                opacity: 0.8;
+            }
+
+            .cs-topper {
+                color: var(--secondary);
+            }
+
+            .cs-option {
+                background-color: var(--primary600);
+                color: var(--textLight);
+
+                &.cs-active, &:hover {
+                    background-color: var(--medium);
+                    color: var(--textLight);
+                }
+            }
+
+            .cs-item {
+                background-color: var(--medium);
+            }
+
+            .cs-faq-item {
+                transition: border-color .3s, transform .6s;
+                border-color: var(--primary);
+                &.active {
+                    .cs-button {
+                        color: var(--primary100);
+
+                        &:before,
+                        &:after {
+                            background-color: var(--accent100);
+                        }
+                    }
+
+                    .cs-item-p {
+                        /* 20px - 24px */
+                        padding-top: clamp(1.25rem, 1.3vw, 1.5rem);
+                    }
+                }
+
+                &:nth-of-type(2) {
+                    transition-delay: 0.1s;
+                }
+                &:nth-of-type(3) {
+                    transition-delay: 0.2s;
+                }
+                &:nth-of-type(4) {
+                    transition-delay: 0.3s;
+                }
+                &:nth-of-type(5) {
+                    transition-delay: 0.4s;
+                }
+                &:nth-of-type(6) {
+                    transition-delay: 0.5s;
+                }
+                &:nth-of-type(7) {
+                    transition-delay: 0.6s;
+                }
+                &:nth-of-type(8) {
+                    transition-delay: 0.7s;
+                }
+                &:nth-of-type(9) {
+                    transition-delay: 0.8s;
+                }
+                &:nth-of-type(10) {
+                    transition-delay: 0.9s;
+                }
+            }
+
+            .cs-button {
+                background-color: var(--dark);
+                color: var(--textLight);
+                &:before,
+                &:after {
+                    background-color: var(--accent100);
+                }
+            }
+
+            .cs-cta-title, .cs-cta-text {
+                color: var(--textLight);
+            }
+
+            .cs-cta {
+                &:before {
+                    background-color: var(--medium);
+                    opacity: .8;
+                }
+            }
+
+            .cs-graphic {
+                display: none;
+            }
+        }
+    }
+}
+                                
