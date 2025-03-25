@@ -1,7 +1,7 @@
 ---
-title: 'Page title for <title> and OG tags'
+title: 'Page title | Neva Masquerade'
 description: 'Description for <meta> description and OG tags'
-preloadImg: '/assets/images/imagename.format'
+preloadImg: '/assets/images/dark-mode-banner.svg'
 permalink: 'page-path/'
 eleventyNavigation:
     key: Name to appear in navigation
@@ -19,4 +19,79 @@ eleventyNavigation:
 
 {% block body %}
     <!-- Page HTML goes here, without a <main> wrapper. The <main> tag is already presented in layouts/base.html -->
+
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
+
+<div id="banner-1106">
+    <div class="cs-container">
+        <span class="cs-int-title">Page Title</span>
+        <div class="cs-breadcrumbs">
+            <a href="/" class="cs-link">Home</a>
+            <a href="" class="cs-link cs-active">Current Page</a>
+        </div>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="../../assets/images/dark-mode-banner.svg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="../../assets/images/dark-mode-banner.svg">
+        <img decoding="async" src="../../assets/images/dark-mode-banner.svg" alt="" width="1280" height="568" aria-hidden="true">
+    </picture>
+</div>
+
+<!-- ============================================ -->
+<!--                 Content Page                 -->
+<!-- ============================================ -->
+
+<!-- ============================================ 
+    This Stitch is used for content heavy interior pages
+    that have no design or layout.  Often times these are 
+    content silos where you talk extensively about a topic
+    to educate your visitors and rank on Google for the 
+    content.  These are great for pages that have a TON
+    of content.  Design isn't important here, it's all 
+    about making the content accessible and easy to read.
+================================================= -->
+
+<section id="content-page-851">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h1 class="cs-title">h1 - A Personalized Approach To Your <span class="cs-color">Well-Being</span></h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4-6</h4>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis laboriosam eum quae in temporibus cumque tempora expedita mollitia nostrum adipisci, ipsum commodi, cupiditate, sequi quos enim! Quaerat esse non sunt! Lorem ipsum dolor sit amet <a href="">link example</a>. Est, quis!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis laboriosam eum quae in temporibus cumque tempora expedita mollitia nostrum <strong>adipisci, ipsum commodi</strong>, cupiditate, sequi quos enim! 
+            </p>
+            <h3>Heading 3</h3>
+            <ol>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            </ol>
+            <h4>Heading 4-6</h4>
+            <ul>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            </ul>
+        </div>
+        <div class="cs-image-group">
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fcontent2.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fcontent2.jpg">
+                <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fcontent2.jpg" alt="person" width="542" height="520" aria-hidden="true">
+            </picture>
+        </div>
+    </div>
+</section>
+
 {% endblock %}

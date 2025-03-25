@@ -1,7 +1,7 @@
 ---
-title: "Contact | Code Stitch Web Designs"
+title: "Contact | Neva Masquerade"
 description: "Meta description for the page"
-preloadImg: "/assets/images/cabinets2.jpg"
+preloadImg: "/assets/images/dark-mode-banner.svg"
 permalink: "contact/"
 eleventyNavigation:
     key: Contact Us
@@ -16,143 +16,76 @@ eleventyNavigation:
 {% endblock %}
 
 {% block body %}
-    <!-- ============================================ -->
-    <!--                    LANDING                   -->
-    <!-- ============================================ -->
 
-    <section id="int-hero">
-        <h1 id="home-h">Contact Us</h1>
-        <picture>
-            <source
-                media="(max-width: 600px)"
-                srcset="/assets/images/cabinets2-m.jpg"
-            />
-            <source
-                media="(min-width: 601px)"
-                srcset="/assets/images/cabinets2.jpg"
-            />
-            <img
-                aria-hidden="true"
-                decoding="async"
-                src="/assets/images/cabinets2.jpg"
-                alt="kitchen cabinets"
-                loading="eager"
-                width="2500"
-                height="1667"
-            />
-        </picture>
-    </section>
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
 
-    <!-- ============================================ -->
-    <!--                Contact Form                  -->
-    <!-- ============================================ -->
-
-    <section id="cs-contact">
-        <div class="cs-container">
-            <form id="cs-form" name="Contact Form" method="post">
-                <div class="cs-content">
-                    <span class="cs-topper">Contact</span>
-                    <h2 class="cs-title">Get in Touch</h2>
-                    <p class="cs-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Ridiculus elementum ullamcorper ipsum porttitor aliquam.
-                        Id magna urna ultrices odio pulvinar. Sed ut.
-                    </p>
-                </div>
-                <label>
-                    Name
-                    <input
-                        required
-                        type="text"
-                        id="name"
-                        name="name"
-                        placeholder="Name"
-                    />
-                </label>
-                <label>
-                    Email
-                    <input
-                        required
-                        type="text"
-                        id="email"
-                        name="email"
-                        placeholder="Email"
-                    />
-                </label>
-                <label>
-                    Phone
-                    <input
-                        required
-                        type="text"
-                        id="phone"
-                        name="phone"
-                        placeholder="Phone"
-                    />
-                </label>
-                <label>
-                    How Did You Find Us
-                    <input
-                        type="text"
-                        id="find"
-                        name="find-us"
-                        placeholder="How did you find us?"
-                    />
-                </label>
-                <label class="cs-label-message">
-                    Message
-                    <textarea
-                        required
-                        name="Message"
-                        id="message"
-                        placeholder="Write message..."
-                    ></textarea>
-                </label>
-                <button class="cs-button-solid" type="submit">
-                    Submit Message
-                </button>
-            </form>
-            <div class="cs-right-section">
-                <!--Email-->
-                <span class="cs-header">Email</span>
-                <a class="cs-link" href="mailto:{{ client.email }}"
-                    >{{ client.email }}</a
-                >
-                <!--Phone-->
-                <span class="cs-header">Phone</span>
-                <a class="cs-link" href="tel:{{ client.phoneForTel }}"
-                    >{{ client.phoneFormatted }}</a
-                >
-                <!--Address-->
-                <span class="cs-header">Address</span>
-                <a class="cs-link" href="{{ client.address.mapLink }}">
-                    {{ client.address.lineOne }},
-                    <br />
-                    {{ client.address.lineTwo }},
-                    <br />
-                    <span class="cs-block">
-                        {{ client.address.city }}
-                        {{ client.address.state }}
-                        {{ client.address.zip }}
-                    </span>
-                </a>
-
-                <!-- Background Image-->
-                <picture class="cs-bg-picture">
-                    <source
-                        media="(min-width: 601px)"
-                        srcset="/assets/images/skyscraper.jpg"
-                    />
-                    <img
-                        aria-hidden="true"
-                        decoding="async"
-                        src="/assets/images/skyscraper.jpg"
-                        alt="building"
-                        loading="lazy"
-                        width="2500"
-                        height="1667"
-                    />
-                </picture>
-            </div>
+<div id="banner-1106">
+    <div class="cs-container">
+        <span class="cs-int-title">Contact Us</span>
+        <div class="cs-breadcrumbs">
+            <a href="/" class="cs-link">Home</a>
+            <a href="" class="cs-link cs-active">Contact Us</a>
         </div>
-    </section>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="../../assets/images/dark-mode-banner.svg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="../../assets/images/dark-mode-banner.svg">
+        <img decoding="async" src="../../assets/images/dark-mode-banner.svg" alt="" width="1280" height="300" aria-hidden="true">
+    </picture>
+</div>
+
+<!-- ============================================ -->
+<!--                   Contact                    -->
+<!-- ============================================ -->
+
+<section id="contact-590">
+    <div class="cs-container">
+        <picture class="cs-picture">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Contact-Page/room2-m.jpg">
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Contact-Page/room2.jpg">
+            <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Contact-Page/room2.jpg" alt="room" width="841" height="877">
+        </picture>
+        <div class="cs-right">
+            <div class="cs-content">
+                <span class="cs-topper">Contact Us</span>
+                <h2 class="cs-title">Get In Touch</h2>
+                <p class="cs-text">
+                    Pellentesque sit amet porttitor eget dolor morbi non arcu. Vitae justo eget magna fermentum iaculis eu non
+                </p>
+            </div>
+            <!--Form-->
+            <form class="cs-form" id="cs-form-590" name="Contact Form" method="post">
+                <label class="cs-label">
+                    Name
+                    <input class="cs-input" required type="text" id="name-590" name="name" placeholder="Name">
+                </label>
+                <label class="cs-label">
+                    Phone
+                    <input class="cs-input" required type="text" id="phone-590" name="phone" placeholder="Phone">
+                </label>
+                <label class="cs-label">
+                    Email
+                    <input class="cs-input" required type="text" id="email-590" name="email" placeholder="Email">
+                </label>
+                <label class="cs-label">
+                    How did you hear about us?
+                    <input class="cs-input" required type="text" id="hear-590" name="heat" placeholder="Google">
+                </label>
+                <label class="cs-label cs-message">
+                    Message
+                    <textarea class="cs-input cs-textarea" required name="Message" id="message-590" placeholder="Write message..."></textarea>
+                </label>
+                <button class="cs-button-solid cs-submit" type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+                                
 {% endblock %}

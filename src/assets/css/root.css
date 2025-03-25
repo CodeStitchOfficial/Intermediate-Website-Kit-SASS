@@ -7,6 +7,7 @@
   :root {
     --primary100: #c5d9e5;
     --primary200: #9bb9cc;
+    --primary300: #6d90a6;
     --primary400: #486a80;
     --primary: #294759;
     --primary600: #122633;
@@ -14,6 +15,7 @@
     --secondary: #e5dbd1;
     --secondary200: #ccb7a5;
     --secondary300: #a6917e;
+    --secondary400: #806c5b;
     --secondary500: #59493b;
     --secondary600: #33281f;
     --accent100: #e5bbb8;
@@ -21,6 +23,8 @@
     --accent300: #a66963;
     --accent400: #804540;
     --accent500: #592824;
+    --accent600: #33120f;
+    --accent700: #190705;
     --textLight: #fffaf0;
     --textMid: #656360;
     --textDark: #262524;
@@ -31,6 +35,9 @@
     --bodyFontSize: 1.2rem;
     /* 60px - 100px top and bottom */
     --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+    --headerFont: "Baskerville", "Georgia", serif;
+    --bodyFont: "Contralto Small", "Arial Narrow", sans-serif;
+    --smallCaps: "Baskerville SC", "Georgia", serif;
   }
   :root body {
     background-color: var(--textLight);
@@ -39,12 +46,12 @@
     display: block;
     margin-bottom: 0.25rem;
     text-transform: uppercase;
-    font-family: "Contralto Small", "Arial Narrow", sans-serif;
+    font-family: var(--bodyFont);
     letter-spacing: 2px;
     font-size: var(--topperFontSize);
     line-height: 1.2em;
     font-weight: 300;
-    color: var(--primary);
+    color: var(--accent500);
     text-align: inherit;
   }
   .cs-title {
@@ -61,7 +68,7 @@
     margin: 0;
     max-width: 40.625rem;
     width: 100%;
-    font-family: "Contralto Small", "Arial Narrow", sans-serif;
+    font-family: var(--bodyFont);
     font-size: var(--bodyFontSize);
     line-height: 1.5em;
     color: var(--textDark);
@@ -71,17 +78,17 @@
     z-index: 1;
     position: relative;
     display: inline-block;
-    background-color: var(--accent200);
+    background: var(--accent500);
     width: auto;
     padding: 0 1.875rem;
-    font-family: "Contralto Small", "Arial Narrow", sans-serif;
+    font-family: var(--bodyFont);
     text-decoration: none;
     text-transform: uppercase;
     font-size: 1rem;
     line-height: 3em;
     letter-spacing: 3px;
     font-weight: 600;
-    color: var(--textDark);
+    color: var(--textLight);
     transition: color 0.3s;
     transition-delay: 0.1s;
     text-align: center;
@@ -97,7 +104,7 @@
     content: "";
     opacity: 1;
     display: block;
-    background-color: var(--accent400);
+    background: var(--accent400);
     height: 100%;
     width: 0;
     transition: width 0.3s;
@@ -109,11 +116,11 @@
     z-index: 1;
     position: relative;
     display: inline-block;
-    background-color: var(--primary);
-    border: 2px solid var(--primary100);
+    background: transparent;
+    border: 2px solid var(--textLight);
     width: auto;
     padding: 0 1.875rem;
-    font-family: "Contralto Small", "Arial Narrow", sans-serif;
+    font-family: var(--bodyFont);
     text-decoration: none;
     text-transform: uppercase;
     font-size: 1rem;
@@ -137,7 +144,7 @@
     content: "";
     opacity: 1;
     display: block;
-    background-color: var(--primary400);
+    background: var(--accent400);
     border: none;
     height: 100%;
     width: 0;
@@ -167,7 +174,7 @@
     margin: 0;
     overflow-x: hidden;
     padding: 0;
-    font-family: "Contralto Small", "Arial Narrow", sans-serif;
+    font-family: var(--bodyFont);
     font-size: 100%;
     color: var(--textDark);
   }
@@ -193,15 +200,15 @@
   h5,
   h6 {
     margin: 0;
-    color: var(--headerColor);
-    font-family: "Baskerville", Georgia, serif;
+    color: var(--textDark);
+    font-family: var(--headerFont);
   }
   p,
   li,
   a {
     margin: 0;
     font-size: 1.5rem;
-    font-family: "Contralto Small", "Arial Narrow", sans-serif;
+    font-family: var(--bodyFont);
     line-height: 1.3em;
   }
   p,
@@ -214,9 +221,9 @@
     margin-left: 1rem;
   }
   li {
-    color: var(--textLight);
+    color: var(--textDark);
     font-size: 1.1rem;
-    font-family: "Contralto Small", "Arial Narrow", sans-serif;
+    font-family: var(--bodyFont);
     list-style-image: url(../svgs/diamond.svg);
     list-style-position: outside;
     padding-left: 0.5em;
@@ -316,78 +323,6 @@
 /*-- -------------------------- -->
 <---       Content Flairs       -->
 <--- -------------------------- -*/
-@media only screen and (min-width: 0rem) {
-  #button-box-838 {
-    width: 100%;
-    max-width: 39.375rem;
-    margin-bottom: 2rem;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-  }
-  #button-box-838 .cs-button-solid {
-    font-size: 1rem;
-    /* 46px - 56px */
-    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-    text-decoration: none;
-    font-weight: 700;
-    text-align: center;
-    margin: 0;
-    min-width: 9.375rem;
-    padding: 0 1.5rem;
-    display: inline-block;
-    position: relative;
-    z-index: 1;
-    /* prevents padding from adding to the width */
-    box-sizing: border-box;
-  }
-  #button-box-838 .cs-button-solid:before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 0%;
-    opacity: 1;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: width 0.3s;
-  }
-  #button-box-838 .cs-button-solid:hover:before {
-    width: 100%;
-  }
-  #button-box-838 .cs-button-transparent {
-    font-size: 1rem;
-    /* 46px - 56px */
-    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-    text-decoration: none;
-    font-family: "Contralto Small", Arial, sans serif;
-    font-weight: 600;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin: 0;
-    color: var(--primary);
-    min-width: 9.375rem;
-    padding: 0 1.5rem;
-    background-color: transparent;
-    display: inline-block;
-    position: relative;
-    z-index: 1;
-    /* prevents padding from adding to the width */
-    box-sizing: border-box;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  #button-box-838 .cs-button-transparent:hover {
-    background-color: var(--primary);
-    color: #fff;
-  }
-  /* Dark Mode */
-  body.dark-mode #button-box-838 .cs-button-transparent {
-    color: var(--textLight);
-  }
-}
 /*-- -------------------------- -->
 <---      Dark Mode Toggle      -->
 <--- -------------------------- -*/
@@ -405,8 +340,7 @@
   #dark-mode-toggle {
     z-index: 1000;
     position: absolute;
-    top: 0.625rem;
-    right: 4.375rem;
+    right: 3.75rem;
     display: block;
     border: none;
     background: transparent;
@@ -461,13 +395,13 @@
   #cs-navigation {
     z-index: 10000;
     position: fixed;
-    background-color: var(--primary600);
+    background: var(--textLight);
     width: 100%;
     /* prevents padding from affecting height and width */
     box-sizing: border-box;
     padding: 0.75rem 1rem;
     /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
-    font-family: "Baskerville SC", Georgia, serif;
+    font-family: var(--smallCaps);
     box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
   }
   #cs-navigation .cs-container {
@@ -504,7 +438,7 @@
     border: none;
     border-radius: 0.25rem;
     margin: 0 0 0 auto;
-    background-color: transparent;
+    background: transparent;
     height: clamp(2.75rem, 6vw, 3rem);
     /* 44px - 48px */
     width: clamp(2.75rem, 6vw, 3rem);
@@ -534,7 +468,7 @@
     left: 50%;
     transform: translateX(-50%);
     border-radius: 2px;
-    background-color: var(--secondary300);
+    background: var(--primary);
     height: 2px;
     width: 100%;
   }
@@ -569,11 +503,11 @@
     opacity: 0;
     visibility: hidden;
     transform: scaleX(0);
-    background-color: var(--textLight);
+    background: var(--textLight);
     height: 100vh;
     overflow: hidden;
     transition: transform 0.4s, opacity 0.3s;
-    box-shadow: inset rgba(7, 18, 25, 0.2) 0px 8px 24px;
+    box-shadow: inset rgba(0, 0, 0, 0.2) 0px 8px 24px;
     transform-origin: top right;
   }
   #cs-navigation .cs-ul {
@@ -633,10 +567,12 @@
     margin: 0;
     text-decoration: none;
     /* 16px - 24px */
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-size: clamp(0.875rem, 2vw, 1.25rem);
     line-height: 1.2em;
-    color: var(--textDark);
-    font-family: "Baskerville SC", Georgia, serif;
+    color: var(--primary600);
+    font-family: var(--bodyFont);
+    letter-spacing: 3px;
+    text-transform: uppercase;
   }
   #cs-navigation .cs-li-link:before {
     position: absolute;
@@ -646,7 +582,7 @@
     content: "";
     opacity: 1;
     display: none;
-    background: currentColor;
+    background: var(--accent500);
     height: 1px;
     width: 100%;
   }
@@ -690,17 +626,17 @@
 /* Dark Mode */
 @media only screen and (max-width: 63.9375rem) {
   body.dark-mode #cs-navigation {
-    background-color: var(--dark);
+    background: var(--dark);
   }
   body.dark-mode #cs-navigation .cs-logo {
     /* makes it white */
     filter: grayscale(1) brightness(1000%);
   }
   body.dark-mode #cs-navigation .cs-line {
-    background-color: var(--secondary300);
+    background: var(--textLight);
   }
   body.dark-mode #cs-navigation .cs-ul-wrapper {
-    background-color: var(--medium);
+    background: var(--medium);
   }
   body.dark-mode #cs-navigation .cs-li-link {
     color: var(--textLight);
@@ -718,7 +654,10 @@
   #cs-navigation .cs-dropdown .cs-li-link {
     position: relative;
     transition: opacity 0.3s;
-    font-family: "Baskerville SC", Georgia, serif;
+    font-family: var(--bodyFont);
+    font-size: clamp(0.875rem, 2vw, 1.25rem);
+    text-transform: uppercase;
+    letter-spacing: 3px;
   }
   #cs-navigation .cs-dropdown.cs-active .cs-drop-ul {
     visibility: visible;
@@ -733,7 +672,7 @@
   }
   #cs-navigation .cs-dropdown-button {
     border: none;
-    background-color: transparent;
+    background: transparent;
     font-family: inherit;
     font-size: clamp(1rem, 2.5vw, 1.5rem);
     cursor: pointer;
@@ -756,7 +695,7 @@
     justify-content: flex-start;
     align-items: flex-end;
     margin: 0;
-    background-color: var(--secondary);
+    background: var(--secondary);
     height: 0;
     width: 100%;
     box-sizing: border-box;
@@ -795,7 +734,7 @@
   }
   #cs-navigation .cs-dropdown-button {
     border: none;
-    background-color: transparent;
+    background: transparent;
     font-family: inherit;
     font-size: inherit;
     cursor: pointer;
@@ -814,9 +753,9 @@
     visibility: hidden;
     opacity: 0;
     transform: scaleY(0);
-    border-bottom: 5px solid var(--accent500);
+    border-bottom: 5px solid var(--secondary300);
     margin: 0;
-    background-color: var(--textLight);
+    background: var(--textLight);
     min-width: 12.5rem;
     overflow: hidden;
     padding: 0;
@@ -885,11 +824,12 @@
     text-decoration: none;
     font-size: 1rem;
     line-height: 1.5em;
+    letter-spacing: 1.5px;
     color: var(--textDark);
-    transition: color 0.3s, background-color 0.3s;
+    transition: color 0.3s, background 0.3s;
   }
   #cs-navigation .cs-li-link.cs-drop-link:hover {
-    background-color: var(--secondary);
+    background: var(--secondary);
   }
   #cs-navigation .cs-li-link.cs-drop-link:focus-visible {
     outline: 2px solid currentColor;
@@ -902,10 +842,10 @@
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
   body.dark-mode #cs-navigation .cs-drop-ul {
-    background-color: var(--dark);
+    background: var(--dark);
   }
   body.dark-mode #cs-navigation .cs-li-link.cs-drop-link:hover {
-    background-color: var(--medium);
+    background: var(--medium);
   }
   body.dark-mode #cs-navigation .cs-drop-icon {
     /* turns it white */
@@ -920,7 +860,7 @@
   #cs-navigation {
     z-index: 10000;
     position: fixed;
-    background-color: var(--primary600);
+    background: var(--textLight);
     width: 100%;
     /* prevents padding from affecting height and width */
     box-sizing: border-box;
@@ -973,18 +913,19 @@
     list-style: none;
     /* prevent flexbox from squishing it */
     flex: none;
-    font-family: "Baskerville SC", Georgia, serif;
   }
   #cs-navigation .cs-li-link {
     position: relative;
     display: block;
     margin: 0;
     text-decoration: none;
-    font-family: "Baskerville SC", Georgia, serif;
+    font-family: var(--bodyFont);
     /* 14px - 16px */
-    font-size: clamp(1rem, 2vw, 1.25rem);
-    line-height: 1.5em;
-    color: var(--textLight);
+    font-size: clamp(0.75rem, 2vw, 1rem);
+    line-height: 1.2em;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--primary600);
   }
   #cs-navigation .cs-li-link:hover:before {
     width: 100%;
@@ -997,7 +938,7 @@
     content: "";
     opacity: 1;
     display: block;
-    background: var(--accent200);
+    background: var(--accent500);
     height: 2px;
     width: 0%;
     transition: width 0.3s;
@@ -1009,7 +950,7 @@
 /* Dark Mode */
 @media only screen and (min-width: 64rem) {
   body.dark-mode #cs-navigation {
-    background-color: var(--dark);
+    background: var(--dark);
   }
   body.dark-mode #cs-navigation .cs-logo {
     /* makes it turn white */
@@ -1019,7 +960,14 @@
     color: var(--textLight);
   }
   body.dark-mode #cs-navigation .cs-li-link:before {
-    background-color: var(--accent200);
+    background: var(--secondary200);
+  }
+  body.dark-mode #cs-navigation .cs-button-solid {
+    background: var(--primary400);
+    color: var(--textLight);
+  }
+  body.dark-mode #cs-navigation .cs-button-solid:before {
+    background: var(--accent500);
   }
 }
 /*-- -------------------------- -->
@@ -1050,7 +998,7 @@
     transform: scale(0);
     display: flex;
     flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.2);
     box-sizing: border-box;
     height: 0;
     width: 100%;
@@ -1102,7 +1050,7 @@
     top: 0;
     left: 100%;
     display: none;
-    background-color: var(--textLight);
+    background: var(--textLight);
     min-width: 12.5rem;
     padding: 0;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -1120,91 +1068,316 @@
 /* Dark Mode */
 @media only screen and (min-width: 1024px) {
   body.dark-mode #cs-navigation .cs-drop3 {
-    background-color: var(--dark);
+    background: var(--dark);
   }
 }
 /*-- -------------------------- -->
-<---   Interior Page Header     -->
+<---          Banner            -->
 <--- -------------------------- -*/
-/* Mobile */
+/* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #int-hero {
-    z-index: 1;
+  #banner-1106 {
+    padding: var(--sectionPadding);
+    padding-top: 11.25rem;
+    padding-bottom: 7.5rem;
+    /* clips the line from causing overflow issues for going off screen */
+    overflow: hidden;
     position: relative;
+    z-index: 1;
+    background: var(--medium);
+  }
+  #banner-1106 .cs-container {
+    text-align: center;
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  #banner-1106 .cs-int-title {
+    /* 39px - 61px */
+    font-family: var(--headerFont);
+    font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+    font-weight: 400;
+    line-height: 1.2em;
+    text-align: inherit;
+    margin: 0;
+    color: var(--textLight);
+    position: relative;
+  }
+  #banner-1106 .cs-breadcrumbs {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    min-height: 30vh;
-    padding-top: 3.125rem;
   }
-  #int-hero picture {
-    z-index: -2;
+  #banner-1106 .cs-link {
+    font-size: 1rem;
+    line-height: 1.2em;
+    text-decoration: none;
+    color: var(--textLight);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #banner-1106 .cs-link:last-of-type {
+    /* remove the chevron on the last list item */
+  }
+  #banner-1106 .cs-link:last-of-type::after {
+    display: none;
+  }
+  #banner-1106 .cs-link:after {
+    /* chevron */
+    content: "";
+    width: 0.75rem;
+    height: 1rem;
+    margin: 0 1rem;
+    background: url("../svgs/chevron.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: block;
+  }
+  #banner-1106 .cs-link.cs-active {
+    opacity: 0.6;
+  }
+  #banner-1106 .cs-link:hover {
+    color: var(--primary100);
+    text-decoration: underline;
+    text-underline-offset: 0.3em;
+    transition: color 0.3s, text-decoration 0.3s;
+  }
+  #banner-1106 .cs-background {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #banner-1106 .cs-background:before {
+    /* background color overlay */
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: -moz-linear-gradient(left, rgba(18, 38, 51, 0.94) 0%, rgba(18, 38, 51, 0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(18, 38, 51, 0.94) 0%, rgba(18, 38, 51, 0) 100%); /* Chrome10-25,Safari5.1-6 */
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  #banner-1106 .cs-background img {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-  }
-  #int-hero picture img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
+    /* Makes img tag act as a background image */
     object-fit: cover;
   }
-  #int-hero h1 {
+}
+/*-- -------------------------- -->
+<---        Content Page        -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #content-page-851 {
+    padding: var(--sectionPadding);
+    background: var(--textLight);
+    /* clips the wave background from causing overflow issues when it goes off screen */
+    overflow: hidden;
     position: relative;
-    margin: 0 auto;
-    margin-top: 4.375rem;
-    margin-bottom: 1.875rem;
-    max-width: 31.25rem;
-    width: 96%;
-    font-size: 2.1333333333rem;
-    color: #fff;
-    text-align: center;
+    z-index: 1;
   }
-  #int-hero p {
-    display: block;
-    margin: auto;
-    margin-bottom: 1.875rem;
-    max-width: 25rem;
-    width: 96%;
-    color: #fff;
-    text-align: center;
-  }
-  #int-hero:before {
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: "";
-    opacity: 0.7;
-    display: block;
-    background: #000;
-    height: 100%;
+  #content-page-851 .cs-container {
     width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+    position: relative;
   }
-}
-/* Tablet */
-@media only screen and (min-width: 48rem) {
-  #int-hero {
-    font-size: 100%;
+  #content-page-851 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    max-width: 46.125rem;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
   }
-  #int-hero h1 {
-    font-size: 4rem;
+  #content-page-851 h2,
+  #content-page-851 h3,
+  #content-page-851 h4,
+  #content-page-851 h5,
+  #content-page-851 h6 {
+    font-weight: 400;
+    text-align: inherit;
+    margin: 0 0 1rem 0;
+    color: var(--textDark);
   }
-}
-/* Small Desktop */
-@media only screen and (min-width: 64rem) {
-  #int-hero {
-    background-attachment: fixed;
-    min-height: 18.75rem;
-    height: auto;
-    padding-top: 11.25rem;
+  #content-page-851 h2 {
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+  #content-page-851 h3 {
+    font-size: 1.5rem;
+    color: var(--primary);
+  }
+  #content-page-851 h4,
+  #content-page-851 h5,
+  #content-page-851 h6 {
+    font-size: 1.25rem;
+  }
+  #content-page-851 .cs-button-solid {
+    margin-bottom: 2rem;
+  }
+  #content-page-851 .cs-no-margin {
+    margin: 0;
+  }
+  #content-page-851 .cs-color {
+    color: var(--secondary400);
+  }
+  #content-page-851 p {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    margin: 0 0 1rem 0;
+    color: var(--textDark);
+  }
+  #content-page-851 p a {
     font-size: inherit;
-    padding-block-end: 6.25rem;
+    line-height: inherit;
+    text-decoration: underline;
+    color: var(--primary400);
+  }
+  #content-page-851 p a:visited {
+    color: var(--accent500);
+  }
+  #content-page-851 ol,
+  #content-page-851 ul {
+    padding-left: 1rem;
+    margin: 0 0 1rem 0;
+    color: var(--textDark);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  #content-page-851 ol li,
+  #content-page-851 ul li {
+    margin: 0 0 -0.5rem 0;
+  }
+  #content-page-851 ol li:last-of-type,
+  #content-page-851 ul li:last-of-type {
+    margin: 0;
+  }
+  #content-page-851 img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  #content-page-851 .cs-image-group {
+    width: 50%;
+    max-width: 27.0625rem;
+    display: none;
+    flex-direction: column;
+    gap: 1.25rem;
+    position: relative;
+  }
+  #content-page-851 .cs-image-group:after {
+    /* colored box */
+    content: "";
+    width: 100%;
+    /* 177px - 258px */
+    height: 100%;
+    background: var(--primary);
+    display: block;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    z-index: -1;
+  }
+  #content-page-851 .cs-picture {
+    width: 100%;
+    /* 300px - 520px */
+    height: clamp(18.75rem, 40vw, 32.5rem);
+    box-shadow: 0px 3.3478px 50.2169px rgba(0, 0, 0, 0.16);
+    /* 125px - 200px */
+    /* prevents border from affecting height and width */
+    box-sizing: border-box;
+    /* clips img tag corners */
+    overflow: hidden;
+    display: block;
+    position: relative;
+  }
+  #content-page-851 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    /* makes it act like a background image */
+    object-fit: cover;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #content-page-851 .cs-container {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  #content-page-851 .cs-content {
+    flex: none;
+    width: 60%;
+  }
+  #content-page-851 .cs-image-group {
+    display: flex;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #content-page-851 {
+    background: var(--medium);
+  }
+  body.dark-mode #content-page-851 .cs-title,
+  body.dark-mode #content-page-851 .cs-text,
+  body.dark-mode #content-page-851 h2,
+  body.dark-mode #content-page-851 h3,
+  body.dark-mode #content-page-851 h4,
+  body.dark-mode #content-page-851 h5,
+  body.dark-mode #content-page-851 h6,
+  body.dark-mode #content-page-851 li,
+  body.dark-mode #content-page-851 p {
+    color: var(--textLight);
+  }
+  body.dark-mode #content-page-851 .cs-color {
+    color: var(--secondary200);
+  }
+  body.dark-mode #content-page-851 a {
+    color: var(--primary200);
+  }
+  body.dark-mode #content-page-851 a:visited {
+    color: var(--accent100);
+  }
+  body.dark-mode #content-page-851 p,
+  body.dark-mode #content-page-851 li {
+    color: var(--textLight);
+  }
+  body.dark-mode #content-page-851 .cs-picture {
+    border-color: var(--dark);
+    background: var(--dark);
   }
 }
 /*-- -------------------------- -->
@@ -1257,7 +1430,7 @@
     gap: 1rem;
   }
   #cta-1612 .cs-input {
-    font-family: "Contralto Small", "Arial Narrow", sans-serif;
+    font-family: var(--bodyFont);
     font-weight: 300;
     font-size: 1rem;
     width: 100%;
@@ -1266,7 +1439,7 @@
     padding: 0;
     padding-left: 1.25rem;
     border: none;
-    background-color: var(--textLight);
+    background: var(--textLight);
     color: var(--textDark);
     /* prevents padding from adding to width and height */
     box-sizing: border-box;
@@ -1274,6 +1447,17 @@
   }
   #cta-1612 .cs-input::placeholder {
     color: var(--textMid);
+  }
+  #cta-1612 .cs-button-solid {
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    background: var(--secondary300);
+    color: var(--textDark);
+  }
+  #cta-1612 .cs-button-solid:hover {
+    color: var(--textLight);
+  }
+  #cta-1612 .cs-button-solid:before {
+    background: var(--accent400);
   }
   #cta-1612 .cs-submit {
     width: 100%;
@@ -1299,7 +1483,7 @@
     content: "";
     width: 100%;
     height: 100%;
-    background: #19130d;
+    background: #071219;
     opacity: 0.6;
     position: absolute;
     display: block;
@@ -1352,7 +1536,7 @@
 /* Large Desktop 1300px - Parallax Scroll */
 @media only screen and (min-width: 81.25rem) {
   #cta-1612 {
-    background: url("../images/cta-background.webp");
+    background: url("../../assets/images/cta-background.jpg");
     background-size: cover;
     background-position: center 20%;
     background-repeat: no-repeat;
@@ -1372,7 +1556,7 @@
     padding-bottom: 1.25rem;
     box-sizing: border-box;
     overflow: hidden;
-    background-color: var(--secondary600);
+    background: var(--primary600);
     position: relative;
     z-index: 10;
     /* Navigation Links */
@@ -1450,9 +1634,9 @@
   }
   #cs-footer-1293 .cs-header {
     font-size: 1.25rem;
-    font-family: "Baskerville SC", Georgia, serif;
+    font-family: var(--smallCaps);
     line-height: 1.2em;
-    font-weight: 700;
+    font-weight: 400;
     margin-bottom: 0.5rem;
     color: var(--textLight);
     position: relative;

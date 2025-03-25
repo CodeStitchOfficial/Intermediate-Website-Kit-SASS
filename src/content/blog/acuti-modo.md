@@ -1,11 +1,12 @@
 ---
-title: Acuti modo
-url: acuti-modo
-description: Lorem markdownum tardantis unam mitissima dissimulator inposuit   corpus sintque tura tremenda, nec coetum.
-author: Code Stitch
-date: 2023-06-08T15:26:46.705Z
+title: X ways your website is killing your business
+url: x-reasons-websites-kill-business
+description: Lorem markdownum tardantis unam mitissima dissimulator
+  inposuit   corpus sintque tura tremenda, nec coetum.
+author: Tianna Hutchins
+date: 2025-03-22T19:28:00.000Z
 tags:
-    - post
+  - featured
 image: /assets/images/blog/landing.jpg
 imageAlt: Kitchen
 ---

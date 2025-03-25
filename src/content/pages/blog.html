@@ -1,5 +1,5 @@
 ---
-title: "Blog | Code Stitch Web Designs"
+title: "Blog | Neva Masquerade"
 description: "Meta description for the page"
 preloadImg: "/assets/images/cabinets2.jpg"
 permalink: "blog/"
@@ -15,95 +15,82 @@ eleventyNavigation:
 {% endblock %}
 
 {% block body %}
+
     <!-- ============================================ -->
-    <!--                    LANDING                   -->
+    <!--                   Banner                     -->
     <!-- ============================================ -->
 
-    <section id="int-hero">
-        <h1 id="home-h">Blog</h1>
-        <picture>
-            <source
-                media="(max-width: 600px)"
-                srcset="/assets/images/cabinets2-m.jpg"
-            />
-            <source
-                media="(min-width: 601px)"
-                srcset="/assets/images/cabinets2.jpg"
-            />
-            <img
-                aria-hidden="true"
-                decoding="async"
-                src="/assets/images/cabinets2.jpg"
-                alt="kitchen cabinets"
-                loading="eager"
-                width="2500"
-                height="1667"
-            />
+    <div id="banner-1106">
+        <div class="cs-container">
+            <span class="cs-int-title">Blog</span>
+            <div class="cs-breadcrumbs">
+                <a href="/" class="cs-link">Home</a>
+                <a href="" class="cs-link cs-active">Blog</a>
+            </div>
+        </div>
+        <!--Background Image-->
+        <picture class="cs-background">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="../../assets/images/banner-background.svg">
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" srcset="../../assets/images/banner-background.svg">
+            <img decoding="async" src="../../assets/images/banner-background.svg" alt="" width="1280" height="568" aria-hidden="true">
         </picture>
-    </section>
+    </div>
 
     <!-- ============================================ -->
-    <!--              Main Blog Content               -->
+    <!--                    Blog                      -->
     <!-- ============================================ -->
 
-    <div class="blog-container main-content-wrapper">
-        <!--Main content -->
-        <div class="main-content">
-            <!-- ============================================ -->
-            <!--                 Blog Articles                -->
-            <!-- ============================================ -->
-
-            {% if collections.post | length == 0 %}
-                <h1>No Recent Posts</h1>
-            {% else %}
-                {%- for post in collections.post | reverse -%}
-                    <article class="recent-articles">
-                        <!--Main Article Image-->
-                        <picture class="blog-mainImage">
-                            <img
-                                src="{{ post.data.image }}"
-                                alt="{{ post.data.imageAlt }}"
-                                width="795"
-                                height="400"
-                                decoding="async"
-                            />
-                        </picture>
-                        <!--Article Info-->
-                        <div class="article-group">
-                            <div class="blog-authorGroup">
-                                <!--Author Image-->
-                                <picture class="blog-author-img">
-                                    <img
-                                        src="/assets/svgs/profile.svg"
-                                        alt="house"
-                                        width="32"
-                                        height="32"
-                                        decoding="async"
-                                    />
-                                </picture>
-                                <span class="blog-author"
-                                    >{{ post.data.author }}</span
-                                >
-                                <span
-                                    aria-hidden="true"
-                                    class="blog-dot"
-                                ></span>
-                                <!--Blog Date-->
-                                <span class="blog-date"
-                                    >{{ post.date | postDate }}</span
-                                >
+    <section id="blog-1701">
+        <div class="cs-container">
+            <div class="cs-news">
+                <div class="cs-content">
+                    <span class="cs-topper">Our Blog</span>
+                    <h2 class="cs-title">Latest News</h2>
+                </div>
+                {% if collections.post | length == 0 %}
+                    <h3>No Recent Posts</h3>
+                {% else %}
+                    {%- for post in collections.post | reverse -%}
+                    <div class="cs-card-group">
+                        <div class="cs-item">
+                            <!--Main Article Image-->    
+                            <picture class="cs-picture">
+                                <img
+                                    src="{{ post.data.image }}"
+                                    alt="{{ post.data.imageAlt }}"
+                                    width="795"
+                                    height="400"
+                                    decoding="async"
+                                />
+                            </picture>
+                            <!--Article Info-->
+                            <div class="cs-item-text">
+                                <div class="blog-authorGroup">
+                                    <span class="blog-author">{{ post.data.author }}</span>
+                                    <span aria-hidden="true" class="blog-dot">&nbsp;</span>
+                                    <span class="blog-date">{{ post.date | postDate }}</span>
+                                </div>
+                                <h3 class="cs-h3">{{ post.data.title }}</h3>
+                                <p class="cs-desc">{{ post.data.description }}</p>
+                                <a href="{{ post.url }}" class="cs-link">
+                                    <span>Continue Reading</span>
+                                    <img class="cs-arrow" loading="lazy" decoding="async"
+                                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
+                                            alt="icon" width="20" height="20" aria-hidden="true" />
+                                </a>
                             </div>
-                            <h2 class="blog-h1">{{ post.data.title }}</h2>
-                            <p class="blog-desc">{{ post.data.description }}</p>
-                            <a href="{{ post.url }}" class="blog-link"
-                                >Continue Reading</a
-                            >
                         </div>
                     </article>
-                {%- endfor -%}
-            {% endif %}
+                    </div>
+                    {%- endfor -%}
+                {% endif %}
+            </div>
+            <div class="blog-sidebar">
+                {% include 'components/featured-post.html' %}
+            </div> 
         </div>
+    </section>
 
-        {% include 'components/featured-post.html' %}
-    </div>
 {% endblock %}
