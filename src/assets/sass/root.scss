@@ -1978,6 +1978,8 @@
         .cs-text {
             color: var(--textLight);
             margin: 0 0 calc(32/16 * 1rem);
+            font-size: 1rem;
+            font-weight: 300;
         }
 
         .cs-link {

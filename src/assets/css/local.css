@@ -548,9 +548,9 @@
   #cs-menu-group-1038 .cs-h3:after {
     /* divider line */
     content: "";
-    width: 50%;
+    width: 75%;
     height: 1px;
-    background: var(--secondary);
+    background: var(--secondary300);
     opacity: 1;
     position: relative;
     display: block;
@@ -603,7 +603,7 @@
     color: var(--textLight);
   }
   #cs-menu-group-1038 .cs-button-solid {
-    background: var(--secondary200);
+    background: var(--secondary300);
     color: var(--secondary600);
   }
   #cs-menu-group-1038 .cs-button-solid:hover {
@@ -1032,6 +1032,9 @@
     background: var(--primary600);
     color: var(--textLight);
   }
+  body.dark-mode #faq-2066 .cs-option:before {
+    background: var(--primary);
+  }
   body.dark-mode #faq-2066 .cs-option.cs-active, body.dark-mode #faq-2066 .cs-option:hover {
     background: var(--medium);
     color: var(--textLight);
@@ -1047,7 +1050,8 @@
     color: var(--primary100);
   }
   body.dark-mode #faq-2066 .cs-faq-item.active .cs-button:before, body.dark-mode #faq-2066 .cs-faq-item.active .cs-button:after {
-    background: var(--accent100);
+    background: var(--textLight);
+    opacity: 0.6;
   }
   body.dark-mode #faq-2066 .cs-faq-item.active .cs-item-p {
     /* 20px - 24px */
@@ -1085,7 +1089,8 @@
     color: var(--textLight);
   }
   body.dark-mode #faq-2066 .cs-button:before, body.dark-mode #faq-2066 .cs-button:after {
-    background: var(--accent100);
+    background: var(--textLight);
+    opacity: 0.6;
   }
   body.dark-mode #faq-2066 .cs-cta-title, body.dark-mode #faq-2066 .cs-cta-text {
     color: var(--textLight);
@@ -1237,7 +1242,7 @@
     margin-top: -2.375em;
     margin-left: 1.5em;
     padding: 1em;
-    background: var(--secondary400);
+    background: var(--primary400);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -1379,6 +1384,9 @@
   #why-choose-1635 .cs-item {
     grid-column: span 12;
     flex-direction: row;
+  }
+  #why-choose-1635 .cs-box {
+    background: var(--accent500);
   }
 }
 /* Dark Mode */

@@ -1,14 +1,12 @@
 ---
-title: 'Page title | Neva Masquerade'
+title: 'Brand Identity | Neva Masquerade'
 description: 'Description for <meta> description and OG tags'
 preloadImg: '/assets/images/dark-mode-banner.svg'
-permalink: 'page-path/'
+permalink: 'services/brand-identity/'
 eleventyNavigation:
-    key: Name to appear in navigation
+    key: Brand Identity
     order: 1000
-    parent: Optional - Put another page's "key" here to create a dropdown
-    hideOnMobile: Optional - set to "true" to hide on devices from, and below, 1023px
-    hideOnDesktop: Optional - set to "true" to hide on devices above, and including, 1024px
+    parent: Services
 ---
 
 {% extends "layouts/base.html" %}
@@ -29,6 +27,7 @@ eleventyNavigation:
                 <span class="cs-int-title">{{ eleventyNavigation.key }}</span>
                 <div class="cs-breadcrumbs">
                     <a href="/" class="cs-link">Home</a>
+                    <a href="/services" class="cs-link">Services</a>
                     <a href="" class="cs-link cs-active">{{ eleventyNavigation.key }}</a>
                 </div>
             </div>

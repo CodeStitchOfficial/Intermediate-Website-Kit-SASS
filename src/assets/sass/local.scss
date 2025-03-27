@@ -627,9 +627,9 @@
             &:after {
                 /* divider line */
                 content: "";
-                width: 50%;
+                width: 75%;
                 height: 1px;
-                background: var(--secondary);
+                background: var(--secondary300);
                 opacity: 1;
                 position: relative;
                 display: block;
@@ -688,7 +688,7 @@
         }
 
         .cs-button-solid {
-            background: var(--secondary200);
+            background: var(--secondary300);
             color: var(--secondary600);
 
             &:hover {
@@ -1197,6 +1197,10 @@
                 background: var(--primary600);
                 color: var(--textLight);
 
+                &:before {
+                    background: var(--primary);
+                }
+
                 &.cs-active, &:hover {
                     background: var(--medium);
                     color: var(--textLight);
@@ -1216,7 +1220,8 @@
 
                         &:before,
                         &:after {
-                            background: var(--accent100);
+                            background: var(--textLight);
+                            opacity: .6;
                         }
                     }
 
@@ -1260,7 +1265,8 @@
                 color: var(--textLight);
                 &:before,
                 &:after {
-                    background: var(--accent100);
+                    background: var(--textLight);
+                    opacity: .6;
                 }
             }
 
@@ -1438,7 +1444,7 @@
             margin-top: calc(-38 / 16 * 1em);
             margin-left: calc(24 / 16 * 1em);
             padding: calc(16 / 16 * 1em);
-            background: var(--secondary400);
+            background: var(--primary400);
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -1606,6 +1612,10 @@
         .cs-item {
             grid-column: span 12;
             flex-direction: row;
+        }
+
+        .cs-box {
+            background: var(--accent500);
         }
     }
 }

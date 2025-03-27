@@ -1599,6 +1599,8 @@
   #cs-footer-1293 .cs-text {
     color: var(--textLight);
     margin: 0 0 2rem;
+    font-size: 1rem;
+    font-weight: 300;
   }
   #cs-footer-1293 .cs-link {
     font-size: 0.875rem;

@@ -8,6 +8,9 @@
     --dark: #071219;
     --medium: #122633;
     --accent: #294759;
+    --darkBlog: #190705;
+    --mediumBlog: #33120f;
+    --accentBlog: #592824;
   }
   body.dark-mode {
     background-color: var(--dark);
