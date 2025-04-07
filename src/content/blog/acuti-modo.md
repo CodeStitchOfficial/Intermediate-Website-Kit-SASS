@@ -7,7 +7,7 @@ author: Tianna Hutchins
 date: 2025-03-22T19:28:00.000Z
 tags:
   - featured
-image: /assets/images/blog/landing.jpg
+image: /assets/images/blog/generic-blog_1.png
 imageAlt: Kitchen
 ---
 If you don’t have a website you could be missing out on thousands of dollars as potential customers go to your competitors instead. That said, a bad website can also hurt your business.

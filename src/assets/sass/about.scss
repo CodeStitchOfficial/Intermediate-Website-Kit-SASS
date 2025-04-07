@@ -9,6 +9,7 @@
     #RPsbs-600,
     #RPsbsr-600 {
         position: relative;
+        background-color: var(--textLight);
 
         .cs-container {
             width: 100%;
@@ -123,8 +124,7 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
     #RPsbsr-600 {
-        background-color: var(--primary);
-
+        background: var(--primary);
         .cs-topper {
             color: var(--secondary);
         }
@@ -198,10 +198,11 @@
 
         .cs-h3-mission {
             font-family: var(--smallCaps);
-            font-size: calc(24 / 16 * 1rem);
-            letter-spacing: 1px;
+            font-size: calc(20 / 16 * 1rem);
+            letter-spacing: 3px;
+            text-transform: uppercase;
             line-height: 1.2em;
-            font-weight: 400;
+            font-weight: 600;
             margin: calc(32 / 16 * 1rem) 0 calc(16 / 16 * 1rem) 0;
             color: var(--accent400);
         }
@@ -250,6 +251,7 @@
         }
 
         .cs-item-number {
+            font-family: var(--smallCaps);
             font-size: calc(20 / 16 * 1rem);
             line-height: 1.2em;
             font-weight: 700;
@@ -259,20 +261,21 @@
             justify-content: flex-start;
             align-items: center;
             gap: calc(8 / 16 * 1rem);
+            font-variant-numeric: lining-nums;
         }
 
         .cs-h3 {
-            font-family: var(--headerFont);
-            font-size: calc(20 / 16 * 1rem);
+            font-family: var(--bodyFont);
+            font-size: calc(16 / 16 * 1rem);
             line-height: 1.2em;
-            font-weight: 500;
+            font-weight: 400;
             margin: 0;
             color: var(--textDark);
         }
 
         .cs-item-text {
-            font-size: calc(16 / 16 * 1rem);
-            line-height: 1.5em;
+            font-size: calc(20 / 16 * 1rem);
+            line-height: 1.2em;
             margin: 0;
             color: var(--textDark);
         }

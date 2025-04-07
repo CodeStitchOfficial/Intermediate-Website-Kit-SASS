@@ -54,6 +54,32 @@
             }
         }
     }
+
+    body.dark-mode {
+        #cs-navigation {
+            background: var(--darkBlog);
+
+            .cs-ul-wrapper {
+                background: var(--mediumBlog);
+            }
+
+            .cs-drop-ul {
+                background: var(--mediumBlog);
+            }
+
+            .cs-li-link {
+                &.cs-drop-link {
+                    &:hover {
+                        background: var(--accentBlog);
+                    }
+                }
+            }
+            
+            .cs-drop3 {
+                background: var(--darkBlog);
+            }
+        }
+    }
 }
 
 /*-- -------------------------- -->
@@ -162,7 +188,7 @@
         }
 
         .cs-link {
-            font-size: calc(16 / 16 * 1rem);
+            font-size: calc(14 / 16 * 1rem);
             line-height: 1.2em;
             text-decoration: none;
             color: var(--textLight);
@@ -362,6 +388,7 @@
 
         .blog-author,
         .blog-date {
+            font-family: var(--smallCaps);
             font-size: calc(14 / 16 * 1rem);
             line-height: 1.5em;
             font-weight: 300;
@@ -433,11 +460,14 @@
         }
 
         .cs-link {
-            font-size: calc(16 / 16 * 1rem);
+            font-family: var(--smallCaps);
+            font-size: calc(14 / 16 * 1rem);
             font-weight: 700;
             line-height: 1.2em;
             text-align: inherit;
             text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 3px;
             margin-top: calc(24 / 16 * 1rem);
             color: var(--primary400);
             display: flex;
@@ -599,8 +629,10 @@
             display: block;
             margin-bottom: calc(30 / 16 * 1rem);
             font-family: var(--smallCaps);
-            font-size: calc(20 / 16 * 1em);
-            letter-spacing: 2px;
+            font-size: calc(18 / 16 * 1em);
+            letter-spacing: 3px;
+            font-weight: 600;
+            text-transform: uppercase;
             color: var(--textLight);
             text-align: center;
 
@@ -668,9 +700,10 @@
             display: block;
             font-size: calc(12 / 16 * 1rem);
             line-height: 1.5em;
+            font-family: var(--smallCaps);
             font-weight: 300;
             font-variant-numeric: lining-nums;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             text-transform: uppercase;
             color: var(--textLight);
             opacity: .8;
@@ -761,6 +794,7 @@
 
         .blog-author,
         .blog-date {
+            font-family: var(--smallCaps);
             font-size: calc(12 / 16 * 1rem);
             line-height: 1.5em;
             font-weight: 300;

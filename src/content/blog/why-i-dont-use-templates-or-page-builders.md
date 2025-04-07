@@ -6,7 +6,7 @@ author: Tianna Hutchins
 date: 2025-03-26T21:31:00.000Z
 tags:
   - post
-image: /assets/images/blog/neva-masquerade-logo_logo-mono-vertical.svg
+image: /assets/images/blog/generic-blog_1.png
 imageAlt: image
 ---
 text

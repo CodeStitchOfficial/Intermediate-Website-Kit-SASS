@@ -1,0 +1,229 @@
+/* PAGE-SPECIFIC STYLES FOR THE ABOUT PAGE */
+
+/*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #services-690 {
+        padding: var(--sectionPadding);
+
+        .cs-container {
+            width: 100%;
+            /* changes to 1280px at tablet */
+            max-width: calc(550 / 16 * 1rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+        }
+
+        .cs-flex-group {
+            /* prevents flexbox from squishing it */
+            flex: none;
+        }
+
+        .cs-topper {
+            color: var(--accent600);
+        }
+
+        .cs-title {
+            color: var(--secondary600);
+        }
+
+        .cs-color {
+            color: var(--accent400);
+        }
+
+        .cs-card-group {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            flex-direction: column;
+            row-gap: calc(16 / 16 * 1rem);
+        }
+
+        .cs-item {
+            list-style: none;
+            width: 100%;
+            /* 24px - 40px top & bottom */
+            padding: clamp(1.25rem, 4vw, 2.5rem) calc(24 / 16 * 1rem);
+            background-color: var(--secondary);
+            box-sizing: border-box;
+            transition:
+                background-color 0.3s,
+                transform 0.3s,
+                box-shadow 0.3s;
+
+            &:hover {
+                background-color: var(--primary);
+                box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 50px;
+                transform: translateY(calc(-7 / 16 * 1rem));
+
+                .cs-picture {
+                    &:before {
+                        width: 100%;
+                        height: 100%;
+                        opacity: 1;
+                    }
+                }
+
+                .cs-h3 {
+                    color: var(--textLight);
+                }
+
+                .cs-item-text {
+                    color: var(--textLight);
+                }
+            }
+        }
+
+        .cs-link {
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .cs-picture {
+            width: calc(64 / 16 * 1rem);
+            height: calc(64 / 16 * 1rem);
+            margin: 0;
+            margin-bottom: calc(24 / 16 * 1rem);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background-color: var(--accent500);
+            box-shadow: 0px 12px 30px rgba(26, 26, 26, 0.04);
+            position: relative;
+            z-index: 1;
+        }
+
+        .cs-icon {
+            height: calc(40 / 16 * 1rem);
+            width: auto;
+        }
+
+        .cs-h3 {
+            font-size: calc(20 / 16 * 1rem);
+            font-weight: 900;
+            text-align: center;
+            line-height: 1.2em;
+            margin: 0;
+            margin-bottom: calc(12 / 16 * 1rem);
+            color: var(--accent500);
+            transition: color 0.3s;
+        }
+
+        .cs-item-text {
+            /* 14px - 16px */
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            text-align: center;
+            line-height: 1.5em;
+            margin: 0;
+            color: var(--textDark);
+            transition: color 0.3s;
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #services-690 {
+        .cs-container {
+            max-width: calc(1280 / 16 * 1rem);
+        }
+
+        .cs-content {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: calc(48 / 16 * 1rem);
+        }
+
+        .cs-flex-group {
+            width: 50%;
+        }
+
+        .cs-card-group {
+            /* pushes down the same amount the 2nd cards are translated down to maintain the even spacing at the bottom of the cs-card-group */
+            margin-bottom: calc(40 / 16 * 1rem);
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            column-gap: calc(20 / 16 * 1rem);
+        }
+
+        .cs-item {
+            width: 30vw;
+            max-width: calc(413 / 16 * 1rem);
+            &:nth-of-type(2) {
+                transform: translateY(calc(40 / 16 * 1rem));
+
+                &:hover {
+                    /* make these cards a separate hover translate amount, they're already translated 40px down, so to match the same hover animations as the other cards we just subtract their translate values from the 40px and they will move up by the same amount as the other cards */
+                    transform: translateY(calc(33 / 16 * 1rem));
+                }
+            }
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #services-690 {
+            background: var(--medium);
+            .cs-topper {
+                color: var(--secondary);
+            }
+            .cs-title,
+            .cs-text,
+            .cs-h3,
+            .cs-item-text {
+                color: var(--textLight);
+            }
+
+            .cs-color {
+                color: var(--secondary300);
+            }
+
+            .cs-picture {
+                background-color: var(--primary400);
+            }
+
+            .cs-text,
+            .cs-item-text {
+                opacity: 0.8;
+            }
+
+            .cs-item {
+                background-color: var(--primary);
+
+                &:hover {
+                    background-color: var(--dark);
+                }
+            }
+        }
+    }
+}
+                                
