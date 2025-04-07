@@ -7,9 +7,14 @@
   #RPsbsr-576 {
     background: var(--primary);
   }
+  #RPsbs-576 ul,
+  #RPsbsr-576 ul {
+    margin-bottom: 2rem;
+  }
   #RPsbs-576 li,
   #RPsbsr-576 li {
     color: var(--textLight);
+    line-height: 1.5;
   }
   #RPsbs-576 .cs-container,
   #RPsbsr-576 .cs-container {
@@ -54,6 +59,11 @@
   #RPsbs-576 .cs-text:last-of-type,
   #RPsbsr-576 .cs-text:last-of-type {
     margin-bottom: 2rem;
+  }
+  #RPsbs-576 .nm-subhead,
+  #RPsbsr-576 .nm-subhead {
+    color: var(--textLight);
+    opacity: 0.9;
   }
   #RPsbs-576 .nm-featured-link,
   #RPsbsr-576 .nm-featured-link {
@@ -165,6 +175,15 @@
   body.dark-mode #RPsbsr-576 .nm-button-outline {
     border: 2px solid var(--primary400);
     background: var(--medium);
+  }
+  body.dark-mode #RPsbs-576 .cs-button-solid,
+  body.dark-mode #RPsbsr-576 .cs-button-solid {
+    background: var(--primary400);
+    color: var(--textLight);
+  }
+  body.dark-mode #RPsbs-576 .cs-button-solid:before,
+  body.dark-mode #RPsbsr-576 .cs-button-solid:before {
+    background: var(--accent500);
   }
 }
 /*-- -------------------------- -->
@@ -291,7 +310,9 @@
   }
   #steps-585 .cs-h3 {
     font-family: var(--smallCaps);
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
     font-weight: 400;
     line-height: 1.2em;
     text-align: left;
@@ -300,14 +321,14 @@
     display: block;
   }
   #steps-585 .cs-item-text {
-    font-size: 1rem;
-    line-height: 1.5em;
+    font-size: var(--bodyFontSize);
+    line-height: 1.4em;
     text-align: left;
     margin: 0;
     color: var(--textDark);
   }
   #steps-585 .cs-number {
-    font-family: var(--headerFont);
+    font-family: var(--smallCaps);
     font-size: 3.8125rem;
     font-weight: 400;
     line-height: 1.2em;
@@ -370,12 +391,12 @@
   }
 }
 /*-- -------------------------- -->
-<---           Menu             -->
+<---          Price             -->
 <--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #cs-menu-group-1038 {
-    text-align: center;
+    text-align: left;
     height: auto;
     padding: var(--sectionPadding);
     position: relative;
@@ -394,15 +415,6 @@
     gap: clamp(3rem, 6vw, 4rem);
     position: relative;
   }
-  #cs-menu-group-1038 .cs-content {
-    /* set text align to left if content needs to be left aligned */
-    text-align: center;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    /* centers content horizontally, set to flex-start to left align */
-    align-items: center;
-  }
   #cs-menu-group-1038 .cs-topper {
     color: var(--secondary200);
   }
@@ -420,27 +432,30 @@
   #cs-menu-group-1038 .cs-title {
     margin: 0 0 2rem;
   }
+  #cs-menu-group-1038 .cs-text {
+    margin-bottom: 1rem;
+  }
   #cs-menu-group-1038 .cs-hidden {
     display: none;
   }
   #cs-menu-group-1038 .cs-button-group {
     width: auto;
     max-width: 62.5rem;
-    margin: 0 1rem;
+    margin: 0;
     /* 16px - 28px top & bottom */
     /* 32px - 48px left & right */
-    padding: clamp(1rem, 3vw, 1.75rem) clamp(2rem, 4vw, 3rem);
+    padding: 1.25rem 0 0 0;
     display: inline-flex;
     justify-content: center;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-end;
     /* 24px - 36px */
     column-gap: clamp(1.5rem, 2vw, 2.25rem);
     row-gap: 0.75rem;
   }
   #cs-menu-group-1038 .cs-button {
-    font-family: var(--bodyFont);
-    font-size: 1rem;
+    font-family: var(--smallCaps);
+    font-size: 1.25rem;
     line-height: 1.5em;
     font-weight: 400;
     letter-spacing: 3px;
@@ -452,8 +467,8 @@
     background: transparent;
     border: none;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
     position: relative;
     transition: color 0.3s, font-weight 0.3s, color 0.3s;
   }
@@ -496,12 +511,12 @@
   }
   #cs-menu-group-1038 .cs-content {
     /* set text align to left if content needs to be left aligned */
-    text-align: center;
+    text-align: left;
     width: 100%;
     display: flex;
     flex-direction: column;
     /* centers content horizontally, set to flex-start to left align */
-    align-items: center;
+    align-items: flex-start;
     position: relative;
     z-index: 20;
   }
@@ -586,7 +601,7 @@
     font-variant-numeric: lining-nums;
   }
   #cs-menu-group-1038 .nm-price-mod {
-    font-family: var(--bodyFont);
+    font-family: var(--smallCaps);
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -600,13 +615,6 @@
     text-align: inherit;
     width: 100%;
     margin: 0;
-    color: var(--textLight);
-  }
-  #cs-menu-group-1038 .cs-button-solid {
-    background: var(--secondary300);
-    color: var(--secondary600);
-  }
-  #cs-menu-group-1038 .cs-button-solid:hover {
     color: var(--textLight);
   }
   #cs-menu-group-1038 .cs-background {
@@ -630,6 +638,10 @@
 @media only screen and (min-width: 48rem) {
   #cs-menu-group-1038 .cs-container {
     max-width: 80rem;
+  }
+  #cs-menu-group-1038 .cs-button-group {
+    justify-content: flex-end;
+    align-items: center;
   }
   #cs-menu-group-1038 .cs-menu-row {
     width: 100%;
@@ -738,25 +750,30 @@
   #faq-2066 .cs-option {
     /* 16px - 20px */
     font-family: var(--smallCaps);
-    font-size: clamp(1rem, 2vw, 1.25rem);
-    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    font-weight: 600;
     /* 50px - 72px */
     line-height: 1.2em;
     /* prevents border from affecting height and width */
     box-sizing: border-box;
     padding: 0.75rem;
     border: none;
-    background: var(--accent400);
+    background: var(--secondary400);
+    box-shadow: inset 0 0 2rem rgba(0, 0, 0, 0.3);
     color: var(--textLight);
     position: relative;
     z-index: 1;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
   }
   #faq-2066 .cs-option:before {
     /* background color */
     content: "";
     width: 100%;
     height: 100%;
-    background: var(--accent500);
+    background: var(--primary);
+    box-shadow: inset 0 0 2rem rgba(0, 0, 0, 0.3);
     opacity: 0;
     display: block;
     position: absolute;
@@ -983,6 +1000,32 @@
     margin: 0 0 2rem 0;
     color: var(--textDark);
   }
+  #faq-2066 .cs-button-transparent {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: 3em;
+    text-decoration: none;
+    font-family: var(--smallCaps);
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 0;
+    color: var(--accent500);
+    min-width: 9.375rem;
+    padding: 0 1.5rem;
+    background-color: transparent;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  #faq-2066 .cs-button-transparent:hover {
+    color: var(--textLight);
+    background: var(--accent500);
+  }
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
@@ -1092,6 +1135,9 @@
     background: var(--textLight);
     opacity: 0.6;
   }
+  body.dark-mode #faq-2066 .cs-button-transparent {
+    color: var(--textLight);
+  }
   body.dark-mode #faq-2066 .cs-cta-title, body.dark-mode #faq-2066 .cs-cta-text {
     color: var(--textLight);
   }
@@ -1139,7 +1185,7 @@
     color: var(--secondary);
   }
   #why-choose-1635 .cs-title {
-    max-width: 20ch;
+    max-width: 30ch;
     color: var(--textLight);
   }
   #why-choose-1635 .cs-text {
@@ -1147,7 +1193,7 @@
     margin-bottom: 1rem;
   }
   #why-choose-1635 .cs-text:last-of-type {
-    margin-bottom: 0;
+    margin-bottom: 2rem;
   }
   #why-choose-1635 .cs-wrapper {
     width: 100%;
@@ -1190,7 +1236,7 @@
     flex: none;
   }
   #why-choose-1635 .cs-icon {
-    width: 2rem;
+    width: 3rem;
     height: auto;
     display: block;
   }
@@ -1198,6 +1244,7 @@
     font-family: var(--headerFont);
     font-size: 1.25rem;
     letter-spacing: 1px;
+    font-weight: 400;
     line-height: 1.5em;
     margin: 0;
     margin-bottom: 0.5rem;

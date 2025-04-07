@@ -49,6 +49,21 @@
   .blog-link:hover:before {
     opacity: 1;
   }
+  body.dark-mode #cs-navigation {
+    background: var(--darkBlog);
+  }
+  body.dark-mode #cs-navigation .cs-ul-wrapper {
+    background: var(--mediumBlog);
+  }
+  body.dark-mode #cs-navigation .cs-drop-ul {
+    background: var(--mediumBlog);
+  }
+  body.dark-mode #cs-navigation .cs-li-link.cs-drop-link:hover {
+    background: var(--accentBlog);
+  }
+  body.dark-mode #cs-navigation .cs-drop3 {
+    background: var(--darkBlog);
+  }
 }
 /*-- -------------------------- -->
 <---           Header           -->
@@ -145,7 +160,7 @@
     align-items: center;
   }
   #banner-1106 .cs-link {
-    font-size: 1rem;
+    font-size: 0.875rem;
     line-height: 1.2em;
     text-decoration: none;
     color: var(--textLight);
@@ -314,6 +329,7 @@
   }
   #blog-1701 .blog-author,
   #blog-1701 .blog-date {
+    font-family: var(--smallCaps);
     font-size: 0.875rem;
     line-height: 1.5em;
     font-weight: 300;
@@ -376,11 +392,14 @@
     -webkit-box-orient: vertical;
   }
   #blog-1701 .cs-link {
-    font-size: 1rem;
+    font-family: var(--smallCaps);
+    font-size: 0.875rem;
     font-weight: 700;
     line-height: 1.2em;
     text-align: inherit;
     text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
     margin-top: 1.5rem;
     color: var(--primary400);
     display: flex;
@@ -511,8 +530,10 @@
     display: block;
     margin-bottom: 1.875rem;
     font-family: var(--smallCaps);
-    font-size: 1.25em;
-    letter-spacing: 2px;
+    font-size: 1.125em;
+    letter-spacing: 3px;
+    font-weight: 600;
+    text-transform: uppercase;
     color: var(--textLight);
     text-align: center;
   }
@@ -572,9 +593,10 @@
     display: block;
     font-size: 0.75rem;
     line-height: 1.5em;
+    font-family: var(--smallCaps);
     font-weight: 300;
     font-variant-numeric: lining-nums;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     text-transform: uppercase;
     color: var(--textLight);
     opacity: 0.8;
@@ -649,6 +671,7 @@
   }
   .blog-article .blog-author,
   .blog-article .blog-date {
+    font-family: var(--smallCaps);
     font-size: 0.75rem;
     line-height: 1.5em;
     font-weight: 300;

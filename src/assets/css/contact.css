@@ -57,6 +57,9 @@
   #contact-590 .cs-topper {
     color: var(--accent500);
   }
+  #contact-590 .cs-text {
+    margin-bottom: -2rem;
+  }
   #contact-590 .cs-form {
     display: flex;
     justify-content: space-between;
@@ -67,8 +70,10 @@
   #contact-590 .cs-label {
     /* 14px - 16px */
     font-family: var(--smallCaps);
+    text-transform: uppercase;
+    font-weight: 300;
     font-size: clamp(0.875rem, 1.5vw, 1rem);
-    letter-spacing: 1px;
+    letter-spacing: 3px;
     width: 100%;
     color: var(--textDark);
     display: flex;
@@ -76,6 +81,7 @@
     justify-content: center;
     align-items: flex-start;
     gap: 0.25rem;
+    margin-top: 1.5rem;
   }
   #contact-590 .cs-input {
     font-family: var(--bodyFont);
@@ -86,7 +92,7 @@
     padding-left: 1.5rem;
     color: var(--textDark);
     background-color: var(--textLight);
-    border: 1px solid var(--secondary200);
+    border: none;
     /* prevents padding from adding to height and width */
     box-sizing: border-box;
     transition: border-color 0.3s;

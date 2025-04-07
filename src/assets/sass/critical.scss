@@ -34,29 +34,35 @@
 
         .cs-title {
             /* 39px - 61px */
-            font-size: clamp(2.5rem, 5vw, 3.25rem);
+            font-size: clamp(2rem, 5vw, 3rem);
             line-height: 1.1em;
             text-align: center;
             max-width: calc(700 / 16 * 1rem);
             margin: 0 auto calc(16 / 16 * 1rem);
-            color: var(--textDark);
+            color: var(--accent600);
             position: relative;
         }
 
         .cs-text {
             /* 16px - 20px */
-            font-size: clamp(1rem, 1.5vw, 1.25rem);
-            line-height: 1.3em;
+            font-size: 1rem;
+            line-height: 1.5em;
             text-align: center;
             width: 100%;
             max-width: calc(531 / 16 * 1rem);
             margin: 0 auto;
             /* 28px - 40px */
             margin-bottom: calc(16 / 16 * 1rem);
-            color: var(--bodyTextColor);
+            color: var(--textDark);
             &:last-of-type {
                 margin-bottom: calc(32 / 16 * 1rem);
             }
+        }
+
+        .nm-subhead {
+            color: var(--accent500);
+            font-size: clamp(1.25rem, 4vh, 1.75rem);
+            margin: .5rem 0 2rem 0;
         }
 
         .cs-picture {
@@ -153,7 +159,7 @@
                 /* 46px - 56px */
                 line-height: clamp(2.875rem, 5.5vw, 3.5rem);
                 text-decoration: none;
-                font-family: var(--bodyFont);
+                font-family: var(--smallCaps);
                 font-weight: 600;
                 text-align: center;
                 text-transform: uppercase;
@@ -227,8 +233,16 @@
     body.dark-mode {
         #hero-288 {
             background: var(--medium);
-            .cs-title,
+            .cs-title {
+                color: var(--textLight);
+            }
+
             .cs-text {
+                color: var(--textLight);
+                opacity: .8;
+            }
+
+            .nm-subhead {
                 color: var(--textLight);
             }
 
@@ -324,9 +338,11 @@
         .cs-h3 {
             /* 20px - 25px */
             font-family: var(--smallCaps);
-            font-size: clamp(1.25rem, 2vw, 1.5625rem);
+            font-size: 1.25rem;
             font-weight: 400;
             text-align: inherit;
+            text-transform: uppercase;
+            letter-spacing: 3px;
             line-height: 1.2em;
             margin: 0;
             color: var(--textLight);

@@ -28,28 +28,33 @@
   }
   #hero-288 .cs-title {
     /* 39px - 61px */
-    font-size: clamp(2.5rem, 5vw, 3.25rem);
+    font-size: clamp(2rem, 5vw, 3rem);
     line-height: 1.1em;
     text-align: center;
     max-width: 43.75rem;
     margin: 0 auto 1rem;
-    color: var(--textDark);
+    color: var(--accent600);
     position: relative;
   }
   #hero-288 .cs-text {
     /* 16px - 20px */
-    font-size: clamp(1rem, 1.5vw, 1.25rem);
-    line-height: 1.3em;
+    font-size: 1rem;
+    line-height: 1.5em;
     text-align: center;
     width: 100%;
     max-width: 33.1875rem;
     margin: 0 auto;
     /* 28px - 40px */
     margin-bottom: 1rem;
-    color: var(--bodyTextColor);
+    color: var(--textDark);
   }
   #hero-288 .cs-text:last-of-type {
     margin-bottom: 2rem;
+  }
+  #hero-288 .nm-subhead {
+    color: var(--accent500);
+    font-size: clamp(1.25rem, 4vh, 1.75rem);
+    margin: 0.5rem 0 2rem 0;
   }
   #hero-288 .cs-picture {
     width: 100%;
@@ -136,7 +141,7 @@
     /* 46px - 56px */
     line-height: clamp(2.875rem, 5.5vw, 3.5rem);
     text-decoration: none;
-    font-family: var(--bodyFont);
+    font-family: var(--smallCaps);
     font-weight: 600;
     text-align: center;
     text-transform: uppercase;
@@ -198,8 +203,14 @@
   body.dark-mode #hero-288 {
     background: var(--medium);
   }
-  body.dark-mode #hero-288 .cs-title,
+  body.dark-mode #hero-288 .cs-title {
+    color: var(--textLight);
+  }
   body.dark-mode #hero-288 .cs-text {
+    color: var(--textLight);
+    opacity: 0.8;
+  }
+  body.dark-mode #hero-288 .nm-subhead {
     color: var(--textLight);
   }
   body.dark-mode #hero-288 .cs-waves {
@@ -281,9 +292,11 @@
   #services-2175 .cs-h3 {
     /* 20px - 25px */
     font-family: var(--smallCaps);
-    font-size: clamp(1.25rem, 2vw, 1.5625rem);
+    font-size: 1.25rem;
     font-weight: 400;
     text-align: inherit;
+    text-transform: uppercase;
+    letter-spacing: 3px;
     line-height: 1.2em;
     margin: 0;
     color: var(--textLight);

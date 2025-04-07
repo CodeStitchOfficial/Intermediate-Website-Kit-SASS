@@ -25,6 +25,26 @@
   body.dark-mode h6 {
     color: var(--textLight);
   }
+  body.dark-mode a {
+    color: var(--primary100);
+  }
+  body.dark-mode a:visited {
+    color: var(--secondary200);
+  }
+  body.dark-mode a:hover {
+    color: var(--primary200);
+  }
+  body.dark-mode a[target=_blank]:link::after {
+    background-color: var(--primary100);
+  }
+  body.dark-mode a[target=_blank]:hover::after {
+    background-color: var(--primary200);
+    width: 0.8em;
+    height: 0.8em;
+  }
+  body.dark-mode a[target=_blank]:visited::after {
+    background-color: var(--secondary200);
+  }
   body.dark-mode .light {
     display: none;
   }

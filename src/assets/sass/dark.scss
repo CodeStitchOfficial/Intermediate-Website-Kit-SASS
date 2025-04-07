@@ -30,6 +30,32 @@
             color: var(--textLight);
         }
 
+        a {
+            color: var(--primary100);
+        
+            &:visited {
+              color: var(--secondary200);
+            }
+        
+            &:hover {
+              color: var(--primary200);
+            }
+          }
+        
+          a[target="_blank"]:link::after {
+            background-color: var(--primary100);
+          }
+        
+          a[target="_blank"]:hover::after {
+            background-color: var(--primary200);
+            width: .8em;
+            height: .8em;
+          }
+        
+          a[target="_blank"]:visited::after {
+            background-color: var(--secondary200);
+          }
+          
         // hide all light classes
         .light {
             display: none;

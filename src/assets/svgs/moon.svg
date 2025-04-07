@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 480 480">
-  <!-- Generator: Adobe Illustrator 29.1.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 142)  -->
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.435 127.744">
   <defs>
     <style>
-      .st0 {
-        fill: #294759;
-        stroke: transparent;
-        stroke-miterlimit: 10;
-        stroke-width: 9.5px;
+      .cls-1 {
+        fill: none;
+        stroke: #294759;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 5.435px;
       }
     </style>
   </defs>
-  <path class="st0" d="M436.4,386.1c-58,67-152.9,95.6-241.9,65.1C77.8,410.9,15.7,283.7,55.8,166.9,85.7,80,163.9,23.3,250.1,16.7c-40.8,24.2-73.5,62.4-90.1,110.8-37.3,108.3,20.3,226.3,128.6,263.5,50.2,17.3,102.4,14.2,147.8-4.9Z"/>
+  <path class="cls-1" d="M87.599,2.717c2.059,6.069,3.167,12.616,3.167,19.372,0,33.522-27.185,60.706-60.705,60.706-9.871,0-19.11-2.322-27.344-6.547,6.598,27.978,31.673,48.778,61.655,48.778,34.998,0,63.345-28.349,63.345-63.346,0-26.816-16.627-49.726-40.118-58.963Z"/>
 </svg>
