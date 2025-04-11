@@ -60,7 +60,7 @@
         }
 
         .nm-subhead {
-            color: var(--accent500);
+            color: var(--secondary500);
             font-size: clamp(1.25rem, 4vh, 1.75rem);
             margin: .5rem 0 2rem 0;
         }
@@ -132,6 +132,7 @@
                 display: inline-block;
                 position: relative;
                 z-index: 1;
+                color: var(--textLight);
                 /* prevents padding from adding to the width */
                 box-sizing: border-box;
     
@@ -356,11 +357,16 @@
             /* 14px - 16px */
             font-size: clamp(.875rem, 1.5vw, 1rem);
             text-align: inherit;
+            font-weight: 400;
             line-height: 1.5em;
             margin: 0;
             color: var(--textLight);
             opacity: .8;
             transition: color .3s, opacity .3s;
+
+            strong {
+                color: var(--secondary200);
+            }
         }
     }
 }

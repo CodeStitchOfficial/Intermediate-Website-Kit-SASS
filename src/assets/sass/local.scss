@@ -703,6 +703,10 @@
             color: var(--textLight);
         }
 
+        .cs-button-solid {
+            color: var(--textLight);
+        }
+
         .cs-background {
             width: 100%;
             height: 100%;
@@ -1150,35 +1154,9 @@
             color: var(--textDark);
         }
 
-        .cs-button-transparent {
-            font-size: calc(16 / 16 * 1rem);
-            /* 46px - 56px */
-            line-height: calc(48 / 16 * 1em);
-            text-decoration: none;
-            font-family: var(--smallCaps);
-            font-weight: 600;
-            text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin: 0;
-            color: var(--accent500);
-            min-width: calc(150 / 16 * 1rem);
-            padding: 0 calc(24 / 16 * 1rem);
-            background-color: transparent;
-            display: inline-block;
-            position: relative;
-            z-index: 1;
-            /* prevents padding from adding to the width */
-            box-sizing: border-box;
-            transition:
-                background-color 0.3s,
-                color 0.3s;
-
-            &:hover {
-                color: var(--textLight);
-                background: var(--accent500);
-            }
-        }
+        .cs-button-solid {
+            color: var(--textLight);
+        }   
     }
 }
 
@@ -1317,10 +1295,6 @@
                 }
             }
 
-            .cs-button-transparent {
-                color: var(--textLight);
-            }
-
             .cs-cta-title, .cs-cta-text {
                 color: var(--textLight);
             }
@@ -1390,6 +1364,10 @@
             &:last-of-type {
                 margin-bottom: calc(32 / 16 * 1rem);
             }
+        }
+
+        .cs-button-solid {
+            color: var(--textLight);
         }
 
         .cs-wrapper {

@@ -45,6 +45,24 @@
   body.dark-mode a[target=_blank]:visited::after {
     background-color: var(--secondary200);
   }
+  body.dark-mode table caption {
+    color: var(--secondary);
+  }
+  body.dark-mode table thead,
+  body.dark-mode table tfoot {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  body.dark-mode table th,
+  body.dark-mode table td {
+    color: var(--textLight);
+    opacity: 0.8;
+  }
+  body.dark-mode table tbody > tr:nth-of-type(odd) {
+    background-color: var(--accent);
+  }
+  body.dark-mode table tbody > tr:nth-of-type(even) {
+    background-color: rgba(41, 71, 89, 0.5);
+  }
   body.dark-mode .light {
     display: none;
   }

@@ -266,20 +266,20 @@
         margin: 0;
         font-size: calc(16 / 16 * 1rem);
         font-family: var(--bodyFont);
-        line-height: 1.2em;
+        line-height: 1.5em;
     }
 
     a {
-        color: var(--primary400);
+        color: var(--primary);
         font-weight: 600;
-        text-underline-offset: .125em;
+        text-underline-offset: .12em;
       
         &:visited {
           color: var(--accent500);
         }
       
         &:hover {
-          color: var(--primary);
+          color: var(--primary600);
         }
       }
       
@@ -339,6 +339,63 @@
             cursor: pointer;
         }
     }
+
+    table {
+        border-collapse: collapse;
+        border: none;
+        font-size: .9rem;
+        width: 100%;
+        margin: 1rem 0;
+
+        caption {
+            caption-side: top;
+            padding: 0 0 .5rem 0;
+            font-family: var(--smallCaps);
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-align: left;
+            color: var(--accent500);
+          }
+          
+          thead,
+          tfoot {
+            background-color:var(--accent500);
+            color: var(--textLight);
+            font-family: var(--headerFont);
+            font-size: 1.2rem;
+            font-weight: 400;
+          }
+          
+          th,
+          td {
+            border: none;
+            padding: .5rem .75rem;
+
+            a {
+                font-size: inherit;
+            }
+          }
+          
+          tbody > tr:nth-of-type(odd) {
+            background-color: rgba(229, 219, 209, .5);
+          }
+
+          tbody > tr:nth-of-type(even) {
+            background-color: rgba(229, 219, 209, 1);
+          }
+          
+          tfoot th {
+            text-align: right;
+          }
+          
+          tfoot td {
+            font-weight: bold;
+          }
+      }
+      
+      
+      
 
     // Hidden Screen reader skip nav button
     .skip {
@@ -1786,6 +1843,7 @@
             font-weight: 400;
             width: 100%;
             margin: 0;
+            padding-top: 1rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -1812,6 +1870,7 @@
             font-weight: 400;
             width: 100%;
             margin: 0;
+            padding-top: 1rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -1871,6 +1930,10 @@
             opacity: .8;
         }
 
+        .nm-h3 {
+            padding-top: 1rem;
+        }
+
         h1,
         h2,
         h3,
@@ -1892,7 +1955,7 @@
         }
 
         h3 {
-            font-size: calc(24 / 16 * 1rem);
+            font-size: calc(24 / 16 * 1rem);;
         }
 
         h4,
@@ -1904,6 +1967,18 @@
         li ul {
             margin-top: .75rem;
             margin-bottom: 0rem;
+        }
+
+        .nm-services {
+            width: 30%;
+        }
+
+        .nm-prices {
+            width: 20%;
+        }
+
+        .nm-description {
+            width: 50%;
         }
 
         .cs-button-solid {
@@ -2127,6 +2202,16 @@
 
                 &:hover {
                     color: var(--primary200);
+                }
+            }
+
+            table {
+                a {
+                    color: var(--textLight);
+
+                    &:visited {
+                        color: var(--secondary);
+                    }
                 }
             }
 

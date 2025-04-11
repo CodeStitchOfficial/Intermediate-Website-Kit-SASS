@@ -52,7 +52,7 @@
     margin-bottom: 2rem;
   }
   #hero-288 .nm-subhead {
-    color: var(--accent500);
+    color: var(--secondary500);
     font-size: clamp(1.25rem, 4vh, 1.75rem);
     margin: 0.5rem 0 2rem 0;
   }
@@ -119,6 +119,7 @@
     display: inline-block;
     position: relative;
     z-index: 1;
+    color: var(--textLight);
     /* prevents padding from adding to the width */
     box-sizing: border-box;
   }
@@ -309,11 +310,15 @@
     /* 14px - 16px */
     font-size: clamp(0.875rem, 1.5vw, 1rem);
     text-align: inherit;
+    font-weight: 400;
     line-height: 1.5em;
     margin: 0;
     color: var(--textLight);
     opacity: 0.8;
     transition: color 0.3s, opacity 0.3s;
+  }
+  #services-2175 .cs-item-text strong {
+    color: var(--secondary200);
   }
 }
 /* Tablet - 768px */

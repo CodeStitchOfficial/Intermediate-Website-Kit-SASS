@@ -55,7 +55,33 @@
           a[target="_blank"]:visited::after {
             background-color: var(--secondary200);
           }
-          
+         
+          table {
+    
+            caption {
+                color: var(--secondary);
+              }
+              
+              thead,
+              tfoot {
+                background-color: rgba(0, 0, 0, .3);
+              }
+
+              th,
+              td {
+                color: var(--textLight);
+                opacity: .8;
+              }
+              
+              tbody > tr:nth-of-type(odd) {
+                background-color: var(--accent);
+              }
+    
+              tbody > tr:nth-of-type(even) {
+                background-color: rgba(41, 71, 89, .5);
+              }
+          }  
+        
         // hide all light classes
         .light {
             display: none;
