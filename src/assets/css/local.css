@@ -705,6 +705,7 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #faq-2066 {
+    display: none;
     padding: var(--sectionPadding);
     overflow: hidden;
     position: relative;
