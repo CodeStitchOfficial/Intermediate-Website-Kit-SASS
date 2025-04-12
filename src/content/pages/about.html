@@ -11,10 +11,12 @@ eleventyNavigation:
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <link rel="stylesheet" href="/assets/css/about.css" />
+    <link rel="stylesheet" href="/assets/css/about.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="/assets/css/content-pages.css " media="print" onload="this.media='all'" />
 {% endblock %}
 
 {% block body %}
+
     <!-- ============================================ -->
     <!--                   Banner                     -->
     <!-- ============================================ -->
@@ -30,10 +32,10 @@ eleventyNavigation:
         <!--Background Image-->
         <picture class="cs-background">
             <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="../../assets/images/dark-mode-banner.svg">
+            <source media="(max-width: 600px)" srcset="../../assets/svgs/dark-mode-banner.svg">
             <!--Tablet and above Image-->
-            <source media="(min-width: 601px)" srcset="../../assets/images/dark-mode-banner.svg">
-            <img decoding="async" src="../../assets/images/dark-mode-banner.svg" alt="" width="1280" height="568" aria-hidden="true">
+            <source media="(min-width: 601px)" srcset="../../assets/svgs/dark-mode-banner.svg">
+            <img decoding="async" src="../../assets/svgs/dark-mode-banner.svg" alt="" width="1280" height="568" aria-hidden="true">
         </picture>
     </div>
 

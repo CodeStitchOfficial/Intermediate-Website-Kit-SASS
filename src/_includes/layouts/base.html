@@ -16,10 +16,10 @@
         <meta property="og:description" content="{{ description }}" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="{{ client.domain }}{{ page.url }}" />
-        <meta property="og:image" content="/assets/images/logo-small.png" />
+        <meta property="og:image" content="/assets/images/social-image.png" />
         <meta
             property="og:image:secure_url"
-            content="/assets/images/logo-small.png"
+            content="/assets/images/social-image.png"
         />
 
         <!--Favicons - Light Mode-->
@@ -27,26 +27,40 @@
         <link rel="icon" type="image/svg+xml" href="/assets/favicons/light-mode/favicon.svg" media="(prefers-color-scheme: light)"/>
         <link rel="shortcut icon" href="/assets/favicons/light-mode/favicon.ico" media="(prefers-color-scheme: light)"/>
         <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/light-mode/apple-touch-icon.png" media="(prefers-color-scheme: light)"/>
-        <link rel="manifest" href="/assets/favicons/light-mode/site.webmanifest"media="(prefers-color-scheme: light)" />
+        
+        <link rel="manifest" href="/assets/favicons/light-mode/site.webmanifest" />
 
         <!--Favicons - Dark Mode-->
         <link rel="icon" type="image/png" href="/assets/favicons/dark-mode/favicon-96x96.png" sizes="96x96" media="(prefers-color-scheme: dark)"/>
         <link rel="icon" type="image/svg+xml" href="/assets/favicons/dark-mode/favicon.svg" media="(prefers-color-scheme: dark)"/>
+        <link rel="shortcut icon" href="/assets/favicons/dark-mode/favicon.ico" media="(prefers-color-scheme: light)"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/dark-mode/apple-touch-icon.png" media="(prefers-color-scheme: light)"/>
 
         <!-- Preloads -->
-        <link rel="preload" as="image" href="/assets/images/Neva Masquerade_Logo Color Dark Horizontal.svg" />
+
+
         <link
             rel="preload"
             as="font"
             type="font/woff2"
-            href="/assets/fonts/roboto-v29-latin-regular.woff2"
+            font-display="swap"
+            href="/assets/fonts/baskervville-v16-latin-regular.woff2"
             crossorigin
         />
         <link
             rel="preload"
             as="font"
             type="font/woff2"
-            href="/assets/fonts/roboto-v29-latin-700.woff2"
+            font-display="swap"
+            href="/assets/fonts/ContraltoSmallDemiBold/font.woff2"
+            crossorigin
+        />
+        <link
+            rel="preload"
+            as="font"
+            type="font/woff2"
+            font-display="swap"
+            href="/assets/fonts/Montserrat/montserrat-v29-latin-regular.woff2"
             crossorigin
         />
 
@@ -56,8 +70,9 @@
         {% endif %}
 
         <!-- Sitewide Stylesheets and Scripts -->
-        <link rel="stylesheet" href="/assets/css/root.css" />
-        <link rel="stylesheet" href="/assets/css/dark.css" />
+        <link rel="stylesheet" href="/assets/css/root.css" media="print" onload="this.media='all'"  />
+        <link rel="stylesheet" href="/assets/css/dark.css" media="print" onload="this.media='all'"  />
+        <link rel="stylesheet" href="/assets/css/global-styles.css" media="print" onload="this.media='all'" />
         <script defer src="/assets/js/dark.js"></script>
         <script defer src="/assets/js/nav.js"></script>
 
@@ -71,7 +86,7 @@
             class="skip"
             aria-label="skip to main content"
             href="#main"
-            tabindex="1"
+            tabindex="0"
             >Click To Skip To Main Content</a
         >
         {% include "components/header.html" %}

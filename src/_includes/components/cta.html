@@ -10,7 +10,8 @@
             <p class="cs-text">
                 <strong>Join our newsletter</strong> to receive our insights on <strong>websites</strong> and <strong>branding</strong>. We <strong>won't sell your email</strong> or <strong>spam you</strong> (unless you consider cat photos spam).
             </p>
-            <form class="cs-form" name="Contact Form" method="post">
+            <form class="cs-form" name="Newsletter CTA" method="post" netlify netlify-honeypot="bot-field">
+                <label class="nm-honeypot">Not for humans <input name="bot-field" /></label>
                 <input class="cs-input" type="email" id="cs-email-302-1612" name="find-us" placeholder="Email Address">
                 <button class="cs-button-solid cs-submit" type="submit">Subscribe</button>
             </form>
@@ -18,9 +19,9 @@
     </div>
     <!--Background Image-->
     <picture class="cs-background">
-        <source media="(max-width: 600px)" srcset="../../assets/images/cta-background.jpg">
-        <source media="(min-width: 601px)" srcset="../../assets/images/cta-background.jpg">
-        <img loading="lazy" decoding="async" src="../../assets/images/cta-background.jpg" alt="A cat wearing glasses looking at a laptop." width="1920" height="486" aria-hidden="true">
+        <source media="(max-width: 600px)" srcset="../../assets/images/cta-background-m.webp">
+        <source media="(min-width: 601px)" srcset="../../assets/images/cta-background.webp">
+        <img loading="lazy" decoding="async" src="../../assets/images/cta-background.webp" alt="A cat wearing glasses looking at a laptop." width="1920" height="486" aria-hidden="true">
     </picture>
 </section>
                                 

@@ -1,7 +1,7 @@
 ---
 title: "Contact | Neva Masquerade"
 description: "Does your small business need a new website and stronger branding? Contact Neva Masquerade to book a free call. Let's elevate your brand and grow your business!"
-preloadImg: "/assets/images/dark-mode-banner.svg"
+preloadImg: "/assets/svgs/dark-mode-banner.svg"
 permalink: "contact/"
 eleventyNavigation:
     key: Book a call
@@ -12,7 +12,8 @@ eleventyNavigation:
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <link rel="stylesheet" href="/assets/css/contact.css" />
+    <link rel="stylesheet" href="../../assets/css/contact.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="../../assets/css/content-pages.css" media="print" onload="this.media='all'" />
 {% endblock %}
 
 {% block body %}
@@ -32,10 +33,10 @@ eleventyNavigation:
     <!--Background Image-->
     <picture class="cs-background">
         <!--Mobile Image-->
-        <source media="(max-width: 600px)" srcset="../../assets/images/dark-mode-banner.svg">
+        <source fetch-priority="high" media="(max-width: 600px)" srcset="../../assets/svgs/dark-mode-banner.svg">
         <!--Tablet and above Image-->
-        <source media="(min-width: 601px)" srcset="../../assets/images/dark-mode-banner.svg">
-        <img decoding="async" src="../../assets/images/dark-mode-banner.svg" alt="" width="1280" height="300" aria-hidden="true">
+        <source media="(min-width: 601px)" srcset="../../assets/svgs/dark-mode-banner.svg">
+        <img fetch-priority="high" decoding="async" src="../../assets/svgs/dark-mode-banner.svg" alt="" width="1280" height="300" aria-hidden="true">
     </picture>
 </div>
 
@@ -61,7 +62,7 @@ eleventyNavigation:
                 </p>
             </div>
             <!--Form-->
-            <form class="cs-form" id="cs-form-590" name="Contact Form" method="post">
+            <form class="cs-form" id="cs-form-590" name="Contact Form" method="post" netlify netlify-honeypot="bot-field">
                 <label class="cs-label">
                     Name
                     <input class="cs-input" required type="text" id="name-590" name="name" placeholder="Name">
@@ -82,6 +83,7 @@ eleventyNavigation:
                     Message
                     <textarea class="cs-input cs-textarea" required name="Message" id="message-590" placeholder="Write message..."></textarea>
                 </label>
+                <label class="nm-honeypot">Not for humans <input name="bot-field" /> </label>
                 <button class="cs-button-solid cs-submit" type="submit">Send Message</button>
             </form>
         </div>

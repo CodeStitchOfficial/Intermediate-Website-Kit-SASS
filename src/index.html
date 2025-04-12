@@ -1,7 +1,7 @@
 ---
 title: "Neva Masquerade | Small business branding and web design"
 description: "Say goodbye to website struggles. Draw in customers with custom web design and engaging brand stories. Elevate your brand and grow your business today."
-preloadImg: "assets/images/index/hero-image.jpg"
+preloadImg: ""
 permalink: "/"
 tags: "sitemap" # Sitemap will use all pages in content/, due to content.json. As index.html is not included in content/ we need to manually add the sitemap tag to this page (only).
 eleventyNavigation:
@@ -12,8 +12,8 @@ eleventyNavigation:
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <link rel="stylesheet" href="/assets/css/local.css" />
-    <link rel="stylesheet" href="/assets/css/critical.css" />
+    <link rel="stylesheet" href="/assets/css/critical.css"  media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="/assets/css/local.css" media="print" onload="this.media='all'" />
 
     <!-- Script for Netlify Identity -->
     <script
@@ -93,17 +93,17 @@ eleventyNavigation:
         </div>
         <!--Hero Image-->
         <picture class="cs-picture">
-            <source media="(max-width: 600px)" srcset="assets/images/index/hero-image.jpg">
-            <source media="(min-width: 601px)" srcset="assets/images/index/hero-image.jpg">
-            <source media="(min-width: 1024px)" srcset="assets/images/index/hero-image.jpg">
-            <img aria-hidden="true" decoding="async" src="assets/images/index/hero-image.jpg" alt="" width="630" height="814">
+            <source fetch-priority="high" media="(max-width: 600px)" srcset="assets/images/index/hero-image-m.webp">
+            <source media="(min-width: 601px)" srcset="assets/images/index/hero-image.webp">
+            <source media="(min-width: 1024px)" srcset="assets/images/index/hero-image.webp">
+            <img aria-hidden="true" decoding="async" src="assets/images/index/hero-image.webp" alt="" width="630" height="814">
         </picture>
         <!--Texture-->
         <picture class="cs-waves">
-            <source media="(min-width: 1024px)" srcset="assets/images/blue-vertical.svg">
-            <source media="(min-width: 601px)" srcset="assets/images/blue-vertical.svg">
-            <source media="(max-width: 600px)" srcset="assets/images/blue-vertical.svg">
-            <img decoding="async" src="assets/images/blue-vertical.svg" alt="waves" width="645" height="1080" aria-hidden="true">
+            <source media="(min-width: 1024px)" srcset="assets/svgs/blue-vertical.svg">
+            <source media="(min-width: 601px)" srcset="assets/svgs/blue-vertical.svg">
+            <source media="(max-width: 600px)" srcset="assets/svgs/blue-vertical.svg">
+            <img decoding="async" src="assets/svgs/blue-vertical.svg" alt="waves" width="645" height="1080" aria-hidden="true">
         </picture>
     </div>
 </section>
@@ -117,10 +117,10 @@ eleventyNavigation:
         <ul class="cs-card-group">
             <li class="cs-item">
                 <a href="/services/web-design" class="cs-link">
-                    <h3 class="cs-h3">
+                    <h2 class="cs-h3">
                         <img class="cs-icon" src="assets/svgs/design.svg" loading="lazy" decoding="async" alt="icon" width="64" height="64" aria-hidden="true">
                         Web Design
-                    </h3>
+                    </h2>
                     <p class="cs-item-text">
                         Are you <strong>unhappy</strong> with your current website? <strong>Stand out</strong> with a <strong>custom design</strong> that suits your <strong>personality</strong> and <strong>brand</strong>. Starting at <strong>$0 down</strong>, $175/month.
                     </p>
@@ -128,10 +128,10 @@ eleventyNavigation:
             </li>
             <li class="cs-item">
                 <a href="/services/support" class="cs-link">
-                    <h3 class="cs-h3">
+                    <h2 class="cs-h3">
                         <img class="cs-icon" src="assets/svgs/maintenance.svg" loading="lazy" decoding="async" alt="icon" width="32" height="32" aria-hidden="true">
                         Support
-                    </h3>
+                    </h2>
                     <p class="cs-item-text">
                         Do you want a <strong>long-term partnership</strong>? <strong>Stop worrying</strong> about running your website. We offer <strong>affordable hosting</strong>, <strong>unlimited</strong> content <strong>edits</strong>, and <strong>copywriting</strong>.
                     </p>
@@ -139,10 +139,10 @@ eleventyNavigation:
             </li>
             <li class="cs-item">
                 <a href="/services/branding" class="cs-link">
-                    <h3 class="cs-h3">
+                    <h2 class="cs-h3">
                         <img class="cs-icon" src="assets/svgs/branding.svg" loading="lazy" decoding="async" alt="icon" width="32" height="32" aria-hidden="true">
                         Branding
-                    </h3>
+                    </h2>
                     <p class="cs-item-text">
                         Are you <strong>struggling</strong> with a weak brand? Draw customers in and <strong>tell your brand story</strong>. Build a <strong>strong</strong> personality, <strong>stunning</strong> look, and <strong>persuasive</strong> narrative.
                     </p>
@@ -160,10 +160,10 @@ eleventyNavigation:
     <div class="cs-container">
         <picture class="cs-picture">
             <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="assets/images/index/index-problem.jpg">
+            <source loading="lazy" media="(max-width: 600px)" srcset="assets/images/index/index-problem-m.webp">
             <!--Tablet and above Image-->
-            <source media="(min-width: 601px)" srcset="assets/images/index/index-problem.jpg">
-            <img loading="lazy" decoding="async" src="assets/images/index/index-problem.jpg" alt="room" width="618" height="537">
+            <source loading="lazy" media="(min-width: 601px)" srcset="assets/images/index/index-problem.webp">
+            <img loading="lazy" decoding="async" src="assets/images/index/index-problem.webp" alt="room" width="618" height="537">
         </picture>
         <div class="cs-content">
             <span class="cs-topper">From frustrated and overwhelmed . . .</span>
@@ -195,10 +195,10 @@ eleventyNavigation:
     <div class="cs-container">
         <picture class="cs-picture">
             <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="assets/images/index/index-solution.jpg">
+            <source loading="lazy" media="(max-width: 600px)" srcset="assets/images/index/index-solution-m.webp">
             <!--Tablet and above Image-->
-            <source media="(min-width: 601px)" srcset="assets/images/index/index-solution.jpg">
-            <img loading="lazy" decoding="async" src="assets/images/index/index-solution.jpg" alt="room" width="618" height="537">
+            <source loading="lazy" media="(min-width: 601px)" srcset="assets/images/index/index-solution.webp">
+            <img loading="lazy" decoding="async" src="assets/images/index/index-solution.webp" alt="room" width="618" height="537">
         </picture>
         <div class="cs-content">
             <span class="cs-topper">. . . to relaxed and confident</span>
@@ -863,9 +863,9 @@ eleventyNavigation:
                 <div class="cs-picture-wrapper">
                     <picture class="cs-picture cs-picture1">
                         <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="assets/images/index/why-choose-us-image-1.webp">
+                        <source loading="lazy" media="(max-width: 600px)" srcset="assets/images/index/why-choose-us-image-1.webp">
                         <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="assets/images/index/why-choose-us-image-1.webp">
+                        <source loading="lazy" media="(min-width: 601px)" srcset="assets/images/index/why-choose-us-image-1.webp">
                         <img loading="lazy" decoding="async" src="assets/images/index/why-choose-us-image-1.webp" alt="meeting" width="434" height="414">
                     </picture>
                     <div class="cs-box">
@@ -875,9 +875,9 @@ eleventyNavigation:
                 </div>
                 <picture class="cs-picture cs-picture2">
                     <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="assets/images/index/why-choose-us-image-2.webp">
+                    <source loading="lazy" media="(max-width: 600px)" srcset="assets/images/index/why-choose-us-image-2.webp">
                     <!--Tablet and above Image-->
-                    <source media="(min-width: 601px)" srcset="assets/images/index/why-choose-us-image-2.webp">
+                    <source loading="lazy" media="(min-width: 601px)" srcset="assets/images/index/why-choose-us-image-2.webp">
                     <img loading="lazy" decoding="async" src="assets/images/index/why-choose-us-image-2.webp" alt="on computer" width="197" height="197">
                 </picture>
             </div>
