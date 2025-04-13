@@ -13,7 +13,6 @@ eleventyNavigation:
 {% block head %}
     <!-- Any page-specific tags that belong in the <head>, such as a page-specific stylesheet -->
     <link rel="stylesheet" href="/assets/css/services.css" media="print" onload="this.media='all'" />
-    <link rel="stylesheet" href="/assets/css/content-pages.css" media="print" onload="this.media='all'" />
 {% endblock %}
 
 {% block body %}
@@ -28,7 +27,7 @@ eleventyNavigation:
                 <span class="cs-int-title">Services</span>
                 <div class="cs-breadcrumbs">
                     <a href="/" class="cs-link">Home</a>
-                    <a href="" class="cs-link cs-active">Services</a>
+                    <a href="#" class="cs-link cs-active">Services</a>
                 </div>
             </div>
             <!--Background Image-->
@@ -92,7 +91,6 @@ eleventyNavigation:
                     </li>
                 </ul>
             </div>
-        </section>
-                                
+        </section>              
     {% include 'components/cta.html' %}
 {% endblock %}
