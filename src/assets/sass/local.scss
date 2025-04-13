@@ -618,6 +618,7 @@
         height: auto;
         padding: var(--sectionPadding);
         position: relative;
+        background: var(--primary600);
 
         .cs-container {
             width: 100%;
@@ -955,7 +956,8 @@
 /* Large Desktop 1300px - Parallax Scroll */
 @media only screen and (min-width: 81.25rem) {
     #cs-menu-group-1038 {
-        background: url("/assets/svgs/blue-banner.svg");
+        background: url("/assets/textures/price-texture.webp");
+        background-color: var(--primary600);
         background-size: cover;
         background-position: center 20%;
         background-repeat: no-repeat;
