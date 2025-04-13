@@ -1,0 +1,102 @@
+/*-- -------------------------- -->
+<---          Tables            -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    table {
+        border-collapse: collapse;
+        border: none;
+        font-size: .9rem;
+        width: 100%;
+        margin: 1rem 0;
+
+        caption {
+        caption-side: top;
+        padding: 0 0 .5rem 0;
+        font-family: var(--smallCaps);
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        text-align: left;
+        color: var(--accent500);
+        }
+        
+        thead,
+        tfoot {
+        background-color:var(--accent500);
+        color: var(--textLight);
+        font-family: var(--headerFont);
+        font-size: 1.2rem;
+        font-weight: 400;
+        }
+        
+        th,
+        td {
+        border: none;
+        padding: .5rem .75rem;
+
+        a {
+            font-size: inherit;
+        }
+        }
+        
+        tbody > tr:nth-of-type(odd) {
+        background-color: rgba(229, 219, 209, .5);
+        }
+
+        tbody > tr:nth-of-type(even) {
+        background-color: rgba(229, 219, 209, 1);
+        }
+        
+        tfoot th {
+        text-align: right;
+        }
+        
+        tfoot td {
+        font-weight: bold;
+        }
+    }
+
+    .nm-services {
+        width: 30%;
+    }
+
+    .nm-prices {
+        width: 20%;
+    }
+
+    .nm-description {
+        width: 50%;
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        table {
+            caption {
+                color: var(--secondary);
+            }
+            
+            thead,
+            tfoot {
+                background-color: rgba(0, 0, 0, .3);
+            }
+
+            th,
+            td {
+                color: var(--textLight);
+                opacity: .8;
+            }
+            
+            tbody > tr:nth-of-type(odd) {
+                background-color: var(--accent);
+            }
+    
+            tbody > tr:nth-of-type(even) {
+                background-color: rgba(41, 71, 89, .5);
+            }
+        }  
+    }
+}

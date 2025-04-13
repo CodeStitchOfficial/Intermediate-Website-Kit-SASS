@@ -1,0 +1,84 @@
+/*-- -------------------------- -->
+<---          Tables            -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  table {
+    border-collapse: collapse;
+    border: none;
+    font-size: 0.9rem;
+    width: 100%;
+    margin: 1rem 0;
+  }
+  table caption {
+    caption-side: top;
+    padding: 0 0 0.5rem 0;
+    font-family: var(--smallCaps);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: left;
+    color: var(--accent500);
+  }
+  table thead,
+  table tfoot {
+    background-color: var(--accent500);
+    color: var(--textLight);
+    font-family: var(--headerFont);
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  table th,
+  table td {
+    border: none;
+    padding: 0.5rem 0.75rem;
+  }
+  table th a,
+  table td a {
+    font-size: inherit;
+  }
+  table tbody > tr:nth-of-type(odd) {
+    background-color: rgba(229, 219, 209, 0.5);
+  }
+  table tbody > tr:nth-of-type(even) {
+    background-color: rgb(229, 219, 209);
+  }
+  table tfoot th {
+    text-align: right;
+  }
+  table tfoot td {
+    font-weight: bold;
+  }
+  .nm-services {
+    width: 30%;
+  }
+  .nm-prices {
+    width: 20%;
+  }
+  .nm-description {
+    width: 50%;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode table caption {
+    color: var(--secondary);
+  }
+  body.dark-mode table thead,
+  body.dark-mode table tfoot {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  body.dark-mode table th,
+  body.dark-mode table td {
+    color: var(--textLight);
+    opacity: 0.8;
+  }
+  body.dark-mode table tbody > tr:nth-of-type(odd) {
+    background-color: var(--accent);
+  }
+  body.dark-mode table tbody > tr:nth-of-type(even) {
+    background-color: rgba(41, 71, 89, 0.5);
+  }
+}
+
+/*# sourceMappingURL=tables.css.map */
