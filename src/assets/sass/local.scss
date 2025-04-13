@@ -634,8 +634,21 @@
             position: relative;
         }
 
-        
+        /* Content Group */
+        #cs-content-1801 {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        max-width: calc(1280/16 * 1rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
 
+        .cs-title {
+            max-width: 25ch;
+        }
+    }
         .cs-topper {
             color: var(--secondary200);
         }
@@ -893,6 +906,13 @@
             max-width: calc(1280 / 16 * 1rem);
         }
 
+        #cs-content-1801 {
+            text-align: left;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
         .cs-button-group {
             justify-content: flex-end;
             align-items: center;
@@ -935,7 +955,7 @@
 /* Large Desktop 1300px - Parallax Scroll */
 @media only screen and (min-width: 81.25rem) {
     #cs-menu-group-1038 {
-        background: url("../images/dark-mode-banner.svg");
+        background: url("/assets/svgs/blue-banner.svg");
         background-size: cover;
         background-position: center 20%;
         background-repeat: no-repeat;
