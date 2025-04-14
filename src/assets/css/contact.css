@@ -150,6 +150,7 @@
     left: 0;
     height: 100%;
     width: 100%;
+    aspect-ratio: 2/1;
     object-fit: cover;
   }
   #contact-590 .cs-right {
@@ -261,6 +262,9 @@
     left: 50%;
     /* 84px - 120px */
     margin-left: clamp(5.25rem, 12vw, 7.5rem);
+  }
+  #contact-590 .cs-picture img {
+    aspect-ratio: 1/1;
   }
   #contact-590 .cs-right {
     width: 56%;

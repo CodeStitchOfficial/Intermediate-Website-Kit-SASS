@@ -367,6 +367,9 @@
   #content-page-851 .cs-image-group {
     display: flex;
   }
+  #content-page-851 .cs-picture {
+    aspect-ratio: 4/5;
+  }
 }
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {

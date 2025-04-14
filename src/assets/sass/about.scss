@@ -193,6 +193,7 @@
             width: 100%;
             height: calc(256 / 16 * 1rem);
             z-index: 1;
+            aspect-ratio: 3 / 2;
 
             img {
                 position: absolute;
@@ -225,6 +226,7 @@
             top: 0;
             bottom: 0;
             right: 50%;
+            aspect-ratio: 5 / 4;
         }
 
         .cs-content {

@@ -172,6 +172,7 @@
     width: 100%;
     height: 16rem;
     z-index: 1;
+    aspect-ratio: 3/2;
   }
   #RPsbs-600 .cs-background img,
   #RPsbsr-600 .cs-background img {
@@ -204,6 +205,7 @@
     top: 0;
     bottom: 0;
     right: 50%;
+    aspect-ratio: 5/4;
   }
   #RPsbs-600 .cs-content,
   #RPsbsr-600 .cs-content {
