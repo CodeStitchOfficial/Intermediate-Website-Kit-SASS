@@ -35,10 +35,10 @@ eleventyNavigation:
             <!--Background Image-->
             <picture class="cs-background">
                 <!--Mobile Image-->
-                <source media="(max-width: 600px)" srcset="../../assets/images/dark-mode-banner.svg">
+                <source media="(max-width: 600px)" srcset="../../assets/textures/blue-banner-m.webp">
                 <!--Tablet and above Image-->
-                <source media="(min-width: 601px)" srcset="../../assets/images/dark-mode-banner.svg">
-                <img decoding="async" src="../../assets/images/dark-mode-banner.svg" alt="" width="1280" height="568" aria-hidden="true">
+                <source media="(min-width: 601px)" srcset="../../assets/textures/blue-banner.webp">
+                <img decoding="async" src="../../assets/textures/blue-banner.webp" alt="" width="1280" height="568" aria-hidden="true">
             </picture>
         </div>
 

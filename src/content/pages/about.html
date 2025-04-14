@@ -12,6 +12,50 @@ eleventyNavigation:
 
 {% block head %}
     <link rel="stylesheet" href="/assets/css/about.css" media="print" onload="this.media='all'" />
+    <style>
+        .cs-background {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+            &:before {
+                /* background color overlay */
+                content: "";
+                position: absolute;
+                display: block;
+                height: 100%;
+                width: 100%;
+                background: -moz-linear-gradient(
+                    left,
+                    rgba(18, 38, 51, 0.94) 0%,
+                    rgba(18, 38, 51, 0) 100%
+                ); /* FF3.6-15 */
+                background: -webkit-linear-gradient(
+                    left,
+                    rgba(18, 38, 51, 0.94) 0%,
+                    rgba(18, 38, 51, 0) 100%
+                ); /* Chrome10-25,Safari5.1-6 */
+                opacity: 1;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                /* Makes img tag act as a background image */
+                object-fit: cover;
+            }
+        }
+    </style>
 {% endblock %}
 
 {% block body %}
@@ -63,7 +107,7 @@ eleventyNavigation:
                 <p class="cs-text">
                     <strong>You don't have to settle</strong> for a subpar website and weak branding. I'm ready to help you <strong>elevate your brand</strong> and <strong>grow your business</strong>. Are you?
                 </p>
-                <a href="" class="cs-button-solid">Book a call</a>
+                <a href="/contact" class="cs-button-solid">Book a call</a>
             </div>
         </div>
     </section>
@@ -93,7 +137,7 @@ eleventyNavigation:
                 <p class="cs-text">
                     We don't use templates or page builders because <strong>every web design should be a partnership</strong>. <strong>Your website</strong> should reflect <strong>your vision</strong> and <strong>personality</strong> and not a generic knock-off. Your business deserves to <strong>stand out</strong> and not blend into the crowded marketplace. We're excited to see what we can build together. When can we start?
                 </p>
-                <a href="" class="cs-button-solid">Book a call</a>
+                <a href="/contact" class="cs-button-solid">Book a call</a>
             </div>
         </div>
     </section>

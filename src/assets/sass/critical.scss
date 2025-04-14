@@ -43,6 +43,10 @@
             position: relative;
         }
 
+        .nm-subhead {
+            text-align: center;
+        }
+
         .cs-text {
             /* 16px - 20px */
             font-size: 1rem;
@@ -68,6 +72,7 @@
         .cs-picture {
             width: 100%;
             max-width: calc(585 / 16 * 1rem);
+            aspect-ratio: 5 / 4;
             /* 380px - 453px */
             height: clamp(23.75rem, 59vw, 28.3215rem);
             /* clips the img tag corners */
@@ -214,8 +219,13 @@
             text-align: left;
         }
 
+        .nm-subhead {
+            text-align: left;
+        }
+
         .cs-picture {
             max-width: calc(630 / 16 * 1rem);
+            aspect-ratio: 3 / 4;
             /* 623px - 814px */
             height: clamp(38.9375rem, 60vw, 50.875rem);
         }

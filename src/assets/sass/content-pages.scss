@@ -326,35 +326,6 @@
             color: var(--textDark);
         }
 
-        a[target="_blank"] {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.25ex;
-          }
-          
-          /* Target the SVG's stroke directly */
-          a[target="_blank"]:link::after {
-            content: "";
-            display: inline-block;
-            margin-left: 0.25ex;
-            width: .8em;
-            height: .8em;
-            vertical-align: top;
-            background-color: var(--primary400); /* Default color */
-            -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20id%3D%22Layer_2%22%20data-name%3D%22Layer%202%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016.696%2016.696%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20.cls-1%20%7B%0A%20%20%20%20%20%20%20%20fill%3A%20none%3B%0A%20%20%20%20%20%20%20%20stroke%3A%20currentColor%3B%0A%20%20%20%20%20%20%20%20stroke-linecap%3A%20round%3B%0A%20%20%20%20%20%20%20%20stroke-linejoin%3A%20round%3B%0A%20%20%20%20%20%20%20%20stroke-width%3A%201.5px%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%3C%2Fstyle%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%3Cg%20id%3D%22Layer_1-2%22%20data-name%3D%22Layer%201%22%3E%0A%20%20%20%20%3Cg%3E%0A%20%20%20%20%20%20%3Cpolyline%20class%3D%22cls-1%22%20points%3D%2214.957%209.043%2014.957%2016.348%20.348%2016.348%20.348%201.739%207.652%201.739%22%2F%3E%0A%20%20%20%20%20%20%3Cline%20class%3D%22cls-1%22%20x1%3D%2212.174%22%20y1%3D%22.348%22%20x2%3D%2216.348%22%20y2%3D%22.348%22%2F%3E%0A%20%20%20%20%20%20%3Cline%20class%3D%22cls-1%22%20x1%3D%2216.348%22%20y1%3D%224.522%22%20x2%3D%2216.348%22%20y2%3D%22.348%22%2F%3E%0A%20%20%20%20%20%20%3Cline%20class%3D%22cls-1%22%20x1%3D%228.696%22%20y1%3D%228%22%20x2%3D%2216.348%22%20y2%3D%22.348%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E");
-            mask-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20id%3D%22Layer_2%22%20data-name%3D%22Layer%202%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016.696%2016.696%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20.cls-1%20%7B%0A%20%20%20%20%20%20%20%20fill%3A%20none%3B%0A%20%20%20%20%20%20%20%20stroke%3A%20currentColor%3B%0A%20%20%20%20%20%20%20%20stroke-linecap%3A%20round%3B%0A%20%20%20%20%20%20%20%20stroke-linejoin%3A%20round%3B%0A%20%20%20%20%20%20%20%20stroke-width%3A%201.5px%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%3C%2Fstyle%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%3Cg%20id%3D%22Layer_1-2%22%20data-name%3D%22Layer%201%22%3E%0A%20%20%20%20%3Cg%3E%0A%20%20%20%20%20%20%3Cpolyline%20class%3D%22cls-1%22%20points%3D%2214.957%209.043%2014.957%2016.348%20.348%2016.348%20.348%201.739%207.652%201.739%22%2F%3E%0A%20%20%20%20%20%20%3Cline%20class%3D%22cls-1%22%20x1%3D%2212.174%22%20y1%3D%22.348%22%20x2%3D%2216.348%22%20y2%3D%22.348%22%2F%3E%0A%20%20%20%20%20%20%3Cline%20class%3D%22cls-1%22%20x1%3D%2216.348%22%20y1%3D%224.522%22%20x2%3D%2216.348%22%20y2%3D%22.348%22%2F%3E%0A%20%20%20%20%20%20%3Cline%20class%3D%22cls-1%22%20x1%3D%228.696%22%20y1%3D%228%22%20x2%3D%2216.348%22%20y2%3D%22.348%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E");
-            -webkit-mask-size: cover;
-            mask-size: cover;
-          }
-          
-          a[target="_blank"]:hover::after {
-            background-color: var(--primary); /* Hover color */
-          }
-          
-          a[target="_blank"]:visited::after {
-            background-color: var(--accent500); /* Visited color */
-          }
-
         .nm-available {
             color: var(--textMid);
             font-family: var(--smallCaps);
@@ -453,6 +424,10 @@
         .cs-image-group {
             display: flex;
         }
+
+        .cs-picture {
+            aspect-ratio: 4 / 5;
+        }
     }
 }
 
@@ -507,31 +482,6 @@
                 color: var(--textLight);
                 opacity: .6;
             }
-            a {
-                color: var(--primary100);
-
-                &:visited {
-                    color: var(--secondary200);
-                }
-
-                &:hover {
-                    color: var(--primary200);
-                }
-            }
-
-            a[target="_blank"]:link::after {
-                background-color: var(--primary100);
-              }
-            
-              a[target="_blank"]:hover::after {
-                background-color: var(--primary200);
-                width: .8em;
-                height: .8em;
-              }
-            
-              a[target="_blank"]:visited::after {
-                background-color: var(--secondary200);
-              }
 
             table {
                 a {

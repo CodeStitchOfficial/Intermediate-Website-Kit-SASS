@@ -14,6 +14,50 @@ eleventyNavigation:
 {% block head %}
     <!-- Any page-specific tags that belong in the <head>, such as a page-specific stylesheet -->
         <link rel="stylesheet" href="/assets/css/content-pages.css" media="print" onload="this.media='all'" />
+        <style>
+            .cs-background {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+
+                &:before {
+                    /* background color overlay */
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                    background: -moz-linear-gradient(
+                        left,
+                        rgba(18, 38, 51, 0.94) 0%,
+                        rgba(18, 38, 51, 0) 100%
+                    ); /* FF3.6-15 */
+                    background: -webkit-linear-gradient(
+                        left,
+                        rgba(18, 38, 51, 0.94) 0%,
+                        rgba(18, 38, 51, 0) 100%
+                    ); /* Chrome10-25,Safari5.1-6 */
+                    opacity: 1;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                }
+
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    /* Makes img tag act as a background image */
+                    object-fit: cover;
+                }
+            }
+        </style>
 {% endblock %}
 
 {% block body %}
@@ -206,14 +250,10 @@ eleventyNavigation:
                         Overwhelmed? Let's chat.
                     </h2>
                         <p>Building a brand can feel overwhelming, but it's worth doing. Our services can get you started. We're also available for <a href="/prices#consulting">consulting</a> if you'd like to do more but aren't sure where to begin. We're happy to share our knowledge if it'll help you figure out how to do it yourself.</p>
-                    <a href="-/contact" class="cs-button-solid">Book a call</a>
+                    <a href="/contact" class="cs-button-solid">Book a call</a>
                 </div>
                 <div class="cs-image-group">
                     <picture class="cs-picture">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="../../assets/images/branding.webp">
-                        <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="../../assets/images/branding.webp">
                         <img decoding="async" src="../../assets/images/branding.webp" alt="A cat wearing a bowtie sits next to a bouqet of roses. Represents a reminder for your brand to always look your best." width="542" height="520" aria-hidden="true">
                     </picture>
                 </div>

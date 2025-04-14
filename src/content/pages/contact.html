@@ -13,6 +13,82 @@ eleventyNavigation:
 
 {% block head %}
     <link rel="stylesheet" href="../../assets/css/contact.css" media="print" onload="this.media='all'" />
+    <style>
+        .cs-background {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+            &:before {
+                /* background color overlay */
+                content: "";
+                position: absolute;
+                display: block;
+                height: 100%;
+                width: 100%;
+                background: -moz-linear-gradient(
+                    left,
+                    rgba(18, 38, 51, 0.94) 0%,
+                    rgba(18, 38, 51, 0) 100%
+                ); /* FF3.6-15 */
+                background: -webkit-linear-gradient(
+                    left,
+                    rgba(18, 38, 51, 0.94) 0%,
+                    rgba(18, 38, 51, 0) 100%
+                ); /* Chrome10-25,Safari5.1-6 */
+                opacity: 1;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                /* Makes img tag act as a background image */
+                object-fit: cover;
+            }
+        }
+
+        .cs-picture {
+            display: block;
+            position: relative;
+            width: 100%;
+            height: calc(300 / 16 * 1rem);
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                aspect-ratio: 2 / 1;
+                object-fit: cover;
+            }
+        }
+
+        @media only screen and (min-width: 48rem) {
+            .cs-picture {
+            position: absolute;
+            height: 100%;
+            width: 44%;
+            left: 50%;
+            /* 84px - 120px */
+            margin-left: clamp(5.25rem, 12vw, 7.5rem);
+
+            img {
+                aspect-ratio: 1 / 1;
+            }
+        }
+        }
+    </style>
 {% endblock %}
 
 {% block body %}
@@ -47,7 +123,7 @@ eleventyNavigation:
     <div class="cs-container">
         <picture class="cs-picture">
             <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="../../assets/images/contact.webp">
+            <source media="(max-width: 600px)" srcset="../../assets/images/contact-m.webp">
             <!--Tablet and above Image-->
             <source media="(min-width: 601px)" srcset="../../assets/images/contact.webp">
             <img loading="lazy" decoding="async" src="../../assets/images/contact.webp" alt="A cat looks at a laptop with four more cats on a video call." width="841" height="877">

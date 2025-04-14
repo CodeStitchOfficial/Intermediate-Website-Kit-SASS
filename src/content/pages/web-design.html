@@ -14,6 +14,50 @@ eleventyNavigation:
 {% block head %}
     <!-- Any page-specific tags that belong in the <head>, such as a page-specific stylesheet -->
         <link rel="stylesheet" href="/assets/css/content-pages.css" media="print" onload="this.media='all'" />
+        <style>
+            .cs-background {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+
+                &:before {
+                    /* background color overlay */
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                    background: -moz-linear-gradient(
+                        left,
+                        rgba(18, 38, 51, 0.94) 0%,
+                        rgba(18, 38, 51, 0) 100%
+                    ); /* FF3.6-15 */
+                    background: -webkit-linear-gradient(
+                        left,
+                        rgba(18, 38, 51, 0.94) 0%,
+                        rgba(18, 38, 51, 0) 100%
+                    ); /* Chrome10-25,Safari5.1-6 */
+                    opacity: 1;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                }
+
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    /* Makes img tag act as a background image */
+                    object-fit: cover;
+                }
+            }
+        </style>
 {% endblock %}
 
 {% block body %}
@@ -98,7 +142,7 @@ eleventyNavigation:
                                 <strong>A template can't capture your essence</strong>. It may look nice, but it won't be you. We don't use templates; we start by getting to know you. The result? A website that excites you because we designed it for <em>you</em>.
                             </p>
                             <p>
-                                Your <strong>website</strong> is only <strong>one part of your brand</strong>. We offer other <a href="/branding">branding and design services</a> to help you build a cohesive brand. Consistency is key.
+                                Your <strong>website</strong> is only <strong>one part of your brand</strong>. We offer other <a href="/services/branding">branding and design services</a> to help you build a cohesive brand. Consistency is key.
                             </p>
                         <h2 id="mobile-first">
                             Mobile first and lightning fast
@@ -163,10 +207,10 @@ eleventyNavigation:
                                 You don't have to worry about these problems if you work with us.
                             </p>
                             <ul>
-                                <li>Our websites are <strong>fast</strong>; we get top marks on <a target="_blank" rel="noopener noreferrer" href="https://pagespeed.web.dev/">PageSpeed Insights</a>. Your customers won't need to wait.</li>
-                                <li>We follow <a target="_blank" rel="noopener noreferrer" href="https://lawsofux.com/jakobs-law/">Jakob's Law</a> and other <strong>best practices</strong>. Your website will be <strong>intuitive</strong>, and visitors will know how to use it.</li>
-                                <li>When hired for <strong>copywriting</strong>, we use <a target="_blank" rel="noopener noreferrer" href="https://storybrand.com/">customer-centric frameworks</a>. Your customers will know how you can help them and how to buy.</li>
-                                <li>We follow the industry standard for <a target="_blank" rel="noopener noreferrer" href="https://www.a11yproject.com/checklist/">accessibility guidelines</a>. Your website will be <strong>accessible to everyone</strong>.</li>
+                                <li>Our websites are <strong>fast</strong>; we get top marks on <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://pagespeed.web.dev/">PageSpeed Insights</a>. Your customers won't need to wait.</li>
+                                <li>We follow <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://lawsofux.com/jakobs-law/">Jakob's Law</a> and other <strong>best practices</strong>. Your website will be <strong>intuitive</strong>, and visitors will know how to use it.</li>
+                                <li>When hired for <strong>copywriting</strong>, we use <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://storybrand.com/">customer-centric frameworks</a>. Your customers will know how you can help them and how to buy.</li>
+                                <li>We follow the industry standard for <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://www.a11yproject.com/checklist/">accessibility guidelines</a>. Your website will be <strong>accessible to everyone</strong>.</li>
                             </ul>
                         <h2 id="seo">
                             Get discovered without buying ads.
@@ -210,11 +254,9 @@ eleventyNavigation:
                 </div>
                 <div class="cs-image-group">
                     <picture class="cs-picture">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="../../assets/images/support.webp">
                         <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="../../assets/images/support.webp">
-                        <img decoding="async" src="../../assets/images/support.webp" alt="A cat loaing with its eyes closed next to art supplies." width="542" height="520" aria-hidden="true">
+                        <source media="(min-width: 601px)" srcset="../../assets/images/web-design.webp">
+                        <img decoding="async" src="../../assets/images/web-design.webp" alt="A cat loaing with its eyes closed next to art supplies." width="542" height="520" aria-hidden="true">
                     </picture>
                 </div>
             </div>

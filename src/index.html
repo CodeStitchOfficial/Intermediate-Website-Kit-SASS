@@ -1,7 +1,7 @@
 ---
 title: "Neva Masquerade | Small business branding and web design"
 description: "Say goodbye to website struggles. Draw in customers with custom web design and engaging brand stories. Elevate your brand and grow your business today."
-preloadImg: "/assets/images/index/hero-image-m.webp"
+preloadImg: "/assets/images/index-hero-m.webp"
 permalink: "/"
 tags: "sitemap" # Sitemap will use all pages in content/, due to content.json. As index.html is not included in content/ we need to manually add the sitemap tag to this page (only).
 eleventyNavigation:
@@ -16,6 +16,8 @@ eleventyNavigation:
     <link rel="stylesheet" href="/assets/css/local.css" media="print" onload="this.media='all'" />
 
     <!-- Script for Netlify Identity -->
+
+    <!--
     <script
         defer
         src="https://identity.netlify.com/v1/netlify-identity-widget.js">
@@ -31,6 +33,8 @@ eleventyNavigation:
             });
         }
     </script>
+    -->
+    
 
     <!-- JSON Schema Markup -->
     <!-- prettier-ignore-start -->
@@ -93,9 +97,9 @@ eleventyNavigation:
         </div>
         <!--Hero Image-->
         <picture class="cs-picture">
-            <source fetch-priority="high" media="(max-width: 1023px)" srcset="assets/images/index/hero-image-m.webp">
-            <source media="(min-width: 1024px)" srcset="assets/images/index/hero-image.webp">
-            <img aria-hidden="true" decoding="async" src="assets/images/index/hero-image.webp" alt="A cat wearing a tophat, glasses, and a bowtie. Conveys a feeling of timeless sophistication." width="630" height="814">
+            <source fetch-priority="high" media="(max-width: 1023px)" srcset="assets/images/index-hero-m.webp">
+            <source media="(min-width: 1024px)" srcset="assets/images/index-hero.webp">
+            <img aria-hidden="true" decoding="async" src="assets/images/index-hero.webp" alt="A cat wearing a tophat, glasses, and a bowtie. Conveys a feeling of timeless sophistication." width="630" height="814">
         </picture>
         <!--Texture-->
         <picture class="cs-waves">
@@ -159,10 +163,10 @@ eleventyNavigation:
     <div class="cs-container">
         <picture class="cs-picture">
             <!--Mobile Image-->
-            <source loading="lazy" media="(max-width: 600px)" srcset="assets/images/index/index-problem-m.webp">
+            <source loading="lazy" media="(max-width: 600px)" srcset="assets/images/index-problem-m.webp">
             <!--Tablet and above Image-->
-            <source loading="lazy" media="(min-width: 601px)" srcset="assets/images/index/index-problem.webp">
-            <img loading="lazy" decoding="async" src="assets/images/index/index-problem.webp" alt="A cat angrily attacks a piece of paper. Conveys feelings of stress and frustration." width="618" height="537">
+            <source loading="lazy" media="(min-width: 601px)" srcset="assets/images/index-problem.webp">
+            <img loading="lazy" decoding="async" src="assets/images/index-problem.webp" alt="A cat angrily attacks a piece of paper. Conveys feelings of stress and frustration." width="618" height="537">
         </picture>
         <div class="cs-content">
             <span class="cs-topper">From frustrated and overwhelmed . . .</span>
@@ -194,10 +198,10 @@ eleventyNavigation:
     <div class="cs-container">
         <picture class="cs-picture">
             <!--Mobile Image-->
-            <source loading="lazy" media="(max-width: 600px)" srcset="assets/images/index/index-solution-m.webp">
+            <source loading="lazy" media="(max-width: 600px)" srcset="assets/images/index-solution-m.webp">
             <!--Tablet and above Image-->
-            <source loading="lazy" media="(min-width: 601px)" srcset="assets/images/index/index-solution.webp">
-            <img loading="lazy" decoding="async" src="assets/images/index/index-solution.webp" alt="A cat wearing sunglasses lounges in  a basket. Conveys a feeling of calm and relaxation." width="618" height="537">
+            <source loading="lazy" media="(min-width: 601px)" srcset="assets/images/index-solution.webp">
+            <img loading="lazy" decoding="async" src="assets/images/index-solution.webp" alt="A cat wearing sunglasses lounges in  a basket. Conveys a feeling of calm and relaxation." width="618" height="537">
         </picture>
         <div class="cs-content">
             <span class="cs-topper">. . . to relaxed and confident</span>
@@ -518,9 +522,11 @@ eleventyNavigation:
     <picture class="cs-background">
         <!--Mobile Image-->
         <source media="(max-width: 600px)" srcset="assets/textures/price-texture-m.webp">
-        <!--Tablet and above Image-->
+        <!--Tablet Image-->
         <source media="(min-width: 601px)" srcset="assets/textures/price-texture-t.webp">
-        <img loading="lazy" decoding="async" src="assets/textures/price-texture-m.webp" alt="" width="600" height="1400">
+        <!--Small Desktop and above Image-->
+        <source media="(min-width: 1024px)" srcset="assets/textures/price-texture.webp">
+        <img loading="lazy" decoding="async" src="assets/textures/price-texture.webp" alt="" width="1400" height="789">
     </picture>
 </section>
                                 
@@ -862,10 +868,12 @@ eleventyNavigation:
                 <div class="cs-picture-wrapper">
                     <picture class="cs-picture cs-picture1">
                         <!--Mobile Image-->
-                        <source loading="lazy" media="(max-width: 600px)" srcset="assets/images/index/why-choose-us-image-1.webp">
-                        <!--Tablet and above Image-->
-                        <source loading="lazy" media="(min-width: 601px)" srcset="assets/images/index/why-choose-us-image-1.webp">
-                        <img loading="lazy" decoding="async" src="assets/images/index/why-choose-us-image-1.webp" alt="A cat running; its legs and the background are blurry. Conveys a feeling of speed and quickness." width="434" height="414">
+                        <source loading="lazy" media="(max-width: 600px)" srcset="assets/images/why-choose-us-speed-m.webp">
+                        <!--Tablet Image-->
+                        <source loading="lazy" media="(min-width: 601px)" srcset="assets/images/why-choose-us-speed-t.webp">
+                        <!--Small Desktop and above Image-->
+                        <source loading="lazy" media="(min-width: 1024px)" srcset="assets/images/why-choose-us-speed.webp">
+                        <img loading="lazy" decoding="async" src="assets/images/why-choose-us-speed.webp" alt="A cat running; its legs and the background are blurry. Conveys a feeling of speed and quickness." width="434" height="414">
                     </picture>
                     <div class="cs-box">
                         <span class="cs-header">Custom Designs</span>
@@ -874,10 +882,12 @@ eleventyNavigation:
                 </div>
                 <picture class="cs-picture cs-picture2">
                     <!--Mobile Image-->
-                    <source loading="lazy" media="(max-width: 600px)" srcset="assets/images/index/why-choose-us-image-2.webp">
+                    <source loading="lazy" media="(max-width: 600px)" srcset="assets/images/why-choose-us-happy-m.webp">
                     <!--Tablet and above Image-->
-                    <source loading="lazy" media="(min-width: 601px)" srcset="assets/images/index/why-choose-us-image-2.webp">
-                    <img loading="lazy" decoding="async" src="assets/images/index/why-choose-us-image-2.webp" alt="A cat sleeping with a happy expression. Conveys a feeling of satisfaction." width="197" height="197">
+                    <source loading="lazy" media="(min-width: 601px)" srcset="assets/images/why-choose-us-happy-t.webp">
+                    <!--Small Desktop and above Image-->
+                    <source loading="lazy" media="(min-width: 1024px)" srcset="assets/images/why-choose-us-happy.webp">
+                    <img loading="lazy" decoding="async" src="assets/images/why-choose-us-happy.webp" alt="A cat sleeping with a happy expression. Conveys a feeling of satisfaction." width="197" height="197">
                 </picture>
             </div>
         </div>

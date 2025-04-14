@@ -36,6 +36,9 @@
     color: var(--accent600);
     position: relative;
   }
+  #hero-288 .nm-subhead {
+    text-align: center;
+  }
   #hero-288 .cs-text {
     /* 16px - 20px */
     font-size: 1rem;
@@ -59,6 +62,7 @@
   #hero-288 .cs-picture {
     width: 100%;
     max-width: 36.5625rem;
+    aspect-ratio: 5/4;
     /* 380px - 453px */
     height: clamp(23.75rem, 59vw, 28.3215rem);
     /* clips the img tag corners */
@@ -187,8 +191,12 @@
   #hero-288 .cs-text {
     text-align: left;
   }
+  #hero-288 .nm-subhead {
+    text-align: left;
+  }
   #hero-288 .cs-picture {
     max-width: 39.375rem;
+    aspect-ratio: 3/4;
     /* 623px - 814px */
     height: clamp(38.9375rem, 60vw, 50.875rem);
   }
