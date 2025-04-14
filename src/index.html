@@ -16,10 +16,13 @@ eleventyNavigation:
     <link rel="stylesheet" href="/assets/css/local.css" media="print" onload="this.media='all'" />
 
     <!-- Script for Netlify Identity -->
+    <!--
     <script
         defer
         src="https://identity.netlify.com/v1/netlify-identity-widget.js">
     </script>
+    -->
+    <!--
     <script defer>
         if (window.netlifyIdentity) {
             window.netlifyIdentity.on("init", (user) => {
@@ -31,6 +34,7 @@ eleventyNavigation:
             });
         }
     </script>
+    -->
 
     <!-- JSON Schema Markup -->
     <!-- prettier-ignore-start -->
@@ -74,7 +78,8 @@ eleventyNavigation:
 {% endblock %}
 
 {% block body %}
-    <!-- ============================================ -->
+
+<!-- ============================================ -->
 <!--                   Hero                       -->
 <!-- ============================================ -->
 
@@ -87,23 +92,22 @@ eleventyNavigation:
                 As a small business owner, you know <strong>how important</strong> it is to be <strong>online</strong>. Finding the <strong>time</strong> or <strong>budget</strong> for <strong>quality web design</strong> can feel overwhelming. <strong>Your brand</strong> deserves a personalized touch that <strong>sets you apart</strong>.            
             </p>
             <div id="button-box-838" class="cs-contact-group">
-                <a href="" class="cs-button-solid">Book a call</a>
+                <a href="/contact" class="cs-button-solid">Book a call</a>
                 <a href="#how-it-works" class="cs-button-transparent">How it works</a>
             </div>
         </div>
         <!--Hero Image-->
         <picture class="cs-picture">
-            <source fetch-priority="high" media="(max-width: 600px)" srcset="assets/images/index/hero-image-m.webp">
-            <source media="(min-width: 601px)" srcset="assets/images/index/hero-image.webp">
-            <source media="(min-width: 1024px)" srcset="assets/images/index/hero-image.webp">
-            <img aria-hidden="true" decoding="async" src="assets/images/index/hero-image.webp" alt="" width="630" height="814">
+            <source fetch-priority="high" media="(max-width: 1023px)" srcset="assets/images/index-hero-m.webp">
+            <source media="(min-width: 1024px)" srcset="assets/images/index-hero.webp">
+            <img aria-hidden="true" decoding="async" src="assets/images/index-hero.webp" alt="A cat wearing a tophat, glasses, and a bowtie. Conveys a feeling of timeless sophistication." width="630" height="814">
         </picture>
         <!--Texture-->
         <picture class="cs-waves">
-            <source media="(min-width: 1024px)" srcset="assets/textures/vertical-blue.webp">
-            <source media="(min-width: 601px)" srcset="assets/textures/vertical-blue-m.webp">
-            <source media="(max-width: 600px)" srcset="assets/textures/vertical-blue-m.webp">
-            <img decoding="async" src="assets/textures/vertical-blue.webp" alt="" width="645" height="1080" aria-hidden="true">
+            <source media="(min-width: 1024px)" srcset="assets/textures/blue-tall.webp">
+            <source media="(min-width: 601px)" srcset="assets/textures/blue-wide.webp">
+            <source media="(max-width: 600px)" srcset="assets/textures/blue-wide-m.webp">
+            <img decoding="async" src="assets/textures/blue-tall.webp" alt="" width="645" height="1080" aria-hidden="true">
         </picture>
     </div>
 </section>
@@ -160,10 +164,10 @@ eleventyNavigation:
     <div class="cs-container">
         <picture class="cs-picture">
             <!--Mobile Image-->
-            <source loading="lazy" media="(max-width: 600px)" srcset="assets/images/index/index-problem-m.webp">
+            <source loading="lazy" media="(max-width: 600px)" srcset="assets/images/index-problem-m.webp">
             <!--Tablet and above Image-->
-            <source loading="lazy" media="(min-width: 601px)" srcset="assets/images/index/index-problem.webp">
-            <img loading="lazy" decoding="async" src="assets/images/index/index-problem.webp" alt="room" width="618" height="537">
+            <source loading="lazy" media="(min-width: 601px)" srcset="assets/images/index-problem.webp">
+            <img loading="lazy" decoding="async" src="assets/images/index-problem.webp" alt="A cat angrily attacks a piece of paper. Conveys feelings of stress and frustration." width="618" height="537">
         </picture>
         <div class="cs-content">
             <span class="cs-topper">From frustrated and overwhelmed . . .</span>
@@ -182,7 +186,7 @@ eleventyNavigation:
                 <li>Do you <strong>wish</strong> you could <strong>tailor designs</strong> to your brand?</li>
                 <li>Does your messaging <strong>lack direction</strong>?</li>
             </ul>
-            <a href="" class="cs-button-solid">Book a call</a>
+            <a href="/contact" class="cs-button-solid">Book a call</a>
         </div>
     </div>
 </section>                  
@@ -195,10 +199,10 @@ eleventyNavigation:
     <div class="cs-container">
         <picture class="cs-picture">
             <!--Mobile Image-->
-            <source loading="lazy" media="(max-width: 600px)" srcset="assets/images/index/index-solution-m.webp">
+            <source loading="lazy" media="(max-width: 600px)" srcset="assets/images/index-solution-m.webp">
             <!--Tablet and above Image-->
-            <source loading="lazy" media="(min-width: 601px)" srcset="assets/images/index/index-solution.webp">
-            <img loading="lazy" decoding="async" src="assets/images/index/index-solution.webp" alt="room" width="618" height="537">
+            <source loading="lazy" media="(min-width: 601px)" srcset="assets/images/index-solution.webp">
+            <img loading="lazy" decoding="async" src="assets/images/index-solution.webp" alt="A cat wearing sunglasses lounges in  a basket. Conveys a feeling of calm and relaxation." width="618" height="537">
         </picture>
         <div class="cs-content">
             <span class="cs-topper">. . . to relaxed and confident</span>
@@ -216,7 +220,7 @@ eleventyNavigation:
                 <li>persuasive and compelling, <strong>story-based messaging</strong>; and</li>
                 <li>a brand that captures <strong>your values</strong> and <strong>personality</strong>.</li>
             </ul>
-            <a href="" class="cs-button-solid">Book a call</a>
+            <a href="/contact" class="cs-button-solid">Book a call</a>
         </div>
     </div>
 </section>
@@ -256,8 +260,8 @@ eleventyNavigation:
                 </p>
                 <span class="cs-number">03</span>
             </li>
-            
         </ul>
+        <a href="/contact" class="cs-button-solid">Book a call</a>
     </div>
 </section>
 
@@ -518,10 +522,12 @@ eleventyNavigation:
     <!--Background Image-->
     <picture class="cs-background">
         <!--Mobile Image-->
-        <source media="(max-width: 600px)" srcset="assets/svgs/blue-banner.svg">
-        <!--Tablet and above Image-->
-        <source media="(min-width: 601px)" srcset="assets/svgs/blue-banner.svg">
-        <img loading="lazy" decoding="async" src="assets/svgs/blue-banner.svg" alt="lobby" width="1400" height="730">
+        <source media="(max-width: 600px)" srcset="assets/textures/price-texture-m.webp">
+        <!--Tablet Image-->
+        <source media="(min-width: 601px)" srcset="assets/textures/price-texture-t.webp">
+        <!--Small Desktop and above Image-->
+        <source media="(min-width: 1024px)" srcset="assets/textures/price-texture.webp">
+        <img loading="lazy" decoding="async" src="assets/textures/price-texture.webp" alt="" width="1400" height="730">
     </picture>
 </section>
                                 
@@ -792,7 +798,7 @@ eleventyNavigation:
                     Write to us or book a free consultation call. We'll be happy to answer all your questions.
                 </p>
             </div>
-            <a href="" class="cs-button-solid">Book a call</a>
+            <a href="/contact" class="cs-button-solid">Book a call</a>
         </div>
     </div>
 </section>
@@ -812,7 +818,7 @@ eleventyNavigation:
                 <p class="cs-text">
                     <strong>Most small business</strong> websites and brands <strong>fail to impress</strong>. We help you <strong>elevate your brand</strong> and <strong>grow your business</strong>. You'll enjoy more <strong>engaged customers</strong> and <strong>more time</strong> to do what you do best.
                 </p>
-                <a href="" class="cs-button-solid">Book a call</a>
+                <a href="/contact" class="cs-button-solid">Book a call</a>
             </span>
         </div>  
         <div class="cs-wrapper">
@@ -863,10 +869,12 @@ eleventyNavigation:
                 <div class="cs-picture-wrapper">
                     <picture class="cs-picture cs-picture1">
                         <!--Mobile Image-->
-                        <source loading="lazy" media="(max-width: 600px)" srcset="assets/images/index/why-choose-us-image-1.webp">
-                        <!--Tablet and above Image-->
-                        <source loading="lazy" media="(min-width: 601px)" srcset="assets/images/index/why-choose-us-image-1.webp">
-                        <img loading="lazy" decoding="async" src="assets/images/index/why-choose-us-image-1.webp" alt="meeting" width="434" height="414">
+                        <source loading="lazy" media="(max-width: 600px)" srcset="assets/images/why-choose-us-speed-m.webp">
+                        <!--Tablet Image-->
+                        <source loading="lazy" media="(min-width: 601px)" srcset="assets/images/why-choose-us-speed-t.webp">
+                        <!--Small Desktop and above Image-->
+                        <source loading="lazy" media="(min-width: 1024px)" srcset="assets/images/why-choose-us-speed.webp">
+                        <img loading="lazy" decoding="async" src="assets/images/why-choose-us-speed.webp" alt="A cat running; its legs and the background are blurry. Conveys a feeling of speed and quickness." width="434" height="414">
                     </picture>
                     <div class="cs-box">
                         <span class="cs-header">Custom Designs</span>
@@ -875,10 +883,12 @@ eleventyNavigation:
                 </div>
                 <picture class="cs-picture cs-picture2">
                     <!--Mobile Image-->
-                    <source loading="lazy" media="(max-width: 600px)" srcset="assets/images/index/why-choose-us-image-2.webp">
-                    <!--Tablet and above Image-->
-                    <source loading="lazy" media="(min-width: 601px)" srcset="assets/images/index/why-choose-us-image-2.webp">
-                    <img loading="lazy" decoding="async" src="assets/images/index/why-choose-us-image-2.webp" alt="on computer" width="197" height="197">
+                    <source loading="lazy" media="(max-width: 600px)" srcset="assets/images/why-choose-us-happy-m.webp">
+                    <!--Tablet Image-->
+                    <source loading="lazy" media="(min-width: 601px)" srcset="assets/images/why-choose-us-happy-t.webp">
+                    <!--Small Desktop and above Image-->
+                    <source loading="lazy" media="(min-width: 1024px)" srcset="assets/images/why-choose-us-happy.webp">
+                    <img loading="lazy" decoding="async" src="assets/images/why-choose-us-happy.webp" alt="A cat sleeping with a happy expression. Conveys a feeling of satisfaction." width="197" height="197">
                 </picture>
             </div>
         </div>

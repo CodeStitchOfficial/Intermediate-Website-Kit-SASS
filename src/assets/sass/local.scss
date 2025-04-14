@@ -618,6 +618,7 @@
         height: auto;
         padding: var(--sectionPadding);
         position: relative;
+        background: var(--primary600);
 
         .cs-container {
             width: 100%;
@@ -637,18 +638,16 @@
         /* Content Group */
         #cs-content-1801 {
         /* set text align to left if content needs to be left aligned */
-        text-align: center;
-        width: 100%;
-        max-width: calc(1280/16 * 1rem);
-        display: flex;
-        flex-direction: column;
-        /* centers content horizontally, set to flex-start to left align */
-        align-items: center;
-
-        .cs-title {
-            max-width: 25ch;
+            text-align: center;
+            width: 100%;
+            max-width: calc(1280/16 * 1rem);
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: center;
+            justify-content: center;
         }
-    }
+
         .cs-topper {
             color: var(--secondary200);
         }
@@ -960,6 +959,7 @@
         background-position: center 20%;
         background-repeat: no-repeat;
         background-attachment: fixed;
+        background-color: var(--primary600);
 
         &:before {
             /* black overlay */

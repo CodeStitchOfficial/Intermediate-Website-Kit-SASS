@@ -538,6 +538,7 @@
     height: auto;
     padding: var(--sectionPadding);
     position: relative;
+    background: var(--primary600);
     /* Content Group */
   }
   #cs-menu-group-1038 .cs-container {
@@ -563,9 +564,7 @@
     flex-direction: column;
     /* centers content horizontally, set to flex-start to left align */
     align-items: center;
-  }
-  #cs-menu-group-1038 #cs-content-1801 .cs-title {
-    max-width: 25ch;
+    justify-content: center;
   }
   #cs-menu-group-1038 .cs-topper {
     color: var(--secondary200);
@@ -839,6 +838,7 @@
     background-position: center 20%;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-color: var(--primary600);
   }
   #cs-menu-group-1038:before {
     /* black overlay */

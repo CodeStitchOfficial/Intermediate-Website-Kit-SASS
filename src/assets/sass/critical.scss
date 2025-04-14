@@ -82,6 +82,7 @@
                 left: 0;
                 height: 100%;
                 width: 100%;
+                aspect-ratio: 5 / 4;
                 /* makes image act as a background image */
                 object-fit: cover;
             }
@@ -216,8 +217,9 @@
 
         .cs-picture {
             max-width: calc(630 / 16 * 1rem);
+            aspect-ratio: 630 / 814;
             /* 623px - 814px */
-            height: clamp(38.9375rem, 60vw, 50.875rem);
+            height: auto;
         }
 
         .cs-waves {

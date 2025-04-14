@@ -73,6 +73,7 @@
     left: 0;
     height: 100%;
     width: 100%;
+    aspect-ratio: 5/4;
     /* makes image act as a background image */
     object-fit: cover;
   }
@@ -189,8 +190,9 @@
   }
   #hero-288 .cs-picture {
     max-width: 39.375rem;
+    aspect-ratio: 630/814;
     /* 623px - 814px */
-    height: clamp(38.9375rem, 60vw, 50.875rem);
+    height: auto;
   }
   #hero-288 .cs-waves {
     height: 100%;
