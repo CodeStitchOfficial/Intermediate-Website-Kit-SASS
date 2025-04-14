@@ -35,9 +35,9 @@
     --bodyFontSize: 1rem;
     /* 60px - 100px top and bottom */
     --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
-    --headerFont: "Baskerville", "Times New Roman", serif;
-    --bodyFont: "Montserrat", "Arial", sans-serif;
-    --smallCaps: "Contralto Small", "Arial", sans-serif;
+    --headerFont: "Baskerville", Georgia, "Times New Roman", serif;
+    --bodyFont: "Montserrat", "Arial", Helvetica, sans-serif;
+    --smallCaps: "Contralto Small", "Arial Narrow", "Helvetica Narrow", Arial, Helvetica, sans-serif;
   }
   :root body {
     background: var(--textLight);
@@ -226,7 +226,7 @@
     font-style: normal;
     font-family: "Baskerville";
     font-weight: 400;
-    font-display: swap;
+    font-display: optional;
     src: local(""), url("../fonts/baskervville-v16-latin-regular.woff2") format("woff2");
   }
   /* Baskerville - Italic */
@@ -234,7 +234,7 @@
     font-style: italic;
     font-family: "Baskerville";
     font-weight: 400;
-    font-display: swap;
+    font-display: optional;
     src: local(""), url("../fonts/baskervville-v16-latin-italic.woff2") format("woff2");
   }
   /* Contralto Small - Light */
@@ -242,7 +242,7 @@
     font-style: normal;
     font-family: "Contralto Small";
     font-weight: 300;
-    font-display: swap;
+    font-display: optional;
     src: local(""), url("../fonts/ContraltoSmallLight/font.woff2") format("woff2"), url("../fonts/ContraltoSmallLight/font.woff") format("woff");
   }
   /* Contralto Small - Regular */
@@ -250,7 +250,7 @@
     font-style: normal;
     font-family: "Contralto Small";
     font-weight: 400;
-    font-display: swap;
+    font-display: optional;
     src: local(""), url("../fonts/ContraltoSmallRegular/font.woff2") format("woff2"), url("../fonts/ContraltoSmallRegular/font.woff") format("woff");
   }
   /* Contralto Small - Demi Bold */
@@ -258,7 +258,7 @@
     font-style: normal;
     font-family: "Contralto Small";
     font-weight: 600;
-    font-display: swap;
+    font-display: optional;
     src: local(""), url("../fonts/ContraltoSmallDemiBold/font.woff2") format("woff2"), url("../fonts/ContraltoSmallDemiBold/font.woff") format("woff");
   }
   /* Montserrat Regular */
@@ -266,7 +266,7 @@
     font-style: normal;
     font-family: "Montserrat";
     font-weight: 400;
-    font-display: swap;
+    font-display: optional;
     src: local(""), url("../fonts/Montserrat/montserrat-v29-latin-regular.woff2") format("woff2");
   }
   /* Montserrat Italic */
@@ -274,7 +274,7 @@
     font-style: italic;
     font-family: "Montserrat";
     font-weight: 400;
-    font-display: swap;
+    font-display: optional;
     src: local(""), url("../fonts/Montserrat/montserrat-v29-latin-italic.woff2") format("woff2");
   }
   /* Montserrat Bold Regular */
@@ -282,7 +282,7 @@
     font-style: normal;
     font-family: "Montserrat";
     font-weight: 600;
-    font-display: swap;
+    font-display: optional;
     src: local(""), url("../fonts/Montserrat/montserrat-v29-latin-600.woff2") format("woff2");
   }
   /* Montserrat Bold Italic */
@@ -290,7 +290,7 @@
     font-style: italic;
     font-family: "Montserrat";
     font-weight: 600;
-    font-display: swap;
+    font-display: optional;
     src: local(""), url("../fonts/Montserrat/montserrat-v29-latin-600italic.woff2") format("woff2");
   }
 }
