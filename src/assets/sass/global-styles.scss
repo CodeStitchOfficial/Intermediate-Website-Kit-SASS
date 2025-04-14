@@ -1009,7 +1009,7 @@
 /* Large Desktop 1300px - Parallax Scroll */
 @media only screen and (min-width: 81.25rem) {
     #cta-1612 {
-        background: url("/assets/images/cta-background.webp");
+        background: url("/assets/images/newsletter-cta.webp");
         background-size: cover;
         background-position: center 20%;
         background-repeat: no-repeat;
@@ -1227,21 +1227,20 @@
             flex-wrap: nowrap;
             /* 40px - 88px */
             column-gap: clamp(2.5rem, 5vw, 5.5rem);
-            row-gap: calc(40/16 * 1rem);
+            row-gap: calc(32/16 * 1rem);
+            justify-content: flex-start;
         }
 
         .cs-logo-group {
             width: 30%;
             max-width: calc(384/16 * 1rem);
             margin-right: auto;
-            margin-left: 1rem;
-            flex-wrap: nowrap;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
         }
 
-        .cs-logo {
-            padding-left: 2rem;
-        }
-
+        
         .cs-nav {
             width: auto;
         }
@@ -1280,6 +1279,7 @@
             /* pushes away from everything to the right */
             margin-right: auto;
             align-items: center;
+            flex-flow: row nowrap;
         }
 
         .cs-text {

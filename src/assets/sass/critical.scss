@@ -43,6 +43,10 @@
             position: relative;
         }
 
+        .nm-subhead {
+            text-align: center;
+        }
+
         .cs-text {
             /* 16px - 20px */
             font-size: 1rem;
@@ -211,6 +215,10 @@
 
         .cs-title,
         .cs-text {
+            text-align: left;
+        }
+
+        .nm-subhead {
             text-align: left;
         }
 

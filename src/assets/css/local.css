@@ -2,6 +2,7 @@
   font-size: 1.75rem;
   font-family: var(--headerFont);
   font-weight: 400;
+  text-align: inherit;
 }
 
 /*-- -------------------------- -->

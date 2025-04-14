@@ -1,0 +1,78 @@
+---
+title: 'Disclaimer | Neva Masquerade'
+description: 'Description for <meta> description and OG tags'
+preloadImg: '/assets/images/dark-mode-banner.svg'
+permalink: 'disclaimer/'
+eleventyNavigation:
+    key: Disclaimer
+    order: 1000
+    hideOnMobile: 'true'
+    hideOnDesktop: 'true'
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <!-- Any page-specific tags that belong in the <head>, such as a page-specific stylesheet -->
+        <link rel="stylesheet" href="/assets/css/content-pages.css" media="print" onload="this.media='all'" />
+{% endblock %}
+
+{% block body %}
+    <!-- Page HTML goes here, without a <main> wrapper. The <main> tag is already presented in layouts/base.html -->
+
+        <!-- ============================================ -->
+        <!--                   Banner                     -->
+        <!-- ============================================ -->
+
+        <div id="banner-1106">
+            <div class="cs-container">
+                <span class="cs-int-title">{{ eleventyNavigation.key }}</span>
+                <div class="cs-breadcrumbs">
+                    <a href="/" class="cs-link">Home</a>
+                    <a href="#" class="cs-link cs-active">{{ eleventyNavigation.key }}</a>
+                </div>
+            </div>
+            <!--Background Image-->
+            <picture class="cs-background">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="../../assets/textures/blue-banner-m.webp">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="../../assets/textures/blue-banner.webp">
+                <img decoding="async" src="../../assets/textures/blue-banner.webp" alt="" width="1280" height="568" aria-hidden="true">
+            </picture>
+        </div>
+
+        <!-- ============================================ -->
+        <!--                 Content Page                 -->
+        <!-- ============================================ -->
+
+        <!-- ============================================ 
+            This Stitch is used for content heavy interior pages
+            that have no design or layout.  Often times these are 
+            content silos where you talk extensively about a topic
+            to educate your visitors and rank on Google for the 
+            content.  These are great for pages that have a TON
+            of content.  Design isn't important here, it's all 
+            about making the content accessible and easy to read.
+        ================================================= -->
+
+        <section id="content-page-851">
+            <div class="cs-container">
+
+                <div name="termly-embed" data-id="997f84d1-6725-4adf-9c11-7c2de54f0f85" style="width: 100%;"></div>
+                
+
+
+                
+            </div>
+        </section>
+        <script type="text/javascript">
+            (function(d, s, id) {
+                var js, tjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "https://app.termly.io/embed-policy.min.js";
+                tjs.parentNode.insertBefore(js, tjs);
+            }(document, 'script', 'termly-jssdk'));
+          </script>
+{% endblock %}

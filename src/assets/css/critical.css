@@ -36,6 +36,9 @@
     color: var(--accent600);
     position: relative;
   }
+  #hero-288 .nm-subhead {
+    text-align: center;
+  }
   #hero-288 .cs-text {
     /* 16px - 20px */
     font-size: 1rem;
@@ -185,6 +188,9 @@
   }
   #hero-288 .cs-title,
   #hero-288 .cs-text {
+    text-align: left;
+  }
+  #hero-288 .nm-subhead {
     text-align: left;
   }
   #hero-288 .cs-picture {
