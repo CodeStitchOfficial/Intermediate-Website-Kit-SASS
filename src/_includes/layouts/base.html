@@ -57,10 +57,18 @@
             href="/assets/fonts/Montserrat/montserrat-v29-latin-regular.woff2"
             crossorigin
         />
+        <link
+        rel="preload"
+        as="font"
+        type="font/woff2"
+        font-display="optional"
+        href="/assets/fonts/Montserrat/montserrat-v29-latin-600.woff2"
+        crossorigin
+        />
 
         <!-- Preload an image - tag not rendered if preloadImg is blank to stop console errors -->
         {% if preloadImg != '' %}
-            <link rel="preload" as="image" href="{{ preloadImg }}" />
+            <link rel="preload" as="image" href="{{ preloadImg }}" fetchpriority="high" />
         {% endif %}
 
         <!-- Sitewide Stylesheets and Scripts -->
