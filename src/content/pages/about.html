@@ -12,50 +12,6 @@ eleventyNavigation:
 
 {% block head %}
     <link rel="stylesheet" href="/assets/css/about.css" media="print" onload="this.media='all'" />
-    <style>
-        .cs-background {
-        width: 100%;
-        height: 100%;
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-
-            &:before {
-                /* background color overlay */
-                content: "";
-                position: absolute;
-                display: block;
-                height: 100%;
-                width: 100%;
-                background: -moz-linear-gradient(
-                    left,
-                    rgba(18, 38, 51, 0.94) 0%,
-                    rgba(18, 38, 51, 0) 100%
-                ); /* FF3.6-15 */
-                background: -webkit-linear-gradient(
-                    left,
-                    rgba(18, 38, 51, 0.94) 0%,
-                    rgba(18, 38, 51, 0) 100%
-                ); /* Chrome10-25,Safari5.1-6 */
-                opacity: 1;
-                top: 0;
-                left: 0;
-                z-index: 1;
-            }
-
-            img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                /* Makes img tag act as a background image */
-                object-fit: cover;
-            }
-        }
-    </style>
 {% endblock %}
 
 {% block body %}
@@ -75,10 +31,10 @@ eleventyNavigation:
         <!--Background Image-->
         <picture class="cs-background">
             <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="../../assets/textures/blue-banner-m.webp">
+            <source media="(max-width: 600px)" srcset="../../assets/textures/blue-banner-m.webp" fetchpriority="high">
             <!--Tablet and above Image-->
             <source media="(min-width: 601px)" srcset="../../assets/textures/blue-banner.webp">
-            <img decoding="async" src="../../assets/textures/blue-banner.webp" alt="" width="1280" height="568" aria-hidden="true">
+            <img decoding="async" src="../../assets/textures/blue-banner.webp" alt="" width="1280" height="568" aria-hidden="true" fetchpriority="high">
         </picture>
     </div>
 
