@@ -72,6 +72,7 @@
   #services-2175 .cs-icon {
     width: 4rem;
     height: auto;
+    aspect-ratio: 1/1;
   }
   #services-2175 .cs-h3 {
     /* 20px - 25px */

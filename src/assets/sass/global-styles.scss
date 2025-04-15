@@ -128,6 +128,7 @@
             img {
                 height: 100%;
                 width: 100%;
+                aspect-ratio: 25 / 3;
                 /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
                 object-fit: contain;
                 /* places the image to the left edge of the parent */
@@ -719,6 +720,7 @@
             img {
                 height: 100%;
                 width: 100%;
+                aspect-ratio: 25 / 3;
                 /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
                 object-fit: contain;
             }
