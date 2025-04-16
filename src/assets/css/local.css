@@ -234,6 +234,7 @@
     left: 0;
     height: 100%;
     width: 100%;
+    aspect-ratio: 2/1;
     object-fit: cover;
   }
 }
@@ -285,6 +286,10 @@
     /* 24px - 32px, added margin top and bottom to cs-picture so it pushes away by the same amount the yellow box element overlaps it top and bottom. This maintains consistent spacing top and bottom */
     margin: clamp(1.5rem, 3vw, 2rem) 0 clamp(1.5rem, 3vw, 2rem) clamp(1.5rem, 3vw, 2rem);
     position: relative;
+  }
+  #RPsbs-576 .cs-picture img,
+  #RPsbsr-576 .cs-picture img {
+    aspect-ratio: 5/4;
   }
   #RPsbs-576 .cs-picture:before,
   #RPsbsr-576 .cs-picture:before {

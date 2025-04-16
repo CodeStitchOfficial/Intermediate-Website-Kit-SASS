@@ -961,6 +961,7 @@
                 left: 0;
                 height: 100%;
                 width: 100%;
+                aspect-ratio: 4 / 3;
                 object-fit: cover;
             }
         }
@@ -998,13 +999,6 @@
             z-index: -1;
             transform: translateX(-50%);
         }
-
-        .cs-fish {
-            /* 172px - 336px */
-            width: clamp(10.75rem, 20vw, 21rem);
-            height: auto;
-            display: block;
-        }
     }
 }
 
@@ -1019,6 +1013,7 @@
         .cs-background {
             img {
                 display: none;
+                aspect-ratio: 16 / 9;
             }
         }
     }

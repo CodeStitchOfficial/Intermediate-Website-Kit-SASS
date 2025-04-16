@@ -75,6 +75,10 @@
             background-color: var(--primary400);
             color: var(--textLight);
 
+            &:visited {
+                color: var(--textLight);
+            }
+
             &:before {
                 background-color: var(--accent500);
             }
