@@ -58,6 +58,9 @@
     background-color: var(--primary400);
     color: var(--textLight);
   }
+  body.dark-mode .cs-button-solid:visited {
+    color: var(--textLight);
+  }
   body.dark-mode .cs-button-solid:before {
     background-color: var(--accent500);
   }

@@ -72,7 +72,6 @@
         .cs-picture {
             width: 100%;
             max-width: calc(585 / 16 * 1rem);
-            aspect-ratio: 5 / 4;
             /* 380px - 453px */
             height: clamp(23.75rem, 59vw, 28.3215rem);
             /* clips the img tag corners */
@@ -87,6 +86,7 @@
                 left: 0;
                 height: 100%;
                 width: 100%;
+                aspect-ratio: 5 / 4;
                 /* makes image act as a background image */
                 object-fit: cover;
             }

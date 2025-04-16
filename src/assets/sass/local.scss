@@ -254,6 +254,7 @@
                 left: 0;
                 height: 100%;
                 width: 100%;
+                aspect-ratio: 2 / 1;
                 object-fit: cover;
             }
         }
@@ -307,6 +308,10 @@
             margin: clamp(1.5rem, 3vw, 2rem) 0 clamp(1.5rem, 3vw, 2rem)
                 clamp(1.5rem, 3vw, 2rem);
             position: relative;
+
+            img {
+                aspect-ratio: 5 / 4;
+            }
 
             &:before {
                 /* yellow box */
