@@ -12,7 +12,10 @@ eleventyNavigation:
 
 {% block head %}
     <!-- Any page-specific tags that belong in the <head>, such as a page-specific stylesheet -->
-    <link rel="stylesheet" href="/assets/css/services.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="/assets/css/services.css" media="print" onload="this.media='all'; this.onload=null;" />
+    <noscript>
+        <link rel="stylesheet" href="/assets/css/services.css" />
+    </noscript>
     <style>
         .cs-background {
         width: 100%;

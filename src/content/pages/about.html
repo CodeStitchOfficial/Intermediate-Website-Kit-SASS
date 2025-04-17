@@ -11,7 +11,10 @@ eleventyNavigation:
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <link rel="stylesheet" href="/assets/css/about.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="/assets/css/about.css" media="print" onload="this.media='all'; this.onload=null;" />
+    <noscript>
+        <link rel="stylesheet" href="/assets/css/about.css" />
+    </noscript>
 {% endblock %}
 
 {% block body %}

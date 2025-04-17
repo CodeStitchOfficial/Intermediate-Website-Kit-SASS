@@ -11,22 +11,6 @@
         <meta name="keywords" content="" />
         <link rel="canonical" href="{{ client.domain }}{{ page.url }}" />
 
-        <!--Termly-->
-        <script
-        type="text/javascript"
-        src="https://app.termly.io/resource-blocker/904a8651-e1e1-46e3-a489-409101c8e118?autoBlock=on"
-        ></script>
-
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZDGC7QH952"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-ZDGC7QH952');
-        </script>
-
         <!--Social Media Display-->
         <meta property="og:title" content="{{ title }}" />
         <meta property="og:description" content="{{ description }}" />
@@ -88,11 +72,68 @@
         {% endif %}
 
         <!-- Sitewide Stylesheets and Scripts -->
-        <link rel="stylesheet" href="/assets/css/root.css" media="print" onload="this.media='all'" />
-        <link rel="stylesheet" href="/assets/css/dark.css" media="print" onload="this.media='all'" />
-        <link rel="stylesheet" href="/assets/css/global-styles.css" media="print" onload="this.media='all'" />
+        <link rel="stylesheet" href="/assets/css/root.css" media="print" onload="this.media='all'; this.onload=null;" />
+        <link rel="stylesheet" href="/assets/css/dark.css" media="print" onload="this.media='all'; this.onload=null;" />
+        <link rel="stylesheet" href="/assets/css/global-styles.css" media="print" onload="this.media='all'; this.onload=null;" />
+        <noscript>
+            <link rel="stylesheet" href="/assets/css/root.css" />
+            <link rel="stylesheet" href="/assets/css/dark.css" />
+            <link rel="stylesheet" href="/assets/css/global-styles.css" />
+        </noscript>
         <script defer src="/assets/js/dark.js"></script>
         <script defer src="/assets/js/nav.js"></script>
+
+        
+        <script
+            type="text/javascript"
+            src="https://app.termly.io/resource-blocker/904a8651-e1e1-46e3-a489-409101c8e118?autoBlock=on"
+            async
+            onload="onTermlyLoaded()"
+        ></script>
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZDGC7QH952"></script>
+     
+        <script>
+            function onTermlyLoaded() {
+                // Termly CMP is initialized
+                Termly.on('initialized', (data) => {
+                console.log('Termly initialized:', data); // Optional: Log initialization data
+
+                // Optional: Get initial consent state
+                if (typeof Termly.getConsentState === 'function') {
+                    const consentState = Termly.getConsentState();
+                    console.log('Initial consent state:', consentState);
+                    if (consentState.analytics) {
+                    initializeGA(); // Initialize GA if consent is already given
+                    }
+                }
+                });
+
+                Termly.on('consent', (data) => {
+                console.log('Termly consent changed:', data);
+
+                // Check if analytics consent is granted
+                if (data.categories.includes('analytics')) {
+                    // User has consented, initialize GA
+                    initializeGA();
+                } else {
+                    // User has not consented to analytics
+                    console.warn('Analytics consent denied. Anonymizing IP.');
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', 'G-ZDGC7QH952', { 'anonymize_ip': true });
+                }
+                });
+            }
+
+            function initializeGA() {
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-ZDGC7QH952');
+            }
+        </script>
 
         {% block head %}{% endblock %}
 
