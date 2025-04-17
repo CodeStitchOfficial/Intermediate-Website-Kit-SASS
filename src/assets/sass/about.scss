@@ -226,7 +226,11 @@
             top: 0;
             bottom: 0;
             right: 50%;
-            aspect-ratio: 5 / 4;
+
+            img {
+                aspect-ratio: 5 / 4;
+            }
+            
         }
 
         .cs-content {

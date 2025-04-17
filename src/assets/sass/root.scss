@@ -119,6 +119,8 @@
         }
 
         &:hover {
+            text-decoration: none;
+            
             &:before {
                 width: 100%;
             }
