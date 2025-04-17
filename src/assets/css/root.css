@@ -101,6 +101,9 @@
   .cs-button-solid:visited {
     color: var(--textLight);
   }
+  .cs-button-solid:hover {
+    text-decoration: none;
+  }
   .cs-button-solid:hover:before {
     width: 100%;
   }

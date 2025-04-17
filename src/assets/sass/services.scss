@@ -226,10 +226,12 @@
 
                 .cs-h3 {
                     color: var(--textLight);
+                    font-weight: 400;
                 }
 
                 .cs-item-text {
                     color: var(--textLight);
+                    font-family: var(--bodyFont);
                 }
             }
         }
@@ -264,7 +266,7 @@
 
         .cs-h3 {
             font-size: calc(20 / 16 * 1rem);
-            font-weight: 900;
+            font-weight: 400;
             text-align: center;
             line-height: 1.2em;
             margin: 0;
@@ -276,6 +278,7 @@
         .cs-item-text {
             /* 14px - 16px */
             font-size: clamp(0.875rem, 1.5vw, 1rem);
+            font-weight: 400;
             text-align: center;
             line-height: 1.5em;
             margin: 0;
