@@ -3,8 +3,8 @@ backend:
   branch: main
   auth:
     type: auth0
-    domain: dev-4wfjd7gm22r8t240.us.auth0.com
-    client_id: PUCQBAJiFBU4GSZwNCZ8EMPH0IyBMwyF
+    domain: AUTH0_DOMAIN
+    client_id: AUTH0_CLIENT_ID
     scope: openid profile email
     redirect_uri: https://nevamasquerade.design/admin/
 
