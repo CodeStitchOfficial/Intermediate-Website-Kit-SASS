@@ -3,15 +3,15 @@ backend:
   branch: main
   auth:
     type: auth0
-    domain: AUTH0_DOMAIN
-    client_id: AUTH0_CLIENT_ID
+    domain: "%env(AUTH0_DOMAIN)%"
+    client_id: "%env(AUTH0_CLIENT_ID)%"
     scope: openid profile email
     redirect_uri: https://nevamasquerade.design/admin/
 
 local_backend: true
 
 # change url to a link to the image you want to use, no file paths, must be a URL
-logo_url: https://nevamasquerade.design/assets/svgs/logo-vertical.svg
+logo_url: https://nevamasquerade.design/assets/svgs/logo-horizontal-color.svg
 
 media_folder: "src/assets/images/blog"
 public_folder: "/assets/images/blog"
