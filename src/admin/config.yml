@@ -1,11 +1,17 @@
 backend:
-    name: git-gateway
-    branch: main
+  name: git-gateway
+  branch: main
+  auth:
+    type: auth0
+    domain: dev-4wfjd7gm22r8t240.us.auth0.com
+    client_id: PUCQBAJiFBU4GSZwNCZ8EMPH0IyBMwyF
+    scope: openid profile email
+    redirect_uri: https://nevamasquerade.design/admin/
 
 local_backend: true
 
 # change url to a link to the image you want to use, no file paths, must be a URL
-logo_url: https://codestitch.app/frontend/images/logo.png
+logo_url: https://nevamasquerade.design/assets/svgs/logo-vertical.svg
 
 media_folder: "src/assets/images/blog"
 public_folder: "/assets/images/blog"

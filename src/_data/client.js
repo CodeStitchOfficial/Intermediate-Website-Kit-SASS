@@ -11,7 +11,7 @@ module.exports = {
         country: "US",
     },
     socials: {
-        facebook: "https://www.facebook.com/",
+        linkedin: "https://www.linkedin.com/company/neva-masquerade/",
     },
     //! Make sure you include the file protocol (e.g. https://) and that NO TRAILING SLASH is included
     domain: "https://nevamasquerade.design",
