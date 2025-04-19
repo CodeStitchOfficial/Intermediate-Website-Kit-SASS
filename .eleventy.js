@@ -118,6 +118,25 @@ module.exports = function (eleventyConfig) {
                               END SERVER SETTINGS
     =======================================================================*/
 
+    /**=====================================================================
+                              AUTH0 SETTINGS
+    =======================================================================*/
+    module.exports = function(eleventyConfig) {
+        const auth0Domain = process.env.AUTH0_DOMAIN;
+        const auth0ClientId = process.env.AUTH0_CLIENT_ID;
+      
+        eleventyConfig.addGlobalData("auth0", {
+          domain: auth0Domain,
+          clientId: auth0ClientId,
+        });
+      };
+    /**=====================================================================
+                              END SERVER SETTINGS
+    =======================================================================*/
+
+
+
+
     return {
         dir: {
             input: "src",
