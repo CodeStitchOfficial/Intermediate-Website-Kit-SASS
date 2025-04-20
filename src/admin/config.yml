@@ -1,12 +1,6 @@
 backend:
   name: git-gateway
   branch: main
-  auth:
-    type: auth0
-    domain: "%env(AUTH0_DOMAIN)%"
-    client_id: "%env(AUTH0_CLIENT_ID)%"
-    scope: openid profile email
-    redirect_uri: https://nevamasquerade.design/admin/
 
 local_backend: true
 
