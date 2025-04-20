@@ -1483,7 +1483,8 @@
   #why-choose-1635 .cs-content {
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    gap: 1rem;
   }
   #why-choose-1635 .cs-flex {
     text-align: left;
