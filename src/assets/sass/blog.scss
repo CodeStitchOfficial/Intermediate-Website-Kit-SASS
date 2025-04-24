@@ -179,6 +179,7 @@
             margin: 0;
             color: var(--textLight);
             position: relative;
+            font-variant-numeric: lining-nums;
         }
 
         .cs-breadcrumbs {
@@ -188,7 +189,10 @@
         }
 
         .cs-link {
+            font-family: var(--smallCaps);
             font-size: calc(14 / 16 * 1rem);
+            text-transform: uppercase;
+            letter-spacing: 3px;
             line-height: 1.2em;
             text-decoration: none;
             color: var(--textLight);
@@ -196,6 +200,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            font-variant-numeric: lining-nums;
 
             &:last-of-type {
                 /* remove the chevron on the last list item */
@@ -220,6 +225,7 @@
 
             &.cs-active {
                 opacity: .6;
+                font-weight: 300;
             }
         }
 
@@ -446,6 +452,7 @@
             display: -webkit-box;
             overflow: hidden;
             -webkit-box-orient: vertical;
+            font-variant-numeric: lining-nums;
         }
 
         .cs-desc {
@@ -694,6 +701,7 @@
             line-height: 1.5em;
             font-weight: 400;
             color: var(--textLight);
+            font-variant-numeric: lining-nums;
         }
 
         .feature-date {
