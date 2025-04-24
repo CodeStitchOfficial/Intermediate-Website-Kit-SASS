@@ -6,6 +6,7 @@ description: Don't let a bad website cost you customers! Learn about the design,
 author: Tianna Hutchins
 date: 2025-04-23T19:41:00.000Z
 tags:
+  - featured post
   - post
 image: /assets/images/blog/9-ways-website-kills-business.webp
 imageAlt: A cat bites a hand as a visual metaphor of a website killing a business.
