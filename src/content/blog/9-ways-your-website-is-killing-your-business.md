@@ -55,6 +55,8 @@ The bottom line: **make sure your website is as fast as possible**. Tools like [
 
 I do everything I can to optimize my websites as much as possible. Before adding scripts, my website got perfect scores in PageSpeed Insights. I aim to do the same for all my clients. Third-party scripts (e.g., Google Analytics) will drop the performance score, but they can be worth it. 
 
+![Screenshot showing perfect scores for Neva Masquerade in PageSpeed Insights.](/assets/images/blog/pagespeed-insights-perfect-score.webp)
+
 ### Looks bad on mobile
 
 Most visitors to your website are likely using their phone. According to StatCounter, in March 2025, [62.21% of people used a mobile device](https://gs.statcounter.com/platform-market-share/desktop-mobile-tablet) to access the Internet. When focusing on the United States, it's closer to a 50/50 split between mobile and desktop.
