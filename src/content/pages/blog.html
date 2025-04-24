@@ -1,13 +1,11 @@
 ---
 title: "Blog | Neva Masquerade"
-description: "Meta description for the page"
-preloadImg: "/assets/images/cabinets2.jpg"
+description: "Find articles on web design and branding best practices."
+preloadImg: "/assets/textures/blog-banner-m.webp"
 permalink: "blog/"
 eleventyNavigation:
     key: Blog
-    order: 500
-    hideOnMobile: true
-    hideOnDesktop: true
+    order: 600
 ---
 
 {% extends "layouts/base.html" %}
@@ -74,16 +72,16 @@ eleventyNavigation:
             <span class="cs-int-title">Blog</span>
             <div class="cs-breadcrumbs">
                 <a href="/" class="cs-link">Home</a>
-                <a href="" class="cs-link cs-active">Blog</a>
+                <a href="#" class="cs-link cs-active">Blog</a>
             </div>
         </div>
         <!--Background Image-->
         <picture class="cs-background">
             <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="../../assets/svgs/blog-background.svg">
+            <source media="(max-width: 600px)" srcset="../../assets/textures/blog-banner-m.webp">
             <!--Tablet and above Image-->
-            <source media="(min-width: 601px)" srcset="../../assets/svgs/blog-background.svg">
-            <img decoding="async" src="../../assets/svgs/blog-background.svg" alt="" width="1280" height="568" aria-hidden="true">
+            <source media="(min-width: 601px)" srcset="../../assets/textures/blog-banner.webp">
+            <img decoding="async" src="../../assets/textures/blog-banner.webp" alt="" width="1920" height="400" aria-hidden="true">
         </picture>
     </div>
 
