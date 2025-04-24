@@ -37,6 +37,8 @@ I've identified three major problems for each leg. I'll expand on each in future
 
 ## Technical problems
 
+![Graphic: 3 technical problems: 1) long load time; 2) bad mobile experience; and 3) security problems](/assets/images/blog/blog-graphics-01.webp)
+
 ### Long load time
 
 Every second your website takes to load, you lose more visitors. According to KissMetrics, [40% of people will abandon a website if it takes more than 3 seconds to load](https://blog.kissmetrics.com/wp-content/uploads/2011/04/loading-time.pdf). 
@@ -81,6 +83,18 @@ Every website I host uses the HTTPS protocol and SSL/TLS certificates. Security 
 
 ## Content problems
 
+![Graphic: 3 content problems: 1) broken links; 2) low-quality content; and 3) ignoring SEO](/assets/images/blog/blog-graphics-02.webp)
+
+### Broken links
+
+Have you ever clicked on a link, only to get a "404 page not found" error message? It's annoying. If you get too many on the same website, you might get frustrated by the poor user experience and leave.
+
+**There's no excuse to have a link to one of your pages 404ing**. It looks bad, blocks crawlers, and signals that you don't update your website. Broken links to other websites are more forgivable, but still bad.
+
+**You need to check your website for broken links**. If your website is small, you can do this by clicking every link. If you don't want to spend time doing a manual check, there are many free and paid tools to automate it. **Google Search Console** is a good free option.
+
+I use Google Search Console for Neva Masquerade. It helps me understand how Google sees my website. I can also use it to identify potential problems beyond broken links. Its many reports can provide valuable information.  
+
 ### Low-quality content
 
 A beautiful website can only carry you so far. You could design and code your website to perfection, but if the content sucks, it's worthless.
@@ -96,16 +110,6 @@ When you write, you must also consider **why you're writing** and **who it's for
 Develop a **content strategy** to give your writing purpose. You should also set a schedule to audit all your pages to keep them current and relevant. Rewriting old content is a great way to give it new life and boost your website's search results.
 
 I do all this on my website. I use Grammarly to catch errors and the free Hemingway Editor to keep my writing simple and easy to read. If I need help with ideas, research, or fact-checking, I'll use Gemini; otherwise, I don't use AI for my content. 
-
-### Broken links
-
-Have you ever clicked on a link, only to get a "404 page not found" error message? It's annoying. If you get too many on the same website, you might get frustrated by the poor user experience and leave.
-
-**There's no excuse to have a link to one of your pages 404ing**. It looks bad, blocks crawlers, and signals that you don't update your website. Broken links to other websites are more forgivable, but still bad.
-
-**You need to check your website for broken links**. If your website is small, you can do this by clicking every link. If you don't want to spend time doing a manual check, there are many free and paid tools to automate it. **Google Search Console** is a good free option.
-
-I use Google Search Console for Neva Masquerade. It helps me understand how Google sees my website. I can also use it to identify potential problems beyond broken links. Its many reports can provide valuable information.  
 
 ### Ignoring SEO
 
@@ -126,6 +130,8 @@ SEO can be a full-time job. It's a lot of work, but ignoring it isn't an option.
 I do all the **on-page SEO** I can for every website I touch. Every developer should do on-page SEO by default. I'd consider that a red flag if they charge extra for it. As for keyword research and other SEO tasks, I use Semrush, but Ahrefs is another good option. 
 
 ## Design problems
+
+![Graphic: 3 design problems: 1) poor structure; 2) outdated design; and 3) low-quality images.](/assets/images/blog/blog-graphics-03.webp)
 
 ### Bad structure
 
