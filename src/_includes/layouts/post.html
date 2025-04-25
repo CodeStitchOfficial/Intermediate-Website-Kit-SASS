@@ -1,7 +1,10 @@
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <link rel="stylesheet" href="/assets/css/blog.css" />
+    <link rel="stylesheet" href="/assets/css/blog.css" media="print" onload="this.media='all'; this.onload=null;" />
+    <noscript>
+        <link rel="stylesheet" href="/assets/css/blog.css" />
+    </noscript>
 
     <!-- prettier-ignore-start -->
     <script type="application/ld+json">

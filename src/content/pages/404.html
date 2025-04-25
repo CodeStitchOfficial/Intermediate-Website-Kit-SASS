@@ -1,0 +1,54 @@
+---
+title: '404: Page not found | Neva Masquerade'
+description: 'Description for <meta> description and OG tags'
+preloadImg: '/assets/textures/blue-banner-m.webp'
+permalink: '404/'
+eleventyNavigation:
+    key: 404
+    order: 1000
+    hideOnMobile: true
+    hideOnDesktop: true
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <!-- Any page-specific tags that belong in the <head>, such as a page-specific stylesheet -->
+    <link rel="stylesheet" href="/assets/css/404.css" media="print" onload="this.media='all'; this.onload=null;" />
+    <noscript>
+        <link rel="stylesheet" href="/assets/css/404.css" />
+    </noscript>
+{% endblock %}
+
+{% block body %}
+    <!-- Page HTML goes here, without a <main> wrapper. The <main> tag is already presented in layouts/base.html -->
+
+        <!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="sbs-574">
+    <div class="cs-container">
+        <picture class="cs-picture">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="../../assets/images/404-page-not-found-m.webp">
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" srcset="../../assets/images/404-page-not-found.webp">
+            <img loading="lazy" decoding="async" src="../../assets/images/404-page-not-found.webp" alt="A cat peeks out from behind a wall. Is it hiding from you? Is it looking for you? No one knows." width="618" height="537">
+        </picture>
+        <div class="cs-content">
+            <span class="cs-topper">Where did I leave that page?</span>
+            <h1 class="cs-title">404: page not found</h1>
+            <p class="cs-text">
+                Well, this is awkward. We can't find the page you're looking for.  
+            </p>
+            <p class="cs-text">
+                It might be hiding under a different spelling. Or maybe a cat ate it and it's gone for good. The world may never know.
+            </p>
+            <p class="cs-text">
+                Or you can write to us at 404@nevamasquerade.design and ask. 
+            </p>
+        </div>
+    </div>
+</section>
+{% endblock %}

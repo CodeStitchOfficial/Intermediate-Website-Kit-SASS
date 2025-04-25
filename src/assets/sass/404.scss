@@ -1,0 +1,157 @@
+/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #sbs-574 {
+        background-color: var(--primary);
+        padding-top: 68px;
+
+        .cs-container {
+            width: 100%;
+            max-width: calc(1280 / 16 * 1rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 7vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            max-width: calc(522 / 16 * 1rem);
+            /* moved section padding to the .cs-content so we can have the cs-picture be full width on mobile without the padding preventing it from doing so */
+            padding: var(--sectionPadding);
+            padding-top: 0;
+            /* prevents padding from affecting width and height */
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+        }
+
+        .cs-topper {
+            color: var(--secondary200);
+        }
+
+        .cs-title {
+            color: var(--textLight);
+        }
+
+        .cs-text {
+            margin-bottom: calc(16 / 16 * 1rem);
+            color: var(--textLight);
+            opacity: 0.8;
+            &:last-of-type {
+                margin-bottom: calc(32 / 16 * 1rem);
+            }
+        }
+
+        .cs-picture {
+            display: block;
+            position: relative;
+            width: 100%;
+            height: calc(300 / 16 * 1rem);
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #sbs-574 {
+        /* we use margin here instead of padding because we want to create the space OUTSIDE the section.  The overflow on the section clips the boxes we made to make the slanted designs, so we need to push from the outside of the section with margin to create space between it and the next section.  If the section above this Stitch has a white background, add margin-top: 0. If it has a white section below it, add margin-bottom: 0. This will allow more proper spacing and not have too much empty space.  If both sections above and below this Stitch have white backgrounds, you can just remove this margin all together */
+
+        margin-top: 89px;
+        margin-left: 0;
+        margin-right: 0;
+        padding: var(--sectionPadding);
+        background-color: var(--secondary);
+        /* clips the red box from overflowing the section */
+        overflow: hidden;
+
+        .cs-container {
+            flex-direction: row;
+            position: relative;
+            z-index: 1;
+            &:before {
+                /* red box */
+                content: "";
+                width: 100vw;
+                margin-left: -38%;
+                background: var(--primary);
+                opacity: 1;
+                display: block;
+                position: absolute;
+                top: calc(-150 / 16 * 1rem);
+                bottom: calc(-150 / 16 * 1rem);
+                left: 50%;
+                z-index: -1;
+            }
+        }
+
+        .cs-content {
+            width: 51%;
+            /* reset the padding, add the section padding back to the section container */
+            padding: 0;
+        }
+
+        .cs-picture {
+            width: 47vw;
+            max-width: calc(618 / 16 * 1rem);
+            height: calc(536 / 16 * 1rem);
+            /* 24px - 32px, added margin top and bottom to cs-picture so it pushes away by the same amount the yellow box element overlaps it top and bottom. This maintains consistent spacing top and bottom */
+            margin: clamp(1.5rem, 3vw, 2rem) 0 clamp(1.5rem, 3vw, 2rem)
+                clamp(1.5rem, 3vw, 2rem);
+            position: relative;
+
+            &:before {
+                /* yellow box */
+                content: "";
+                width: 50%;
+                background: var(--secondary300);
+                opacity: 1;
+                display: block;
+                position: absolute;
+                /*24px - 32px, wrapped in calc function to multiple by negative 1 and get a negative clamp value */
+                top: calc(clamp(1.5rem, 3vw, 2rem) * -1);
+                bottom: calc(clamp(1.5rem, 3vw, 2rem) * -1);
+                left: calc(clamp(1.5rem, 3vw, 2rem) * -1);
+            }
+        }
+    }
+}
+
+/* Dark Mode - 768px */
+@media only screen and (min-width: 48rem) {
+    body.dark-mode {
+        #sbs-574 {
+            background: var(--dark);
+
+            .cs-container {
+                &:before {
+                    background: var(--medium);
+                }
+            }
+
+            .cs-picture {
+                &:before {
+                    background: var(--primary);
+                }
+            }
+        }
+    }
+}                         
