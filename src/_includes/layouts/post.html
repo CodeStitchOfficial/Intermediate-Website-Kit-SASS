@@ -11,7 +11,7 @@
         {
             "@context": "https://schema.org",
             "@type": "Article",
-            {% if title %}"headline": "{{ title }}",{% endif %}
+            {% if meta_title %}"headline": "{{ meta_title }}",{% elif title %}"headline": "{{ title }}",{% endif %}
             {% if image %}
                 "image": ["{{ image }}"],
             {% endif %}

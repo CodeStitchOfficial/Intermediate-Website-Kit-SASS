@@ -19,6 +19,12 @@ collections:
       fields:
           - { label: "Title", name: "title", widget: "string" }
           - {
+                label: "Meta Title",
+                name: "meta_title",
+                widget: "string",
+                hint: "The title that appears in search engine results (if left blank, the main title will be used)",
+            }
+          - {
                 label: "URL Slug",
                 name: "url",
                 widget: "string",
