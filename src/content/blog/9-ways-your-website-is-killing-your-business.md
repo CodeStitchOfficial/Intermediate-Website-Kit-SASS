@@ -54,6 +54,8 @@ Site abandonment or bounce rate isn't a direct ranking factor. That said, it sug
 
 The bottom line: **make sure your website is as fast as possible**. Tools like [PageSpeed Insights](https://pagespeed.web.dev/) can test your website and identify areas for improvement.
 
+This is such an important topic that I had to dedicate an entire post to it. I explain [why slow websites drive away customers](https://nevamasquerade.design/blog/slow-website-lost-opportunity/) and damage brands. It's a deeper analysis of why speed matters, what makes websites slow, and how to avoid or fix the common problems.
+
 I do everything I can to optimize my websites as much as possible. Before adding scripts, my website got perfect scores in PageSpeed Insights. I aim to do the same for all my clients. Third-party scripts (e.g., Google Analytics) will drop the performance score, but they can be worth it. 
 
 ![Screenshot showing perfect scores for Neva Masquerade in PageSpeed Insights.](/assets/images/blog/pagespeed-insights-perfect-score.webp)
