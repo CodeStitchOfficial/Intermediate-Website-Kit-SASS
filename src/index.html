@@ -18,23 +18,6 @@ eleventyNavigation:
         <link rel="stylesheet" href="/assets/css/critical.css" />
         <link rel="stylesheet" href="/assets/css/local.css" />
     </noscript>
-
-    <!-- Script for Netlify Identity -->
-    <script
-        defer
-        src="https://identity.netlify.com/v1/netlify-identity-widget.js"
-    ></script>
-    <script defer>
-        if (window.netlifyIdentity) {
-            window.netlifyIdentity.on("init", (user) => {
-                if (!user) {
-                    window.netlifyIdentity.on("login", () => {
-                        document.location.href = "/admin/";
-                    });
-                }
-            });
-        }
-    </script>
     
     <!-- JSON Schema Markup -->
     <!-- prettier-ignore-start -->
