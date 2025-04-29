@@ -1,7 +1,7 @@
 ---
 title: "Slow website, lost opportunity: Are long load times driving away your
   customers?"
-meta_title: "Hidden costs: slow websites lose customers | Neva Masquerade"
+meta_title: "Hidden costs: slow websites lose customers"
 url: slow-website-lost-opportunity
 description: Stop losing customers before they arrive. Your slow website
   frustrates users, raises bounce rates, and hurts your search rank. Fix
