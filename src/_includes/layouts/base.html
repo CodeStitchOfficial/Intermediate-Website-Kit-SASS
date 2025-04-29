@@ -137,7 +137,8 @@
 
         {% block head %}{% endblock %}
 
-        <title>{{ title }}</title>
+        <title>{% if page.url == '/' %}{{ client.name }} | {{ title }}{% elif meta_title %}{{ meta_title }} | {{ client.name }}{% else %}{{ title }} | {{ client.name }}{% endif %}</title>
+        
     </head>
     <body>
         <!--Screen reader skip main nav-->
