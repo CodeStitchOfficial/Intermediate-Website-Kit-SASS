@@ -611,7 +611,7 @@
     font-family: var(--smallCaps);
     font-weight: 600;
     /* 14px - 16px */
-    font-size: clamp(0.75rem, 2vw, 1rem);
+    font-size: clamp(0.7rem, 1.8vw, 0.9rem);
     line-height: 1.2em;
     letter-spacing: 3px;
     text-transform: uppercase;
