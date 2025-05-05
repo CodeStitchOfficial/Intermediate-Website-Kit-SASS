@@ -1,4 +1,4 @@
-const CACHE_NAME = 'my-site-cache-v1';
+const CACHE_NAME = 'my-site-cache-v2';
 const urlsToCache = [
   '/',
   '/index.html',
@@ -31,36 +31,24 @@ self.addEventListener('install', (event) => {
   );
 });
 
-// Listen for network requests
+// Listen for network requests (Cache-then-Network Strategy)
 self.addEventListener('fetch', (event) => {
   event.respondWith(
-    caches.match(event.request)
-      .then((response) => {
-        // Cache hit - return the cached response
-        if (response) {
-          return response;
+    caches.match(event.request).then((response) => {
+      // Cache hit - return the cached response
+      const fetchPromise = fetch(event.request).then((networkResponse) => {
+        if (networkResponse) {
+          // Update the cache with the new response
+          caches.open(CACHE_NAME).then((cache) => {
+            cache.put(event.request, networkResponse.clone());
+          });
         }
+        return networkResponse;
+      });
 
-        // Not in cache - fetch from network
-        return fetch(event.request).then(
-          (response) => {
-            // Check if response is valid
-            if (!response || response.status !== 200 || response.type !== 'basic') {
-              return response;
-            }
-
-            // Cache the fetched response for future requests
-            const responseToCache = response.clone();
-
-            caches.open(CACHE_NAME)
-              .then((cache) => {
-                cache.put(event.request, responseToCache);
-              });
-
-            return response;
-          }
-        );
-      })
+      // Return the cached response immediately, and update the cache in the background
+      return response || fetchPromise;
+    })
   );
 });
 
