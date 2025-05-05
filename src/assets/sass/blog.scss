@@ -227,6 +227,13 @@
                 opacity: .6;
                 font-weight: 300;
             }
+
+            &:hover {
+                color: var(--primary100);
+                text-decoration: underline;
+                text-underline-offset: .3em;
+                transition: color .3s, text-decoration .3s;
+            }
         }
 
         .light-mode {
@@ -319,7 +326,7 @@
 }
 
 /*-- -------------------------- -->
-<---           Blog             -->
+<---       Blog Feed            -->
 <--- -------------------------- -*/
 
 /* Mobile - 360px */
@@ -466,40 +473,16 @@
             -webkit-box-orient: vertical;
         }
 
-        .cs-link {
-            font-family: var(--smallCaps);
-            font-size: calc(14 / 16 * 1rem);
-            font-weight: 700;
-            line-height: 1.2em;
-            text-align: inherit;
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-top: calc(24 / 16 * 1rem);
-            color: var(--primary400);
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            gap: calc(10 / 16 * 1rem);
-            transition: color 0.3s;
-
-            &:visited {
-                color: var(--accent500);
-            }
-
-            &:hover {
-                color: var(--primary);
-                .cs-arrow {
-                    transform: translateX(0.25rem);
-                }
-            }
-        }
-
-        .cs-arrow {
-            width: calc(20 / 16 * 1rem);
-            height: auto;
-            display: block;
-            transition: filter 0.3s, transform 0.3s;
+        .nm-link-title {
+            font-family: var(--headerFont);
+            font-size: calc(24 / 16 * 1rem);
+            font-weight: 400;
+            line-height: 1.3em;
+            text-overflow: ellipsis;
+            margin: 0;
+            display: -webkit-box;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
         }
 
         .blog-sidebar {
@@ -581,8 +564,8 @@
                 color: var(--textLight);
             }
 
-            .cs-link {
-                color: var(--primary100);
+            .nm-link-title {
+                color: var(--secondary200);
 
                 &:visited {
                     color: var(--accent100);
@@ -638,7 +621,7 @@
             font-family: var(--smallCaps);
             font-size: calc(18 / 16 * 1em);
             letter-spacing: 3px;
-            font-weight: 600;
+            font-weight: 400;
             text-transform: uppercase;
             color: var(--textLight);
             text-align: center;
@@ -663,6 +646,8 @@
             padding: calc(20 / 16 * 1rem) 0;
             text-decoration: none;
             column-gap: calc(24 / 16 * 1em);
+
+
 
             &:nth-of-type(1) {
                 padding-top: 0;
@@ -723,6 +708,37 @@
 @media only screen and (min-width: 64rem) {
     .blog-sidebar {
         max-width: calc(360 / 16 * 1em);
+
+        .blog-feature {
+            &:hover {
+                .blog-featureImage {
+                    transform: translateX(10px); /* Move image slightly */
+                }
+
+                .feature-h3 {
+                    color: var(--secondary);
+                    text-decoration: underline;
+                    text-underline-offset: .2rem;
+                    text-decoration-thickness: 1px;
+                }
+
+                .feature-date {
+                    color: var(--secondary); /* Change date color */
+                }
+            }
+        }
+
+        .blog-featureImage {
+            transition: transform 0.3s ease-in-out; /* Smooth image transition */
+        }
+
+        .feature-h3 {
+            transition: color 0.3s ease-in-out; /* Smooth title transition */
+        }
+
+        .feature-date {
+            transition: color 0.3s ease-in-out; /* Smooth date transition */
+        }
     }
 }
 
@@ -878,16 +894,15 @@
             }
 
             a {
-                text-decoration: underline;
                 font-size: inherit;
-                color: var(--primary400);
+                color: var(--primary);
 
                 &:visited {
-                    color: var(--accent400);
+                    color: var(--accent500);
                 }
 
                 &:hover {
-                    color: var(--primary);
+                    color: var(--primary600);
                 }
             }
 
@@ -950,7 +965,7 @@
             }
 
             a {
-                color: var(--primary100);
+                color: var(--secondary200);
 
                 &:visited {
                     color: var(--accent100);
@@ -970,11 +985,16 @@
             background: var(--mediumBlog);
 
             .cs-button-solid {
-                background: var(--secondary300);
+                background: var(--secondary200);
                 color: var(--darkBlog);
 
                 &:hover {
                     color: var(--textLight);
+                    background: var(--accent400);
+                }
+
+                &:before {
+                    background: var(--accent400);
                 }
             }
         }

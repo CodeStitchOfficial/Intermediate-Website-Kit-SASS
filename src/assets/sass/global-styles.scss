@@ -745,6 +745,10 @@
             gap: clamp(1.25rem, 2.6vw, 2.25rem);
         }
 
+        .cs-button-solid {
+            font-size: clamp(.7rem, 1.8vw, .9rem);
+        }
+
         .cs-li {
             padding: calc(32 / 16 * 1rem) 0;
             list-style: none;
