@@ -1,9 +1,10 @@
 ---
 title: "Mobile-first matters: Optimize your website to rank higher and sell more"
-meta_title: "Local Search Success: Mobile Website Tips"
+meta_title: "Mobile Websites: Win Local Customers & Rank Higher"
 url: mobile-first-matters
-description: Local searchers use phones; don't let a bad mobile website cost you
-  sales. Learn how optimized and responsive websites win on Google and convert.
+description: Most local customers use their phones. If your mobile website is
+  bad, you lose sales. Learn how a good mobile site helps you rank higher on
+  Google and get more customers.
 author: Tianna Hutchins
 date: 2025-05-04T20:38:00.000Z
 tags:
