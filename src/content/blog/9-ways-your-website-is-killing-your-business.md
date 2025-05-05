@@ -66,6 +66,8 @@ Most visitors to your website are likely using their phone. According to StatCou
 
 Regardless of the stats, your website must function and look good on people's phones. Google cares about the **mobile user experience**; if you want your website to rank well, you should too. To do this, ensure it's **responsive** and designed with many **breakpoints**.
 
+Optimizing your website for smartphones engages users, makes Google happy, and wins customers. It takes more work than shrinking your website to fit on a phone screen. I cover this in depth in "[Mobile-first matters: Optimize your website to rank higher and sell more](https://nevamasquerade.design/blog/mobile-first-matters/)."
+
 You can check your website's responsiveness by opening it on your computer. Make sure you aren't in full-screen mode, and then drag the corner of the window to change the screen size. The layout and content should shift around in response to the changing window. If the design doesn't shift or looks bad at specific sizes, you have a serious problem.
 
 Just as people leave slow websites, **they'll bounce if it looks bad or is unusable on their phone**. Fix formatting issues at all screen sizes, but pay extra attention to mobile.
