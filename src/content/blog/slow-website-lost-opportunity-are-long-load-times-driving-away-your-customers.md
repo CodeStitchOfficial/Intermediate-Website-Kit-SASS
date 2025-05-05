@@ -23,8 +23,7 @@ If your website takes [over 3 seconds to load](https://blog.kissmetrics.com/wp-c
 
 Annoying your customers is bad for business. However, a slow website does more harm than annoying customers---it drives them away.
 
-A 10-second attention span: why website speed matters
------------------------------------------------------
+## A 10-second attention span: why website speed matters
 
 People can be fickle. We lack patience. We get distracted. We have short memories and even shorter attention spans. If you want to keep your customers, you need a fast website.
 
@@ -42,8 +41,7 @@ Let me be clear, that 10-second limit is for attention spans. It **is not an acc
 
 You will lose customers for each second it takes to load, so **keep it under 3 seconds**. This recommendation comes from research conducted by KissMetrics in the 2010s. They found that 40% or more of visitors abandon a website if it takes longer than 3 seconds to load. Over a decade later, it remains a key metric.
 
-Sluggishness: how a slow website damages your brand
----------------------------------------------------
+## Sluggishness: how a slow website damages your brand
 
 Many people will first learn about your business through your website. As such, it needs to **make a good first impression**. You don't want their main takeaway to be "that website was painfully slow."
 
@@ -59,18 +57,19 @@ Second, a high bounce rate means that **people aren't engaged**. They aren't rea
 
 Building on the second point, every bounce represents a **lost opportunity**. Each bounce is someone who didn't contact you. They didn't even consider what you may have to offer.
 
-Your **mobile performance** is the last area you must focus on to make a good impression. At least half of your web traffic will come from smartphones. Most people use their phone for local searches. These are searches like "[business category] near me" or "[service] in [city]."
+Your **mobile performance** is the last area you must focus on to make a good impression. At least half of your web traffic will come from smartphones. Most people use their phone for local searches. These are searches like "\[business category] near me" or "\[service] in \[city]."
 
 Why does this matter? Phones don't always have the best connection. You can't expect everyone to always have 5G service and full bars. Your website still needs to function under low-bandwidth circumstances.
 
 User perceptions, bounce rates, and the mobile experience build your brand's reputation. If customers experience slowness or clunkiness, they may question your quality and professionalism. You'll have difficulty bouncing back from this rough start as you later try to build trust.
 
-Does Google love you or hate you? Hint: slow hurts your rank
-------------------------------------------------------------
+## Does Google love you or hate you? Hint: slow hurts your rank
 
 **Search engine optimization**, or **SEO**, refers to how your website ranks in search results. Every website needs to do SEO. Organic traffic is unbeatable, even if you have a hefty advertising budget.
 
 I already touched on how high bounce rates can indirectly hurt your ranking. **Site speed** is another direct ranking factor, and **Google hates slow websites**. The faster site will win every time if two websites are equal in every way except for performance. Faster sites win, because they offer a better user experience. Do you see how the ranking factors are all interconnected and feed off each other?
+
+Google uses "mobile-first indexing" to decide which websites to show in search results. Mobile performance is a huge part of this, but it runs deeper. In my post on [why mobile-first matters](https://nevamasquerade.design/blog/mobile-first-matters/), I explore mobile optimization and how to make Google happy. 
 
 One way to measure and quantify your website's health is through the **Core Web Vitals**. The three main ones are the Largest Contentful Paint, the Interaction to Next Paint, and the Cumulative Layout Shift. I'll explain what they are shortly. They matter because they're a **ranking factor**. They're helpful to measure because a good score correlates with a good user experience. Am I sounding like a broken record yet?
 
@@ -82,8 +81,7 @@ Last, the **Cumulative Layout Shift** measures how much things move around while
 
 Fixing issues with your Core Web Vitals can get very technical. Resolving these issues takes time and expertise; I won't waste your time now. That said, you can use [PageSpeed Insights](https://pagespeed.web.dev/) to test how well your website is doing. You may not see Interaction to Next Paint in your results, but you should see a Total Blocking Time score. They're highly correlated, so if you optimize one, the other should be good.
 
-Are images and code weighing your site down?
---------------------------------------------
+## Are images and code weighing your site down?
 
 We've covered why slow websites are bad, but what makes your website slow in the first place? A lot of it comes down to the code. Before we dive into code, let's talk about images first.
 
@@ -117,8 +115,7 @@ Code is the language computers speak. It's different from the languages humans s
 
 **Custom coding** avoids these platform-specific issues of bloat and vulnerabilities. That said, it **requires more skill**. You need fluency in computer languages like HTML and CSS, but the result is **better if done well**. A good developer can create a hand-coded website that only includes the features you need. It doesn't go into the code if you don't need it. Clean. Simple. Fast.
 
-Money isn't the only cost for a slow website
---------------------------------------------
+## Money isn't the only cost for a slow website
 
 **Slow websites aren't cheap**. Sure, you can create a website for free or at a low monthly fee, so the upfront costs are low. Keep in mind: you get what you pay for.
 
@@ -132,8 +129,7 @@ If your **other marketing efforts** point back to your website, **you'll waste t
 
 As a lay person, you can fix some issues, but how many hours will it take? Are you willing to focus on this instead of helping your customers or running your business? How much time will you sink into your website to save a few bucks?
 
-Custom-code: your path to a faster website and growing business
----------------------------------------------------------------
+## Custom-code: your path to a faster website and growing business
 
 **A cheap website costs more than a quality one**. A professional website can avoid these hidden costs if you pick a good developer.
 
@@ -145,19 +141,18 @@ When I work on a website, **I want to see perfect scores**. 90 is the lowest acc
 
 My approach to websites enables such high scores. **I don't use** platforms like **WordPress or page builders** like Webflow. My websites are **100% custom-coded** using HTML, CSS, and JavaScript. Every line of code serves a purpose---if it doesn't, I don't add it. I also don't abandon my clients; **I want to build partnerships** that will last for many years. If we work together, I'll create a website with **fast, clean code** and **maintain it** for as long as we have a contract.
 
-Now you know better. What's next to get a faster website?
----------------------------------------------------------
+## Now you know better. What's next to get a faster website?
 
 We've covered a lot. To recap, we learned:
 
--   How humans can notice **delays** as short as **0.1 seconds** and **lose focus** in **10 seconds**;
--   That **sluggishness** can be your website's most memorable **brand trait**;
--   That **40%** or more people **bounce** after waiting for only **3 seconds**;
--   Why **search engines**, like Google, **hate slow websites**;
--   Why you should **optimize** your **images**;
--   Why **easy-to-use** website **platforms** make **slow**, bloated websites;
--   How a **slow website costs** a business **customers** and **isn't cheap**; and
--   What you should look for in a **developer**.
+* How humans can notice **delays** as short as **0.1 seconds** and **lose focus** in **10 seconds**;
+* That **sluggishness** can be your website's most memorable **brand trait**;
+* That **40%** or more people **bounce** after waiting for only **3 seconds**;
+* Why **search engines**, like Google, **hate slow websites**;
+* Why you should **optimize** your **images**;
+* Why **easy-to-use** website **platforms** make **slow**, bloated websites;
+* How a **slow website costs** a business **customers** and **isn't cheap**; and
+* What you should look for in a **developer**.
 
 It's okay to feel overwhelmed; websites are more complicated than they initially seem. Anyone can make something that looks and functions like a website. Elevating it to the next level requires time, effort, and skill. If you aren't in this space professionally, there's no shame in admitting that you're in over your head. You've done great coming this far.
 
