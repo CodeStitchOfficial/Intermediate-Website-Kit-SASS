@@ -1,9 +1,9 @@
 ---
 title: 9 ways your website is killing your business
-meta_title: Avoid these costly website mistakes
+meta_title: Is your website killing your business?
 url: 9-ways-websites-kill-business
-description: Don't let a bad website cost you customers! Learn about the design,
-  content, and technical mistakes that small businesses often miss.
+description: Is your website hurting your business? 9 common design, content, &
+  tech issues lose customers and hurt your search rank. Learn how to avoid them.
 author: Tianna Hutchins
 date: 2025-04-23T19:41:00.000Z
 tags:
