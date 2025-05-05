@@ -1,11 +1,11 @@
 ---
 title: "Slow website, lost opportunity: Are long load times driving away your
   customers?"
-meta_title: "Hidden costs: slow websites lose customers"
+meta_title: Slow websites lose customers
 url: slow-website-lost-opportunity
-description: Stop losing customers before they arrive. Your slow website
-  frustrates users, raises bounce rates, and hurts your search rank. Fix
-  performance and grow profits.
+description: Is a slow website driving away customers? Long load times annoy
+  visitors, raise bounce rates, and hurt search rank. Faster sites attract leads
+  & grow profits.
 author: Tianna Hutchins
 date: 2025-04-28T00:30:00.000Z
 tags:
