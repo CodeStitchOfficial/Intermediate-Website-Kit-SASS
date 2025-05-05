@@ -72,7 +72,7 @@ eleventyNavigation:
             <h1 class="cs-int-title">Blog</h1>
             <div class="cs-breadcrumbs">
                 <a href="/" class="cs-link">Home</a>
-                <a href="#" class="cs-link cs-active">Blog</a>
+                <a href="/{{ permalink }}" class="cs-link cs-active">Blog</a>
             </div>
         </div>
         <!--Background Image-->
@@ -119,14 +119,8 @@ eleventyNavigation:
                                     <span aria-hidden="true" class="blog-dot">&nbsp;</span>
                                     <span class="blog-date">{{ post.date | postDate }}</span>
                                 </div>
-                                <h3 class="cs-h3">{{ post.data.title }}</h3>
+                                <h3 class="cs-h3"><a href="{{ post.url }}" class="nm-link-title">{{ post.data.title }}</a></h3>
                                 <p class="cs-desc">{{ post.data.description }}</p>
-                                <a href="{{ post.url }}" class="cs-link">
-                                    <span>Continue Reading</span>
-                                    <img class="cs-arrow" loading="lazy" decoding="async"
-                                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
-                                            alt="icon" width="20" height="20" aria-hidden="true" />
-                                </a>
                             </div>
                         </div>
                     </article>

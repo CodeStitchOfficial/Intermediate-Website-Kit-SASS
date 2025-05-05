@@ -597,6 +597,9 @@
     /* 20px - 36px */
     gap: clamp(1.25rem, 2.6vw, 2.25rem);
   }
+  #cs-navigation .cs-button-solid {
+    font-size: clamp(0.7rem, 1.8vw, 0.9rem);
+  }
   #cs-navigation .cs-li {
     padding: 2rem 0;
     list-style: none;

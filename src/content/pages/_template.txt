@@ -29,7 +29,7 @@ eleventyNavigation:
                 <span class="cs-int-title">{{ eleventyNavigation.key }}</span>
                 <div class="cs-breadcrumbs">
                     <a href="/" class="cs-link">Home</a>
-                    <a href="#" class="cs-link cs-active">{{ eleventyNavigation.key }}</a>
+                    <a href="/{{ permalink }}" class="cs-link cs-active">{{ eleventyNavigation.key }}</a>
                 </div>
             </div>
             <!--Background Image-->
