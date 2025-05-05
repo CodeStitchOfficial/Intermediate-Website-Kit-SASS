@@ -21,7 +21,7 @@ In my post "[9 ways your website is killing your business](https://nevamasquerad
 
 If your website takes [over 3 seconds to load](https://blog.kissmetrics.com/wp-content/uploads/2011/04/loading-time.pdf), you've already lost **at least 40%** of your would-be customers. [88% of those people will never return](https://www.forbes.com/advisor/au/business/software/website-statistics/#scrollto_website_user_experience_statistics_section:~:text=88%25%20of%20online%20users%20won%E2%80%99t%20return%20to%20a%20site%20after%20a%20bad%20experience).
 
-Annoying your customers is bad for business. However, a slow website does more harm than annoying customers---it drives them away.
+Annoying your customers is bad for business. However, a slow website does more harm than annoying customers—it drives them away.
 
 ## A 10-second attention span: why website speed matters
 
@@ -91,9 +91,9 @@ We've covered why slow websites are bad, but what makes your website slow in the
 
 Every byte of data you put on your website adds to the processing needed to load your website. More data means longer load times, more waiting, and a higher bounce rate.
 
-**Never put a 5MB image on your website**---that's far bigger than it needs to be. Instead, crop and resize it to the size you need. Then, save it in a modern image format like AVIF or WebP. If you can't, save it as a JPG or PNG, and use online tools to compress and convert it.
+**Never put a 5MB image on your website**—that's far bigger than it needs to be. Instead, crop and resize it to the size you need. Then, save it in a modern image format like AVIF or WebP. If you can't, save it as a JPG or PNG, and use online tools to compress and convert it.
 
-**Aim for 20--40KB** for mobile images. Background images can be larger, but keep them under **100KB max**.
+**Aim for 20–40KB** for mobile images. Background images can be larger, but keep them under **100KB max**.
 
 This may sound like a lot of work, but it's worth it. Optimizing your images will help your website load faster.
 
@@ -139,7 +139,7 @@ Before you hire someone, ask them about their process. Do they test how their co
 
 When I work on a website, **I want to see perfect scores**. 90 is the lowest acceptable score for me, but I'm not stopping there; I want to see a perfect 100. Getting it that high is not always possible, especially if we need to add third-party scripts. But I promise to keep tweaking the code until it is the highest score I can reach.
 
-My approach to websites enables such high scores. **I don't use** platforms like **WordPress or page builders** like Webflow. My websites are **100% custom-coded** using HTML, CSS, and JavaScript. Every line of code serves a purpose---if it doesn't, I don't add it. I also don't abandon my clients; **I want to build partnerships** that will last for many years. If we work together, I'll create a website with **fast, clean code** and **maintain it** for as long as we have a contract.
+My approach to websites enables such high scores. **I don't use** platforms like **WordPress or page builders** like Webflow. My websites are **100% custom-coded** using HTML, CSS, and JavaScript. Every line of code serves a purpose—if it doesn't, I don't add it. I also don't abandon my clients; **I want to build partnerships** that will last for many years. If we work together, I'll create a website with **fast, clean code** and **maintain it** for as long as we have a contract.
 
 ## Now you know better. What's next to get a faster website?
 
