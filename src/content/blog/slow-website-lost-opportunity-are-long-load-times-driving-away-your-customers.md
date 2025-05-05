@@ -9,7 +9,6 @@ description: Stop losing customers before they arrive. Your slow website
 author: Tianna Hutchins
 date: 2025-04-28T00:30:00.000Z
 tags:
-  - featured
   - post
 image: /assets/images/blog/slow-website-lost-opportunity.webp
 imageAlt: A fat cat lounging on a sofa. Represents a slow, heavy website.
