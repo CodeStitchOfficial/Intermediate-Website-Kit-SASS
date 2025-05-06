@@ -1,5 +1,5 @@
 ---
-title: "Mobile-first matters: Optimize your website to rank higher and sell more"
+title: "Mobile-First Matters: Optimize Your Website to Rank Higher and Sell More"
 meta_title: "Mobile Websites: Win Local Customers & Rank Higher"
 url: mobile-first-matters
 description: Your customers use smartphones! Don't lose them to a bad website.
