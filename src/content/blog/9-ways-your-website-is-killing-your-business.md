@@ -1,6 +1,6 @@
 ---
-title: 9 ways your website is killing your business
-meta_title: Is your website killing your business?
+title: 9 Ways Your Website Is Killing Your Business
+meta_title: Is Your Website Killing Your Business?
 url: 9-ways-websites-kill-business
 description: Is your website hurting your business? 9 common design, content, &
   tech issues lose customers and hurt your search rank. Learn how to avoid them.
