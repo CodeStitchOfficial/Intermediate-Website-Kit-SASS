@@ -9,7 +9,7 @@ author: Tianna Hutchins
 date: 2025-05-04T20:38:00.000Z
 tags:
   - post
-image: /assets/images/blog/mobile-first-matters.webp
+image: /assets/images/blog/mobile-matters-social-graphic.webp
 imageAlt: A cat looking at a smarphone.
 social_image: /assets/images/blog/mobile-first-social-graphic.webp
 ---
