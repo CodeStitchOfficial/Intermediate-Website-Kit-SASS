@@ -1,5 +1,5 @@
 ---
-title: 'Small business website support'
+title: 'Small Business Website Support'
 description: 'Don't worry about your website. Get effortless support: hosting, updates, & copywriting. We'll keep your site running, you focus on what you do best.'
 preloadImg: '/assets/textures/blue-banner-m.webp'
 permalink: 'services/support/'
@@ -12,6 +12,8 @@ eleventyNavigation:
 {% extends "layouts/base.html" %}
 
 {% block head %}
+    {{ super() }}
+    <meta property="og:type" content="website" />
     <!-- Any page-specific tags that belong in the <head>, such as a page-specific stylesheet -->
         <link rel="stylesheet" href="/assets/css/content-pages.css" media="print" onload="this.media='all'; this.onload=null;" />
         <noscript>
@@ -110,10 +112,10 @@ eleventyNavigation:
                         Hosting and updates for small business websites
                     </h1>
                     <p>
-                        <strong>Websites</strong> are iterative and never carved in stone&mdash;they can and <strong>should get regular updates</strong>. You must also take <strong>many technical steps</strong> to <strong>connect</strong> your website to the <strong>Internet</strong>. If you aren't savvy with technology, don't worry; <strong>we're here to help</strong>.
+                        Websites are iterative and never carved in stone&mdash;they can and should get regular updates. You must also take many technical steps to connect your website to the Internet. If you aren't savvy with technology, don't worry; we're here to help.
                     </p>
                     <p>
-                        Some developers finish working on a website and leave you alone to figure things out. Others might be willing to make updates for a high hourly rate. Not us. <strong>We won't abandon you or charge you an obscene amount for a simple edit.</strong>
+                        Some developers finish working on a website and leave you alone to figure things out. Others might be willing to make updates for a high hourly rate. Not us. We won't abandon you or charge you an obscene amount for a simple edit.
                     </p>
                     <p>
                         We offer these website management services:
@@ -127,73 +129,74 @@ eleventyNavigation:
                     <h2 id="domain-management">
                         Your domain helps people find you; pick a good one.
                     </h2>
-                        <p>Computers use numbers, but people need words. Every website has a <strong>numerical IP address</strong>. For example, no one would ever remember &quot;208.80.153.224/27&quot;&mdash;we use wikipedia.org. This <strong>word-based version</strong> is the <strong>domain</strong>. The <strong>Domain Name System (DNS)</strong> translates the readable domain into the IP address. Your domain is how people will remember your website, so pick a good one!
+                        <p>
+                            Computers use numbers, but people need words. Every website has a numerical IP address. For example, no one would ever remember "208.80.153.224/27"&mdash;we use wikipedia.org. This word-based version is the domain. The Domain Name System (DNS) translates the readable domain into the IP address. Your domain is how people will remember your website, so pick a good one! 
                         </p>
                         <p>
-                            <strong>Every website needs an active domain</strong> (it expires if you forget to renew it). You must also <strong>maintain your DNS records</strong> to configure your website and email. Some common DNS records include:
+                            Every website needs an active domain (it expires if you forget to renew it). You must also maintain your DNS records to configure your website and email. Some common DNS records include:
                         </p>
                         <ul>
-                            <li><strong>A record:</strong> to <strong>assign</strong> your website's <strong>IP address</strong> to your <strong>domain</strong>;</li>
-                            <li><strong>CNAME record:</strong> to <strong>add an alias</strong> or alternate version of your domain;</li>
-                            <li><strong>MX record:</strong> to <strong>direct mail</strong> to your <strong>email server</strong>; and</li>
-                            <li><strong>TXT record:</strong> to <strong>prove</strong> you <strong>own the domain</strong> and that your <strong>emails aren't spam</strong>.</li>
+                            <li>A record: to assign your website's IP address to your domain;</li>
+                            <li>CNAME record: to add an alias or alternate version of your domain;</li>
+                            <li>MX record: to direct mail to your email server; and</li>
+                            <li>TXT record: to prove you own the domain and that your emails aren't spam.</li>
                         </ul>
                         <p>
-                            There are many more types of DNS records. We can <a href="/prices/#domain">manage your domain</a> for <strong>$20 a year</strong> if this stuff gives you a headache. Should you <strong>cancel</strong> our service, <strong>we'll return your domain without hassle</strong>. <strong>You always own your domain</strong>, even if we buy it for you.
+                            There are many more types of DNS records. We can <a href="/prices/#domain">manage your domain</a> for $20 a year if this stuff gives you a headache. Should you cancel our service, we'll return your domain without hassle. You always own your domain, even if we buy it for you.
                         </p>
                     <h2 id="hosting">
                         Hosting connects your website with the world.
                     </h2>
                         <p>
-                            <strong>Web hosting connects your website to the Internet</strong>. Your website's files live on the host's server. When you visit a website, your computer pings the host's server, which returns the files to you.
+                            Web hosting connects your website to the Internet. Your website's files live on the host's server. When you visit a website, your computer pings the host's server, which returns the files to you.
                         </p>
                         <p>
-                            A <strong>content delivery network</strong>, or <strong>CDN</strong>, works with the web host to <strong>improve website performance</strong>. A CDN is a global network of servers that can serve a cached version of your website. This network can make the website <strong>faster</strong> and <strong>more secure</strong>. Sharing the load also reduces the likelihood of crashing.
+                            A content delivery network, or CDN, works with the web host to improve website performance. A CDN is a global network of servers that can serve a cached version of your website. This network can make the website faster and more secure. Sharing the load also reduces the likelihood of crashing.
                         </p>
                         <p>
-                            Our web host offers a <strong>CDN at no extra charge</strong>. <strong>We include hosting with our Subscription websites</strong>. If you buy a <strong>Standard website</strong>, you can <a href="/prices/#hosting">add hosting for $25 a month</a>.
+                            Our web host offers a CDN at no extra charge. We include hosting with our Subscription websites. If you buy a Standard website, you can <a href="/prices/#hosting">add hosting for $25 a month</a>.
                         </p>
                     <h2 id="copywriting">
                         Clear copy converts
                     </h2>
                         <p>
-                            <strong>Don't make your customers think</strong>. Your website should be <strong>effortless</strong> to read and <strong>persuasive</strong>. Storytelling accomplishes this.
+                            Don't make your customers think. Your website should be effortless to read and persuasive. Storytelling accomplishes this.
                         </p>
                         <p>
-                            Your website and brand need to <strong>tell the story of a hero</strong>. In this story, the hero overcomes obstacles, solves their problems, and transforms themself. <strong>Your business is not the hero</strong>; your customer is. <strong>Your business is the mentor</strong> guiding them to success.
+                            Your website and brand need to tell the story of a hero. In this story, the hero overcomes obstacles, solves their problems, and transforms themself. Your business is not the hero; your customer is. Your business is the mentor guiding them to success.
                         </p>
                         <p>
-                            This narrative structure <strong>puts your customer first</strong>. Customers don't care about you; they care about how you can solve their problems. This approach shows <strong>how</strong> your <strong>product</strong> or <strong>service will improve their lives</strong>. <strong>Features</strong> and <strong>benefits</strong> are essential, but <strong>they aren't convincing</strong>. You need to <strong>show them how your offer will improve their lives</strong>.
+                            This narrative structure puts your customer first. Customers don't care about you; they care about how you can solve their problems. This approach shows how your product or service will improve their lives. Features and benefits are essential, but they aren't convincing. You need to show them how your offer will improve their lives.
                         </p>
                         <p>
-                            <strong>Explicit stories engage</strong> your customers and <strong>persuade</strong> them to act. Don't settle for bland copy that lists boring facts and fails to inspire action. <strong>You have a great offer</strong>; present it in a way that <strong>lets it shine</strong>.
+                            Explicit stories engage your customers and persuade them to act. Don't settle for bland copy that lists boring facts and fails to inspire action. You have a great offer; present it in a way that lets it shine.
                         </p>
                         <p>
-                            We've applied this approach throughout our website. If you have us <a href="/prices/#copywriting">write your copy</a>, we can do the same. We'll use the same <strong>framework</strong>, <strong>keyword research</strong>, and <strong>strong calls to action</strong>.
+                            We've applied this approach throughout our website. If you have us <a href="/prices/#copywriting">write your copy</a>, we can do the same. We'll use the same framework, keyword research, and strong calls to action.
                         </p>
                         <p>
-                            Also, our <a href="/prices/#brand-narrative">Brand Narrative</a> service <strong>gives you</strong> the <strong>narrative framework to use everywhere</strong>. Represent your brand with clear, consistent, and coordinated messaging across every channel.
+                            Also, our <a href="/prices/#brand-narrative">Brand Narrative</a> service gives you the narrative framework to use everywhere. Represent your brand with clear, consistent, and coordinated messaging across every channel.
                         </p>
                     <h2 id="unlimited-edits">
                         Unlimited content edits keep website updates simple.
                     </h2>
                         <p>
-                            Websites need updates. <strong>Search engines like</strong> to see <strong>regular updates</strong> and <strong>no broken links</strong>. You should have a <strong>content strategy</strong> and <strong>review your content on a schedule</strong>, looking for <strong>ways to improve</strong> it. It's good practice to keep your website updated.
+                            Websites need updates. Search engines like to see regular updates and no broken links. You should have a content strategy and review your content on a schedule, looking for ways to improve it. It's good practice to keep your website updated.
                         </p>
                         <p>
-                            <strong>We don't use page builders</strong> on our websites. This approach can result in <strong>faster performance</strong> and <strong>greater control</strong> over the code. But it can also make content updates <strong>more complex</strong>; you can't do it yourself. You lose some autonomy, but <strong>you'll never have to remember</strong> how to update your website. <strong>Send us an email,</strong> and <strong>we'll do the work</strong>.
+                            We don't use page builders on our websites. This approach can result in faster performance and greater control over the code. But it can also make content updates more complex; you can't do it yourself. You lose some autonomy, but you'll never have to remember how to update your website. Send us an email, and we'll do the work.
                         </p>
                         <p>
-                            Another benefit of having us do all the updates is <strong>governance</strong>. We can ensure that your <strong>website follows best practices</strong> and <strong>remains accessible</strong>.
+                            Another benefit of having us do all the updates is governance. We can ensure that your website follows best practices and remains accessible.
                         </p>
                         <p>
-                            As with hosting, our <strong>Subscription websites</strong> already include <a href="/prices/#unlimited-edits">unlimited content edits</a>. Add this service to a <strong>Standard website</strong> for <strong>$50 a year</strong>. Content edits <strong>include</strong> updates like <strong>changing photos</strong> or <strong>text</strong>. They <strong>do not include</strong> changing the look and feel of the website&mdash;that's a <strong>redesign</strong> and a separate charge.
+                            As with hosting, our Subscription websites already include <a href="/prices/#unlimited-edits">unlimited content edits</a>. Add this service to a Standard website for $50 a year. Content edits include updates like changing photos or text. They do not include changing the look and feel of the website&mdash;that's a redesign and a separate charge.
                         </p>
                     <h2>
                         Technical details shouldn't be your problem.
                     </h2>
                         <p>
-                            Jargon can always overwhelm and confuse people. Web jargon, in particular, can be a lot to learn, especially if technology isn't your strength. You <strong>don't need to worry</strong> about DNS records, web hosts, CDNs, best practices, or a content management system. <strong>Let us handle</strong> all these <strong>technical details</strong> while <strong>you focus on what you do best</strong>.
+                            Jargon can always overwhelm and confuse people. Web jargon, in particular, can be a lot to learn, especially if technology isn't your strength. You don't need to worry about DNS records, web hosts, CDNs, best practices, or a content management system. Let us handle all these technical details while you focus on what you do best.
                         </p>
                     <a href="/contact/" class="cs-button-solid">Book a call</a>
                 </div>

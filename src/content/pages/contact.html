@@ -1,6 +1,6 @@
 ---
-title: "Contact"
-description: "Does your small business need a new website and stronger branding? Contact Neva Masquerade to book a free call. Let's elevate your brand and grow your business!"
+title: "Book a Free Consultation"
+description: "Does your small business need a new website & stronger branding? Contact Neva Masquerade to book a free call. Let's elevate your brand & grow your business!"
 preloadImg: "/assets/textures/blue-banner-m.webp"
 permalink: "contact/"
 eleventyNavigation:
@@ -12,6 +12,8 @@ eleventyNavigation:
 {% extends "layouts/base.html" %}
 
 {% block head %}
+    {{ super() }}
+    <meta property="og:type" content="website" />
     <link rel="stylesheet" href="../../assets/css/contact.css" media="print" onload="this.media='all'; this.onload=null;" />
     <noscript>
         <link rel="stylesheet" href="/assets/css/contact.css" />
@@ -102,10 +104,10 @@ eleventyNavigation:
 
 <div id="banner-1106">
     <div class="cs-container">
-        <span class="cs-int-title">Contact us</span>
+        <span class="cs-int-title">Contact Us</span>
         <div class="cs-breadcrumbs">
             <a href="/" class="cs-link">Home</a>
-            <a href="/{{ permalink }}" class="cs-link cs-active">Contact us</a>
+            <a href="/{{ permalink }}" class="cs-link cs-active">Contact Us</a>
         </div>
     </div>
     <!--Background Image-->

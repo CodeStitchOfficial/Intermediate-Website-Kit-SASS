@@ -36,4 +36,5 @@ collections:
           - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
           - { label: "Featured Image", name: "image", widget: "image" }
           - { label: "Image Caption", name: "imageAlt", widget: "string" }
+          - { label: "Social Share Image", name: "social_image", widget: "image", hint: "A graphic including the title and featured image for social media sharing" }
           - { label: "Body", name: "body", widget: "markdown" }

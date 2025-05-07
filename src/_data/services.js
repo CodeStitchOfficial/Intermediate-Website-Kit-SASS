@@ -1,0 +1,22 @@
+// _data/services.js
+module.exports = {
+  stdWeb: { name: 'Standard Website', price: '3,000' },
+  subWeb: { name: 'Subscription Website', price: '175' },
+  figma: { name: 'Figma Design', price: '500' },
+  extraPages: { name: 'Extra Pages', price: '100' },
+  blog: { name: 'Blog Configuration', price: '250' },
+  darkMode: { name: 'Dark Mode', price: '150' },
+  hosting: { name: 'Hosting', price: '25' },
+  edits: { name: 'Unlimited Content Edits', price: '50' },
+  domain: { name: 'Domain Management', price: '20' },
+  copywriting: { name: 'Copywriting', price: '0.50' },
+  profileGraphic: { name: 'Social Media Profile Graphic', price: '100' },
+  socialGraphic: { name: 'Social Media Graphic', price: '35' },
+  socialSub: { name: 'Social Media Subscription', price: '75' },
+  businessCards: { name: 'Business Cards', price: '250' },
+  letterhead: { name: 'Letterhead & Envelopes', price: '500' },
+  otherGraphic: { name: 'Other Graphic Design', price: 'Varies' },
+  styleGuide: { name: 'Brand Style Guide', price: '1,000' },
+  narrative: { name: 'Brand Narrative', price: '500' },
+  consulting: { name: 'Consulting', price: '85' },
+};
