@@ -16,10 +16,10 @@
         <meta property="og:title" content="{{ title }}" />
         <meta property="og:description" content="{{ description }}" />
         <meta property="og:url" content="{{ client.domain }}{{ page.url }}" />
-        <meta property="og:image" content="{% if social_image %}/assets/images/blog{{ social_image }}{% else %}/assets/images/social-share-image.webp{% endif %}" />
+        <meta property="og:image" content="{% if collections.blog and collections.blog.includes(page) and social_image %}{{ social_image }}{% else %}/assets/images/social-share-image.webp{% endif %}" />
         <meta
             property="og:image:secure_url"
-            content="{% if social_image %}/assets/images/blog{{ social_image }}{% else %}/assets/images/social-share-image.webp{% endif %}"
+            content="{% if collections.blog and collections.blog.includes(page) and social_image %}{{ social_image }}{% else %}/assets/images/social-share-image.webp{% endif %}"
         />
 
         <link rel="preconnect" href="https://app.termly.io" crossorigin>
