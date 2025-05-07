@@ -11,6 +11,7 @@ tags:
   - post
 image: /assets/images/blog/9-ways-website-kills-business.webp
 imageAlt: A cat bites a hand as a visual metaphor of a website killing a business.
+social_image: /assets/images/blog/9-mistakes-social-graphic.webp
 ---
 People go online to look for local businesses. In 2021, Visual Objects surveyed 500 consumers. They found that [76% of people search for a company online](https://clutch.co/resources/benefits-of-local-seo#small-businesses-can-reach-mobile-users-with-local-seo-strategies:~:text=More%20than%20three%2Dquarters%20of%20consumers%20(76%25)%20will%20search%20for%20a%20company%20website%20before%20visiting%20their%20physical%20location.) before visiting in person.
 
