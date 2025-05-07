@@ -11,6 +11,7 @@ tags:
   - post
 image: /assets/images/blog/mobile-first-matters.webp
 imageAlt: A cat looking at a smarphone.
+social_image: /assets/images/blog/mobile-first-social-graphic.webp
 ---
 What do 91% of Americans have in common? Owning a smartphone is one response the Pew Research Center offers in its [2024 mobile fact sheet](https://www.pewresearch.org/internet/fact-sheet/mobile/). Another striking fact is that **15%** of Americans are "**smartphone only**" Internet users. Meaning roughly 52 million people access the Internet only through their smartphone.
 
