@@ -13,6 +13,8 @@ eleventyNavigation:
 {% extends "layouts/base.html" %}
 
 {% block head %}
+    {{ super() }}
+    <meta property="og:type" content="website" />
     <!-- Any page-specific tags that belong in the <head>, such as a page-specific stylesheet -->
     <link rel="stylesheet" href="/assets/css/404.css" media="print" onload="this.media='all'; this.onload=null;" />
     <noscript>

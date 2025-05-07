@@ -15,12 +15,11 @@
         <!--Social Media Display-->
         <meta property="og:title" content="{{ title }}" />
         <meta property="og:description" content="{{ description }}" />
-        <meta property="og:type" content="website" />
         <meta property="og:url" content="{{ client.domain }}{{ page.url }}" />
-        <meta property="og:image" content="/assets/images/social-share-image.webp" />
+        <meta property="og:image" content="{% if collections.blog and collections.blog.includes(page) and social_image %}{{ social_image }}{% else %}/assets/images/social-share-image.webp{% endif %}" />
         <meta
             property="og:image:secure_url"
-            content="/assets/images/social-image.png"
+            content="{% if collections.blog and collections.blog.includes(page) and social_image %}{{ social_image }}{% else %}/assets/images/social-image.png{% endif %}"
         />
 
         <link rel="preconnect" href="https://app.termly.io" crossorigin>

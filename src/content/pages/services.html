@@ -1,5 +1,5 @@
 ---
-title: 'Custom web design & branding | Services'
+title: 'Custom Web Design & Branding | Services'
 description: 'Explore our custom web design, support, & branding services for small businesses. Find the perfect solution to elevate your brand, stand out, & grow.'
 preloadImg: '/assets/textures/blue-banner-m.webp'
 permalink: 'services/'
@@ -11,6 +11,8 @@ eleventyNavigation:
 {% extends "layouts/base.html" %}
 
 {% block head %}
+    {{ super() }}
+    <meta property="og:type" content="website" />
     <!-- Any page-specific tags that belong in the <head>, such as a page-specific stylesheet -->
     <link rel="stylesheet" href="/assets/css/services.css" media="print" onload="this.media='all'; this.onload=null;" />
     <noscript>
@@ -99,7 +101,7 @@ eleventyNavigation:
                         <h2 class="cs-title"><span class="cs-color">Web design</span> and <span class="cs-color">branding</span> for your small business</h2>
                     </div>
                     <p class="cs-text">
-                        Get a <strong>fast, unique website</strong> that <strong>draws in customers</strong>. We'll guide you to a <strong>stunning online presence</strong> that <strong>reflects your brand</strong>. Your competition will never overshadow you again.
+                        Get a fast, unique website that draws in customers. We'll guide you to a stunning online presence that reflects your brand. Your competition will never overshadow you again.
                     </p>
                 </div>
                 <ul class="cs-card-group">

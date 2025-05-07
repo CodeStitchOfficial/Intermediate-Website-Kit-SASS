@@ -1,10 +1,10 @@
 ---
-title: 'Terms of service'
+title: 'Terms of Service'
 description: 'Latest Terms of Service for nevamasquerade.design. Learn about data privacy, termination clauses, and other important legal information.'
 preloadImg: '/assets/textures/blue-banner.webp'
 permalink: 'terms-of-service/'
 eleventyNavigation:
-    key: Terms of service
+    key: Terms of Service
     order: 1000
     hideOnMobile: 'true'
     hideOnDesktop: 'true'
@@ -13,6 +13,8 @@ eleventyNavigation:
 {% extends "layouts/base.html" %}
 
 {% block head %}
+    {{ super() }}
+    <meta property="og:type" content="website" />
     <!-- Any page-specific tags that belong in the <head>, such as a page-specific stylesheet -->
         <link rel="stylesheet" href="/assets/css/content-pages.css" media="print" onload="this.media='all'; this.onload=null;" />
         <noscript>

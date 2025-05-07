@@ -1,5 +1,5 @@
 ---
-title: 'Page title | Neva Masquerade'
+title: 'Page title'
 description: 'Description for <meta> description and OG tags'
 preloadImg: '/assets/textures/blue-banner-m.webp'
 permalink: 'page-path/'
@@ -14,6 +14,8 @@ eleventyNavigation:
 {% extends "layouts/base.html" %}
 
 {% block head %}
+    {{ super() }}
+    <meta property="og:type" content="website" />
     <!-- Any page-specific tags that belong in the <head>, such as a page-specific stylesheet -->
 {% endblock %}
 
