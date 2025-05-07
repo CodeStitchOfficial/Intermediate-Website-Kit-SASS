@@ -12,7 +12,7 @@ tags:
   - post
 image: /assets/images/blog/slow-website-lost-opportunity.webp
 imageAlt: A fat cat lounging on a sofa. Represents a slow, heavy website.
-social_image: /assets/images/blog/slow-website-social-graphic.webp
+social_image: /assets/images/blog/slow-websites-social-graphic.webp
 ---
 If you love standing in line, sitting in a traffic jam, or listening to hold music, you must yearn for the old days of dial-up Internet.
 
