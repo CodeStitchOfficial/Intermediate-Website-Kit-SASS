@@ -99,7 +99,7 @@ Every website I host uses the HTTPS protocol and SSL/TLS certificates. Security 
 
 ![Graphic: 3 content problems: 1) broken links; 2) low-quality content; and 3) ignoring SEO](/assets/images/blog/blog-graphics-02.webp)
 
-<a id="404s"></a>
+<a id="404"></a>
 
 ### Broken links
 
