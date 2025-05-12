@@ -74,7 +74,7 @@ Once you have data on your ideal customers, analyze it and create personas. A pe
 
 I plan to cover personas more in the future.
 
-![Graphic of a simple persona. Includes placeholder text for a name, demographic details, pain points, goals, and info sources.](/assets/images/blog/persona-graphic.webp "Sample persona with placeholder text. All the information should fit on a single presentation slide.")
+![Graphic of a simple persona. Includes placeholder text for a name, demographic details, pain points, goals, and info sources.](/assets/images/blog/persona-graphic.webp)
 
 Creating personas is a lot of work, but I promise it pays off. You don't need many; 3 is ideal. If you make too many personas, your messaging will suffer.
 
@@ -118,7 +118,7 @@ Not all elements appear on every landing page, but pages that convert use severa
 
 On the rest of my homepage, you'll find sections devoted to many of these elements. You'll also see the primary CTA repeated in most sections.
 
-![Graphic of Neva Masquerade's homepage annotating sections for: hero, services, problem, solution, how it works, prices, USP, and CTA.](/assets/images/blog/annotated-index-sections.webp "Neva Masquerade's homepage with each section identified. Can you spot which sections include more than one element?")
+![Graphic of Neva Masquerade's homepage annotating sections for: hero, services, problem, solution, how it works, prices, USP, and CTA.](/assets/images/blog/annotated-index-sections.webp)
 
 Additionally, ensure your landing page and website are usable. If people can't use your website and tell what you do or how to contact you, they may leave and go to your competition.
 
