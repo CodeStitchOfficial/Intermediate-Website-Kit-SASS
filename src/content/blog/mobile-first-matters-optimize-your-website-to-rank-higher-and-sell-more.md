@@ -30,7 +30,7 @@ Use these links to skip ahead to any section:
 * ["Plumber near me": why local search optimization matters](#local-seo)
 * [Tap, pinch, swipe vs. click, drag, scroll: how interactions define design](#interactions)
 * [Breakpoints: the web designer's best-kept secret for responsive websites](#breakpoints)
-* [Mobile-only or desktop-only? Why you need both](mobile-and-desktop-required)
+* [Mobile-only or desktop-only? Why you need both](#mobile-and-desktop-required)
 * [Make Google happy with mobile-optimizations; you'll do better in search results](#google-results)
 * [Mobile-first: the gold standard for good developers](#mobile-first-development)
 * [Mobile matters, now what?](#conclusion)
