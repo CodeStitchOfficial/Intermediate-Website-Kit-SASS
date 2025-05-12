@@ -124,6 +124,8 @@ The opposite problem, **a website only designed for mobile**, would also have is
 
 Both scenarios are bad because **people abandon unusable websites**. Would you put up with all these issues when a better website is a back button and one click away?
 
+<a id="google-results"></a>
+
 ## Make Google happy with mobile-optimizations; you'll do better in search results
 
 On the subject of search results, we need to talk about Google. It dominates the competition with an overwhelming market share of around 90%. With **9 out of 10 searches done on Google**, it's good to understand how it works.
