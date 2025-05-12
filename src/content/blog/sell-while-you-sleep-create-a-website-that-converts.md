@@ -44,9 +44,9 @@ Instead, think of your website as an employee who never eats, sleeps, or takes t
 * establishing your credibility and expertise in your field, and even
 * convincing people to open their wallets to give you their money.
 
-Take that, Yellow Pages---Internet: 1, phone books: 0.
+Take that, Yellow Pages—Internet: 1, phone books: 0.
 
-None of this happens on its own; you have to be intentional and strategic. First, you need to know your audience. Then, you need to guide them down your sales funnel. This takes a lot of effort and trial and error to learn what works. Get it right and you'll reap the benefits of inbound marketing.
+None of this happens on its own; **you have to be intentional and strategic**. First, you need to know your audience. Then, you need to guide them down your sales funnel. This takes a lot of effort and trial and error to learn what works. Get it right and you'll reap the benefits of inbound marketing.
 
 Keep one thing in mind: you can't sell to everyone. If you try to appeal to everyone, you won't attract anyone. Identify your ideal customer, then focus on meeting their specific needs. You will alienate some people, but you can also build a community of true believers. The latter group is so much more important than people who were unlikely to ever buy from you in the first place.
 
@@ -62,9 +62,9 @@ For a new business, you don't have an existing customer base to tap into, so you
 * reports from research organizations, and
 * discussions on online forums such as Reddit.
 
-If your business is already established, survey your existing customers. You'll gain insights into why they chose you that you can leverage to convince other people to buy as well. You should also ask for ways you can improve; that feedback may be even more valuable.
+If your business is already established, **survey your existing customers**. You'll gain insights into why they chose you that you can leverage to convince other people to buy as well. You should also ask for ways you can improve; that feedback may be even more valuable.
 
-Once you have data on your ideal customers, analyze it and create personas. A persona is a fictitious person representing a group of real people. Make your personas as realistic as possible, so that they feel like actual people. Personas often include:
+Once you have data on your ideal customers, analyze it and create personas. A **persona** is a fictitious person representing a group of real people. Make your personas as realistic as possible, so that they feel like actual people. Personas often include:
 
 * a memorable name,
 * demographics,
@@ -84,7 +84,7 @@ Reflect on your personas often and use them as a benchmark. Ask yourself, "What 
 
 Your website should help your personas achieve their goals. If Jesse's basement floods, they need to find your phone number as soon as possible to get that leak fixed. If Rebecca and Lauren need to plan for retirement, they don't want a scammy life insurance policy. They want to be confident that you'll put their best interests first.
 
-Your website should provide solutions to real people's problems. If it does, your services will sell themselves.
+Your website should **provide solutions to real people's problems**. If it does, your services will sell themselves.
 
 <a id="page-elements"></a>
 
@@ -116,7 +116,7 @@ Not all elements appear on every landing page, but pages that convert use severa
 * shows a transformation (elevate your brand, grow your business); and
 * includes a primary CTA (book a call) and a secondary CTA (how it works).
 
-On the rest of my homepage, you'll find sections devoted to many of these elements. You'll also see the primary CTA repeated in most sections.
+On the rest of the homepage, you'll find sections devoted to many of these elements. You'll also see the primary CTA repeated in most sections.
 
 ![Graphic of Neva Masquerade's homepage annotating sections for: hero, services, problem, solution, how it works, prices, USP, and CTA.](/assets/images/blog/annotated-index-sections.webp)
 
@@ -130,17 +130,17 @@ If your mobile website sucks, people may return to the search results and check 
 
 ## Effective copywriting frameworks: your roadmap to success
 
-A well-designed and clear layout is essential. If your website doesn't communicate what you do or how to reach you, it has failed to do its job. Design without communication isn't design---it's art.
+A well-designed and clear layout is essential. If your website doesn't communicate what you do or how to reach you, it has failed to do its job. Design without communication isn't design—it's art.
 
-To get conversions, you need to marry the aesthetics (design) with the copy (content). How do you do this? Follow these battle-tested copywriting frameworks.
+To get conversions, you need to marry the aesthetics (design) with the copy (content). How do you do this? Follow these battle-tested **copywriting frameworks**.
 
 ### Storytelling
 
 The world's most successful brands tell stories. Nike inspires you to overcome obstacles and "Just do it." Apple invites you to challenge the status quo with "Think different." Patagonia empowers you to fight against consumerism by telling you, "Don't buy this jacket."
 
-These brands are memorable and iconic. It isn't because of their products, though---it's for the transformation they offer. The company isn't the hero of the story; the customer is. *You* triumph. *You* break out of the mold. *You* save our planet.
+These brands are memorable and iconic. It isn't because of their products, though—it's for the transformation they offer. The company isn't the hero of the story; the customer is. *You* triumph. *You* break out of the mold. *You* save our planet.
 
-The good news is that you don't need millions of dollars to tell a story. You only need to identify the characters and plot points. Joseph Campbell's hero's journey includes 12 steps, but Donald Miller condensed it down to 7 for brands:
+The good news is that you don't need millions of dollars to tell a story. You only need to **identify the characters and plot points**. Joseph Campbell's hero's journey includes 12 steps, but Donald Miller condensed it down to 7 for brands:
 
 1. A character (your customer)
 2. Has a problem (their struggles)
@@ -150,19 +150,19 @@ The good news is that you don't need millions of dollars to tell a story. You on
 6. They succeed (they buy your offer) or fail (they don't buy it)
 7. And transform (from struggling to successful).
 
-You may notice that many of these steps correlate to your landing page's main elements. This isn't a coincidence---persuasive copy tells a story. And yes, I did use this approach for Neva Masquerade.
+You may notice that many of these steps correlate to your landing page's main elements. This isn't a coincidence—persuasive copy tells a story. And yes, I did use this approach for Neva Masquerade.
 
 Refer to your personas while crafting your brand's story; remember they're the hero, not you.
 
 ### PAS (Problem-Agitate-Solution)
 
-This popular framework reminds (or enlightens) your reader that they have a problem. Once they're aware of it, you pour salt in the wound to make them feel the pain and want an immediate remedy. At this point, your reader is ready to hear your offer---they have a problem and they want it fixed, now. You can now explain how you can ease their pain.
+This popular framework reminds (or enlightens) your reader that they have a problem. Once they're aware of it, you pour salt in the wound to make them feel the pain and want an immediate remedy. At this point, your reader is ready to hear your offer—they have a problem and they want it fixed, now. You can now explain how you can ease their pain.
 
-PAS is effective because it prods the buyer into action. People can be prone to entropy---objects at rest tend to stay at rest. Sure, that pesky problem is annoying, but meh, it's not worth the effort to change anything. PAS makes them realize that they are the frog in a pot of water that's starting to boil. It is a serious problem, and they must take action now.
+PAS is effective because it **prods the buyer into action**. People can be prone to entropy—objects at rest tend to stay at rest. Sure, that pesky problem is annoying, but meh, it's not worth the effort to change anything. PAS makes them realize that they are the frog in a pot of water that's starting to boil. It is a serious problem, and they must take action now.
 
 ### AIDA (Attention-Interest-Desire-Action)
 
-A classic marketing technique, AIDA is particularly relevant for social media content.
+A classic marketing technique, AIDA is particularly **relevant for social media content**.
 
 First, you hook the reader's attention with something like:
 
@@ -199,7 +199,7 @@ Resist this urge.
 
 AI can be a powerful tool. It can automate and speed up various tasks. It can help generate ideas. It can process more information than a human ever could. Love it or hate it, AI isn't going anywhere.
 
-With that said, do not rely on AI to generate all your sales copy. It's a tempting shortcut for sure, but be cautious.
+With that said, **do not rely on AI to generate all your sales copy**. It's a tempting shortcut for sure, but be cautious.
 
 In December 2024, NielsenIQ released a study on [consumer perceptions of AI-generated ads](https://nielseniq.com/global/en/news-center/2024/niq-research-uncovers-hidden-consumer-attitudes-toward-ai-generated-ads/). They found that people intuitively identified most of the AI-generated content as such. Many people can recognize AI content without much thought. They also concluded that :
 
@@ -217,7 +217,7 @@ Can you ever use AI? Absolutely! Here's how I use it:
 * proofreading my writing, and
 * researching topics quickly.
 
-I don't accept AI outputs without thought; it's not foolproof. I've received many incomplete or inaccurate responses. If I use it for copy, I edit it to make it my voice. I don't use AI to generate content---I use it as an assistant to improve my work.
+I don't accept AI outputs without thought; it's not foolproof. I've received many incomplete or inaccurate responses. If I use it for copy, I edit it to make it my voice. I don't use AI to generate content—I use it as an assistant to check and improve my work.
 
 <a id="poor-content-costs"></a>
 
@@ -225,7 +225,7 @@ I don't accept AI outputs without thought; it's not foolproof. I've received man
 
 Whether a human or AI writes your content, it needs to persuade people and bring them closer to buying. If it doesn't do that, it's failing.
 
-Weak web content costs you opportunities.
+**Weak web content costs you opportunities.**
 
 Imagine spending $10,000 on ads and getting 0 sales. This can happen if you're directing people to an ineffective or unconvincing page. You got a click, so that lead was at least somewhat interested in you. Tragically, your website couldn't convince them to stay and convert.
 
@@ -242,7 +242,7 @@ Here's how I approach websites and copywriting:
 5. Design and code the website to fit the copy.
 6. Edit the copy again once it's in place on the website.
 
-Design and content are inseparable. You can't have one without the other. It's best to design around content to keep your messaging strong. Otherwise, you may need to butcher your content to make it fit the layout.
+**Design and content are inseparable.** You can't have one without the other. It's best to design around content to keep your messaging strong. Otherwise, you may need to butcher your content to make it fit the layout.
 
 <a id="conclusion"></a>
 
