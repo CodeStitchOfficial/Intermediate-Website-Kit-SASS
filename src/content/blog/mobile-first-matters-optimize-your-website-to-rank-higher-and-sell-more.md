@@ -23,6 +23,20 @@ I've touched on the importance of a good mobile experience before. A bad mobile 
 
 Now let's dive into why mobile matters.
 
+## Jump to a section
+
+Use these links to skip ahead to any section:
+
+* ["Plumber near me": why local search optimization matters](#local-seo)
+* [Tap, pinch, swipe vs. click, drag, scroll: how interactions define design](#interactions)
+* [Breakpoints: the web designer's best-kept secret for responsive websites](#breakpoints)
+* [Mobile-only or desktop-only? Why you need both](mobile-and-desktop-required)
+* [Make Google happy with mobile-optimizations; you'll do better in search results](#google-results)
+* [Mobile-first: the gold standard for good developers](#mobile-first-development)
+* [Mobile matters, now what?](#conclusion)
+
+<a id="local-seo"></a>
+
 ## "Plumber near me": why local search optimization matters
 
 A week ago, my shower started dripping nonstop. I rent, so I texted my landlord to get it fixed, but if I were a homeowner, I would need to find a plumber myself.
@@ -42,6 +56,8 @@ Do you need more convincing? Seoprofy put together a list of [76 Local SEO Stati
 7. 4 out of 5 mobile searches lead to a sale, often within hours. ([SearchEngineWatch](https://www.searchenginewatch.com/2014/04/09/80-of-local-searches-on-mobile-phones-convert-study/))
 
 I cannot emphasize this enough: **your success depends on your website's mobile version**. Many people will first encounter your business through your mobile website. Make sure it's a good first impression!
+
+<a id="interactions"></a>
 
 ## Tap, pinch, swipe vs. click, drag, scroll: how interactions define design
 
@@ -67,6 +83,8 @@ Different types of **interactions impact usability**, but so does **speed**. [Hu
 
 Moreover, your website needs to **load in under 3 seconds** and function under all conditions. That includes low bandwidth and a weak cell signal—no one has 5G and full bars 100% of the time. I cover website speed in depth in "[Slow website, lost opportunity: Are long load times driving away your customers?](https://nevamasquerade.design/blog/slow-website-lost-opportunity/)"
 
+<a id="breakpoints"></a>
+
 ## Breakpoints: the web designer's best-kept secret for responsive websites
 
 Your website needs to look good on all devices. No one wants to spend time on a website incompatible with their device, but it's easier said than done.
@@ -82,6 +100,8 @@ You don't need to use every breakpoint every time. Some components work fine wit
 I always check how the design looks at all sizes between breakpoints too. If it looks awkward or broken, I'll make adjustments until it looks good at that size. Then, I'll test it again to ensure I didn't break it at any other sizes.
 
 Earlier, I explained how mobile and desktop versions have different requirements. Breakpoints define those differences. They let us define the design's appearance and functionality at various sizes. Don't overlook breakpoints!
+
+<a id="mobile-and-desktop-required"></a>
 
 ## Mobile-only or desktop-only? Why you need both
 
@@ -124,6 +144,8 @@ There are several implications of mobile-first indexing for your website. To ran
 
 Whatever you do, **don't neglect your mobile website**—it will cost you.
 
+<a id="mobile-first-development"></a>
+
 ## Mobile-first: the gold standard for good developers
 
 Now that we've covered the essentials, let's revisit mobile-first development. Your website's success depends on how well it supports smartphone users' needs.
@@ -141,6 +163,8 @@ If you were to start with the more complex layout, you'd need more lines of code
 **I use a mobile-first approach** on my websites. If you were to examine my stylesheets, you'd find an 80/20 split in my code. I estimate that about 80% of the code provides the base styles for mobile. The remaining 20% adds the variations for larger screens.
 
 One last benefit is that mobile-first code is **easier to maintain**. This is especially true if you follow other best practices like "don't repeat yourself." Fewer lines of code mean fewer places to update or for bugs to hide.
+
+<a id="conclusion"></a>
 
 ## Mobile matters, now what?
 
