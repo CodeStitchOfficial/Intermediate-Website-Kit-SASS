@@ -10,7 +10,7 @@ tags:
   - post
 image: /assets/images/blog/sell-while-you-sleep.webp
 imageAlt: A fat, business cat wearing a necktie sits on a messy desk.
-social_image: /assets/images/blog/sell-while-you-sleep-social-image.webp
+social_image: /assets/images/blog/sell-while-you-sleep-social-image.png
 ---
 A website doesn't do much good if no one visits it, but getting clicks is hard work. It takes time, money, or both to gain traction. Advertisements can bring you a lot of views quickly, but if your targeting is wrong, that's wasted money. Content marketing, which is my primary strategy, takes months to yield results. Referrals are ideal, but outside of your control.
 
