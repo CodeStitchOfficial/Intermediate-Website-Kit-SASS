@@ -27,19 +27,21 @@ I see websites as a three-legged stool; the whole thing will collapse if one leg
 
 I've identified three major problems for each leg. I'll expand on each in future blog posts, but for now, the **nine pitfalls every website should avoid** include:
 
-1. Long load time
-2. Bad mobile experience
-3. Security problems
-4. Broken links
-5. Low-quality content
-6. No search engine optimization
-7. Poor structure
-8. Outdated and amateurish design
-9. Low-quality images
+1. [Long load time](#load-time)
+2. [Bad mobile experience](#mobile)
+3. [Security problems](#security)
+4. [Broken links](#404)
+5. [Low-quality content](#content)
+6. [No search engine optimization](#seo)
+7. [Poor structure](#structure)
+8. [Outdated and amateurish design](#design)
+9. [Low-quality images](#images)
 
 ## Technical problems
 
 ![Graphic: 3 technical problems: 1) long load time; 2) bad mobile experience; and 3) security problems](/assets/images/blog/blog-graphics-01.webp)
+
+<a id="load-time"></a>
 
 ### Long load time
 
@@ -61,6 +63,8 @@ I do everything I can to optimize my websites as much as possible. Before adding
 
 ![Screenshot showing perfect scores for Neva Masquerade in PageSpeed Insights.](/assets/images/blog/pagespeed-insights-perfect-score.webp)
 
+<a id="mobile"></a>
+
 ### Looks bad on mobile
 
 Most visitors to your website are likely using their phone. According to StatCounter, in March 2025, [62.21% of people used a mobile device](https://gs.statcounter.com/platform-market-share/desktop-mobile-tablet) to access the Internet. When focusing on the United States, it's closer to a 50/50 split between mobile and desktop.
@@ -76,6 +80,8 @@ Just as people leave slow websites, **they'll bounce if it looks bad or is unusa
 I use **two or three breakpoints** for most sections on my websites. First, I style each component for **mobile as the default view**, then I'll add more styles for larger screens. Sometimes, mobile and tablet or larger suffice. Other times, I need to style mobile, tablet, and desktop separately. 
 
 I also check every design at various screen sizes multiple times throughout development. If anything looks off, I'll keep adjusting things until I'm happy with how it looks. Then I'll test at different sizes again to be confident I didn't break one of the other sizes.
+
+<a id="security"></a>
 
 ### Security problems
 
@@ -93,6 +99,8 @@ Every website I host uses the HTTPS protocol and SSL/TLS certificates. Security 
 
 ![Graphic: 3 content problems: 1) broken links; 2) low-quality content; and 3) ignoring SEO](/assets/images/blog/blog-graphics-02.webp)
 
+<a id="404s"></a>
+
 ### Broken links
 
 Have you ever clicked on a link, only to get a "404 page not found" error message? It's annoying. If you get too many on the same website, you might get frustrated by the poor user experience and leave.
@@ -101,7 +109,9 @@ Have you ever clicked on a link, only to get a "404 page not found" error messag
 
 **You need to check your website for broken links**. If your website is small, you can do this by clicking every link. If you don't want to spend time doing a manual check, there are many free and paid tools to automate it. **Google Search Console** is a good free option.
 
-I use Google Search Console for Neva Masquerade. It helps me understand how Google sees my website. I can also use it to identify potential problems beyond broken links. Its many reports can provide valuable information.  
+I use Google Search Console for Neva Masquerade. It helps me understand how Google sees my website. I can also use it to identify potential problems beyond broken links. Its many reports can provide valuable information.
+
+<a id="content"></a>  
 
 ### Low-quality content
 
@@ -117,7 +127,9 @@ When you write, you must also consider **why you're writing** and **who it's for
 
 Develop a **content strategy** to give your writing purpose. You should also set a schedule to audit all your pages to keep them current and relevant. Rewriting old content is a great way to give it new life and boost your website's search results.
 
-I do all this on my website. I use Grammarly to catch errors and the free Hemingway Editor to keep my writing simple and easy to read. If I need help with ideas, research, or fact-checking, I'll use Gemini; otherwise, I don't use AI for my content. 
+I do all this on my website. I use Grammarly to catch errors and the free Hemingway Editor to keep my writing simple and easy to read. If I need help with ideas, research, or fact-checking, I'll use Gemini; otherwise, I don't use AI for my content.
+
+<a id="seo"></a>
 
 ### Ignoring SEO
 
@@ -141,6 +153,8 @@ I do all the **on-page SEO** I can for every website I touch. Every developer sh
 
 ![Graphic: 3 design problems: 1) poor structure; 2) outdated design; and 3) low-quality images.](/assets/images/blog/blog-graphics-03.webp)
 
+<a id="structure"></a>
+
 ### Bad structure
 
 **People can't buy from you if they can't find what they want**. Shallow navigation, orphaned pages, and illogical links make your content hard to find.
@@ -149,7 +163,9 @@ Your navigation labels should be clear, intuitive, and match your customers' men
 
 **Give some thought to your website's organization**. If you can, ask your customers where they would think to go to find x—their responses may surprise you.
 
-Shallow navigation isn't a concern for a basic 5-page website. But, if I'm working on a website with 15, 20, or more pages, I'm mindful about creating hierarchy and content pillars. I also always follow **best practices for URLs** and add **breadcrumb trails** to all page headers. 
+Shallow navigation isn't a concern for a basic 5-page website. But, if I'm working on a website with 15, 20, or more pages, I'm mindful about creating hierarchy and content pillars. I also always follow **best practices for URLs** and add **breadcrumb trails** to all page headers.
+
+<a id="design"></a>
 
 ### Outdated or amateurish design
 
@@ -169,6 +185,8 @@ I'm mindful of **design principles** and **best practices**. Using Neva Masquera
 * 100px padding for the top and bottom of every section. 
 
 Every aspect of a design should be a conscious and intentional choice. That's why I like to get to know my clients, it lets me make good choices that suit them and not my personal tastes.
+
+<a id="images"></a>
 
 ### Low-quality images
 
