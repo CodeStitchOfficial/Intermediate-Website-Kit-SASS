@@ -20,7 +20,7 @@ What? You don't like wasting time doing any of those things? Well, neither do yo
 
 In my post "[9 ways your website is killing your business](https://nevamasquerade.design/blog/9-ways-websites-kill-business/)," I explain how a website is like a three-legged stool. The whole thing will collapse if one leg is weak or missing. Speed is a non-negotiable part of the technical infrastructure leg. Long load times weaken your website and put it at risk of collapse.
 
-If your website takes [over 3 seconds to load](https://blog.kissmetrics.com/wp-content/uploads/2011/04/loading-time.pdf), you've already lost **at least 40%** of your would-be customers. [88% of those people will never return](https://www.forbes.com/advisor/au/business/software/website-statistics/#scrollto_website_user_experience_statistics_section:~:text=88%25%20of%20online%20users%20won%E2%80%99t%20return%20to%20a%20site%20after%20a%20bad%20experience).
+If your website takes [over 3 seconds to load](https://blog.kissmetrics.com/wp-content/uploads/2011/04/loading-time.pdf), you've already lost at least 40% of your would-be customers. [88% of those people will never return](https://www.forbes.com/advisor/au/business/software/website-statistics/#scrollto_website_user_experience_statistics_section:~:text=88%25%20of%20online%20users%20won%E2%80%99t%20return%20to%20a%20site%20after%20a%20bad%20experience).
 
 Annoying your customers is bad for business. However, a slow website does more harm than annoying customers—it drives them away.
 
@@ -148,7 +148,7 @@ If your website is an obligatory expense to check off a box and look official, s
 
 A slow website has higher bounce rates. People who bounce could have been leads. Something compelled them to click on your website. You could have solved their problem, but your website got in the way. The slow website **lost a potential lead** or even a **loyal, repeat customer**.
 
-If your **other marketing efforts** point back to your website, **you'll waste time and money**. The same issues that lead to a high bounce rate will create holes in your marketing funnel.
+If your **other marketing efforts** point back to your website, **you'll waste time and money**. The same issues that lead to a high bounce rate will create holes in your marketing funnel. Your website should be a 24/7 salesperson—I explore how this works in "[Sell While You Sleep: Create a Website That Converts](https://nevamasquerade.design/blog/sell-while-you-sleep/)." But it won't matter how well you've optimized your content if no one ever reads it. 
 
 As a lay person, you can fix some issues, but how many hours will it take? Are you willing to focus on this instead of helping your customers or running your business? How much time will you sink into your website to save a few bucks?
 
