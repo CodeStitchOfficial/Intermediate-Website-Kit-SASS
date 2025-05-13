@@ -119,11 +119,13 @@ A beautiful website can only carry you so far. You could design and code your we
 
 Poor content can take a few different forms:
 
-* **Spelling** and **grammar errors** that challenge your professionalism and attention to detail. 
-* **Lack of structure** or **organization** that confuses readers and obscures your offer. 
+* **Spelling** and **grammar errors** that challenge your professionalism and attention to detail.
+* **Lack of structure** or **organization** that confuses readers and obscures your offer.
 * **AI-generated content** that is bland, generic, and devoid of authenticity.
 
 When you write, you must also consider **why you're writing** and **who it's for**. Your writing should also serve a purpose. You're wasting your time if it doesn't help your customer or further a business goal.
+
+Your website's content should also work for you—think of it as a salesperson who never eats, sleeps, or gets sick. Build sales funnels into your web content to attract leads and customers. I explore this topic in "[Sell While You Sleep: Create a Website That Converts](https://nevamasquerade.design/blog/sell-while-you-sleep/)."
 
 Develop a **content strategy** to give your writing purpose. You should also set a schedule to audit all your pages to keep them current and relevant. Rewriting old content is a great way to give it new life and boost your website's search results.
 
