@@ -1,11 +1,3 @@
-backend:
-    name: git-gateway
-    branch: main
-
-local_backend: true
-# change url to a link to the image you want to use, no file paths, must be a URL
-logo_url: https://codestitch.app/frontend/images/logo.png
-
 # copy and paste here from Decapbridge
 
 
