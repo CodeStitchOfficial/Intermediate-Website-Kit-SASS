@@ -264,7 +264,7 @@ Note the if-check in the `class` attribute of the anchor element. Here, we're ch
 
 The `admin/` directory sets up [Decap CMS](https://decapcms.org/) to be used within the project. It's configured as a blog that a client can access by navigating to the `/admin/` path on the deployed site, where they can create, update, and delete blog posts whenever they want. This modifies the markdown files in the source code, which will trigger a rebuild in Netlify, incorporating the new blog data. After about one minute, the client can see the new blog post on the website.
 
-Decap CMS has been chosen due to its open-source nature, good UX/DX, and stability. Very little training is required on the client's end to get it to work - the interface is clean and operates without trouble. It works through an `index.html` file in the `admin/` directory that contains a CDN script for the CMS. This `index.html` file is processed as an Eleventy template, added to `/public/admin`, and the CMS is loaded when navigating to the `/admin` path.
+Decap CMS has been chosen due to its open-source nature, good UX/DX, and stability. Very little training is required on the client's end to get it to work - the interface is clean and operates without trouble. It works through an `index.html` file in the `admin/`. This `index.html` file is processed as an Eleventy template, added to `/public/admin`, and the CMS is loaded when navigating to the `/admin` path. This kit uses DecapBridge for authentication as the Netlify Identity feature has been deprecated
 
 The CMS is configured through a `config.yml` file, as per the Decap documentation. If you wish to use the blog as-is, you shouldn't need to make any changes here. If you want to extend the kit and modify the CMS for your own needs, we recommend referring to the Decap documentation for guidance on how to do so.
 
@@ -377,8 +377,80 @@ When you're happy with your website, you can deploy it to your hosting provider 
 4.  Find your project in the list of repositories.
 5.  Everything should be already configured, thanks to the `netlify.toml` file. Click **Deploy [PROJECT NAME]**.
 6.  Check to see if your site deploys without error. The site should be live, but we still need to set up the CMS.
-7.  Go to **Site Configuration > Identity**, and select **Enable Identity service**.
-8.  Under **Registration preferences**, select **Open** or **Invite only**. In most cases, you want only invited users to access your CMS, but if you're just experimenting, you can leave it open for convenience.
-9.  If you'd like to allow one-click login with services like Google and GitHub, check the boxes next to the services you'd like to use under **External providers**.
-10. Scroll down to **Services > Git Gateway**, and click **Enable Git Gateway**. This authenticates with your Git host and generates an API access token. In this case, we're leaving the **Roles** field blank, which means any logged-in user may access the CMS. For information on changing this, check the [Netlify Identity documentation](https://www.netlify.com/docs/identity/).
-11. Test the CMS by navigating to `/admin` on the deployed website
+
+With slight modifications for usage with 11ty, this setup guide for DecapBridge was written by Geoffrey on the [Intermediate Astro Decap kit](https://github.com/CodeStitchOfficial/Intermediate-Astro-Decap-CMS/blob/main/README.md?plain=1#deployment)
+
+> [!IMPORTANT]
+> This kit now uses decapbridge.com for its authentication solution. If you still use Netlify Identity, please refer to [the Netlify Identity branch](https://github.com/CodeStitchOfficial/Intermediate-Astro-Decap-CMS/tree/deprecated---using-Netlify-Identity)
+
+> [!TIP]
+> If you are updating your kit from Netlify Identity to decapbridge.com:
+>
+> 1. Login to your Netlify account
+> 2. Navigate to Projects/Your-Site
+> 3. Navigate to Project Configuration/Identity and delete the Netlify Identity instance. This will delete your users as well. They will have to be re-created in decapbridge later.
+> 4. Delete the Netlify Identity script in src/index.html and in src/admin/index.html
+
+### On decapbridge.com:
+
+1. Make sure that your repo is on Github and your site is deployed (doesn’t have to be Netlify) before moving on to the next step.
+2. Navigate to https://decapbridge.com/ and create an account. It’s free.
+3. Navigate to the dashboard and Create New Site. You see this screen:
+
+![decapbridge.com dashboard](readme-images/decapbridge-dashboard.png)
+
+Fill in the 3 input fields:
+
+- Github repository: it has to be in a `user-or-org/repository-name` format. e.g. `BuckyBuck135/testing-decapbridge`
+- Github access token.
+  To create a personal access token in GitHub, follow these steps:
+
+  1. Log into your Github account.
+  2. Click on your profile picture (top right) (not the repository profile), and click the “Settings” link.
+  3. Scroll down and click the “Developer Settings” link.
+  4. Click the GitHub “Personal access tokens” link and choose `fine-grained tokens`
+  5. Click the “Generate new token” button and provide your password again if required.
+  6. Provide a name for the GitHub personal access token in the “Note” field.
+  7. Set the access token’s “expiration” timeout to “No expiration.”
+  8. Set the “Repository access” to the desired repository only.
+  9. Set the “Permissions / Repository permissions” to **read-write access** for this repository's **Contents** and **Pull requests**. (This is needed by DecapCMS to read your markdown, and write new content via Pull Requests.)
+  10. Click “Generate token.”, double check the permissions and click the Generate Token button
+  11. **Make sure to copy your GitHub Personal Access Token now as you will not be able to see this again.**
+
+      ![The Permissions settings](readme-images/github-permissions.png)
+
+  12. Double check your permissions before generating the token. It must have read and write access to Contents and Pull Requests.
+
+- Decap CMS URL: provide the (deployed) URL of the Decap CMS dashboard. e.g [`https://testing-decapbridge.netlify.app/admin/#/`](https://testing-decapbridge.netlify.app/admin/#/)
+
+### On your CS Decap kit:
+
+1. In `/src/admin/config.yml`, edit the `backend` Decap config to paste in the snippet provided by the [DecapBridge.com](http://DecapBridge.com) dashboard. It should look something like this:
+
+```yaml
+# Use DecapBridge auth (required)
+backend:
+  name: git-gateway
+  repo: BuckyBuck135/testing-decapbridge # provided by decapbridge
+  branch: main
+  identity_url: https://auth.decapbridge.com/sites/5605bbe7-08f2-4ce5-bce2-7d97def08bed # provided by decapbridge
+  gateway_url: https://gateway.decapbridge.com # provided by decapbridge
+
+  # Quickly see who did what (optional)
+  commit_messages:
+    create: Create {{collection}} “{{slug}}” - {{author-name}} <{{author-login}}> via DecapBridge
+    update: Update {{collection}} “{{slug}}” - {{author-name}} <{{author-login}}> via DecapBridge
+    delete: Delete {{collection}} “{{slug}}” - {{author-name}} <{{author-login}}> via DecapBridge
+    uploadMedia: Upload “{{path}}” - {{author-name}} <{{author-login}}> via DecapBridge
+    deleteMedia: Delete “{{path}}” - {{author-name}} <{{author-login}}> via DecapBridge
+    openAuthoring: Message {{message}} - {{author-name}} <{{author-login}}> via DecapBridge
+
+# Better Decap + Bridge logo (optional)
+logo_url: https://decapbridge.com/decapcms-with-bridge.svg
+
+# Add site links in DecapCMS (optional)
+site_url: https://testing-decapbridge.netlify.app
+```
+
+2. Push changes to the repo and test the authentication system. As the admin of the site, your login credentials to access the Decap dashboard are the same as your decapbridge.com credentials.
+3. Invite your client from your decapbridge dashboard. This will create a decapbridge collaborator account for them. From there, they will be able to access their Decap dashboard, reset their password etc.
