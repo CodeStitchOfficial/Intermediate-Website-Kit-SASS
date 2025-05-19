@@ -4,33 +4,33 @@
 <--- -------------------------- -*/
 /* Mobile */
 @media only screen and (min-width: 0rem) {
-    :root {
-        --dark: #082032;
-        --medium: #2c394b;
-        --accent: #334756;
-    }
-    body.dark-mode {
-        background-color: var(--dark);
-    }
-    body.dark-mode p,
-    body.dark-mode li,
-    body.dark-mode h1,
-    body.dark-mode h2,
-    body.dark-mode h3,
-    body.dark-mode h4,
-    body.dark-mode h5,
-    body.dark-mode h6 {
-        color: #fff;
-    }
-    body.dark-mode .light {
-        display: none;
-    }
-    body.dark-mode .dark {
-        display: block !important;
-    }
-    .dark {
-        display: none;
-    }
+  :root {
+    --dark: #082032;
+    --medium: #2c394b;
+    --accent: #334756;
+  }
+  body.dark-mode {
+    background-color: var(--dark);
+  }
+  body.dark-mode p,
+  body.dark-mode li,
+  body.dark-mode h1,
+  body.dark-mode h2,
+  body.dark-mode h3,
+  body.dark-mode h4,
+  body.dark-mode h5,
+  body.dark-mode h6 {
+    color: #fff;
+  }
+  body.dark-mode .light {
+    display: none;
+  }
+  body.dark-mode .dark {
+    display: block !important;
+  }
+  .dark {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=dark.css.map */
