@@ -381,7 +381,7 @@ When you're happy with your website, you can deploy it to your hosting provider 
 With slight modifications for usage with 11ty, this setup guide for DecapBridge was written by Geoffrey on the [Intermediate Astro Decap kit](https://github.com/CodeStitchOfficial/Intermediate-Astro-Decap-CMS/blob/main/README.md?plain=1#deployment)
 
 > [!IMPORTANT]
-> This kit now uses decapbridge.com for its authentication solution. If you still use Netlify Identity, please refer to [the Netlify Identity branch](https://github.com/CodeStitchOfficial/Intermediate-Astro-Decap-CMS/tree/deprecated---using-Netlify-Identity)
+> This kit now uses decapbridge.com for its authentication solution. If you still use Netlify Identity, please refer to [the Netlify Identity branch](https://github.com/CodeStitchOfficial/Intermediate-Website-Kit-SASS/tree/deprecated---using-Netlify-Identity)
 
 > [!TIP]
 > If you are updating your kit from Netlify Identity to decapbridge.com:
