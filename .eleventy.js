@@ -1,6 +1,7 @@
 // Imports
 const pluginEleventyNavigation = require("@11ty/eleventy-navigation");
-const pluginMinifier = require("@sherby/eleventy-plugin-files-minifier");
+const eleventyPluginSharpImages = require("@codestitchofficial/eleventy-plugin-sharp-images");
+const pluginMinifier = require("@codestitchofficial/eleventy-plugin-minify");
 const pluginSitemap = require("@quasibit/eleventy-plugin-sitemap");
 
 // Configs
@@ -15,7 +16,7 @@ const isProduction = configServer.isProduction;
 
 module.exports = function (eleventyConfig) {
     /**=====================================================================
-          EXTENSIONS - Recognising non-default languages as templates 
+          EXTENSIONS - Recognising non-default languages as templates
     =======================================================================*/
     /** https://www.11ty.dev/docs/languages/custom/ */
 
@@ -37,9 +38,14 @@ module.exports = function (eleventyConfig) {
     =======================================================================*/
 
     /**=====================================================================
-                  PLUGINS - Adds additional eleventy functionality 
+                  PLUGINS - Adds additional eleventy functionality
     =======================================================================*/
     /** https://www.11ty.dev/docs/plugins/ */
+
+    eleventyConfig.addPlugin(eleventyPluginSharpImages, {
+        urlPath: "/assets/images",
+        outputDir: "public/assets/images",
+    });
 
     /**
      *  ELEVENTY NAVIGATION

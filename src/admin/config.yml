@@ -1,14 +1,14 @@
-backend:
-    name: git-gateway
-    branch: main
+# copy and paste here from Decapbridge
 
+
+# Keep this to allow you to edit the cms locally
 local_backend: true
-# change url to a link to the image you want to use, no file paths, must be a URL
-logo_url: https://codestitch.app/frontend/images/logo.png
 
+# Image folders
 media_folder: "src/assets/images/blog"
 public_folder: "/assets/images/blog"
 
+# Decap CMS Collections
 collections:
     - name: "blog"
       label: "Blog"
