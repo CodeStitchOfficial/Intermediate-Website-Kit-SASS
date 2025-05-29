@@ -63,7 +63,7 @@
     width: 100%;
     max-width: 36.5625rem;
     /* 380px - 453px */
-    aspect-ratio: 800/583;
+    aspect-ratio: 398/290;
     height: auto;
     /* clips the img tag corners */
     overflow: hidden;
@@ -77,7 +77,7 @@
     left: 0;
     height: 100%;
     width: 100%;
-    aspect-ratio: 5/4;
+    aspect-ratio: 398/290;
     /* makes image act as a background image */
     object-fit: cover;
   }
@@ -197,7 +197,7 @@
   }
   #hero-288 .cs-picture {
     max-width: 39.375rem;
-    aspect-ratio: 750/1000;
+    aspect-ratio: 630/814;
     /* 623px - 814px */
     height: auto;
   }
