@@ -110,7 +110,7 @@ eleventyNavigation:
                 <div class="cs-content">
                     <h1 class="cs-title">Upfront prices for small business design services</h1>
                         <p>
-                            Are you frustrated by hidden prices? It's impossible to budget if you don't know how much something should cost. Transparent pricing is better for everyone, so we're upfront about how much you'll pay to work with us.     
+                            <strong>Tired of budgeting in the dark? Sick of playing hide-and-seek with web design prices? </strong> Everyone benefits from transparent pricing, yet too many people keep their pricing a secret. That's absurd. At Neva Masquerade, you'll find upfront, predictable prices for all our services. No surprises. No sales tricks to snag your contact information. Just clear costs so that you can plan your budget and invest in a website and branding that work for you. Then you can get back to focusing on what matters most: growing your business.   
                         </p>
                         <p>
                             Each service in our price tables links to a description explaining what it is and why you should buy it.
@@ -135,11 +135,6 @@ eleventyNavigation:
                                     <td><a href="#subscription-website">{{ services.subWeb.name }}</a></td>
                                     <td>${{ services.subWeb.price }}/month</td>
                                     <td>5-page website, $0 down with monthly payments</td>
-                                </tr>
-                                <tr>
-                                    <td><a href="#figma">{{ services.figma.name }}</a></td>
-                                    <td>${{ services.figma.price }} (starts at)</td>
-                                    <td>Design files for a developer</td>
                                 </tr>
                                 <tr>
                                     <td><a href="#extra-pages">{{ services.extraPages.name }}</a></td>
@@ -253,20 +248,17 @@ eleventyNavigation:
                             Web design
                         </h2>
                             <p>
-                                Small businesses don't need complicated websites or a content management system. WordPress is high-maintenance and overkill for our clients' needs. Do you enjoy spending more time and money on your website than you need to? 
+                                Here's a secret the big players in web design don't want you to know: Simpler is often better. They want to sell you a fancy content management system filled with distracting bells and whistles. Yet, most small businesses and freelancers simply need the basics. No bloated page builders. No AI chatbots. All you need is clean code and a clear message. 
                             </p>
                             <h3 class="cs-h3" id="standard-website">
                                 <span class="cs-name">{{ services.stdWeb.name }}</span>
                                 <span class="cs-price"><span class="nm-price-mod">Starts at</span> ${{ services.stdWeb.price }}</span>
                             </h3>
                                 <p>
-                                    Do you have a good amount of cash in your budget and want to own your website? If so, the {{ services.stdWeb.name }} is right for you.
+                                    Do you have a solid budget and wish to own your website? The {{ services.stdWeb.name}} is your clear choice. You pay upfront, and everything is yours to do with as you please. No lingering payments. No incomplete or limited exports. No strings attached.
                                 </p>
                                 <p>
-                                    You pay for the {{ services.stdWeb.name }} upfront and own everything.
-                                </p>
-                                <p>
-                                    You can host and maintain it yourself, but we don't recommend that. It's best to add <a href="#hosting">{{ services.hosting.name }}</a> and <a href="#unlimited-edits">{{ services.edits.name }}</a>.
+                                    You are free to manage hosting and updates yourself, but we don't recommend it, to be frank. We build our websites to perform well, but we sacrifice ease of updating to achieve this. They need developer skills and tools to manage them. That's why we offer ongoing <a href="#hosting">{{ services.hosting.name }}</a> and <a href="#unlimited-edits">{{ services.edits.name }}</a>. Your website lives up to its full potential, and you don't need to worry about editing code.
                                 </p>
                                 <div class="nm-columns">
                                     <div class="nm-column">
@@ -285,7 +277,7 @@ eleventyNavigation:
                                                 <ul>
                                                     <li>Responsive, mobile-first design (looks great on phones)</li>
                                                     <li>PageSpeed Insights scores of 90+ (loads fast and performs well)</li>
-                                                    <li>Meets WCAG 2.2 AA standards (accessible to people with disabilities)</li>
+                                                    <li>Accessible to all users (meets WCAG 2.2 AA standards)</li>
                                                 </ul>
                                             </li>
                                             <li>
@@ -295,20 +287,20 @@ eleventyNavigation:
                                     </div>
                                     <div class="nm-column">
                                         <p class="nm-include">
-                                            Does not include:
+                                            Add-ons:
                                         </p>
                                         <ul>
                                             <li>
-                                                <a href="#hosting">{{ services.hosting.name }}</a> (add ${{ services.hosting.price }}/month)</li>
+                                                <a href="#hosting">{{ services.hosting.name }}</a>: Keep your site online, without the technical headaches. (${{ services.hosting.price }}/month)</li>
                                                 <li>
-                                                <a href="#unlimited-edits">{{ services.edits.name }}</a> (add ${{ services.edits.price }}/month)</li>
+                                                <a href="#unlimited-edits">{{ services.edits.name }}</a>: Effortlessly update your content for SEO and engagement. (${{ services.edits.price }}/month)</li>
                                                 <li>
-                                                <a href="#extra-pages">{{ services.extraPages.name }}</a> (add ${{ services.extraPages.price }} fee for each page)</li>
+                                                <a href="#extra-pages">{{ services.extraPages.name }}</a>: Expand your site as needed. (${{ services.extraPages.price }} fee for each page)</li>
                                                 <li>
-                                                <a href="#blog-configuration">{{ services.blog.name }}</a> and training session (add ${{ services.blog.price }} fee)</li>
+                                                <a href="#blog-configuration">{{ services.blog.name }}</a>: Boost your SEO and connect with your audience. (${{ services.blog.price }} fee)</li>
                                                 <li>
-                                                <a href="#dark-mode">{{ services.darkMode.price }}</a> (add ${{ services.darkMode.price }} fee)</li>
-                                                <li>Design refreshes</li>
+                                                <a href="#dark-mode">{{ services.darkMode.name }}</a>: A modern touch that enhances user experience. (${{ services.darkMode.price }} fee)</li>
+                                                <li><em>Please note: This package does not include future design refreshes.</em></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -317,16 +309,10 @@ eleventyNavigation:
                                 <span class="cs-price">${{ services.subWeb.price }} <span class="nm-price-mod">/ month</span></span>
                             </h3>
                                 <p>
-                                    Do you have a limited budget and no upfront capital? Do you want to refresh your website's style every few years without paying extra? If you answer yes, the {{ services.subWeb.name }} fits your needs.
+                                    Does a professional website feel like a costly, out-of-reach dream? Do you want a trendy look without paying an arm and a leg to refresh it? If this is you, look no further than the {{ services.subWeb.name }}. For an affordable monthly payment, you can have a high-performing, custom-coded site. You'll also get <a href="#hosting">{{ services.hosting.name }}</a>, <a href="#unlimited-edits">{{ services.edits.name }}</a>, and even periodic design refreshes. It's the frugal option that keeps your brand modern and effective.
                                 </p>
                                 <p>
-                                    You'll pay for your website monthly, and over time, you'll pay for it in full. To give you continued value, we'll let you redesign your website every few years at no extra charge. This frugal option will keep your website fresh and modern.
-                                </p>
-                                <p>
-                                    The subscription also includes <a href="#hosting">{{ services.hosting.name }}</a> and <a href="#unlimited-edits">{{ services.edits.name }}</a>. This adds even more value to your monthly payment.
-                                </p>
-                                <p>
-                                    To make this model work, we own the website. Your domain and the content you provide are always yours, but the design and code are ours. We do this to protect our investment in you. Building a website without upfront payment is a gamble. If you cancel after the first year, we won't receive payment for all our time and labor.
+                                    To make this flexible model possible, we handle ownership in a different manner. We own the design and codebase. You own your domain and all the content you provide. This structure makes custom, top-tier websites accessible to those with smaller budgets. It also lets us provide continuous value and a perpetually fresh online presence.                                
                                 </p>
                                 <div class="nm-columns">
                                     <div class="nm-column">
@@ -340,12 +326,12 @@ eleventyNavigation:
                                                 <ul>
                                                     <li>Responsive, mobile-first design (looks great on phones)</li>
                                                     <li>PageSpeed Insights scores of 90+ (loads fast and performs well)</li>
-                                                    <li>Meets WCAG 2.2 AA standards (accessible to people with disabilities)</li>
+                                                    <li>Accessible to all users (meets WCAG 2.2 AA standards)</li>
                                                 </ul>
                                             </li>
                                             <li><a href="#hosting">{{ services.hosting.name }}</a> (${{ services.hosting.price }} value)</li>
                                             <li><a href="#unlimited-edits">{{ services.edits.name }}</a> (${{ services.edits.price }} value)</li>
-                                            <li>Design refreshes every ~3 years ($3,000 value)</li>
+                                            <li>Design refreshes every ~3 years (${{ services.stdWeb.price }} value)</li>
                                         </ul>
                                     </div>
                                     <div class="nm-column">
@@ -353,91 +339,55 @@ eleventyNavigation:
                                             Does not include:
                                         </p>
                                         <ul>
-                                            <li>Ownership of the design and codebase</li>
-                                            <li><a href="#extra-pages">{{ services.extraPages.name }}</a> (add ${{ services.extraPages.price }} fee for each page)</li>
-                                            <li><a href="#blog-configuration">{{ services.blog.name }}</a> and training session (add ${{ services.blog.price }} fee)</li>
-                                            <li><a href="#dark-mode">{{ services.darkMode.name }}</a> (add ${{ services.darkMode.price }} fee)</li>
+                                            <li><a href="#extra-pages">{{ services.extraPages.name }}</a>: Expand your site as needed. (${{ services.extraPages.price }} fee for each page)</li>
+                                            <li><a href="#blog-configuration">{{ services.blog.name }}</a>: Boost your SEO and connect with your audience. (${{ services.blog.price }} fee)</li>
+                                            <li><a href="#dark-mode">{{ services.darkMode.name }}</a>: A modern touch that enhances user experience. (${{ services.darkMode.price }} fee)</li>
+                                            <li><em>Please note: This package does not include ownership of the design and codebase.</em></li>
                                         </ul>
                                     </div>
                                 </div>
-                            <h3 class="cs-h3" id="figma">
-                                <span class="cs-name">{{ services.figma.name }}</span>
-                                <span class="cs-price"><span class="nm-price-mod">Starts at</span> ${{ services.figma.price }}</span>
-                            </h3>
-                                <p>
-                                    Do you have a developer and need a web designer? If so, a {{ services.figma.name }} is the solution you need.
-                                </p>
-                                <p>
-                                    Figma is the industry standard platform for web designs and prototypes. We'll create an annotated design in Figma for your developer to use. Our design will include 4 breakpoints to ensure it looks good on different devices. The total price will depend on:
-                                </p>
-                                <ul>
-                                    <li>the number of page designs you need,</li>
-                                    <li>the complexity of the content and sections and</li>
-                                    <li>if you need more than 2 rounds of revisions.</li>
-                                </ul>
                             <h3 class="nm-h3">
                                 Add-ons
                             </h3>
                                 <p>
-                                    Both website packages include 5 custom-designed and custom-coded pages. You can add more features and services to either package. All are one-time charges.
+                                    Need more from your website? Not a problem. Whether you have more to say or just want to spice things up, our add-ons will grow with you. Pay for them once and reap the benefits for years to come.
                                 </p>
                                 <h4 class="nm-h4" id="extra-pages">
                                     <span class="cs-name">{{ services.extraPages.name }}</span>
                                     <span class="cs-price">${{ services.extraPages.price }} <span class="nm-price-mod">/ each</span></span>
                                 </h4>
                                     <p>
-                                        Do you need more than 5 pages?
-                                    </p>
-                                    <p>
-                                        We can create as many as you need. After we've built the page, we'll never charge you for working on it again.
-                                    </p>
-                                    <p>
-                                        This fee covers the time and effort required to create each extra page.
+                                        Psst...Did you know that websites aren't carved in stone? They need regular updates, which can include adding new pages. A chaotic hodgepodge with all the keywords confuses both search engines and users. Instead, you should break those bad boys up into separate pages with a single, clear message. We can create as many pages as you need. This fee covers the development time needed to set up the page; once it's built, you'll never pay for it again.
                                     </p>
                                 <h4 class="nm-h4" id="blog-configuration">
                                     <span class="cs-name">{{ services.blog.name }}</span>
                                     <span class="cs-price">${{ services.blog.price }}</span>
                                 </h4>
                                     <p>
-                                        Do you want to blog to improve your website's search engine optimization (SEO)?
+                                        Ignore the naysayers, blogging isn't dead. Don't base your retirement plan on your blog, but it's far from a waste of time. Good blogs aren't about monetization; they exist to boost your SEO and build authority.
                                     </p>
                                     <p>
-                                        We can add a blog for you to manage yourself. To do this, we use Decap CMS. It works with static websites (like what we build). Unlike WordPress, it doesn't have a database, so it has lower maintenance and is more secure. It's also super easy to use.
-                                    </p>
-                                    <p>
-                                        This fee covers configuring Decap CMS, styling the blog, and a training session on how to use it.
+                                        WordPress is the most popular blogging platform. We don't use it. Its database creates vulnerabilities, and it is extremely high-maintenance. Yuck. Instead, we use Decap CMS. It keeps your website fast, secure, and simple to update. This fee covers the complete setup, custom styling, and a live training session. We put our money where our mouth is: Neva Masquerade's blog uses Decap CMS. It isn't flashy, but it is easy to use and gets the job done.
                                     </p>
                                 <h4 class="nm-h4" id="dark-mode">
                                     <span class="cs-name">{{ services.darkMode.name }}</span>
                                     <span class="cs-price">${{ services.darkMode.price }}</span>
                                 </h4>
                                     <p>
-                                        Are you a fan of dark mode? Do you want to wow people?
-                                    </p>
-                                    <p>
-                                        Dark mode adds a modern feature your competitors may not have on their websites. It can also benefit people with certain eye conditions. It's a good feature.
-                                    </p>
-                                    <p>
-                                        This fee covers the extra CSS work required to add dark mode styles to your website.
+                                        Are you a fan of dark mode? Your customers might be. Why not wow them with a cutting-edge aesthetic that few small businesses offer? But dark mode is more than just a style; it can also be a thoughtful touch. Dark mode reduces eye fatigue for many and aids people with certain eye conditions. It's a valuable feature and well worth the extra effort. See it in action by tapping the moon or sun icon on the right side of the menu bar.
                                     </p>
                         <h2 id="support">
                             Support
                         </h2>
                             <p>
-                                Your website needs don't end with design and development. Websites demand continuous maintenance and support, as well as good content. Do you have someone experienced in this line of work?
+                                Congratulations on launching your new website! Now you never have to think about it again. Wait, that's not right. Websites demand ongoing attention and care to remain healthy. Do you have the time or expertise to keep it running and make Google happy? Good news, you don't have to. Our support services take care of that stuff so that you can relax and focus on other priorities.
                             </p>
                             <h3 class="cs-h3" id="domain">
                                 <span class="cs-name">{{ services.domain.name }}</span>
                                 <span class="cs-price">${{ services.domain.price }} <span class="nm-price-mod">/ year</span></span>
                             </h3>
                                 <p>
-                                    Do you know what a domain is? What about DNS records?
-                                </p>
-                                <p>
-                                    Your domain is like your website's name. You need to renew it yearly, or it will expire and break your website. The Domain Name System (DNS) connects your website and email to your domain.
-                                </p>
-                                <p>
-                                    We can manage all this for you for a small annual fee.
+                                    So, a domain is...? And DNS records do what exactly? This stuff is technical; it's okay if you don't understand it. A lapsed domain means a broken website and no emails. No emails sounds kinda nice... no, that's bad. For a small annual fee, we can take this technical burden off your plate. We'll ensure your domain remains active and connected.
                                 </p>
                             <h3 class="cs-h3" id="hosting">
                                 <span class="cs-name">{{ services.hosting.name }}</span>
@@ -447,16 +397,7 @@ eleventyNavigation:
                                     (Included with {{ services.subWeb.name }})
                                 </span>
                                 <p>
-                                    Do you know what a web host is or how it works?
-                                </p>
-                                <p>
-                                    Don't worry, most non-technical people don't. Hosting is what puts your website on the Internet and makes it available to your customers.
-                                </p>
-                                <p>
-                                    You can choose to host your {{ services.stdWeb.name }} yourself. If you do, you must set up the right tech stack and troubleshoot it if something goes wrong.
-                                </p>
-                                <p>
-                                    Or, we can do it all for you. If a problem comes up, we'll take care of it. You don't need to do a thing.
+                                    Do you ever wonder how the Internet works? Magic. Joking, it's a bunch of computers and servers talking to each other imperceptibly fast. Hosting is how your website joins the party. Can you set up the tech stack yourself and troubleshoot issues when they happen? Sure, but why would you want to? Let us handle it. We'll keep your website online and running smoothly, so you don't need to lift a finger.
                                 </p>
                             <h3 class="cs-h3" id="unlimited-edits">
                                 <span class="cs-name">{{ services.edits.name }}</span>
@@ -466,77 +407,47 @@ eleventyNavigation:
                                     (Included with {{ services.subWeb.name }})
                                 </span>
                                 <p>
-                                    Do you want to make Google happy by keeping your website up-to-date?
-                                </p>
-                                <p>
-                                    Regular updates can improve your ranking in search results. This monthly retainer covers all updates to your existing pages.
-                                </p>
-                                <p>
-                                    We'll take care of everything and won't charge for the time it takes. The retainer covers it all.
+                                    Our online overlord demands regular updates to show that we are worthy of attention. By that, I mean Google wants to see updates so that it knows your website isn't dead. If you neglect to make updates, Google will favor your active rivals, and you'll slip through the ranks. This monthly retainer gives you peace of mind. From text tweaks to image swaps, send us an email and we'll take care of it. No invoices for every minor edit. No wrestling with a content management system. Just seamless updates to please the overlord.
                                 </p>
                             <h3 class="cs-h3" id="copywriting">
                                 <span class="cs-name">{{ services.copywriting.name }}</span>
                                 <span class="cs-price">${{ services.copywriting.price }} <span class="nm-price-mod">/ word</span></span>
                             </h3>
                                 <p>
-                                    Do you know how to write persuasive copy?
+                                    Let's be realistic: the world's most stunning design won't save your website if the content is sucks. Don't overlook the power of persuasive copy. And don't use AI-generated text without editing it. If you want your content to connect, it needs a human touch. 
                                 </p>
                                 <p>
-                                    A website is only as good as its content. The most stunning website with perfect code won't be effective if the content sucks. Brand storytelling offers a proven framework that engages and persuades.
-                                </p>
-                                <p>
-                                    We'll use this approach to turn boring features and benefits into a compelling story. If you add our <a href="#brand-narrative">{{ services.narrative.name }}</a> service, we'll give you these talking points and tips on how to use them on your own.
+                                    We can help you turn dry, boring information into dynamic, persuasive copy. Seriously, does anyone think websites are an engaging topic? Who wants to read about CDNs and client-side rendering? Yawn. The secret to transforming mundane features into compelling benefits: brand storytelling and a touch of personality. Sprinkle on some copywriting frameworks, and that snore-fest can become vibrant and engaging. Don't just fill space, make every word count.
                                 </p>
                         <h2 id="branding">
                             Branding
                         </h2>
                             <p>
-                                You don't need millions to be a brand&mdash;you already are one. But existing doesn't mean it's any good. You need to be consistent and strategic to build your brand and make it good. How effective is your brand today?
+                                Fact: You already have a brand. Is it working for you or against you? A brand is so much more than a logo, color palette, and fonts. It's your voice. It's your message. It's your every interaction. Your brand should be consistent and strategic; otherwise, it's just chaotic digital noise. We can help you bring order to the chaos. You don't need millions to craft a message that is clear, consistent, and unforgettable.
                             </p>
                             <h3 class="cs-h3" id="social-banner">
                                 <span class="cs-name">{{ services.profileGraphic.name }}</span>
                                 <span class="cs-price">${{ services.profileGraphic.price }}</span>
                             </h3>
                                 <p>
-                                    Do you have Facebook, LinkedIn, or other social media accounts?
-                                </p>
-                                <p>
-                                    Many platforms have space for a banner image on your profile page. Many people put a pretty picture there, but that's a waste of space. Turn it into a digital billboard to drive potential leads into your marketing funnel.
-                                </p>
-                                <p>
-                                    Unique selling proposition + call to action + social proof = a banner image with purpose
-                                </p>
-                                <p>
-                                    We style this winning formula to look like it belongs to your brand. Use it to make your profile part of your customer acquisition strategy.
+                                    You're on social media, right? You're using your profile to nudge people into your sales funnel, yes? Oh, your banner is just a nice-looking picture; that's a shame. The profile banner is a valuable piece of digital real estate — use it wisely. We can transform this often neglected area into a powerful digital billboard. Our formula: your unique selling proposition, a clear call to action, and social proof. Add in styles that complement your website, and you're well on the way to a cohesive brand and a solid customer acquisition strategy.
                                 </p>
                             <h3 class="cs-h3" id="social-graphic">
                                 <span class="cs-name">{{ services.socialGraphic.name }}</span>
                                 <span class="cs-price">${{ services.socialGraphic.price }}</span>
                             </h3>
                                 <p>
-                                    Do you know how to grab attention on social media?
-                                </p>
-                                <p>
-                                    It varies by platform, but eye-catching visuals are a must for many. A good graphic can stop scrolling and hold attention. People need to recognize you when they see your graphics, and then they need to remember you.
-                                </p>
-                                <p>
-                                    We can take the text and any images you provide and turn them into a branded graphic.
+                                    Social media is brutal. With every post, you are at the mercy of the algorithm. It can feel like you're speaking to the void. How do you win attention? Social media strategy often feels overwhelming and mysterious. First, you have to find your voice. Then you need to grab attention. One way to do this is with graphics. We can take your text and images and create instantly recognizable and memorable graphics that reinforce your brand. Remember, every interaction builds your brand, so make every impression count. 
                                 </p>
                             <h3 class="cs-h3" id="social-subscription">
                                 <span class="cs-name">{{ services.socialSub.name }}</span>
                                 <span class="cs-price">${{ services.socialSub.price }} <span class="nm-price-mod">/ month</span></span>
                             </h3>
                                 <p>
-                                    Do you post often on your socials?
+                                    Thanks to Canva, everyone is now a graphic designer. Err, a lot of people think they're a designer, but do they really have a designer's eye? Have you ever made something in Canva and it felt off but you weren't sure why? The difference between good design and great design is in the small details. The things few people notice. 
                                 </p>
                                 <p>
-                                    Every content strategy should call for frequent posting on your social media accounts. If you post a lot, you'll need a lot of graphics.
-                                </p>
-                                <p>
-                                    We offer a subscription to get custom graphics at a reduced cost. We'll create a few layouts for you; whenever you request a graphic, you pick which style you want it in. This will keep the quality consistent and reduce our turnaround time.
-                                </p>
-                                <p>
-                                    Your subscription includes the first 5 graphics. After that, they are $15 each, a 57% savings.
+                                    Social media demands regular posts. You need fresh, branded graphics to stay top of mind. With this subscription, you can get all the graphics you need for at a reduced price. We set up a few signature layouts, then you tell us what you need. The monthly payments includes 5 graphics, then you can add more for $15 each — that's a 57% savings. Quality stays consistent, turnaround is swift, and your brand always looks sharp. Better than Canva.
                                 </p>
                             <h3 class="cs-h3" id="business-cards">
                                 <span class="cs-name">{{ services.businessCards.name }}</span>
@@ -546,13 +457,7 @@ eleventyNavigation:
                                     (Design only)
                                 </p>
                                 <p>
-                                    Do you have a physical reminder of business?
-                                </p>
-                                <p>
-                                    Business cards remind people you exist. Sometimes, they may be a lead's first contact with your brand, so you must make a strong impression.
-                                </p>
-                                <p>
-                                    We can make your business cards look like your website and socials.
+                                    Time to get physical. Your website represents your business digitally; your business card represents it physically. You need both to make a good impression. They also need to look cohesive. If you have a custom-designed website, you need custom-designed business cards to match. The designs won't perfectly match if you use a template. You'll look like a wannabe amateur, not the competent professional you know you are. What are you waiting for?
                                 </p>
                             <h3 class="cs-h3" id="letterhead-envelopes">
                                 <span class="cs-name">{{ services.letterhead.name }}</span>
@@ -562,36 +467,24 @@ eleventyNavigation:
                                     (Design only)
                                 </p>
                                 <p>
-                                    Do you send things by mail? Do you need to print official-looking documents?
-                                </p>
-                                <p>
-                                    A stationery set will add professionalism to your written communications. Customers must recognize your brand at every interaction. Whether digital, in-person, or checking their mail, a consistent look will convey professionalism.
-                                </p>
-                                <p>
-                                    We can create letterhead and envelope designs that compliment your online presence.
+                                    Fun fact: King County in Washington used Comic Sans font on birth certificates for many years. They look like a bad forgery, not an official document. Don't let your stationery be the butt of a joke like King County. Reinforce your brand's legitimacy and professionalism with custom-designed letterhead and envelopes. It's the perfect touch to marry your invoices and other documents with your website.
                                 </p>
                             <h3 class="cs-h3" id="other-design">
                                 <span class="cs-name">{{ services.otherGraphic.name }}</span>
                                 <span class="cs-price">{{ services.otherGraphic.price }}</span>
                             </h3>
                                 <p>
-                                    Do you have other graphic design needs?
-                                </p>
-                                <p>
-                                    We're a web design agency first; graphic design is not our primary focus. If you need something else designed, ask. We'll provide a quote if we can do it well.
+                                    Need something else designed? While our primary focus is web design, we dabble in the world of graphic design. We've priced out the common high-value services that will benefit most businesses. That said, if you need something else, such as a brochure or presentation deck, please reach out! We'll review your needs and provide a quote. If it falls outside our skill set, we won't take on the work. We guarantee that everything we create will meet the same high standard you expect with other services.
                                 </p>
                             <h3 class="cs-h3" id="style-guide">
                                 <span class="cs-name">{{ services.styleGuide.name }}</span>
                                 <span class="cs-price">${{ services.styleGuide.price }}</span>
                             </h3>
                                 <p>
-                                    Do you know the rules for using your logo, fonts, and colors? Do you have rules for their consistent application?
+                                    Is your brand more chaotic neutral or lawful good? While unhinged marketing is a popular trend right now, it shouldn't be pure chaos. A style guide keeps your brand consistent and focused even if you're running off the rails. It also streamlines workflows and decision-making, making it easy for anyone to create your branded content. Whether you prefer to play it safe or push the edge, a style guide will keep your brand undeniably your brand.
                                 </p>
                                 <p>
-                                    Style guides are a guardrail. They keep you consistent. They make design workflows more efficient and streamline decision-making. They teach newcomers how to create content for your brand. You can't overvalue a style guide.
-                                </p>
-                                <p>
-                                    If you don't have a style guide, we can fix that. Our style guide will include pages on:
+                                    Our style guide will include pages on:
                                 </p>
                                 <ul>
                                     <li>Company mission, vision, and values</li>
@@ -609,32 +502,23 @@ eleventyNavigation:
                                 <span class="cs-price">${{ services.narrative.price }}</span>
                             </h3>
                                 <p>
-                                    Does your current brand tell a story? Does it engage people and inspire them to take action?
+                                    Stories connect to emotions. Emotions drive decisions, not reason. People use reason to justify their choices after the fact. Don't believe us? Imagine a freelancing CPA thriving at tax time, but struggling during the off-season slump. Their website? Quieter than a mouse on Christmas Eve. They learn about its flaws, connect with us, and buy a website, copywriting, and a brand narrative. Slowly, their bounce rate drops. They start getting new clients through their website. The next slump comes around, and they're busier than Santa Claus delivering presents.
                                 </p>
                                 <p>
-                                    Stories sell, and emotions drive decisions, not reason. We use facts to justify our choices after we've already made them. A brand narrative lets you capitalize on this human nature with your messaging.
-                                </p>
-                                <p>
-                                    Tell this story everywhere. Any time your business comes up in conversation, pull from your brand narrative.
-                                </p>
-                                <p>
-                                    We apply this strategy to our <a href="#copywriting">copywriting</a>; we'll give you the talking points to use.
+                                    Stories sell because they trigger emotions and build connections. Your brand narrative will tell your authentic story. It will help you take your customers on a journey of their transformation. It will make you unforgettable. Don't be boring. Sell.
                                 </p>
                             <h3 class="cs-h3" id="consulting">
                                 <span class="cs-name">{{ services.consulting.name }}</span>
                                 <span class="cs-price">${{ services.consulting.price }} <span class="nm-price-mod">/ hour</span></span>
                             </h3>
                                 <p>
-                                    Do you feel stuck? Are you unsure where to start or what to do next?
-                                </p>
-                                <p>
-                                    We're available for consultations if you want more help with your brand or web strategy. Unfortunately, we can't do everything and must make tough choices about what to offer and cut. We love sharing our knowledge on these topics. If we can help you DIY a few things, let's schedule a call and figure out what you need to do!
+                                    In Greek mythology, the gods curse Sisyphus to roll a boulder up a hill for all eternity. When he neared the top, it would roll back down again and he would need to start over. Does running your brand or website ever feel like that? While we can't build everything for you, we can help you get unstuck. Stop doing the same thing again and again expecting different results. We'll help you look at it from a different angle. Schedule a consultation and get the answers you crave.
                                 </p>
                         <h2>
-                            Intrigued? Let's chat
+                            How can we serve you?
                         </h2>
                             <p>
-                                Do you have questions? Are you wondering how to start? Let's schedule a free discovery call to discuss your needs and goals.
+                                Now that you know about our services, which seem right for you? Schedule a free discovery call to discuss your needs and plan your next steps.
                             </p>
                             <a href="/contact/" class="cs-button-solid">Book a call</a>
                 </div>
