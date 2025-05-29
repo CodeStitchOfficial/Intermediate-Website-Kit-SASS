@@ -73,7 +73,7 @@
             width: 100%;
             max-width: calc(585 / 16 * 1rem);
             /* 380px - 453px */
-            aspect-ratio: 800 / 583;
+            aspect-ratio: 398 / 290;
             height: auto;
             /* clips the img tag corners */
             overflow: hidden;
@@ -87,7 +87,7 @@
                 left: 0;
                 height: 100%;
                 width: 100%;
-                aspect-ratio: 5 / 4;
+                aspect-ratio: 398 / 290;
                 /* makes image act as a background image */
                 object-fit: cover;
             }
@@ -226,7 +226,7 @@
 
         .cs-picture {
             max-width: calc(630 / 16 * 1rem);
-            aspect-ratio: 750 / 1000;
+            aspect-ratio: 630 / 814;
             /* 623px - 814px */
             height: auto;
         }
