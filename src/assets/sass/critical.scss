@@ -73,7 +73,8 @@
             width: 100%;
             max-width: calc(585 / 16 * 1rem);
             /* 380px - 453px */
-            height: clamp(23.75rem, 59vw, 28.3215rem);
+            aspect-ratio: 800 / 583;
+            height: auto;
             /* clips the img tag corners */
             overflow: hidden;
             display: block;
@@ -225,9 +226,9 @@
 
         .cs-picture {
             max-width: calc(630 / 16 * 1rem);
-            aspect-ratio: 3 / 4;
+            aspect-ratio: 750 / 1000;
             /* 623px - 814px */
-            height: clamp(38.9375rem, 60vw, 50.875rem);
+            height: auto;
         }
 
         .cs-waves {
