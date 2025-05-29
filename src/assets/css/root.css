@@ -176,6 +176,16 @@
     color: var(--textDark);
     font-family: var(--headerFont);
   }
+  /* Global Styles to prevent H1 font-size changes in sectioning elements */
+  article h1,
+  aside h1,
+  nav h1,
+  section h1 {
+    font-size: var(--headerFontSize);
+    line-height: 1.2em;
+    font-weight: 400;
+    color: var(--textDark);
+  }
   p,
   li,
   a {
