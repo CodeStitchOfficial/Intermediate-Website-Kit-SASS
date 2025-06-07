@@ -4,22 +4,6 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Content Manager</title>
-        <!-- Script for Netlify Identity -->
-        <script
-        defer
-        src="https://identity.netlify.com/v1/netlify-identity-widget.js"
-        ></script>
-        <script defer>
-            if (window.netlifyIdentity) {
-                window.netlifyIdentity.on("init", (user) => {
-                    if (!user) {
-                        window.netlifyIdentity.on("login", () => {
-                            document.location.href = "/admin/";
-                        });
-                    }
-                });
-            }
-        </script>
     </head>
     <body>
         <!-- Include the script that builds the page and powers Decap CMS -->
