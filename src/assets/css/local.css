@@ -548,6 +548,18 @@
     background: var(--primary600);
     /* Content Group */
   }
+  #cs-menu-group-1038 .cs-name a {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 400;
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+  }
+  #cs-menu-group-1038 .cs-name a:hover {
+    color: var(--primary200);
+  }
   #cs-menu-group-1038 .cs-container {
     width: 100%;
     /* changes to 1280px at tablet */
