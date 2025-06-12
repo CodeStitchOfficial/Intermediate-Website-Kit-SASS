@@ -627,6 +627,20 @@
         position: relative;
         background: var(--primary600);
 
+        .cs-name a {
+            font-family: inherit;
+            font-size: inherit;
+            font-weight: 400;
+            color: #fff;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            text-decoration-thickness: 1px;
+
+            &:hover {
+                color: var(--primary200);
+            }
+        }
+
         .cs-container {
             width: 100%;
             /* changes to 1280px at tablet */
