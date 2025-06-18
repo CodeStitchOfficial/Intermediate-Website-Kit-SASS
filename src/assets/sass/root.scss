@@ -13,9 +13,9 @@
 @media only screen and (min-width: 0rem) {
     /* All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
     :root {
-        --primary: #ff6a3e;
+        --primary: #B69D75;
         --primaryLight: #ffba43;
-        --secondary: #ffba43;
+        --secondary: black;
         --secondaryLight: #ffba43;
         --headerColor: #1a1a1a;
         --bodyTextColor: #4e4b66;
@@ -32,9 +32,11 @@
         --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
         --bodyFontSize: 1rem;
         /* 60px - 100px top and bottom */
-        --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+        --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 2rem;
 
-        --headerFont: "Roboto", Arial, sans-serif;
+        --headerFont: "Tenor Sans", Arial, sans-serif;
+        --navFont: "Tenor Sans", Arial, sans-serif;
+         --buttonFont: "Tenor Sans", Arial, sans-serif;
         --bodyFont: "Roboto", Arial, sans-serif;
     }
 
@@ -94,6 +96,8 @@
 
 /* Components + Utilities */
 @media only screen and (min-width: 0rem) {
+.hidden {display: none;}
+
     // Hidden screen reader skip nav button
     .skip {
         z-index: -1111111;
@@ -109,6 +113,7 @@
         position: relative;
         display: inline-block;
         background-color: var(--primary);
+        font-family: var(--buttonFont);
         width: auto;
         padding: calc(16 / 16 * 1rem) calc(32 / 16 * 1rem);
         text-decoration: none;
@@ -116,7 +121,7 @@
         font-size: calc(16 / 16 * 1rem);
         line-height: calc(16 / 16 * 1em);
         font-weight: bold;
-        border-radius: calc(4 / 16 * 1rem);
+        border-radius: 999px;
         overflow: hidden;
 
         // Transition Properties
@@ -296,6 +301,20 @@
 /* Fonts */
 @media only screen and (min-width: 0rem) {
     // Grab your fonts to locally host from https://gwfh.mranftl.com/fonts
+
+
+    @font-face {
+        font-style: normal;
+        font-family: "Tenor Sans";
+        font-weight: 700;
+        font-display: swap;
+        src: local(""),
+            url("/assets/fonts/tenor-sans-v20-latin-regular.woff2") format("woff2"),
+            /* Chrome 26+, Opera 23+, Firefox 39+ */
+                url("/assets/fonts/tenor-sans-v20-latin-regular.woff2")
+                format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+
     /* roboto-regular - latin */
     @font-face {
         font-style: normal;

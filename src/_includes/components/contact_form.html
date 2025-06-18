@@ -1,0 +1,437 @@
+
+    <!-- ============================================ -->
+    <!--                Contact Form                  -->
+    <!-- ============================================ -->
+
+    <style>
+
+/*-- -------------------------- -->
+<---          Contact           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #cs-contact-265 {
+        padding: var(--sectionPadding);
+
+        .cs-container {
+            width: 100%;
+            /* changes to 1280px at tablet */
+            max-width: calc(550 / 16 * 1rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            margin: 0 0 calc(32 / 16 * 1rem) 0;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+        }
+
+        #cs-form-265 {
+            label {
+                font-size: calc(16 / 16 * 1rem);
+                line-height: 1.5em;
+                font-weight: 700;
+                /* 12px - 20px */
+                margin-bottom: clamp(0.75rem, 1.3em, 1.25rem);
+                color: var(--headerColor);
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .cs-label-message {
+                /* 32px - 48px */
+                margin-bottom: clamp(2rem, 6.3vw, 3rem);
+            }
+
+            input,
+            textarea {
+                font-size: calc(16 / 16 * 1rem);
+                width: 100%;
+                height: calc(64 / 16 * 1rem);
+                margin-top: calc(4 / 16 * 1rem);
+                padding-left: calc(20 / 16 * 1rem);
+                border: 1px solid #b4b2c7;
+                border-radius: calc(4 / 16 * 1rem);
+                /* prevents border & padding from affecting height */
+                box-sizing: border-box;
+                transition: border 0.3s;
+
+                &:hover {
+                    border: 1px solid var(--primary);
+                }
+            }
+
+            textarea {
+                font-family: inherit;
+                padding-top: calc(20 / 16 * 1rem);
+                min-height: calc(120 / 16 * 1rem);
+            }
+
+            .cs-button-solid {
+                width: 100%;
+            }
+        }
+
+        .cs-button-solid {
+            font-size: calc(16 / 16 * 1rem);
+            /* 46px - 56px */
+            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+            text-decoration: none;
+            font-weight: 700;
+            text-align: center;
+            margin: 0;
+            color: #fff;
+            min-width: calc(150 / 16 * 1rem);
+            padding: 0 calc(24 / 16 * 1rem);
+            background-color: var(--primary);
+            border-radius: calc(4 / 16 * 1rem);
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            /* prevents padding from adding to the width */
+            box-sizing: border-box;
+
+            &:before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 0%;
+                background: #000;
+                opacity: 1;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                border-radius: calc(4 / 16 * 1rem);
+                transition: width 0.3s;
+            }
+
+            &:hover {
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+
+        .cs-submit {
+            width: 100%;
+            border: none;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .cs-right-section {
+            width: 100%;
+            height: calc(320 / 16 * 1rem);
+            /* 24px - 40px top & bottom */
+            /* 20px - 40px left & right */
+            padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1.25rem, 3vw, 2.5rem);
+            /* prevents padding and border from affecting height and width */
+            box-sizing: border-box;
+            border-radius: calc(4 / 16 * 1rem);
+            /* cuts off corners on img tag */
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+            position: relative;
+        }
+
+        .cs-header {
+            /* 16px - 20px */
+            font-size: clamp(1rem, 3vw, 1.25rem);
+            line-height: 1.2em;
+            font-weight: 700;
+            margin-bottom: calc(8 / 16 * 1rem);
+            color: var(--bodyTextColorWhite);
+            display: block;
+        }
+
+        .cs-link {
+            /* 16px - 20px */
+            font-size: clamp(1rem, 3vw, 1.25rem);
+            line-height: 1.2em;
+            text-decoration: none;
+            margin-bottom: calc(20 / 16 * 1rem);
+            color: var(--bodyTextColorWhite);
+            display: block;
+            position: relative;
+
+            &:before {
+                /* Animated underline */
+                content: "";
+                width: 0%;
+                height: 2px;
+                /* current color of the parent */
+                background: currentColor;
+                opacity: 1;
+                position: absolute;
+                display: block;
+                bottom: calc(-2 / 16 * 1rem);
+                left: 0;
+                transition: width 0.3s;
+            }
+
+            &:hover {
+                &:before {
+                    width: 100%;
+                }
+            }
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+        .cs-block {
+            /* sends second address line to the bottom on its own line */
+            display: block;
+        }
+
+        .cs-bg-picture {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: transform 0.6s;
+
+            &:before {
+                /* background color overlay */
+                content: "";
+                position: absolute;
+                display: block;
+                height: 100%;
+                width: 100%;
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                /* Makes img tag act as a background image */
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+/* Tablet - 700px */
+@media only screen and (min-width: 43.75rem) {
+    #cs-contact-265 {
+        .cs-container {
+            max-width: calc(1280 / 16 * 1rem);
+        }
+
+        #cs-form-265 {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+
+            label {
+                width: 48%;
+            }
+
+            .cs-label-message {
+                width: 100%;
+            }
+        }
+    }
+}
+
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #cs-contact-265 {
+        .cs-container {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: calc(80 / 16 * 1rem);
+        }
+
+        .cs-left-section {
+            max-width: calc(630 / 16 * 1rem);
+        }
+
+        #cs-form-265 {
+            label {
+                width: 100%;
+            }
+        }
+
+        .cs-right-section {
+            /* changes to 578px at 1300px wide */
+            height: calc(686 / 16 * 1rem);
+            width: 40vw;
+            max-width: calc(542 / 16 * 1rem);
+            /* prevents flexbox from squishing it */
+            flex: none;
+
+            &:hover {
+                .cs-bg-picture {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        .cs-block {
+            /* goes back to inline so it stays "in line" with the rest of the text */
+            display: inline-block;
+        }
+    }
+}
+
+/* Small Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+    #cs-contact-265 {
+        #cs-form-265 {
+            column-gap: calc(0 / 16 * 1rem);
+            label {
+                width: 48%;
+                max-width: calc(305 / 16 * 1rem);
+            }
+
+            .cs-label-message {
+                max-width: 100%;
+            }
+        }
+
+        .cs-right-section {
+            height: calc(578 / 16 * 1rem);
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #cs-contact-265 {
+            .cs-text,
+            .cs-title {
+                color: var(--bodyTextColorWhite);
+            }
+
+            #cs-form-265 {
+                label,
+                input,
+                textarea {
+                    background-color: transparent;
+                    color: var(--bodyTextColorWhite);
+
+                    &::placeholder {
+                        /* lighten up the color of the text by 40%*/
+                        filter: brightness(1.4);
+                    }
+                }
+            }
+
+            .cs-bg-picture {
+                background-color: #000;
+
+                img {
+                    /* lets parent background-color bleed through and darken it */
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+}
+
+    </style>
+
+    <section id="cs-contact-265" style="margin-top: 150px;">
+        <div class="cs-container">
+            <div class="cs-left-section">
+                <div class="cs-content">
+                    <span class="cs-topper">Contact</span>
+                    <h2 class="cs-title">Get in Touch</h2>
+                    <p class="cs-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus elementum ullamcorper ipsum porttitor aliquam. Id magna urna ultrices odio pulvinar. Sed ut.
+                    </p>
+                </div>
+                <form netlify  id="cs-form-265" name="Contact Form" method="post" netlify-honeypot="bot-field"
+  data-netlify="true">
+  <p class="hidden">
+    <label>
+      Don’t fill this out if you’re human: <input name="bot-field" />
+    </label></p>
+                    <label>
+                        Name
+                        <input required type="text" id="name-265" name="name" placeholder="Name">
+                    </label>
+                    <label>
+                        Email
+                        <input required type="text" id="email-265" name="email" placeholder="Email">
+                    </label>
+                    <label>
+                        Phone
+                        <input required type="text" id="phone-265" name="phone" placeholder="Phone">
+                    </label>
+                    <label>
+                        How Did You Find Us
+                        <input type="text" id="find-265" name="find-us" placeholder="How did you find us?">
+                    </label>
+                    <label class="cs-label-message">
+                        Message
+                        <textarea required name="Message" id="message-265" placeholder="Write message..."></textarea>
+                    </label>
+                    <button class="cs-button-solid cs-submit" type="submit">Submit Message</button>
+                </form>
+            </div>
+            <div class="cs-right-section">
+                <!--Email-->
+                <span class="cs-header">Email</span>
+                <a class="cs-link" href="mailto:{{ client.email }}">{{ client.email }}</a>
+                <!--Phone-->
+                <span class="cs-header">Phone</span>
+                <a class="cs-link" href="tel:{{ client.phoneForTel }}">{{ client.phoneFormatted }}</a>
+                <!--Address-->
+                <span class="cs-header">Address</span>
+                <a class="cs-link" href="{{ client.address.mapLink }}">
+                    {{ client.address.lineOne }}, <br>
+                    {{ client.address.lineTwo }}, <br>
+                    {{ client.address.city }}, {{ client.address.state }}
+                    {{ client.address.zip }}
+                </a>
+                <!-- Background Image-->
+                <picture class="cs-bg-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 576, height: 640 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 576, height: 640 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 576, height: 640 }) | jpeg %}" type="image/jpeg">
+                    <!--Tablet Image-->
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 820, height: 1372 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 820, height: 1372 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 820, height: 1372 }) | jpeg %}" type="image/jpeg">
+                    <!--Desktop Image-->
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 1084, height: 1156 }) | avif %}" type="image/avif">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 1084, height: 1156 }) | webp %}" type="image/webp">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 1084, height: 1156 }) | jpeg %}" type="image/jpeg">
+                    <img src="{% getUrl "/assets/images/construction.jpg" | resize({ width: 1084, height: 1156 }) | jpeg %}" alt="building" width="542" height="578" decoding="async">
+                </picture>
+            </div>
+        </div>
+    </section>

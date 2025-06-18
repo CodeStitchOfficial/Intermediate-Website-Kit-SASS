@@ -1,0 +1,197 @@
+<!-- place this stitch just before your </body> tag. the absolute position of the popup should keep it to the bottom-right of the screen. -->
+
+<style>
+    /*-- -------------------------- -->
+<---           Popup            -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #popup-2064 {
+    max-width: 52.625rem;
+    /* 16px - 48px*/
+    padding: 2.5rem clamp(1rem, 7vw, 3rem);
+    background-color: #f3fcfb;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    opacity: 0;
+    border-radius: 1rem;
+    visibility: hidden;
+    position: fixed;
+    right: 0;
+    bottom: 1rem;
+    z-index: 1400;
+    transform: translateY(10rem);
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  #popup-2064.cs-show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  #popup-2064 .cs-container {
+    display: flex;
+    flex-direction: column;
+  }
+  #popup-2064 .cs-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  #popup-2064 .cs-close {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: auto;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    transition: transform 0.3s;
+  }
+  #popup-2064 .cs-close:hover {
+    cursor: pointer;
+    transform: rotate(90deg);
+  }
+  #popup-2064 .cs-h3 {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 4vw, 1.5625rem);
+    font-weight: 700;
+    line-height: 1.2em;
+    margin: 0 0 0.5rem;
+    color: var(--headerColor);
+  }
+  #popup-2064 .cs-link {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    margin-top: 0.25rem;
+    color: var(--secondary);
+    display: block;
+  }
+  #popup-2064 .cs-button-solid {
+    font-size: 1rem;
+    font-weight: 700;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-align: center;
+    text-decoration: none;
+    width: fit-content;
+    height: fit-content;
+    margin: 0;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+    padding: 0 2rem;
+    background-color: var(--secondary);
+    overflow: hidden;
+    color: var(--bodyTextColorWhite);
+    border: none;
+    border-radius: 0.5rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+  }
+  #popup-2064 .cs-button-solid:before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    background: #000;
+    opacity: 1;
+    border-radius: 0.25rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #popup-2064 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #popup-2064 .cs-accept:hover {
+    cursor: pointer;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #popup-2064 .cs-content {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  #popup-2064 .cs-text {
+    margin: 0;
+  }
+  #popup-2064 .cs-link {
+    display: inline;
+  }
+}
+                                
+</style>
+<div id="popup-2064">
+    <div class="cs-container">
+        <button class="cs-close">
+            <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/cookie-close.svg" alt="close" width="16" height="16">
+        </button>
+        <div class="cs-content">
+            <div class="cs-flex">
+                <h3 class="cs-h3">This website uses cookies</h3>
+                <p class="cs-text">
+                    This website uses cookies. By using our website you consent to all cookies in accordance with our Cookie Policy. <a class="cs-link" href="">Read More</a>
+                </p>
+            </div>
+            <button class="cs-button-solid cs-accept">Accept</button>
+        </div>
+    </div>
+</div>
+                                <script>
+                                    // Note that you may need to go into you Local Storage (in developer tools) and clear the "cookiesAccepted" key if you want this stitch to appear again
+
+// Wait until the DOM is fully loaded - prevents any errors being thrown if the script isn't deferred
+document.addEventListener('DOMContentLoaded', function () {
+    const popup = document.getElementById('popup-2064');
+    const closeButton = document.querySelector('.cs-close');
+    const acceptButton = document.querySelector('.cs-button-solid');
+
+    // Check if the user has already accepted cookies
+    if (!localStorage.getItem('cookiesAccepted')) {
+        // Set the popup to block, so we can apply the cs-show class and animate the popup into view
+        popup.style.display = "block";
+
+        // Set the popup to appear after a set period of time (default: 1000ms/1s).
+        setTimeout(function () {
+            popup.classList.add('cs-show');
+        }, 1000);
+    }
+
+    // Function to close the popup. Add an item to localStorage to remember that the user has accepted cookies.
+    function closePopup() {
+        popup.classList.remove('cs-show');
+        localStorage.setItem('cookiesAccepted', 'true');
+
+        // Removes the popover from the screen (visibly and through screen readers) after the transition (0.3s - in the CSS) has finished
+        setTimeout(function () {
+            popup.style.display = "none";
+        }, 300);
+    }
+
+    // Close button event listener
+    closeButton.addEventListener('click', closePopup);
+
+    // Accept button event listener
+    acceptButton.addEventListener('click', () => {
+        closePopup();
+
+        // Cookie functionality should go here
+        // For example: setCookies();
+    });
+
+    // Comment: Cookie functionality
+    // Implement your cookie setting logic here. This is where you would set any necessary cookies after the user has accepted the cookie policy.
+    // function setCookies() {
+    //      Set your cookies here
+    // }
+});
+                                
+                                </script>

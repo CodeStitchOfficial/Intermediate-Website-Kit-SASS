@@ -37,6 +37,7 @@
         <link rel="stylesheet" href="/assets/css/root.css">
         <script defer src="/assets/js/dark.js"></script>
         <script defer src="/assets/js/nav.js"></script>
+               
 
         {% block head %}{% endblock %}
 
@@ -51,6 +52,15 @@
             {% block body %}{% endblock %}
         </main>
         {% include "sections/footer.html" %}
+
+
+       <script src="/assets/js/aos.js"></script>
+
+        <script>
+          AOS.init({
+            easing: 'ease-in-out-sine',
+          });
+        </script> 
 
     </body>
 </html>

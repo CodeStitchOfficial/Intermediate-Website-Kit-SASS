@@ -1,0 +1,217 @@
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<style>
+    /*-- -------------------------- -->
+<---            Hero            -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #hero-2368 {
+    /* 116px - 164px top */
+    /* 60px - 100px  bottom */
+    padding: clamp(7.25rem, 16.82vw, 10.25rem) 1rem clamp(3.75rem, 7.82vw, 6.25rem);
+    background-color: #FBF9F5;
+    /* clips the svg wave from overflowing */
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #hero-2368 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  #hero-2368 .cs-content {
+    text-align: left;
+    width: 100%;
+    /* 24px - 24px top & bottom */
+    /* 16px - 60px left & right */
+    padding: clamp(1.5rem, 6vw, 3.75rem) clamp(1rem, 6vw, 3.75rem);
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  #hero-2368 .cs-title {
+    /* 39px - 61px */
+    font-size: clamp(2.4375rem, 5vw, 3.8125rem);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: inherit;
+    /* 23 characters including spaces wide */
+    max-width: 23ch;
+    /* 24px - 32px */
+    margin: 0 0 clamp(1.5rem, 3vw, 2rem) 0;
+    padding-bottom: 3rem;
+    color: var(--headerColor);
+    border-bottom: 1px solid #D2D8DF;
+    position: relative;
+  }
+  #hero-2368 .cs-text {
+    /* 16px - 20px */
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    max-width: 33.1875rem;
+    /* 28px - 40px */
+    margin: 0 0 clamp(1.75rem, 3.92vw, 2.5rem) 0;
+    color: var(--bodyTextColor);
+  }
+  #hero-2368 .cs-button-box {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* 16px - 20px */
+    gap: clamp(1rem, 1.9vw, 1.25rem);
+  }
+  #hero-2368 .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    overflow: hidden;
+    min-width: 9.375rem;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    border-radius: 6.25rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+  }
+  #hero-2368 .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0.25rem;
+    transition: width 0.3s;
+  }
+  #hero-2368 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #hero-2368 .cs-button-phone {
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--headerColor);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  #hero-2368 .cs-icon-wrapper {
+    /* 46px - 56px */
+    width: clamp(2.875rem, 6vw, 3.5rem);
+    height: clamp(2.875rem, 6vw, 3.5rem);
+    border-radius: 50%;
+    background-color: var(--secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #hero-2368 .cs-picture {
+    width: 100%;
+    /* 320px - 520px */
+    height: clamp(20rem, 80vw, 32.5rem);
+    /* 100px - 200px */
+    border-radius: 1rem;
+    /* clips the img tag corners */
+    overflow: hidden;
+    display: block;
+    position: relative;
+  }
+  #hero-2368 .cs-picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* makes image act as a background image */
+    object-fit: cover;
+    /* ensures the top of the images is at the top of the container, no heads getting cut off */
+    object-position: top;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #hero-2368 .cs-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  #hero-2368 .cs-content {
+    width: 50vw;
+    max-width: 39.375rem;
+    /* prevents flex-box from squishing it */
+    flex: none;
+    align-items: flex-start;
+  }
+  #hero-2368 .cs-title,
+  #hero-2368 .cs-text {
+    text-align: left;
+  }
+  #hero-2368 .cs-picture {
+    height: auto;
+    order: -1;
+  }
+}
+/* Large Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+  #hero-2368 .cs-title {
+    padding-bottom: 12.5rem;
+  }
+}
+                                
+</style>
+
+<section id="hero-2368">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h1 class="cs-title" data-aos="fade-up">Premium Therapy for Lasting Positive Change</h1>
+            <p class="cs-text">
+                You deserve a life filled with clarity, strength, and peace. We’re here to help you get there—one step at a time.            </p>
+            <div class="cs-button-box">
+                <a href="" class="cs-button-solid">Schedule An Appointment</a>
+                <a href="" class="cs-button-phone">
+                    <picture class="cs-icon-wrapper">
+                        <img aria-hidden="true" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/white-phone.svg" alt="phone icon" width="24" height="24">
+                    </picture>
+                    (555) 444-4904
+                </a>
+            </div>
+        </div>
+        <!--Hero Image-->
+        <picture class="cs-picture">
+            <!--Mobile-->
+            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/hands-close.jpg">
+            <!--Tablet-->
+            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/hands-close.jpg">
+            <!--Desktop-->
+            <source media="(min-width: 1024px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/hands-close.jpg">
+            <img aria-hidden="true" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/hands-close.jpg" alt="therapy" width="630" height="760">
+        </picture>
+    </div>
+</section>
+                                
