@@ -1,0 +1,40 @@
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "{{ client.domain }}{{ page.url }}"
+        },
+        {% if title %}"headline": "{{ title | escape }}",{% endif %}
+        {% if description %}"description": "{{ description | escape }}",{% endif %}
+        {% if image %}
+            "image": {
+                "@type": "ImageObject",
+                "url": "{{ client.domain }}{{ image }}",
+                "width": 1200,
+                "height": 630
+            },
+        {% endif %}
+        {% if date %}"datePublished": "{{ date | isoDate }}",{% endif %}
+        {% if date %}"dateModified": "{{ date | isoDate }}",{% endif %}
+        {% if author %}
+            "author": {
+                "@type": "Person",
+                "name": "{{ author | escape }}"
+            },
+        {% endif %}
+        {% if client.name %}
+            "publisher": {
+                "@type": "Organization",
+                "name": "{{ client.name | escape }}",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "{{ client.domain }}/assets/svgs/logo-black.svg",
+                    "width": 210,
+                    "height": 28
+                }
+            }
+        {% endif %}
+    }
+</script>

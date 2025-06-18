@@ -10,7 +10,7 @@ module.exports = {
         state: "CO",
         zip: "80206",
         country: "US",
-        mapLink: "https://goo.gl/maps/UAQn4vuGDiwv7DV39",
+        mapLink: "https://maps.app.goo.gl/TEdS5KoLC9ZcULuQ6",
     },
     socials: {
         facebook: "https://www.facebook.com/",
@@ -18,4 +18,6 @@ module.exports = {
     },
     //! Make sure you include the file protocol (e.g. https://) and that NO TRAILING SLASH is included
     domain: "https://www.example.com",
+    // Passing the isProduction variable for use in HTML templates
+    isProduction: process.env.ELEVENTY_ENV === "PROD",
 };

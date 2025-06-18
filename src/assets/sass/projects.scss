@@ -1,48 +1,69 @@
-/* PAGE-SPECIFIC STYLES FOR THE PROJECTS PAGE */
+// ─────────────────────────────────────────────────────────────────────────────
+// PAGE STYLES
+// Interior pages have their own stylesheet for styles that only exist on
+// that page. Any styles shared between pages, including repeated sections,
+// should go into root.scss
+// ─────────────────────────────────────────────────────────────────────────────
 
 /*-- -------------------------- -->
 <---          Gallery           -->
 <--- -------------------------- -*/
 
-/* Mobile - 360px - Contains hover animation */
+/* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #gallery {
-        position: relative;
-        /* Prevents overflow from the image going off screen */
-        overflow: hidden;
+    #gallery-48 {
         padding: var(--sectionPadding);
-        /* Centers button */
-        text-align: center;
+        position: relative;
+
         .cs-container {
-            margin: auto;
-            max-width: calc(1322 / 16 * 1em);
             width: 100%;
+            max-width: calc(1280 / 16 * 1rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            text-align: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .cs-image-group {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            margin: 0 auto calc(60 / 16 * 1rem);
-            max-width: calc(1322 / 16 * 1em);
-            width: 100%;
-            padding: 0;
             /* used rem so it doesn't scale with the font size of on parent */
             font-size: min(1.1vw, 1em);
-            gap: calc(30 / 16 * 1em);
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            /* 8px - 20px */
+            gap: clamp(0.5rem, 2vw, 1.25rem);
         }
 
         .cs-row {
+            width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
-            gap: calc(30 / 16 * 1em);
+            /* 8px - 20px */
+            gap: clamp(0.5rem, 2vw, 1.25rem);
         }
 
         .cs-picture {
+            width: 100%;
             position: relative;
             display: block;
+            border-radius: calc(8 / 16 * 1rem);
+            overflow: hidden;
+
             img {
                 position: absolute;
                 top: 0;
@@ -54,53 +75,95 @@
         }
 
         .cs-row-1 {
-            .cs-picture1 {
+            .cs-picture-1 {
                 height: calc(567 / 16 * 1em);
-                width: calc(420 / 16 * 1em);
             }
 
-            .cs-picture2 {
+            .cs-picture-2 {
                 height: calc(629 / 16 * 1em);
-                width: calc(420 / 16 * 1em);
             }
 
-            .cs-picture3 {
+            .cs-picture-3 {
                 height: calc(512 / 16 * 1em);
-                width: calc(420 / 16 * 1em);
             }
         }
 
         .cs-row-2 {
-            .cs-picture1 {
+            .cs-picture-1 {
                 height: calc(492 / 16 * 1em);
-                width: calc(420 / 16 * 1em);
             }
 
-            .cs-picture2 {
+            .cs-picture-2 {
                 height: calc(517 / 16 * 1em);
-                width: calc(420 / 16 * 1em);
             }
 
-            .cs-picture3 {
+            .cs-picture-3 {
                 height: calc(629 / 16 * 1em);
-                width: calc(420 / 16 * 1em);
             }
         }
 
         .cs-row-3 {
-            .cs-picture1 {
+            .cs-picture-1 {
                 height: calc(625 / 16 * 1em);
-                width: calc(420 / 16 * 1em);
             }
 
-            .cs-picture2 {
+            .cs-picture-2 {
                 height: calc(452 / 16 * 1em);
-                width: calc(420 / 16 * 1em);
             }
 
-            .cs-picture3 {
+            .cs-picture-3 {
                 height: calc(629 / 16 * 1em);
-                width: calc(420 / 16 * 1em);
+            }
+        }
+
+        .cs-button-solid {
+            font-size: calc(16 / 16 * 1rem);
+            /* 46px - 56px */
+            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+            text-decoration: none;
+            font-weight: 700;
+            text-align: center;
+            margin: 0;
+            color: #fff;
+            min-width: calc(150 / 16 * 1rem);
+            padding: 0 calc(24 / 16 * 1rem);
+            background-color: var(--primary);
+            border-radius: calc(4 / 16 * 1rem);
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            /* prevents padding from adding to the width */
+            box-sizing: border-box;
+
+            &:before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 0%;
+                background: #000;
+                opacity: 1;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                border-radius: calc(4 / 16 * 1rem);
+                transition: width 0.3s;
+            }
+
+            &:hover {
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+/* Dark mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #gallery-48 {
+            .cs-title {
+                color: var(--bodyTextColorWhite);
             }
         }
     }

@@ -10,7 +10,7 @@
     Introducing the Intermediate Website Kit, presented by CodeStitch. This kit includes a pre-configured Eleventy environment with Nunjucks templating, along with seamless integration of Decap CMS. This setup allows you to quickly start a project while providing your client with a blog for content management. Everything is ready to go right from the start, offering a fantastic introduction to the advantages of a Static Site Generator, complete with SASS preprocessing.
     <br/>
     <br/>
-    <a href="https://github.com/CodeStitchOfficial/Intermediate-Website-Kit-LESS">LESS Starter Kit</a>
+    <a href="https://github.com/CodeStitchOfficial/Intermediate-Website-Kit-SASS">SASS Starter Kit</a>
     .
     <a href="https://codestitch-intermediate.netlify.app/">View Live Result</a>
     .
@@ -27,7 +27,6 @@
     -   <a href="#must-knows">Must Knows</a>
     -   <a href="#good-to-knows">Good-to-knows</a>
 -   <a href="#quick-start-guide">Quick Start Guide</a>
--   <a href="#formatting">Formatting</a>
 -   <a href="#explanation-of-file-structure">Explanation of File Structure</a>
     -   <a href="#root-files">Root Files</a>
         -   <a href="#eleventyjs">.eleventy.js</a>
@@ -102,12 +101,6 @@ _Not required for light-medium kit usage, but helpful if you want to customise t
 7.  Adjust the `:root` variables in `./src/assets/[sass or less]/root.[scss or less]`
 8.  Modify the website files (use `./src`, NOT `./public`) as needed. Use the template file in `content/pages/_template.txt` to get started, or modify the existing pages.
 9.  Deploy using your preferred hosting provider.
-
-<a name="formatting"></a>
-
-## Formatting
-
-This template leverages Prettier to format all project files, with configuration settings located in the `.prettierrc` file. Since Prettier doesn’t natively support Nunjucks, we use the Jinja template formatter as an alternative, as recommended in this [guide](https://saneef.com/blog/format-nunjucks-files-with-prettier/).
 
 <a name="explanation-of-file-structure"></a>
 
@@ -216,7 +209,7 @@ In Eleventy, this is known as "Global Data". You can read more about Global Data
 
 <a name="_includes"></a>
 
-#### \_includes/
+#### \_includes
 
 The `_includes` directory contains pieces of HTML code that you want to share between multiple pages. This code could be small components (a button or a loading spinner), larger sections (header, footer, or a stitch from [CodeStitch](https://codestitch.app/)), or a layout containing a reusable `<head>` element with all necessary meta tags.
 
@@ -264,9 +257,28 @@ Note the if-check in the `class` attribute of the anchor element. Here, we're ch
 
 The `admin/` directory sets up [Decap CMS](https://decapcms.org/) to be used within the project. It's configured as a blog that a client can access by navigating to the `/admin/` path on the deployed site, where they can create, update, and delete blog posts whenever they want. This modifies the markdown files in the source code, which will trigger a rebuild in Netlify, incorporating the new blog data. After about one minute, the client can see the new blog post on the website.
 
-Decap CMS has been chosen due to its open-source nature, good UX/DX, and stability. Very little training is required on the client's end to get it to work - the interface is clean and operates without trouble. It works through an `index.html` file in the `admin/`. This `index.html` file is processed as an Eleventy template, added to `/public/admin`, and the CMS is loaded when navigating to the `/admin` path. This kit uses DecapBridge for authentication as the Netlify Identity feature has been deprecated. Visit [Decapbridge Discord]((https://discord.com/channels/1257728522361901219/1257728681380417600)) and their [open-sources repos](https://github.com/decapbridge) for more information and support
+Decap CMS has been chosen due to its open-source nature, good UX/DX, and stability. Very little training is required on the client's end to get it to work - the interface is clean and operates without trouble. It works through an `index.html` file in the `admin/`. This `index.html` file is processed as an Eleventy template, added to `/public/admin`, and the CMS is loaded when navigating to the `/admin` path. This kit uses DecapBridge for authentication as the Netlify Identity feature has been deprecated. Visit [Decapbridge Discord](<(https://discord.com/channels/1257728522361901219/1257728681380417600)>) and their [open-sources repos](https://github.com/decapbridge) for more information and support.
 
 The CMS is configured through a `config.yml` file, as per the Decap documentation. If you wish to use the blog as-is, you shouldn't need to make any changes here. If you want to extend the kit and modify the CMS for your own needs, we recommend referring to the Decap documentation for guidance on how to do so.
+
+Styling the Decap preview pane This template includes custom styles for the Decap CMS preview pane, so that blog posts in the admin dashboard look similar to the live site.
+
+1. How it works:
+
+The preview styles are defined in /admin/decap-preview-styles.css. The CMS preview script in /admin/index.html:
+
+-   pulls the props from the collection
+-   creates the DOM elements
+-   registers these elements and styles for the preview panel to use
+
+2. How to update or customize:
+
+Edit /admin/decap-preview-styles.css and the preview pane script in /admin/index.html to match your site's branding or layout changes. Use Decap's documentation on [customizing the preview pane](https://decapcms.org/docs/customization/)
+
+3.Notes
+
+-   The style sheet must be a CSS file
+-   The style sheet does not support nested CSS.
 
 <a name="assets"></a>
 
@@ -380,11 +392,9 @@ When you're happy with your website, you can deploy it to your hosting provider 
 
 With slight modifications for usage with 11ty, this setup guide for DecapBridge was written by Geoffrey on the [Intermediate Astro Decap kit](https://github.com/CodeStitchOfficial/Intermediate-Astro-Decap-CMS/blob/main/README.md?plain=1#deployment)
 
-> [!IMPORTANT]
-> This kit now uses decapbridge.com for its authentication solution. If you still use Netlify Identity, please refer to [the Netlify Identity branch](https://github.com/CodeStitchOfficial/Intermediate-Website-Kit-SASS/tree/deprecated---using-Netlify-Identity)
+> [!IMPORTANT] This kit now uses decapbridge.com for its authentication solution. If you still use Netlify Identity, please refer to [the Netlify Identity branch](https://github.com/CodeStitchOfficial/Intermediate-Website-Kit-LESS/tree/deprecated---using-Netlify-Identity)
 
-> [!TIP]
-> If you are updating your kit from Netlify Identity to decapbridge.com:
+> [!TIP] If you are updating your kit from Netlify Identity to decapbridge.com:
 >
 > 1. Login to your Netlify account
 > 2. Navigate to Projects/Your-Site
@@ -397,31 +407,30 @@ With slight modifications for usage with 11ty, this setup guide for DecapBridge 
 2. Navigate to https://decapbridge.com/ and create an account. It’s free.
 3. Navigate to the dashboard and Create New Site. You see this screen:
 
-![decapbridge.com dashboard](readme-images/decapbridge-dashboard.png)
+![decapbridge.com dashboard](github/decapbridge-dashboard.png)
 
 Fill in the 3 input fields:
 
-- Github repository: it has to be in a `user-or-org/repository-name` format. e.g. `BuckyBuck135/testing-decapbridge`
-- Github access token.
-  To create a personal access token in GitHub, follow these steps:
+-   Github repository: it has to be in a `user-or-org/repository-name` format. e.g. `BuckyBuck135/testing-decapbridge`
+-   Github access token. To create a personal access token in GitHub, follow these steps:
 
-  1. Log into your Github account.
-  2. Click on your profile picture (top right) (not the repository profile), and click the “Settings” link.
-  3. Scroll down and click the “Developer Settings” link.
-  4. Click the GitHub “Personal access tokens” link and choose `fine-grained tokens`
-  5. Click the “Generate new token” button and provide your password again if required.
-  6. Provide a name for the GitHub personal access token in the “Note” field.
-  7. Set the access token’s “expiration” timeout to “No expiration.”
-  8. Set the “Repository access” to the desired repository only.
-  9. Set the “Permissions / Repository permissions” to **read-write access** for this repository's **Contents** and **Pull requests**. (This is needed by DecapCMS to read your markdown, and write new content via Pull Requests.)
-  10. Click “Generate token.”, double check the permissions and click the Generate Token button
-  11. **Make sure to copy your GitHub Personal Access Token now as you will not be able to see this again.**
+    1. Log into your Github account.
+    2. Click on your profile picture (top right) (not the repository profile), and click the “Settings” link.
+    3. Scroll down and click the “Developer Settings” link.
+    4. Click the GitHub “Personal access tokens” link and choose `fine-grained tokens`
+    5. Click the “Generate new token” button and provide your password again if required.
+    6. Provide a name for the GitHub personal access token in the “Note” field.
+    7. Set the access token’s “expiration” timeout to “No expiration.”
+    8. Set the “Repository access” to the desired repository only.
+    9. Set the “Permissions / Repository permissions” to **read-write access** for this repository's **Contents** and **Pull requests**. (This is needed by DecapCMS to read your markdown, and write new content via Pull Requests.)
+    10. Click “Generate token.”, double check the permissions and click the Generate Token button
+    11. **Make sure to copy your GitHub Personal Access Token now as you will not be able to see this again.**
 
-      ![The Permissions settings](readme-images/github-permissions.png)
+        ![The Permissions settings](github/github-permissions.png)
 
-  12. Double check your permissions before generating the token. It must have read and write access to Contents and Pull Requests.
+    12. Double check your permissions before generating the token. It must have read and write access to Contents and Pull Requests.
 
-- Decap CMS URL: provide the (deployed) URL of the Decap CMS dashboard. e.g [`https://testing-decapbridge.netlify.app/admin/#/`](https://testing-decapbridge.netlify.app/admin/#/)
+-   Decap CMS URL: provide the (deployed) URL of the Decap CMS dashboard. e.g [`https://testing-decapbridge.netlify.app/admin/#/`](https://testing-decapbridge.netlify.app/admin/#/)
 
 ### On your CS Decap kit:
 
@@ -430,20 +439,20 @@ Fill in the 3 input fields:
 ```yaml
 # Use DecapBridge auth (required)
 backend:
-  name: git-gateway
-  repo: BuckyBuck135/testing-decapbridge # provided by decapbridge
-  branch: main
-  identity_url: https://auth.decapbridge.com/sites/5605bbe7-08f2-4ce5-bce2-7d97def08bed # provided by decapbridge
-  gateway_url: https://gateway.decapbridge.com # provided by decapbridge
+    name: git-gateway
+    repo: BuckyBuck135/testing-decapbridge # provided by decapbridge
+    branch: main
+    identity_url: https://auth.decapbridge.com/sites/5605bbe7-08f2-4ce5-bce2-7d97def08bed # provided by decapbridge
+    gateway_url: https://gateway.decapbridge.com # provided by decapbridge
 
-  # Quickly see who did what (optional)
-  commit_messages:
-    create: Create {{collection}} “{{slug}}” - {{author-name}} <{{author-login}}> via DecapBridge
-    update: Update {{collection}} “{{slug}}” - {{author-name}} <{{author-login}}> via DecapBridge
-    delete: Delete {{collection}} “{{slug}}” - {{author-name}} <{{author-login}}> via DecapBridge
-    uploadMedia: Upload “{{path}}” - {{author-name}} <{{author-login}}> via DecapBridge
-    deleteMedia: Delete “{{path}}” - {{author-name}} <{{author-login}}> via DecapBridge
-    openAuthoring: Message {{message}} - {{author-name}} <{{author-login}}> via DecapBridge
+    # Quickly see who did what (optional)
+    commit_messages:
+        create: Create {{collection}} “{{slug}}” - {{author-name}} <{{author-login}}> via DecapBridge
+        update: Update {{collection}} “{{slug}}” - {{author-name}} <{{author-login}}> via DecapBridge
+        delete: Delete {{collection}} “{{slug}}” - {{author-name}} <{{author-login}}> via DecapBridge
+        uploadMedia: Upload “{{path}}” - {{author-name}} <{{author-login}}> via DecapBridge
+        deleteMedia: Delete “{{path}}” - {{author-name}} <{{author-login}}> via DecapBridge
+        openAuthoring: Message {{message}} - {{author-name}} <{{author-login}}> via DecapBridge
 
 # Better Decap + Bridge logo (optional)
 logo_url: https://decapbridge.com/decapcms-with-bridge.svg

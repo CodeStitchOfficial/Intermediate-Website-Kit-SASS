@@ -1,0 +1,127 @@
+/* This style sheet is used to style the blog preview in the Decap CMS admin panel. */
+/* THe classses should match the elements created in the Decap CMS preview pane script in admin.astro */
+
+:root {
+	--primary: hsl(80, 90%, 55%);
+	--primaryLight: hsl(80, 60%, 40%);
+	--secondary: #001f3f;
+	--secondaryLight: #001f3f;
+	--headerColor: #1a1a1a;
+	--bodyTextColor: #4e4b66;
+	--bodyTextColorWhite: #fafbfc;
+
+	/* 13px - 16px */
+	--topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+	/* 31px - 49px */
+	--headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+	--bodyFontSize: 1rem;
+
+	/* 60px - 100px top and bottom */
+	--sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+
+.frame-content {
+	font-family: "Roboto", sans-serif;
+	line-height: 1.6em;
+}
+
+.frame-content h1,
+.frame-content h2,
+.frame-content h3,
+.frame-content h4,
+.frame-content h5,
+.frame-content h6 {
+	font-family: "Roboto", sans-serif;
+	color: var(--headerColor);
+}
+
+.frame-content img {
+	max-width: 100%;
+}
+
+.frame-content .blog {
+	padding: 2rem;
+	max-width: 48rem;
+	margin-inline: auto;
+}
+
+.frame-content .blog .title {
+	margin-top: 40px;
+}
+
+.frame-content .blog .cover {
+	border-radius: 0.5em;
+	min-width: 100%;
+	height: clamp(200px, 30vw, 400px);
+	margin-bottom: 50px;
+	object-fit: cover;
+}
+
+.frame-content .blog .metadata {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 50px;
+	color: var(--bodyTextColor);
+}
+
+.frame-content .blog .metadata .author {
+	margin: 0;
+	font-size: 0.875rem;
+}
+
+.frame-content .blog .metadata .dot {
+	display: block;
+	width: 3px;
+	height: 3px;
+	background-color: var(--primary);
+	border-radius: 50%;
+	margin-bottom: 1px;
+}
+
+.frame-content .blog .metadata .date {
+	font-size: 0.875rem;
+}
+
+.frame-content .blog .divider {
+	margin-top: 0;
+	margin-bottom: 1.5625em;
+	background-color: #a2a0a0;
+}
+
+.frame-content .blog .markdown {
+	margin-top: 3rem;
+	max-width: 80ch;
+}
+
+.frame-content .blog .markdown h1,
+.frame-content .blog .markdown h2,
+.frame-content .blog .markdown h3,
+.frame-content .blog .markdown h4,
+.frame-content .blog .markdown h5,
+.frame-content .blog .markdown h6 {
+	color: var(--headerColor);
+}
+
+.frame-content .blog .markdown a {
+	color: var(--bodyTextColor);
+}
+
+.frame-content .blog .markdown a:hover {
+	color: var(--primary);
+	text-decoration-color: var(--primary);
+}
+
+.frame-content .blog .markdown *:not(pre *, .admonition *, details *, blockquote *, span, a, h1, h2, h3, h4, h5, h6) {
+	color: var(--bodyTextColor);
+}
+
+.frame-content .blog .markdown pre {
+	padding: 1rem;
+	margin: 1rem 0;
+	background-color: #24292e;
+	color: #e1e4e8 !important;
+	overflow-x: auto;
+	border-radius: 0.5em;
+}

@@ -1,136 +1,131 @@
-// Imports
-const pluginEleventyNavigation = require("@11ty/eleventy-navigation");
-const eleventyPluginSharpImages = require("@codestitchofficial/eleventy-plugin-sharp-images");
+// ─────────────────────────────────────────────────────────────────────────────
+// ELEVENTY CONFIGURATION
+// This file configures how Eleventy builds your static site
+// Documentation: https://www.11ty.dev/docs/config/
+// ─────────────────────────────────────────────────────────────────────────────
+
+// 📦 Plugin Imports
+const pluginImages = require("@codestitchofficial/eleventy-plugin-sharp-images");
 const pluginMinifier = require("@codestitchofficial/eleventy-plugin-minify");
 const pluginSitemap = require("@quasibit/eleventy-plugin-sitemap");
 
-// Configs
-const configCss = require("./src/config/css");
-const configJs = require("./src/config/javascript");
-const configSitemap = require("./src/config/sitemap");
-const configServer = require("./src/config/server");
+// ⚙️ Configuration Files
+const configSitemap = require("./src/config/plugins/sitemap");
+const configImages = require("./src/config/plugins/images");
 
-// Other
-const filterPostDate = require("./src/config/postDate");
-const isProduction = configServer.isProduction;
+// 🔧 Processing Functions
+const sass = require("./src/config/processors/sass");
+const javascript = require("./src/config/processors/javascript");
+
+// 🛠️ Utilities
+const filterPostDate = require("./src/config/filters/postDate");
+const filterIsoDate = require("./src/config/filters/isoDate");
+const isProduction = process.env.ELEVENTY_ENV === "PROD";
 
 module.exports = function (eleventyConfig) {
-    /**=====================================================================
-          EXTENSIONS - Recognising non-default languages as templates
-    =======================================================================*/
-    /** https://www.11ty.dev/docs/languages/custom/ */
+    // ═════════════════════════════════════════════════════════════════════════
+    // LANGUAGES
+    // Using Eleventy's build events to process non-template languages
+    // Learn more: https://www.11ty.dev/docs/events/
+    // ═════════════════════════════════════════════════════════════════════════
 
-    /**
-     *  CSS EXTENSION
-     *  Setting up CSS files to be recognised as aN eleventy template language. This allows our minifier to read CSS files and minify them
+    /*
+     * JavaScript & CSS Processing
+     * These processors handle bundling, transpiling, and minification
+     * - JavaScript: Compiled with esbuild for modern bundling
+     * - CSS/SASS: Processed and minified for production, including a PostCSS pipeline
      */
-    eleventyConfig.addTemplateFormats("css");
-    eleventyConfig.addExtension("css", configCss);
+    eleventyConfig.on("eleventy.after", javascript);
+    eleventyConfig.on("eleventy.after", sass);
 
-    /**
-     *  JS EXTENSION
-     *  Sets up JS files as an eleventy template language, which are compiled by esbuild. Allows bundling and minification of JS
+    // ═════════════════════════════════════════════════════════════════════════
+    // PLUGINS
+    // Extend Eleventy with additional functionality
+    // Learn more: https://www.11ty.dev/docs/plugins/
+    // ═════════════════════════════════════════════════════════════════════════
+
+    /*
+     * 🖼️ Image Optimization
+     * Resize and optimize images for better performance using {% getUrl %}
+     * Documentation: https://github.com/CodeStitchOfficial/eleventy-plugin-sharp-images
      */
-    eleventyConfig.addTemplateFormats("js");
-    eleventyConfig.addExtension("js", configJs);
-    /**=====================================================================
-                                END EXTENSIONS
-    =======================================================================*/
+    eleventyConfig.addPlugin(pluginImages, configImages);
 
-    /**=====================================================================
-                  PLUGINS - Adds additional eleventy functionality
-    =======================================================================*/
-    /** https://www.11ty.dev/docs/plugins/ */
-
-    eleventyConfig.addPlugin(eleventyPluginSharpImages, {
-        urlPath: "/assets/images",
-        outputDir: "public/assets/images",
-    });
-
-    /**
-     *  ELEVENTY NAVIGATION
-     *  Sets up the eleventy navigation plugin for a scalable navigation as used in _includes/components/header.html
-     *  https://github.com/11ty/eleventy-navigation
-     */
-    eleventyConfig.addPlugin(pluginEleventyNavigation);
-
-    /**
-     *  AUTOMATIC SITEMAP GENERATION
-     *  Automatically generate a sitemap, using the domain in _data/client.json
-     *  https://www.npmjs.com/package/@quasibit/eleventy-plugin-sitemap
+    /*
+     * 🗺️ Sitemap Generation
+     * Creates sitemap.xml automatically using domain from _data/client.json
+     * Documentation: https://github.com/quasibit/eleventy-plugin-sitemap
      */
     eleventyConfig.addPlugin(pluginSitemap, configSitemap);
 
-    /**
-     *  MINIFIER
-     *  When in production ("npm run build" is ran), minify all HTML, CSS, JSON, XML, XSL and webmanifest files.
-     *  https://github.com/benjaminrancourt/eleventy-plugin-files-minifier
+    /*
+     * 📦 Production Minification
+     * Minifies HTML, CSS, JSON, XML, XSL, and webmanifest files
+     * Only runs during production builds (npm run build)
+     * Documentation: https://github.com/CodeStitchOfficial/eleventy-plugin-minify
      */
     if (isProduction) {
         eleventyConfig.addPlugin(pluginMinifier);
     }
-    /**=====================================================================
-                                END PLUGINS
-    =======================================================================*/
 
-    /**======================================================================
-       PASSTHROUGHS - Copy source files to /public with no 11ty processing
-    ========================================================================*/
-    /** https://www.11ty.dev/docs/copy/ */
+    // ═════════════════════════════════════════════════════════════════════════
+    // PASSTHROUGH COPIES
+    // Copy files directly to output without processing
+    // Learn more: https://www.11ty.dev/docs/copy/
+    // ═════════════════════════════════════════════════════════════════════════
 
-    eleventyConfig.addPassthroughCopy("./src/assets", {
-        filter: ["**/*", "!**/*.js"],
-    });
-    eleventyConfig.addPassthroughCopy("./src/admin");
-    eleventyConfig.addPassthroughCopy("./src/_redirects");
-    /**=====================================================================
-                              END PASSTHROUGHS
-    =======================================================================*/
+    eleventyConfig.addPassthroughCopy("./src/assets"); // Static assets
+    eleventyConfig.addPassthroughCopy("./src/admin"); // CMS admin files
+    eleventyConfig.addPassthroughCopy("./src/_redirects"); // Redirect rules
 
-    /**======================================================================
-               FILTERS - Modify data in template files at build time
-    ========================================================================*/
-    /** https://www.11ty.dev/docs/filters/ */
+    // ═════════════════════════════════════════════════════════════════════════
+    // FILTERS
+    // Transform data in templates at build time
+    // Learn more: https://www.11ty.dev/docs/filters/
+    // ═════════════════════════════════════════════════════════════════════════
 
-    /**
-     *  Converts dates from JSDate format (Fri Dec 02 18:00:00 GMT-0600) to a locale format.
-     *  Use - {{ "DATE GOES HERE" | postDate }}
-     *  https://moment.github.io/luxon/api-docs/index.html#datetime
+    /*
+     * 📅 Human-Readable Date Formatting Filter
+     * Converts JavaScript dates to human-readable format
+     * Usage: {{ "2023-12-02" | postDate }}
+     * Powered by Luxon: https://moment.github.io/luxon/api-docs/
      */
     eleventyConfig.addFilter("postDate", filterPostDate);
-    /**=====================================================================
-                                    END FILTERS
-    =======================================================================*/
 
-    /**======================================================================
-                  SHORTCODES - Output data using JS at build time
-    ========================================================================*/
-    /** https://www.11ty.dev/docs/shortcodes/ */
+    /*
+     * 📅 ISO Date Formatting Filter
+     * Converts JavaScript dates to ISO 8601 format
+     * Usage: {{ "2023-12-02" | isoDate }}
+     * Powered by Luxon: https://moment.github.io/luxon/api-docs/
+     */
+    eleventyConfig.addFilter("isoDate", filterIsoDate);
 
-    /**
-     *  Gets the current year, which can be outputted with {% year %}. Used for the footer copyright. Updates with every build.
-     *  Use - {% year %}
+    // ═════════════════════════════════════════════════════════════════════════
+    // SHORTCODES
+    // Generate dynamic content with JavaScript
+    // Learn more: https://www.11ty.dev/docs/shortcodes/
+    // ═════════════════════════════════════════════════════════════════════════
+
+    /*
+     * 📆 Current Year Shortcode
+     * Outputs the current year (useful for copyright notices)
+     * Usage: {% year %}
+     * Updates automatically with each build
      */
     eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
-    /**=====================================================================
-                                END SHORTCODES
-    =======================================================================*/
 
-    /**=====================================================================
-                                SERVER SETTINGS
-    =======================================================================*/
-    eleventyConfig.setServerOptions(configServer);
-    /**=====================================================================
-                              END SERVER SETTINGS
-    =======================================================================*/
+    // ═════════════════════════════════════════════════════════════════════════
+    // BUILD CONFIGURATION
+    // Define input/output directories and template engine
+    // ═════════════════════════════════════════════════════════════════════════
 
     return {
         dir: {
-            input: "src",
-            output: "public",
-            includes: "_includes",
-            data: "_data",
+            input: "src", // Source files directory
+            output: "public", // Build output directory
+            includes: "_includes", // Partial templates directory
+            data: "_data", // Global data files directory
         },
-        htmlTemplateEngine: "njk",
+        htmlTemplateEngine: "njk", // Nunjucks for HTML templates
     };
 };

@@ -1,4 +1,9 @@
-/* STYLES FOR ABOVE THE FOLD */
+// ─────────────────────────────────────────────────────────────────────────────
+// CRITICAL PAGE STYLES
+// Above-the-fold and high-priority styles for the home page's landing section.
+// Put the first section of the home page in here, so it loads immediately.
+// The rest of the home page styles in local.css will be deferred and
+// ─────────────────────────────────────────────────────────────────────────────
 
 /*-- -------------------------- -->
 <---           Hero             -->
@@ -6,27 +11,77 @@
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #hero {
-        z-index: 1;
-        position: relative;
-        /* prevents overflow from the lines extending past the screen width */
-        overflow: hidden;
-        /* changes on tablet */
-        padding: 0 calc(16 / 16 * 1rem);
-        padding-bottom: calc(100 / 16 * 1rem);
-        font-family: "Roboto", "Arial", sans-serif;
+    #hero-143 {
         /* Centers button */
         text-align: center;
+        /* 144px - 300px - leaving extra space for the navigation */
+        padding: clamp(9rem, 25.95vw, 18.75rem) calc(16 / 16 * 1rem) 0;
+        /* 130px - 450px */
+        padding-bottom: clamp(12.125rem, 30.95vw, 28.125rem);
+        position: relative;
+        z-index: 1;
+        /* Prevents white rectangle pseudos from overlapping the sections below */
+        overflow: hidden;
 
-        .cs-picture {
-            z-index: -2;
+        &:before {
+            /* Left side of the triangle */
+            content: "";
+            width: calc(500 / 16 * 1rem);
+            /* make really long so it covers the whole screen all the way to desktop */
+            height: calc(4000 / 16 * 1rem);
+            background: #fff;
+            opacity: 1;
+            transform: rotate(-67deg);
+            transform-origin: center;
+            position: absolute;
+            display: block;
+            bottom: calc(-2235 / 16 * 1rem);
+            /* this makes the right edge sit at the 50% line at all times */
+            right: 50%;
+            z-index: 0;
+        }
+
+        &:after {
+            /* Right side of the triangle */
+            content: "";
+            width: calc(500 / 16 * 1rem);
+            height: calc(4000 / 16 * 1rem);
+            background: #fff;
+            opacity: 1;
+            transform: rotate(67deg);
+            transform-origin: center;
+            position: absolute;
+            display: block;
+            bottom: calc(-2235 / 16 * 1rem);
+            /* this makes the left edge sit at the 50% line at all times */
+            left: 50%;
+            z-index: 0;
+        }
+
+        .cs-background {
+            width: 100%;
+            height: 100%;
+            display: block;
             position: absolute;
             top: 0;
             left: 0;
-            display: block;
-            height: 100%;
-            /* Background Image */
-            width: 100%;
+            z-index: -2;
+
+            &:before {
+                /* Overlay */
+                content: "";
+                width: 100%;
+                height: 100%;
+                background: #000;
+                opacity: 0.7;
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                /* prevents the cursor from interacting with it */
+                pointer-events: none;
+            }
 
             img {
                 position: absolute;
@@ -34,211 +89,90 @@
                 left: 0;
                 height: 100%;
                 width: 100%;
-                /* Makes image act like a background-image */
                 object-fit: cover;
-            }
-
-            &:before {
-                z-index: 1;
-                position: absolute;
-                top: 0;
-                left: 0;
-                /* Black Color Overlay */
-                content: "";
-                opacity: 0.7;
-                display: block;
-                background: #000;
-                height: 100%;
-                width: 100%;
-                /* prevents the cursor from interacting with it */
-                pointer-events: none;
             }
         }
 
         .cs-container {
-            position: relative;
-            margin: auto;
-            max-width: calc(1280 / 16 * 1em);
             width: 100%;
-            /* we put the padding top and bottom on the container instead of #Hero so the pseudo element lines go to the top and bottom of the section */
-            /* 144px - 280px - leaving extra space for the navigation */
-            /* changes on tablet */
-            padding: clamp(9em, 25.95vw, 17.5em) 0;
-
-            &:before {
-                position: absolute;
-                top: 0;
-                left: 0;
-                /* Left Line */
-                content: "";
-                opacity: 1;
-                display: block;
-                background: -moz-linear-gradient(
-                    top,
-                    rgba(250, 251, 252, 0.5) 0%,
-                    rgba(250, 251, 252, 0) 100%
-                ); /* FF3.6-15 */
-                background: -webkit-linear-gradient(
-                    top,
-                    rgba(250, 251, 252, 0.5) 0%,
-                    rgba(250, 251, 252, 0) 100%
-                ); /* Chrome10-25,Safari5.1-6 */
-                height: 100%;
-                width: 1px;
-            }
-        }
-
-        .cs-flex-group {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: flex-start;
+            max-width: calc(1280 / 16 * 1rem);
             margin: auto;
-            /* 60px - 220px */
-            margin-bottom: clamp(3.75em, 15.5vw, 13.75em);
-            /* 464px - 562px */
-            max-width: clamp(29em, 60vw, 35.125em);
-            width: 80vw;
-            box-sizing: border-box;
-        }
-
-        .cs-topper {
-            margin-bottom: calc(16 / 16 * 1rem);
-            color: var(--primary);
-            text-align: center;
         }
 
         .cs-title {
-            width: 100%;
-            color: var(--bodyTextColorWhite);
+            /* 39px - 61px */
+            font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+            font-weight: 700;
+            line-height: 1.2em;
             text-align: center;
+            max-width: calc(829 / 16 * 1rem);
+            /* 16px - 24px */
+            margin: 0 auto clamp(1rem, 4vw, 1.5rem);
+            color: #fff;
+            position: relative;
+
+            &:after {
+                /* Divider Line */
+                content: "";
+                /* 60px - 100px */
+                width: clamp(3.75rem, 9.5vw, 6.25rem);
+                /* 4px - 8px */
+                height: clamp(0.25rem, 0.8vw, 0.5rem);
+                /* 16px - 24px */
+                margin: clamp(1rem, 4vw, 1.5rem) auto clamp(1rem, 4vw, 1.5rem);
+                background: var(--primary);
+                opacity: 1;
+                position: relative;
+                display: block;
+            }
         }
 
         .cs-text {
-            /* 32px - 40px */
-            margin: 0 auto clamp(2rem, 4vw, 2.5rem) 0;
+            /* 16px - 25px */
+            font-size: clamp(1rem, 1.95vw, 1.5625rem);
+            line-height: 1.5em;
+            text-align: center;
+            width: 100%;
+            /* 464px - 800px */
+            max-width: clamp(29rem, 60vw, 50rem);
+            margin: 0 auto;
             /* 40px - 48px */
             margin-bottom: clamp(2.5rem, 4vw, 3rem);
-            color: var(--bodyTextColorWhite);
-            text-align: center;
-        }
-
-        .cs-button-solid {
-            margin-bottom: calc(16 / 16 * 1rem);
-            height: initial;
-            line-height: clamp(2.875em, 5.5vw, 3.5em);
-        }
-
-        .cs-button-transparent {
-            z-index: 1;
-            position: relative;
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            border: 1px solid var(--bodyTextColorWhite);
-            margin: 0 calc(8 / 16 * 1rem);
-            background-color: transparent;
-            /* 46px - 56px */
-            height: clamp(2.875em, 5.5vw, 3.5em);
-            width: calc(180 / 16 * 1rem);
-            box-sizing: border-box;
-            padding: 0;
-            text-decoration: none;
-            font-size: calc(16 / 16 * 1rem);
-            /* 46px - 56px */
-            line-height: clamp(2.875em, 5.5vw, 3.5em);
-            font-weight: 700;
             color: #fff;
-
-            .cs-img {
-                display: block;
-                margin-right: calc(12 / 16 * 1rem);
-            }
-
-            &:before {
-                z-index: -1;
-                position: absolute;
-                /* so it sits on top of the border */
-                top: -1px;
-                bottom: -1px;
-                left: -1px;
-                right: -1px;
-                content: "";
-                opacity: 1;
-                /* this is what creates the grow affect on hover */
-                transform: scaleX(0);
-                display: block;
-                background: #000;
-                transition: transform 0.3s;
-                transform-origin: left;
-            }
-
-            &:hover {
-                &:before {
-                    transform: scaleX(1);
-                }
-            }
         }
     }
 }
 
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-    #hero {
-        /* 32px - 40px */
-        padding: 0 clamp(2em, 5vw, 2.5em);
-
-        .cs-container {
-            padding: clamp(7em, 27.95vw, 17.5em) 0 clamp(9em, 30.95vw, 23.5em) 0;
-            &:after {
-                position: absolute;
-                top: 0;
-                right: 0;
-                /* Right Line */
-                content: "";
-                opacity: 1;
-                display: block;
-                background: -moz-linear-gradient(
-                    top,
-                    rgba(250, 251, 252, 0) 0%,
-                    rgba(250, 251, 252, 0.5) 100%
-                ); /* FF3.6-15 */
-                background: -webkit-linear-gradient(
-                    top,
-                    rgba(250, 251, 252, 0) 0%,
-                    rgba(250, 251, 252, 0.5) 100%
-                ); /* Chrome10-25,Safari5.1-6 */
-                height: 100%;
-                width: 1px;
-            }
-        }
-
-        .cs-button-solid {
-            margin-right: calc(20 / 16 * 1rem);
-            margin-bottom: 0;
-        }
-    }
-}
-
-/* Desktop Parallax Effect - 1300px */
-@media only screen and (min-width: 81.25em) {
-    #hero {
+/* Desktop - 1300px (To make image background parallax) */
+@media only screen and (min-width: 81.25rem) {
+    #hero-143 {
         background: url("/assets/images/landing.jpg");
-        background-position: center;
         background-size: cover;
+        background-position: center;
         background-repeat: no-repeat;
-        /* creates parallax effect on background image */
+        /* makes the parallax effect */
         background-attachment: fixed;
+
+        .cs-background {
+            img {
+                display: none;
+            }
+        }
     }
 }
 
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
-        #hero {
+        #hero-143 {
+            &:before,
+            &:after {
+                background: var(--dark);
+            }
+
             .cs-background {
                 &:before {
-                    opacity: 0.8;
+                    opacity: 0.85;
                 }
             }
         }
@@ -246,61 +180,123 @@
 }
 
 /*-- -------------------------- -->
-<---          Services          -->
+<---         Services           -->
 <--- -------------------------- -*/
 
-/* Mobile */
+/* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    .services {
-        z-index: 100;
+    #h-services-143 {
+        /* 40px - 100px */
+        padding: 0 calc(16 / 16 * 1em) clamp(2.5rem, 7.9vw, 6.25rem) calc(16 / 16 * 1rem);
         position: relative;
-        border-top: calc(6 / 16 * 1em) solid var(--primary);
-        border-radius: calc(5 / 16 * 1em);
-        margin: auto;
-        margin-top: calc(-167 / 16 * 1em);
-        margin-bottom: calc(50 / 16 * 1em);
-        background: #fff;
-        max-width: calc(1320 / 16 * 1em);
-        width: 90%;
-        padding: calc(50 / 16 * 1em) calc(20 / 16 * 1em);
-        box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
-        .card {
-            display: block;
-            margin: auto;
-            margin-bottom: calc(50 / 16 * 1em);
-            max-width: calc(357 / 16 * 1em);
+        /* give a higher z index than the hero so it can sit on top */
+        z-index: 10;
+
+        .cs-card-group {
             width: 100%;
+            max-width: calc(465 / 16 * 1rem);
+            margin: 0 auto 0;
+            /* negative margin pulls it up on top of the hero section */
+            /* -46px to -76px - we're calculating whatever clamp is and multiplying by -1
+            to make the value negative since clamp doesn't work with negative values */
+            margin-top: calc(clamp(5rem, 13vw, 4.75rem) * -1);
+            /* 40px - 60px top and bottom, 16px - 44px left & right */
+            padding: clamp(2.5rem, 4.7vw, 3.75rem) clamp(1rem, 5.3vw, 2.75rem);
+            box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.05);
+            border-radius: calc(5 / 16 * 1rem);
+            border-top: 8px solid var(--primary);
+            background-color: #fff;
+            /* prevents padding and border from affecting height and width */
+            box-sizing: border-box;
+        }
 
-            picture {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-radius: 50%;
-                margin: auto;
-                margin-bottom: calc(23 / 16 * 1em);
-                background: var(--primary);
-                height: calc(88 / 16 * 1em);
-                width: calc(88 / 16 * 1em);
+        .cs-item {
+            list-style: none;
+            margin: 0 auto calc(32 / 16 * 1rem);
+            width: 100%;
+            max-width: calc(360 / 16 * 1rem);
 
-                img {
-                    height: calc(48 / 16 * 1em);
-                    width: calc(48 / 16 * 1em);
-                }
+            &:last-of-type {
+                margin-bottom: 0;
             }
-            h2 {
-                margin-bottom: calc(13 / 20 * 1em);
-                font-size: calc(32 / 16 * 1em);
-                line-height: calc(27 / 20 * 1em);
-                font-weight: 700;
-                color: #1a1a1a;
-                text-align: center;
+        }
+
+        .cs-icon {
+            /* 68px - 88px */
+            width: clamp(4.25rem, 8.8vw, 5.5rem);
+            /* 68px - 88px */
+            height: clamp(4.25rem, 8.8vw, 5.5rem);
+            margin: auto;
+            /* 20px - 24px */
+            margin-bottom: clamp(1.25rem, 5vw, 1.5rem);
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                /* 44px - 52px */
+                width: clamp(2.75rem, 5.8vw, 3.25rem);
+                height: auto;
             }
-            p {
-                opacity: 0.7;
-                width: 100%;
-                line-height: calc(24 / 18 * 1em);
-                text-align: center;
+        }
+
+        .cs-title {
+            font-size: calc(20 / 16 * 1rem);
+            line-height: 1.2em;
+            text-transform: uppercase;
+            text-align: center;
+            margin: 0 auto calc(8 / 16 * 1rem);
+            color: var(--headerColor);
+        }
+
+        .cs-text {
+            font-size: calc(16 / 16 * 1rem);
+            text-align: center;
+            line-height: 1.5em;
+            max-width: calc(360 / 16 * 1rem);
+            margin: 0 auto;
+            color: var(--bodyTextColor);
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #h-services-143 {
+        .cs-card-group {
+            max-width: calc(784 / 16 * 1rem);
+            /* -76px to -320px - we're calculating whatever clamp is and multiplying by -1
+               to make the value negative since clamp doesn't work with negative values */
+            margin-top: calc(clamp(4.75rem, 20vw, 20rem) * -1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            column-gap: calc(40 / 16 * 1rem);
+        }
+
+        .cs-item {
+            width: 45%;
+            max-width: calc(314 / 16 * 1rem);
+            &:last-of-type {
+                margin-bottom: calc(32 / 16 * 1rem);
             }
+        }
+    }
+}
+
+/* Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+    #h-services-143 {
+        .cs-card-group {
+            max-width: calc(1280 / 16 * 1rem);
+            flex-wrap: nowrap;
+        }
+
+        .cs-item {
+            margin: 0;
             &:last-of-type {
                 margin-bottom: 0;
             }
@@ -308,45 +304,23 @@
     }
 }
 
-/* Inbetween */
-@media only screen and (min-width: 768px) {
-    .services {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        width: 98%;
-        font-size: min(1.8vw, 1em);
-
-        .card {
-            margin: 0;
-            max-width: calc(325 / 16 * 1em);
-        }
-    }
-}
-
-/* Large Desktop */
-@media only screen and (min-width: 1300px) {
-    .services {
-        padding: calc(50 / 16 * 1em) calc(80 / 16 * 1em);
-
-        .card {
-            max-width: calc(357 / 16 * 1em);
-        }
-    }
-}
-
-/* Dark mode */
+/* Dark Mode */
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
-        #services {
-            background: var(--medium);
-
-            picture {
-                background: var(--primaryDark);
+        #h-services-143 {
+            .cs-card-group {
+                background: var(--medium);
             }
 
-            h2 {
-                font-weight: bold;
+            .cs-icon {
+                background: var(--darkTint);
+            }
+
+            .cs-title {
+                color: #fff;
+            }
+
+            .cs-text {
                 color: #fff;
             }
         }

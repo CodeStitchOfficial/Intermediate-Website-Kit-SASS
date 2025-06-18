@@ -1,4 +1,9 @@
-/* PAGE-SPECIFIC STYLES FOR THE ABOUT PAGE */
+// ─────────────────────────────────────────────────────────────────────────────
+// PAGE STYLES
+// Interior pages have their own stylesheet for styles that only exist on
+// that page. Any styles shared between pages, including repeated sections,
+// should go into root.scss
+// ─────────────────────────────────────────────────────────────────────────────
 
 /*-- -------------------------- -->
 <---       Side By Side         -->
@@ -6,35 +11,99 @@
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #sbs {
+    #RPsbs-313 {
         padding: var(--sectionPadding);
 
         .cs-container {
+            width: 100%;
+            max-width: calc(1280 / 16 * 1rem);
+            margin: auto;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            margin: auto;
-            max-width: calc(1280 / 16 * 1rem);
-            width: 100%;
-            row-gap: calc(40 / 16 * 1rem);
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
         }
 
-        .cs-left {
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            max-width: calc(542 / 16 * 1rem);
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+        }
+
+        .cs-text {
+            margin-bottom: calc(16 / 16 * 1rem);
+            &:last-of-type {
+                margin-bottom: calc(32 / 16 * 1rem);
+            }
+        }
+
+        .cs-quote {
+            margin: 0 0 calc(32 / 16 * 1rem) 0;
+            /* 16px - 32px */
+            padding: clamp(1rem, 3vw, 2rem);
+            background-color: #f7f7f7;
+            border-radius: calc(16 / 16 * 1rem);
             position: relative;
-            height: calc(636 / 16 * 1em);
-            /* using ems so we can use font size to scale the whole section */
-            width: calc(631 / 16 * 1em);
+        }
+
+        .cs-quote-text {
+            /* 14px - 16px */
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            line-height: 1.5em;
+            margin: 0 0 calc(16 / 16 * 1rem);
+            color: #767676;
+            display: block;
+        }
+
+        .cs-name {
+            font-size: calc(16 / 16 * 1rem);
+            line-height: 1.2em;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin: 0 0 calc(4 / 16 * 1rem);
+            color: var(--headerColor);
+            display: block;
+        }
+
+        .cs-job {
+            font-size: calc(14 / 16 * 1rem);
+            line-height: 1.5em;
+            color: #767676;
+            display: block;
+        }
+
+        .cs-quote-icon {
+            /* 60px - 136px */
+            width: clamp(3.75rem, 10vw, 8.5rem);
+            height: auto;
+            position: absolute;
+            bottom: calc(0 / 16 * 1rem);
+            /* 16px - 32px */
+            right: clamp(1rem, 4vw, 2rem);
+        }
+
+        .cs-image-group {
             /* scaling the font size with the view width */
             font-size: min(2.31vw, 0.7em);
+            /* using ems so we can use font size to scale the whole section */
+            width: calc(631 / 16 * 1em);
+            height: calc(636 / 16 * 1em);
+            position: relative;
         }
 
         .cs-picture {
-            position: absolute;
-            display: block;
             border-radius: calc(24 / 16 * 1em);
             /* clips img tag corners */
             overflow: hidden;
+            position: absolute;
+            display: block;
+
             img {
                 position: absolute;
                 top: 0;
@@ -47,113 +116,40 @@
         }
 
         .cs-picture1 {
-            top: 0;
-            left: 0;
-            height: calc(581 / 16 * 1em);
             width: calc(522 / 16 * 1em);
+            height: calc(581 / 16 * 1em);
+            left: 0;
+            top: 0;
         }
 
         .cs-picture2 {
-            bottom: 0;
-            right: 0;
+            width: calc(414 / 16 * 1em);
+            height: calc(400 / 16 * 1em);
+            background-color: #fff;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 40px;
             /* 6px - 12px */
             border: clamp(0.375em, 1.5vw, 0.75em) solid #fff;
-            background-color: #fff;
-            height: calc(400 / 16 * 1em);
-            width: calc(414 / 16 * 1em);
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 40px;
-        }
-
-        .cs-right {
-            margin: auto;
-            max-width: calc(542 / 16 * 1rem);
-        }
-
-        .cs-topper {
-            margin-bottom: calc(4 / 16 * 1rem);
-            text-align: left;
-        }
-
-        .cs-title {
-            max-width: calc(800 / 16 * 1rem);
-            text-align: left;
-        }
-
-        .cs-text {
-            margin-bottom: calc(16 / 16 * 1rem);
-            max-width: calc(750 / 16 * 1rem);
-            color: var(--bodyTextColor);
-            text-align: left;
-
-            &:last-of-type {
-                margin-bottom: calc(32 / 16 * 1rem);
-            }
-        }
-
-        .cs-flex-group {
-            position: relative;
-            border-radius: calc(16 / 16 * 1rem);
-            background-color: #f7f7f7;
-            /* 16px - 32px */
-            padding: clamp(1rem, 3vw, 2rem);
-        }
-
-        .cs-flex-p {
-            margin: 0 0 calc(16 / 16 * 1rem);
-            /* 14px - 16px */
-            font-size: clamp(0.875rem, 1.5vw, 1rem);
-            line-height: 1.5em;
-            color: #353535;
-        }
-
-        .cs-name {
-            display: block;
-            margin: 0 0 calc(4 / 16 * 1rem);
-            text-transform: uppercase;
-            font-size: calc(16 / 16 * 1rem);
-            line-height: 1.2em;
-            font-weight: bold;
-            color: var(--headerColor);
-        }
-
-        .cs-job {
-            display: block;
-            font-size: calc(14 / 16 * 1rem);
-            line-height: 1.5em;
-            color: #353535;
-        }
-
-        .cs-quote-icon {
-            position: absolute;
-            bottom: calc(0 / 16 * 1rem);
-            /* 16px - 32px */
-            right: clamp(1rem, 4vw, 2rem);
-            height: auto;
-            /* 60px - 136px */
-            width: clamp(3.75rem, 10vw, 8.5rem);
-        }
-
-        .cs-button-solid {
-            margin-top: calc(32 / 16 * 1rem);
+            right: 0;
+            bottom: 0;
         }
     }
 }
 
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
-    #sbs {
+    #RPsbs-313 {
         .cs-container {
             flex-flow: row;
             justify-content: space-between;
             gap: calc(52 / 16 * 1rem);
         }
 
-        .cs-left {
+        .cs-image-group {
             font-size: min(1.2vw, 1em);
             flex: none;
         }
 
-        .cs-right {
+        .cs-content {
             margin: 0;
         }
     }
@@ -162,8 +158,8 @@
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
-        #sbs {
-            .cs-left {
+        #RPsbs-313 {
+            .cs-image-group {
                 &:before,
                 &:after {
                     background: var(--accent);
@@ -171,9 +167,9 @@
             }
 
             .cs-picture2 {
+                background-color: var(--dark);
                 /* 6px - 12px */
                 border: clamp(0.375em, 1.5vw, 0.75em) solid var(--dark);
-                background-color: var(--dark);
             }
 
             .cs-topper {
@@ -183,18 +179,18 @@
             .cs-title,
             .cs-text,
             .cs-h3,
-            .cs-flex-p,
+            .cs-quote-text,
             .cs-name {
                 color: var(--bodyTextColorWhite);
             }
 
-            .cs-flex-group {
+            .cs-quote {
                 background-color: var(--accent);
             }
 
             .cs-job {
-                opacity: 0.8;
                 color: var(--bodyTextColorWhite);
+                opacity: 0.8;
             }
 
             .cs-quote-icon {

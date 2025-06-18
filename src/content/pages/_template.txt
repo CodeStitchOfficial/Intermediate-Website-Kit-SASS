@@ -1,14 +1,8 @@
 ---
-title: 'Page title for <title> and OG tags'
-description: 'Description for <meta> description and OG tags'
-preloadImg: '/assets/images/imagename.format'
-permalink: 'page-path/'
-eleventyNavigation:
-    key: Name to appear in navigation
-    order: 1000
-    parent: Optional - Put another page's "key" here to create a dropdown
-    hideOnMobile: Optional - set to "true" to hide on devices from, and below, 1023px
-    hideOnDesktop: Optional - set to "true" to hide on devices above, and including, 1024px
+title: "Page title for <title> and OG tags"
+description: "Description for <meta> description and OG tags"
+permalink: "/page-path/"
+image: "OPTIONAL - If an image path is specified here, it will be used for that page's OG image. Useful for blog posts (implemented as standard with this kit)"
 ---
 
 {% extends "layouts/base.html" %}

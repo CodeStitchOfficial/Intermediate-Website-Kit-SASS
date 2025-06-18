@@ -1,4 +1,9 @@
-/* PAGE-SPECIFIC STYLES FOR THE CONTACT PAGE */
+// ─────────────────────────────────────────────────────────────────────────────
+// PAGE STYLES
+// Interior pages have their own stylesheet for styles that only exist on
+// that page. Any styles shared between pages, including repeated sections,
+// should go into root.scss
+// ─────────────────────────────────────────────────────────────────────────────
 
 /*-- -------------------------- -->
 <---          Contact           -->
@@ -6,65 +11,44 @@
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    :root {
-        /* 13px - 16px */
-        --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
-        /* 31px - 49px */
-        --headerFontSize: clamp(1.9375rem, 4.5vw, 3.0625rem);
-        --bodyFontSize: 1rem;
-
-        /* 60px - 100px top and bottom */
-        --sectionPadding: clamp(3.75em, 7.82vw, 6.25em) 1rem;
-    }
-
-    #cs-contact {
+    #cs-contact-265 {
         padding: var(--sectionPadding);
-        font-family: "Roboto", "Arial", sans-serif;
 
         .cs-container {
-            margin: auto;
-            /* changes to 1280px at desktop */
-            max-width: calc(800 / 16 * 1rem);
             width: 100%;
+            /* changes to 1280px at tablet */
+            max-width: calc(550 / 16 * 1rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
         }
 
         .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
             width: 100%;
+            margin: 0 0 calc(32 / 16 * 1rem) 0;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
         }
 
-        .cs-topper {
-            /* 8px - 12px */
-            margin-bottom: clamp(0.5rem, 1.4vw, 0.75rem);
-            text-align: left;
-        }
-
-        .cs-title {
-            max-width: calc(800 / 16 * 1rem);
-            text-align: left;
-        }
-
-        .cs-text {
-            margin: 0 auto 0 0;
-            /* 40px - 48px */
-            margin-bottom: clamp(2.5rem, 6.3vw, 3rem);
-            /* 404px - 522px */
-            max-width: clamp(25.25rem, 30vw, 32.625rem);
-            text-align: left;
-        }
-
-        #cs-form {
-            margin-bottom: calc(40 / 16 * 1rem);
+        #cs-form-265 {
             label {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: flex-start;
-                /* 12px - 20px */
-                margin-bottom: clamp(0.75rem, 1.3em, 1.25rem);
                 font-size: calc(16 / 16 * 1rem);
                 line-height: 1.5em;
                 font-weight: 700;
+                /* 12px - 20px */
+                margin-bottom: clamp(0.75rem, 1.3em, 1.25rem);
                 color: var(--headerColor);
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                flex-direction: column;
             }
 
             .cs-label-message {
@@ -74,15 +58,15 @@
 
             input,
             textarea {
-                border: 1px solid #b4b2c7;
-                border-radius: calc(8 / 16 * 1rem);
-                margin-top: calc(4 / 16 * 1rem);
-                height: calc(64 / 16 * 1rem);
+                font-size: calc(16 / 16 * 1rem);
                 width: 100%;
+                height: calc(64 / 16 * 1rem);
+                margin-top: calc(4 / 16 * 1rem);
+                padding-left: calc(20 / 16 * 1rem);
+                border: 1px solid #b4b2c7;
+                border-radius: calc(4 / 16 * 1rem);
                 /* prevents border & padding from affecting height */
                 box-sizing: border-box;
-                padding-left: calc(20 / 16 * 1rem);
-                font-size: calc(16 / 16 * 1rem);
                 transition: border 0.3s;
 
                 &:hover {
@@ -91,64 +75,114 @@
             }
 
             textarea {
-                min-height: calc(120 / 16 * 1rem);
-                padding-top: calc(20 / 16 * 1rem);
                 font-family: inherit;
+                padding-top: calc(20 / 16 * 1rem);
+                min-height: calc(120 / 16 * 1rem);
             }
 
             .cs-button-solid {
-                border: none;
                 width: 100%;
             }
         }
 
-        .cs-right-section {
+        .cs-button-solid {
+            font-size: calc(16 / 16 * 1rem);
+            /* 46px - 56px */
+            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+            text-decoration: none;
+            font-weight: 700;
+            text-align: center;
+            margin: 0;
+            color: #fff;
+            min-width: calc(150 / 16 * 1rem);
+            padding: 0 calc(24 / 16 * 1rem);
+            background-color: var(--primary);
+            border-radius: calc(4 / 16 * 1rem);
+            display: inline-block;
             position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            align-items: flex-start;
-            border-radius: calc(8 / 16 * 1rem);
+            z-index: 1;
+            /* prevents padding from adding to the width */
+            box-sizing: border-box;
+
+            &:before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 0%;
+                background: #000;
+                opacity: 1;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                border-radius: calc(4 / 16 * 1rem);
+                transition: width 0.3s;
+            }
+
+            &:hover {
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+
+        .cs-submit {
+            width: 100%;
+            border: none;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .cs-right-section {
+            width: 100%;
             height: calc(320 / 16 * 1rem);
-            /* cuts off corners on img tag */
-            overflow: hidden;
             /* 24px - 40px top & bottom */
             /* 20px - 40px left & right */
             padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1.25rem, 3vw, 2.5rem);
+            /* prevents padding and border from affecting height and width */
+            box-sizing: border-box;
+            border-radius: calc(4 / 16 * 1rem);
+            /* cuts off corners on img tag */
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+            position: relative;
         }
 
         .cs-header {
-            display: block;
-            margin-bottom: calc(8 / 16 * 1rem);
             /* 16px - 20px */
             font-size: clamp(1rem, 3vw, 1.25rem);
             line-height: 1.2em;
             font-weight: 700;
+            margin-bottom: calc(8 / 16 * 1rem);
             color: var(--bodyTextColorWhite);
+            display: block;
         }
 
         .cs-link {
-            position: relative;
-            display: block;
-            margin-bottom: calc(20 / 16 * 1rem);
-            text-decoration: none;
             /* 16px - 20px */
             font-size: clamp(1rem, 3vw, 1.25rem);
             line-height: 1.2em;
+            text-decoration: none;
+            margin-bottom: calc(20 / 16 * 1rem);
             color: var(--bodyTextColorWhite);
+            display: block;
+            position: relative;
 
             &:before {
-                position: absolute;
-                bottom: calc(-2 / 16 * 1rem);
-                left: 0;
                 /* Animated underline */
                 content: "";
-                opacity: 1;
-                display: block;
+                width: 0%;
+                height: 2px;
                 /* current color of the parent */
                 background: currentColor;
-                height: 2px;
-                width: 0%;
+                opacity: 1;
+                position: absolute;
+                display: block;
+                bottom: calc(-2 / 16 * 1rem);
+                left: 0;
                 transition: width 0.3s;
             }
 
@@ -169,14 +203,27 @@
         }
 
         .cs-bg-picture {
-            z-index: -1;
+            width: 100%;
+            height: 100%;
+            display: block;
             position: absolute;
             top: 0;
             left: 0;
-            display: block;
-            height: 100%;
-            width: 100%;
+            z-index: -1;
             transition: transform 0.6s;
+
+            &:before {
+                /* background color overlay */
+                content: "";
+                position: absolute;
+                display: block;
+                height: 100%;
+                width: 100%;
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
 
             img {
                 position: absolute;
@@ -187,35 +234,22 @@
                 /* Makes img tag act as a background image */
                 object-fit: cover;
             }
-
-            &:before {
-                z-index: 1;
-                position: absolute;
-                top: 0;
-                left: 0;
-                /* background color overlay */
-                content: "";
-                display: block;
-                background: linear-gradient(
-                    180deg,
-                    rgba(0, 0, 0, 0) 0%,
-                    rgba(0, 0, 0, 0.8) 100%
-                );
-                height: 100%;
-                width: 100%;
-            }
         }
     }
 }
 
 /* Tablet - 700px */
-@media only screen and (min-width: 43.75em) {
-    #cs-contact {
-        #cs-form {
+@media only screen and (min-width: 43.75rem) {
+    #cs-contact-265 {
+        .cs-container {
+            max-width: calc(1280 / 16 * 1rem);
+        }
+
+        #cs-form-265 {
             display: flex;
-            flex-wrap: wrap;
             justify-content: space-between;
             align-items: flex-start;
+            flex-wrap: wrap;
 
             label {
                 width: 48%;
@@ -230,17 +264,19 @@
 
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
-    #cs-contact {
+    #cs-contact-265 {
         .cs-container {
-            display: flex;
-            justify-content: flex-end;
+            flex-direction: row;
+            justify-content: space-between;
             align-items: flex-start;
-            max-width: calc(1280 / 16 * 1rem);
             gap: calc(80 / 16 * 1rem);
         }
 
-        #cs-form {
+        .cs-left-section {
             max-width: calc(630 / 16 * 1rem);
+        }
+
+        #cs-form-265 {
             label {
                 width: 100%;
             }
@@ -249,8 +285,8 @@
         .cs-right-section {
             /* changes to 578px at 1300px wide */
             height: calc(686 / 16 * 1rem);
+            width: 40vw;
             max-width: calc(542 / 16 * 1rem);
-            width: 40%;
             /* prevents flexbox from squishing it */
             flex: none;
 
@@ -269,13 +305,13 @@
 }
 
 /* Small Desktop - 1300px */
-@media only screen and (min-width: 81.25em) {
-    #cs-contact {
-        #cs-form {
+@media only screen and (min-width: 81.25rem) {
+    #cs-contact-265 {
+        #cs-form-265 {
             column-gap: calc(0 / 16 * 1rem);
             label {
-                max-width: calc(305 / 16 * 1rem);
                 width: 48%;
+                max-width: calc(305 / 16 * 1rem);
             }
 
             .cs-label-message {
@@ -292,13 +328,13 @@
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
-        #cs-contact {
+        #cs-contact-265 {
             .cs-text,
             .cs-title {
                 color: var(--bodyTextColorWhite);
             }
 
-            #cs-form {
+            #cs-form-265 {
                 label,
                 input,
                 textarea {
