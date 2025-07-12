@@ -3,7 +3,4 @@ permalink: /sitemap.xml
 layout: null
 eleventyExcludeFromCollections: true
 ---
-<!-- This will get all pages that has a "tag" of "sitemap" and generate a sitemap.xml file every time the site is built -->
-<!-- All pages in ./src/content will automatically be tagged, because of the content/content.json directory data file -->
-<!-- index.html has this tag in the front matter -->
 {% sitemap collections.sitemap %}
