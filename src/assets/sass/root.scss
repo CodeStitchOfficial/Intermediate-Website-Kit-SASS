@@ -893,7 +893,7 @@
                 transition: color 0.3s, background-color 0.3s;
 
                 &:hover {
-                    background-color: #f7f7f7;
+                    background-color: #f0f0f0;
                 }
 
                 &:before {
@@ -914,8 +914,10 @@
 
             .cs-li-link {
                 &.cs-drop-link {
+                    background-color: var(--medium);
+
                     &:hover {
-                        background-color: var(--medium);
+                        background-color: var(--light);
                     }
                 }
             }
