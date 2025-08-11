@@ -1,0 +1,49 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    "schedule:monthly",
+    "group:allNonMajor",
+    ":semanticPrefixFixDepsChoreOthers",
+    ":automergePatch",
+    ":disableDependencyDashboard"
+  ],
+  "labels": ["dependencies"],
+  "rangeStrategy": "bump",
+  "postUpdateOptions": [
+    "npmDedupe"
+  ],
+  "packageRules": [
+    {
+      "description": "Group Eleventy ecosystem packages together",
+      "groupName": "eleventy-ecosystem",
+      "matchPackagePatterns": [
+        "^@11ty/",
+        "^eleventy-",
+        "^@.*eleventy"
+      ],
+      "matchPackageNames": [
+        "@quasibit/eleventy-plugin-sitemap"
+      ]
+    },
+    {
+      "description": "Group CodeStitch packages together", 
+      "groupName": "codestitch-tools",
+      "matchPackagePatterns": [
+        "^@codestitchofficial/",
+        "^codestitch-"
+      ]
+    },
+    {
+      "description": "Group build and CSS processing tools",
+      "groupName": "build-tools",
+      "matchPackageNames": [
+        "autoprefixer",
+        "cssnano", 
+        "postcss",
+        "esbuild",
+        "sass"
+      ]
+    }
+  ]
+}
