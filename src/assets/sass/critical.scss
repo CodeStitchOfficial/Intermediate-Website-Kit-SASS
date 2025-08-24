@@ -18,6 +18,7 @@
         .cs-container {
             width: 100%;
             max-width: calc(1280 / 16 * 1rem);
+            height: auto;
             margin: auto;
             display: flex;
             justify-content: center;
@@ -34,17 +35,13 @@
 
         .cs-title {
             /* 39px - 61px */
-            font-size: clamp(2rem, 5vw, 3rem);
+            font-size: clamp(2.25rem, 5vw, 3rem);
             line-height: 1.1em;
             text-align: center;
             max-width: calc(700 / 16 * 1rem);
             margin: 0 auto calc(16 / 16 * 1rem);
             color: var(--accent600);
             position: relative;
-        }
-
-        .nm-subhead {
-            text-align: center;
         }
 
         .cs-text {
@@ -65,8 +62,15 @@
 
         .nm-subhead {
             color: var(--secondary500);
+            font-size: clamp(1.125rem, 3.5vh, 1.5rem);
+            margin: .5rem 0 0 0;
+        }
+
+        .nm-subhead-md {
             font-size: clamp(1.25rem, 4vh, 1.75rem);
-            margin: .5rem 0 2rem 0;
+            font-family: var(--headerFont);
+            text-align: center;
+            margin: 1rem 0 2rem 0;
         }
 
         .cs-picture {
@@ -118,7 +122,7 @@
         #button-box-838 {
             width: 100%;
             max-width: calc(630 / 16 * 1rem);
-            margin-bottom: calc(32 / 16 * 1rem);
+            margin-bottom: calc(64 / 16 * 1rem);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -254,7 +258,7 @@
                 opacity: .8;
             }
 
-            .nm-subhead {
+            .nm-subhead, .nm-subhead-md {
                 color: var(--textLight);
             }
 

@@ -14,6 +14,7 @@
   #hero-288 .cs-container {
     width: 100%;
     max-width: 80rem;
+    height: auto;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -28,16 +29,13 @@
   }
   #hero-288 .cs-title {
     /* 39px - 61px */
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(2.25rem, 5vw, 3rem);
     line-height: 1.1em;
     text-align: center;
     max-width: 43.75rem;
     margin: 0 auto 1rem;
     color: var(--accent600);
     position: relative;
-  }
-  #hero-288 .nm-subhead {
-    text-align: center;
   }
   #hero-288 .cs-text {
     /* 16px - 20px */
@@ -56,8 +54,14 @@
   }
   #hero-288 .nm-subhead {
     color: var(--secondary500);
+    font-size: clamp(1.125rem, 3.5vh, 1.5rem);
+    margin: 0.5rem 0 0 0;
+  }
+  #hero-288 .nm-subhead-md {
     font-size: clamp(1.25rem, 4vh, 1.75rem);
-    margin: 0.5rem 0 2rem 0;
+    font-family: var(--headerFont);
+    text-align: center;
+    margin: 1rem 0 2rem 0;
   }
   #hero-288 .cs-picture {
     width: 100%;
@@ -104,7 +108,7 @@
   #hero-288 #button-box-838 {
     width: 100%;
     max-width: 39.375rem;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -220,7 +224,7 @@
     color: var(--textLight);
     opacity: 0.8;
   }
-  body.dark-mode #hero-288 .nm-subhead {
+  body.dark-mode #hero-288 .nm-subhead, body.dark-mode #hero-288 .nm-subhead-md {
     color: var(--textLight);
   }
   body.dark-mode #hero-288 .cs-waves {
