@@ -550,6 +550,9 @@
     /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
     box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 24px;
   }
+  #cs-navigation li {
+    margin-bottom: 0;
+  }
   #cs-navigation .cs-container {
     display: flex;
     justify-content: flex-end;
@@ -599,6 +602,7 @@
   }
   #cs-navigation .cs-button-solid {
     font-size: clamp(0.7rem, 1.8vw, 0.9rem);
+    align-self: center;
   }
   #cs-navigation .cs-li {
     padding: 2rem 0;
@@ -609,6 +613,7 @@
   #cs-navigation .cs-li-link {
     position: relative;
     display: block;
+    align-self: center;
     margin: 0;
     text-decoration: none;
     font-family: var(--smallCaps);
@@ -674,6 +679,7 @@
     padding: var(--sectionPadding);
     position: relative;
     z-index: 1;
+    display: none;
   }
   #cta-1612 .cs-container {
     width: 100%;

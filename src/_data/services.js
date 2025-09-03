@@ -1,7 +1,7 @@
 // _data/services.js
 module.exports = {
-  stdWeb: { name: 'Standard Website', price: '3,000' },
-  subWeb: { name: 'Subscription Website', price: '175' },
+  stdWeb: { name: 'The Final Site', price: '3,000' },
+  subWeb: { name: 'The Forever Site', price: '175' },
   figma: { name: 'Figma Design', price: '500' },
   extraPages: { name: 'Extra Pages', price: '100' },
   blog: { name: 'Blog Configuration', price: '250' },

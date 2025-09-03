@@ -546,6 +546,7 @@
     padding: var(--sectionPadding);
     position: relative;
     background: var(--primary600);
+    display: none;
     /* Content Group */
   }
   #cs-menu-group-1038 .cs-name a {
@@ -865,6 +866,323 @@
   }
   #cs-menu-group-1038 .cs-background img {
     display: none;
+  }
+}
+/*-- -------------------------- -->
+<---          Pricing           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #pricing-1315 {
+    padding: var(--sectionPadding);
+    /* clips the cs-floater and prevents it from causing overflow issues */
+    overflow: hidden;
+    background-color: var(--primary);
+    position: relative;
+    z-index: 1;
+  }
+  #pricing-1315 .cs-container {
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: 36.5rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #pricing-1315 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    max-width: 33.875rem;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #pricing-1315 .cs-topper {
+    color: var(--secondary);
+  }
+  #pricing-1315 .cs-title {
+    max-width: 20ch;
+    color: var(--textLight);
+  }
+  #pricing-1315 .cs-text {
+    color: var(--textLight);
+    margin-bottom: 1rem;
+  }
+  #pricing-1315 .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+  #pricing-1315 .cs-card-group {
+    width: 100%;
+    max-width: 39.375rem;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* 16px - 20px */
+    gap: clamp(1rem, 2.3vw, 1.25rem);
+  }
+  #pricing-1315 .cs-item {
+    text-align: center;
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    /* 32px - 40px top & bootm */
+    /* 16px - 24px left & right */
+    padding: clamp(2rem, 4.4vw, 2.5rem) clamp(1rem, 2.3vw, 1.5rem);
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    background-color: var(--textLight);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #pricing-1315 .cs-package {
+    /* 13px - 16px */
+    font-family: var(--smallCaps);
+    font-size: clamp(0.8125rem, 1.5vw, 1rem);
+    line-height: 1.2em;
+    letter-spacing: 2px;
+    text-align: inherit;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--accent500);
+    /* 4px - 8px */
+    margin: 0 0 clamp(0.25rem, 1vw, 0.5rem) 0;
+  }
+  #pricing-1315 .cs-desc {
+    font-size: 1rem;
+    line-height: 1.5em;
+    text-align: inherit;
+    margin: 0 0 1rem 0;
+    color: var(--textDark);
+    display: block;
+  }
+  #pricing-1315 .cs-price {
+    /* 31px - 49px */
+    font-family: var(--headerFont);
+    font-size: clamp(1.9375rem, 4vw, 3.0625rem);
+    line-height: 1.2em;
+    font-weight: 700;
+    text-align: inherit;
+    margin: 0;
+    padding: 0;
+    color: var(--accent500);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  #pricing-1315 .cs-duration {
+    font-family: var(--smallCaps);
+    font-variant-numeric: lining-nums;
+    font-size: 0.75rem;
+    line-height: 1.5em;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: inherit;
+    margin: 0;
+    /* 4px - 8px */
+    padding: clamp(0.25rem, 1vw, 0.5rem) 0;
+    color: var(--textMid);
+    display: block;
+  }
+  #pricing-1315 .cs-ul {
+    width: 100%;
+    /* 16px - 24px */
+    margin: clamp(1rem, 2vw, 1.25rem) 0 auto 0;
+    padding: clamp(1rem, 2vw, 1.25rem) 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    /* 8px - 12px */
+    gap: clamp(0.5rem, 1.5vw, 0.75rem);
+    position: relative;
+  }
+  #pricing-1315 .cs-ul:before {
+    content: "";
+    width: 100%;
+    max-width: 15.625rem;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(232, 232, 232, 0.2) 0%, #e8e8e8 53.78%, rgba(232, 232, 232, 0.2) 100%);
+    opacity: 1;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #pricing-1315 .cs-li {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    list-style: none;
+    line-height: 1.5em;
+    font-weight: 400;
+    text-align: inherit;
+    margin: 0;
+    padding: 0;
+    color: var(--textDark);
+    display: block;
+  }
+  #pricing-1315 .cs-button-transparent {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-family: var(--smallCaps);
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 0;
+    color: var(--accent500);
+    min-width: 9.375rem;
+    padding: 0 1.5rem;
+    background-color: transparent;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  #pricing-1315 .cs-button-transparent:hover {
+    color: var(--textLight);
+    background: var(--accent500);
+  }
+  #pricing-1315 .cs-button-transparent {
+    /* this is the section specific override if you choose to pull out the cs-button-transparent and place it in a global stylesheet to resue acorss the entire site */
+    /* 28px - 40px */
+    margin-top: clamp(1.75rem, 3vw, 2.5rem);
+  }
+  #pricing-1315 .cs-floater {
+    width: 40.75rem;
+    height: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+  #pricing-1315 .cs-background {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #pricing-1315 .cs-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #pricing-1315 .cs-container {
+    max-width: 80rem;
+  }
+  #pricing-1315 .cs-container .cs-card-group {
+    margin-bottom: 4.5rem;
+    flex-direction: row;
+    align-items: stretch;
+  }
+  #pricing-1315 .cs-container .cs-item:nth-of-type(2) {
+    transform: translateY(4.5rem);
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #pricing-1315 .cs-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #pricing-1315 .cs-content {
+    text-align: left;
+    align-items: flex-start;
+    /* sends it to the right in the 2nd position */
+    order: 2;
+  }
+  #pricing-1315 .cs-card-group {
+    width: 56.7%;
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+}
+/* Large Desktop 1300px - Parallax Scroll */
+@media only screen and (min-width: 81.25rem) {
+  #pricing-1315 {
+    background: url("/assets/textures/price-texture.webp");
+    background-color: var(--primary600);
+    background-size: cover;
+    background-position: center 20%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  #pricing-1315:before {
+    /* black overlay */
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #19130d;
+    opacity: 0.6;
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  #pricing-1315 .cs-background img {
+    display: none;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #pricing-1315 {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  body.dark-mode #pricing-1315 .cs-title,
+  body.dark-mode #pricing-1315 .cs-text {
+    color: var(--textLight);
+  }
+  body.dark-mode #pricing-1315 .cs-text {
+    opacity: 0.8;
+  }
+  body.dark-mode #pricing-1315 .cs-ul:before {
+    opacity: 0.5;
+  }
+  body.dark-mode #pricing-1315 .cs-item {
+    background-color: var(--medium);
+  }
+  body.dark-mode #pricing-1315 .cs-package {
+    color: var(--secondary200);
+  }
+  body.dark-mode #pricing-1315 .cs-desc,
+  body.dark-mode #pricing-1315 .cs-price,
+  body.dark-mode #pricing-1315 .cs-duration,
+  body.dark-mode #pricing-1315 .cs-li {
+    color: var(--textLight);
+  }
+  body.dark-mode #pricing-1315 .cs-duration,
+  body.dark-mode #pricing-1315 .cs-li,
+  body.dark-mode #pricing-1315 .cs-desc {
+    opacity: 0.8;
+  }
+  body.dark-mode #pricing-1315 .cs-floater {
+    opacity: 0.3;
+  }
+  body.dark-mode #pricing-1315 .cs-button-transparent {
+    color: var(--textLight);
   }
 }
 /*-- -------------------------- -->

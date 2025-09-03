@@ -63,7 +63,9 @@
         .nm-subhead {
             color: var(--secondary500);
             font-size: clamp(1.125rem, 3.5vh, 1.5rem);
-            margin: .5rem 0 0 0;
+            margin: .5rem 0 1rem 0;
+            text-align: center;
+            max-width: calc(700 / 16 * 1rem);
         }
 
         .nm-subhead-md {

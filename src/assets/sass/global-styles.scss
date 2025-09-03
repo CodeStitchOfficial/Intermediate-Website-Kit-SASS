@@ -691,6 +691,10 @@
         /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
         box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 24px;
 
+        li {
+            margin-bottom: 0; 
+        }
+
         .cs-container {
             display: flex;
             justify-content: flex-end;
@@ -747,6 +751,7 @@
 
         .cs-button-solid {
             font-size: clamp(.7rem, 1.8vw, .9rem);
+            align-self: center;
         }
 
         .cs-li {
@@ -759,6 +764,7 @@
         .cs-li-link {
             position: relative;
             display: block;
+            align-self: center;
             margin: 0;
             text-decoration: none;
             font-family: var(--smallCaps);
@@ -844,6 +850,7 @@
         padding: var(--sectionPadding);
         position: relative;
         z-index: 1;
+        display: none;
 
         .cs-container {
             width: 100%;
