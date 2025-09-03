@@ -55,9 +55,7 @@
   #hero-288 .nm-subhead {
     color: var(--secondary500);
     font-size: clamp(1.125rem, 3.5vh, 1.5rem);
-    margin: 0.5rem 0 1rem 0;
-    text-align: center;
-    max-width: 43.75rem;
+    margin: 1rem 0 2rem 0;
   }
   #hero-288 .nm-subhead-md {
     font-size: clamp(1.25rem, 4vh, 1.75rem);
