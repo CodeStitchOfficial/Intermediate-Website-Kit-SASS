@@ -31,6 +31,7 @@
         --textLight: #fffaf0;
         --textMid: #656360;
         --textDark: #262524;
+        --accent100-rgb: 229, 187, 184;
 
         /* 13px - 16px */
         --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
@@ -95,15 +96,16 @@
         z-index: 1;
         position: relative;
         display: inline-block;
-        background: #A2635D;
+        background: var(--accent300);
         width: auto;
-        padding: 0 calc(30 / 16 * 1rem);
+        padding: 1rem;
         font-family: var(--smallCaps);
         text-decoration: none;
         text-transform: uppercase;
         font-size: calc(16 / 16 * 1rem);
         font-variant-numeric: lining-nums;
-        line-height: calc(48 / 16 * 1em);
+        text-wrap: balance;
+        line-height: 1.4;
         letter-spacing: 3px;
         font-weight: 600;
         filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, .3));
@@ -139,6 +141,7 @@
             height: 100%;
             box-shadow: inset 0 0 2rem rgba(0, 0, 0, 0.4);
             //Transition properties
+            will-change: transform;
             width: 0;
             transition: width 0.3s;
         }
@@ -146,6 +149,37 @@
 
     .cs-button-solid:hover {
         color: var(--textLight);
+    }
+
+    .cs-button-transparent {
+        font-size: calc(16 / 16 * 1rem);
+        /* 46px - 56px */
+        line-height: 1.4;
+        text-decoration: none;
+        font-family: var(--smallCaps);
+        font-weight: 600;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin: 0;
+        color: var(--accent500);
+        min-width: calc(150 / 16 * 1rem);
+        padding: 1rem;
+        background-color: transparent;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+        transition:
+            background-color 0.3s,
+            color 0.3s;
+
+        &:hover {
+            color: var(--textLight);
+            background: var(--accent500);
+            text-decoration: none;
+        }
     }
 
     .nm-honeypot {
@@ -237,7 +271,7 @@
     nav h1,
     section h1 {
         font-size: 2rem;
-        line-height: 1.2rem;
+        line-height: 1.2;
         font-weight: 400;
         color: var(--textDark);
     }
@@ -257,31 +291,11 @@
         text-decoration: none;
         transition: color 0.3s;
         font-weight: 600;
-        
-        &[target="_blank"] {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.25ex;
-        
-        &::after {
-            content: "";
-            display: inline-block;
-            margin-left: 0.25ex;
-            width: 0.8em;
-            height: 0.8em;
-            vertical-align: top;
-            background-color: var(--primary); /* Default color */
-            -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20id%3D%22Layer_2%22%20data-name%3D%22Layer%202%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016.696%2016.696%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20.cls-1%20%7B%0A%20%20%20%20%20%20%20%20fill%3A%20none%3B%0A%20%20%20%20%20%20%20%20stroke%3A%20currentColor%3B%0A%20%20%20%20%20%20%20%20stroke-linecap%3A%20round%3B%0A%20%20%20%20%20%20%20%20stroke-linejoin%3A%20round%3B%0A%20%20%20%20%20%20%20%20stroke-width%3A%201.5px%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%3C%2Fstyle%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%3Cg%20id%3D%22Layer_1-2%22%20data-name%3D%22Layer%201%22%3E%0A%20%20%20%20%3Cg%3E%0A%20%20%20%20%20%20%3Cpolyline%20class%3D%22cls-1%22%20points%3D%2214.957%209.043%2014.957%2016.348%20.348%2016.348%20.348%201.739%207.652%201.739%22%2F%3E%0A%20%20%20%20%20%20%3Cline%20class%3D%22cls-1%22%20x1%3D%2212.174%22%20y1%3D%22.348%22%20x2%3D%2216.348%22%20y2%3D%22.348%22%2F%3E%0A%20%20%20%20%20%20%3Cline%20class%3D%22cls-1%22%20x1%3D%2216.348%22%20y1%3D%224.522%22%20x2%3D%2216.348%22%20y2%3D%22.348%22%2F%3E%0A%20%20%20%20%20%20%3Cline%20class%3D%22cls-1%22%20x1%3D%228.696%22%20y1%3D%228%22%20x2%3D%2216.348%22%20y2%3D%22.348%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E");
-            mask-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20id%3D%22Layer_2%22%20data-name%3D%22Layer%202%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016.696%2016.696%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20.cls-1%20%7B%0A%20%20%20%20%20%20%20%20fill%3A%20none%3B%0A%20%20%20%20%20%20%20%20stroke%3A%20currentColor%3B%0A%20%20%20%20%20%20%20%20stroke-linecap%3A%20round%3B%0A%20%20%20%20%20%20%20%20stroke-linejoin%3A%20round%3B%0A%20%20%20%20%20%20%20%20stroke-width%3A%201.5px%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%3C%2Fstyle%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%3Cg%20id%3D%22Layer_1-2%22%20data-name%3D%22Layer%201%22%3E%0A%20%20%20%20%3Cg%3E%0A%20%20%20%20%20%20%3Cpolyline%20class%3D%22cls-1%22%20points%3D%2214.957%209.043%2014.957%2016.348%20.348%2016.348%20.348%201.739%207.652%201.739%22%2F%3E%0A%20%20%20%20%20%20%3Cline%20class%3D%22cls-1%22%20x1%3D%2212.174%22%20y1%3D%22.348%22%20x2%3D%2216.348%22%20y2%3D%22.348%22%2F%3E%0A%20%20%20%20%20%20%3Cline%20class%3D%22cls-1%22%20x1%3D%2216.348%22%20y1%3D%224.522%22%20x2%3D%2216.348%22%20y2%3D%22.348%22%2F%3E%0A%20%20%20%20%20%20%3Cline%20class%3D%22cls-1%22%20x1%3D%228.696%22%20y1%3D%228%22%20x2%3D%2216.348%22%20y2%3D%22.348%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E");
-            -webkit-mask-size: cover;
-            mask-size: cover;
-            }
-        }
 
-        a[target="_blank"]:visited,
-        a[target="_blank"]:visited::after {
-            color: var(--accent500);
-            background-color: var(--accent500);
+        a[target="_blank"]:after {
+            content: " ↗";
+            font-size: 0.8em;
+            opacity: 0.7;
         }
         
         &:visited {
@@ -292,10 +306,6 @@
             color: var(--primary600);
             text-decoration: underline;
             text-underline-offset: .1em;
-        }
-
-        a[target="_blank"]:hover::after {
-            background-color: var(--primary600); /* Hover color */
         }
     }
 
@@ -329,12 +339,33 @@
 
     // Hidden Screen reader skip nav button
     .skip {
-        z-index: -1111111;
         position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0;
+        top: -40px;
+        left: 6px;
+        background: var(--primary);
+        color: var(--textLight);
+        padding: 8px;
+        text-decoration: none;
+        border-radius: 0 0 4px 4px;
+        z-index: 1000;
+        transform: translateY(-100%);
+        transition: transform 0.3s;
+
+        &:focus {
+            transform: translateY(0);
+        }
     }
+    
+    /* Remove default focus styles and add custom ones */
+    *:focus {
+        outline: none; /* Remove browser default */
+    }
+
+    *:focus-visible {
+        outline: 2px solid var(--accent300);
+        outline-offset: 8px;
+    }       
+    
     // Grab your fonts to locally host from https://google-webfonts-helper.herokuapp.com/fonts
 
     /* Baskerville - Regular */

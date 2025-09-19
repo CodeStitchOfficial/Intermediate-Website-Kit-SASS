@@ -33,7 +33,7 @@
     line-height: 1.1em;
     text-align: center;
     max-width: 43.75rem;
-    margin: 0 auto 1rem;
+    margin: 0 0 1rem 0;
     color: var(--accent600);
     position: relative;
   }
@@ -83,13 +83,12 @@
     left: 0;
     height: 100%;
     width: 100%;
-    aspect-ratio: 398/290;
     /* makes image act as a background image */
     object-fit: cover;
   }
   #hero-288 .cs-waves {
     width: 100%;
-    height: 30%;
+    height: 30vh;
     background: var(--primary);
     display: block;
     position: absolute;
@@ -117,63 +116,6 @@
     flex-wrap: wrap;
     gap: 1.5rem;
   }
-  #hero-288 #button-box-838 .cs-button-solid {
-    font-size: 1rem;
-    /* 46px - 56px */
-    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-    text-decoration: none;
-    font-weight: 700;
-    text-align: center;
-    margin: 0;
-    min-width: 9.375rem;
-    padding: 0 1.5rem;
-    display: inline-block;
-    position: relative;
-    z-index: 1;
-    color: var(--textLight);
-    /* prevents padding from adding to the width */
-    box-sizing: border-box;
-  }
-  #hero-288 #button-box-838 .cs-button-solid:before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 0%;
-    opacity: 1;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: width 0.3s;
-  }
-  #hero-288 #button-box-838 .cs-button-solid:hover:before {
-    width: 100%;
-  }
-  #hero-288 #button-box-838 .cs-button-transparent {
-    font-size: 1rem;
-    /* 46px - 56px */
-    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-    text-decoration: none;
-    font-family: var(--smallCaps);
-    font-weight: 600;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin: 0;
-    color: var(--accent500);
-    min-width: 9.375rem;
-    padding: 0 1.5rem;
-    background-color: transparent;
-    display: inline-block;
-    position: relative;
-    z-index: 1;
-    /* prevents padding from adding to the width */
-    box-sizing: border-box;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  #hero-288 #button-box-838 .cs-button-transparent:hover {
-    color: var(--textLight);
-    background: var(--accent500);
-  }
 }
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
@@ -193,6 +135,7 @@
   }
   #hero-288 .cs-content #button-box-838 {
     justify-content: flex-start;
+    flex-flow: nowrap;
   }
   #hero-288 .cs-title,
   #hero-288 .cs-text {

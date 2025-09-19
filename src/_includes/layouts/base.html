@@ -22,6 +22,13 @@
             content="{% if social_image %}{{ client.domain }}{{ social_image }}{% else %}{{ client.domain }}/assets/images/social-share-image.webp{% endif %}"
         />
         <meta property="fb:app_id" content="9518164928251833" />
+        <meta property="og:site_name" content="Neva Masquerade">
+        <meta property="og:locale" content="en_US">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="{{ title }}">
+        <meta name="twitter:description" content="{{ description }}">
+        <meta name="twitter:image" content="{% if social_image %}{{ client.domain }}{{ social_image }}{% else %}{{ client.domain }}/assets/images/social-share-image.webp{% endif %}">
+
 
         <link rel="preconnect" href="https://app.termly.io" crossorigin>
         <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
@@ -148,7 +155,7 @@
             aria-label="skip to main content"
             href="#main"
             tabindex="0"
-            >Click To Skip To Main Content</a
+            >Skip To Main Content</a
         >
         {% include "components/header.html" %}
         <main id="main">{% block body %}{% endblock %}</main>
