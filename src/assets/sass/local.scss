@@ -81,7 +81,7 @@
             aspect-ratio: 1 / 1;
         }
 
-        .cs-h3 {
+        .cs-h2 {
             /* 20px - 25px */
             font-family: var(--smallCaps);
             font-size: 1.25rem;
@@ -98,6 +98,17 @@
             transition: color .3s;
         }
 
+        .nm-micro-tagline {
+            color: var(--textLight);
+            font-size: clamp(.875rem, 1.5vw, 1rem);
+            text-align: inherit;
+            font-weight: 400;
+            line-height: 1.5em;
+            margin: 0;
+            color: var(--textLight);
+            opacity: .8;
+        }
+
         .cs-item-text {
             /* 14px - 16px */
             font-size: clamp(.875rem, 1.5vw, 1rem);
@@ -108,10 +119,6 @@
             color: var(--textLight);
             opacity: .8;
             transition: color .3s, opacity .3s;
-
-            strong {
-                color: var(--secondary200);
-            }
         }
     }
 }
@@ -385,6 +392,28 @@
         .cs-text {
             color: var(--textLight);
         }
+
+        a {
+            color: var(--primary100);
+        
+            &:visited {
+                color: var(--secondary200);
+            }
+        
+            &:hover {
+                color: var(--primary200);
+            }
+
+            
+        }
+
+        .cs-button-solid {
+            color: var(--textLight);
+
+            &:visited {
+                color: var(--textLight);
+            }
+        }
     }
 }
 
@@ -615,395 +644,12 @@
 }
 
 /*-- -------------------------- -->
-<---          Price             -->
-<--- -------------------------- -*/
-
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-    #cs-menu-group-1038 {
-        text-align: left;
-        height: auto;
-        padding: var(--sectionPadding);
-        position: relative;
-        background: var(--primary600);
-        display: none;
-
-        .cs-name a {
-            font-family: inherit;
-            font-size: inherit;
-            font-weight: 400;
-            color: #fff;
-            text-decoration: underline;
-            text-underline-offset: 4px;
-            text-decoration-thickness: 1px;
-
-            &:hover {
-                color: var(--primary200);
-            }
-        }
-
-        .cs-container {
-            width: 100%;
-            /* changes to 1280px at tablet */
-            max-width: calc(550 / 16 * 1rem);
-            margin: auto;
-            /* prevents padding and border from affecting height and width */
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            /* 48px - 64px */
-            gap: clamp(3rem, 6vw, 4rem);
-            position: relative;
-        }
-
-        /* Content Group */
-        #cs-content-1801 {
-        /* set text align to left if content needs to be left aligned */
-        text-align: center;
-        width: 100%;
-        max-width: calc(1280/16 * 1rem);
-        display: flex;
-        flex-direction: column;
-        /* centers content horizontally, set to flex-start to left align */
-        align-items: center;
-
-        .cs-title {
-            max-width: 25ch;
-        }
-    }
-        .cs-topper {
-            color: var(--secondary200);
-        }
-
-        .cs-title, .cs-text {
-            color: var(--textLight);
-        }
-
-        .cs-icon {
-            width: 40%;
-            /* 100px - 180px */
-            max-width: clamp(6.25rem, 18vw, 11.25rem);
-            height: auto;
-            /* prevents flexbox from squishing it */
-            flex: none;
-        }
-
-        .cs-title {
-            margin: 0 0 calc(32 / 16 * 1rem);
-        }
-
-        .cs-text {
-            margin-bottom: 1rem;
-        }
-        .cs-hidden {
-            display: none;
-        }
-
-        .cs-button-group {
-            width: auto;
-            max-width: calc(1000 / 16 * 1rem);
-            margin: 0;
-            /* 16px - 28px top & bottom */
-            /* 32px - 48px left & right */
-            padding: calc(20 / 16 * 1rem) 0 0 0;
-            display: inline-flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            align-items: flex-end;
-            /* 24px - 36px */
-            column-gap: clamp(1.5rem, 2vw, 2.25rem);
-            row-gap: calc(12 / 16 * 1rem);
-        }
-
-        .cs-button {
-            font-family: var(--smallCaps);
-            font-size: calc(20 / 16 * 1rem);
-            line-height: 1.5em;
-            font-weight: 400;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            margin: 0;
-            padding: 0;
-            color: var(--textLight);
-            opacity: .8;
-            background: transparent;
-            border: none;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            position: relative;
-            transition:
-                color 0.3s,
-                font-weight 0.3s,
-                color 0.3s;
-
-            &:hover {
-                color: var(--primary100);
-                cursor: pointer;
-            }
-
-            &:before {
-                position: absolute;
-                bottom: calc(-2 / 16 * 1rem);
-                left: 0;
-                /* active state underline */
-                content: "";
-                opacity: 1;
-                display: none;
-                background: var(--secondary300);
-                height: 2px;
-                width: 100%;
-            }
-
-            &.cs-active {
-                color: var(--textLight);
-                font-weight: 700;
-                opacity: 1;
-                &:after {
-                    width: clamp(1.5625rem, 3vw, 2.25rem);
-                    opacity: 1;
-                    /* 8px - 16px */
-                    margin-left: clamp(0.5rem, 0.5vw, 1rem);
-                }
-                &:before {
-                    display: block;
-                }
-            }
-        }
-
-        .cs-menu {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            /* 32px - 64px */
-            gap: clamp(2rem, 6vw, 4rem);
-        }
-
-        .cs-content {
-            /* set text align to left if content needs to be left aligned */
-            text-align: left;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            /* centers content horizontally, set to flex-start to left align */
-            align-items: flex-start;
-            position: relative;
-            z-index: 20;
-        }
-
-        .cs-menu-list {
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            /* 32px - 60px */
-            row-gap: clamp(2rem, 6vw, 3.75rem);
-            position: relative;
-            z-index: 20;
-        }
-
-        .cs-menu-row {
-            display: flex;
-            flex-direction: column;
-            align-items: stretch;
-            /* 32px - 60px */
-            row-gap: clamp(2rem, 6vw, 3.75rem);
-        }
-
-        .cs-menu-item {
-            text-align: left;
-            list-style: none;
-            margin: 0;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: calc(16 / 16 * 1rem);
-        }
-
-        .cs-h3 {
-            /* 20px - 25px */
-            font-size: clamp(1.25rem, 2vw, 1.5625rem);
-            line-height: 1.2em;
-            font-weight: 400;
-            width: 100%;
-            margin: 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: calc(16 / 16 * 1rem);
-            position: relative;
-
-            
-        }
-
-        .cs-name {
-            /* 16px - 20px */
-            font-size: clamp(1.25rem, 2vw, 1.5625rem);
-            line-height: 1.2em;
-            max-width: 16ch;
-            margin-right: auto;
-            display: block;
-            /* prevents flexbox from squishing it */
-            flex: none;
-            color: var(--textLight);
-        }
-
-        .cs-price {
-            /* 20px - 25px */
-            font-size: clamp(1.25rem, 2vw, 1.5625rem);
-            line-height: 1.2em;
-            font-weight: 400;
-            width: auto;
-            margin: 0;
-            padding: calc(8 / 16 * 1rem) calc(12 / 16 * 1rem);
-            color: var(--textLight);
-            /* prevents padding and border from affecting height and width */
-            box-sizing: border-box;
-            display: block;
-            /* prevents flexbox from squishing it */
-            flex: none;
-            /* forces it into the 3rd position */
-            order: 3;
-            font-variant-numeric: lining-nums;
-        }
-
-        .nm-price-mod {
-            font-family: var(--smallCaps);
-            font-size: .75rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 300;
-            opacity: .8;
-        }
-
-        .cs-menu-p {
-            /* 14px - 16px */
-            font-size: clamp(0.875rem, 1.5vw, 1rem);
-            line-height: 1.5em;
-            text-align: inherit;
-            width: 100%;
-            margin: 0;
-            color: var(--textLight);
-        }
-
-        .cs-button-solid {
-            color: var(--textLight);
-        }
-
-        .cs-background {
-            width: 100%;
-            height: 100%;
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-
-            img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-            }
-        }
-    }
-}
-
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-    #cs-menu-group-1038 {
-        .cs-container {
-            max-width: calc(1280 / 16 * 1rem);
-        }
-
-        #cs-content-1801 {
-            text-align: left;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: flex-end;
-        }
-
-        .cs-button-group {
-            justify-content: flex-end;
-            align-items: center;
-        }
-
-        .cs-menu-row {
-            width: 100%;
-            flex-direction: row;
-            justify-content: stretch;
-            /* 32px - 80px */
-            gap: clamp(2em, 4vw, 5rem);
-
-            &.cs-3 {
-                .cs-h3 {
-                    gap: calc(8 / 16 * 1rem);
-                    &:after {
-                        display: none;
-                    }
-                }
-                .cs-name {
-                    font-size: clamp(1rem, 2vw, 1.5625rem);
-                    width: 70%;
-                    max-width: 20ch;
-                }
-            }
-        }
-
-        .cs-menu-item {
-            max-width: calc(600 / 16 * 1rem);
-            margin: 0 auto;
-        }
-
-        .cs-name {
-            width: fit-content;
-            max-width: 70%;
-        }
-    }
-}
-
-/* Large Desktop 1300px - Parallax Scroll */
-@media only screen and (min-width: 81.25rem) {
-    #cs-menu-group-1038 {
-        background: url("/assets/textures/price-texture.webp");
-        background-color: var(--primary600);
-        background-size: cover;
-        background-position: center 20%;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-
-        &:before {
-            /* black overlay */
-            content: "";
-            width: 100%;
-            height: 100%;
-            background: #19130d;
-            opacity: 0.6;
-            position: relative;
-            display: block;
-            top: 0;
-            left: 0;
-            z-index: 1;
-        }
-
-        .cs-background {
-            img {
-                display: none;
-            }
-        }
-    }
-}
-   
-/*-- -------------------------- -->
 <---          Pricing           -->
 <--- -------------------------- -*/
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #pricing-1315 {
+    #pricing-1319 {
         padding: var(--sectionPadding);
         /* clips the cs-floater and prevents it from causing overflow issues */
         overflow: hidden;
@@ -1013,7 +659,7 @@
 
         .cs-container {
             width: 100%;
-            /* changes to 1280px at tablet */
+            /* changes to 1440px at tablet */
             max-width: calc(584 / 16 * 1rem);
             margin: auto;
             display: flex;
@@ -1027,20 +673,20 @@
             /* set text align to left if content needs to be left aligned */
             text-align: center;
             width: 100%;
-            max-width: calc(542 / 16 * 1rem);
+            max-width: calc(487 / 16 * 1rem);
             display: flex;
             flex-direction: column;
             /* centers content horizontally, set to flex-start to left align */
             align-items: center;
         }
 
-        .cs-topper {
-            color: var(--secondary);
-        }
-
         .cs-title {
             max-width: 20ch;
             color: var(--textLight);
+        }
+
+        .cs-topper {
+            color: var(--secondary);
         }
 
         .cs-text {
@@ -1053,7 +699,7 @@
 
         .cs-card-group {
             width: 100%;
-            max-width: calc(630 / 16 * 1rem);
+            max-width: calc(852 / 16 * 1rem);
             padding: 0;
             margin: 0;
             display: flex;
@@ -1069,21 +715,45 @@
             list-style: none;
             width: 100%;
             margin: 0;
-            /* 32px - 40px top & bootm */
+            /* 48px - 64px top & bootm */
             /* 16px - 24px left & right */
-            padding: clamp(2rem, 4.4vw, 2.5rem) clamp(1rem, 2.3vw, 1.5rem);
+            padding: clamp(3rem, 4.4vw, 4rem) clamp(1rem, 2.3vw, 1.5rem);
             /* prevents padding and border from affecting height and width */
             box-sizing: border-box;
             background-color: var(--textLight);
             display: flex;
             flex-direction: column;
             align-items: center;
+
+            &.cs-popular {
+                background-color: var(--secondary);
+
+                .cs-ul {
+                    &:before {
+                        opacity: 0.5;
+                    }
+                }
+
+                .cs-duration {
+                    color: var(--textDark);
+                }
+
+                .cs-desc,
+                .cs-duration,
+                .cs-li {
+                    opacity: 0.8;
+                }
+            }
+            .cs-text,
+            .cs-li {
+                color: var(--textDark);
+            }
         }
 
         .cs-package {
             /* 13px - 16px */
             font-family: var(--smallCaps);
-            font-size: clamp(0.8125rem, 1.5vw, 1rem);
+            font-size: clamp(1.125rem, 1.75vw, 1.5rem);
             line-height: 1.2em;
             letter-spacing: 2px;
             text-align: inherit;
@@ -1102,6 +772,56 @@
             color: var(--textDark);
             display: block;
         }
+
+        .nm-recommended {
+            font-family: var(--smallCaps);
+            font-size: calc(12 / 16 * 1rem);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background-color: var(--accent500);
+            color: var(--textLight);
+            padding: .125rem;
+            margin-bottom: .5rem;
+        }
+
+        .nm-footer {
+            font-size: calc(14 / 16 * 1rem);
+            line-height: 1.5em;
+            text-align: inherit;
+            margin: 2rem 0 1rem 0;
+            color: var(--textDark);
+            display: block;
+        }
+
+        .cs-button-transparent {
+                font-size: calc(16 / 16 * 1rem);
+                /* 46px - 56px */
+                line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+                text-decoration: none;
+                font-family: var(--smallCaps);
+                font-weight: 600;
+                text-align: center;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                margin: 0;
+                color: var(--accent500);
+                min-width: calc(150 / 16 * 1rem);
+                padding: 0 calc(24 / 16 * 1rem);
+                background-color: transparent;
+                display: inline-block;
+                position: relative;
+                z-index: 1;
+                /* prevents padding from adding to the width */
+                box-sizing: border-box;
+                transition:
+                    background-color 0.3s,
+                    color 0.3s;
+    
+                &:hover {
+                    color: var(--textLight);
+                    background: var(--accent500);
+                }
+            }
 
         .cs-price {
             /* 31px - 49px */
@@ -1141,7 +861,7 @@
             padding: clamp(1rem, 2vw, 1.25rem) 0 0 0;
             display: flex;
             flex-direction: column;
-            align-items: left;
+            align-items: center;
             /* 8px - 12px */
             gap: clamp(0.5rem, 1.5vw, 0.75rem);
             position: relative;
@@ -1153,9 +873,9 @@
                 height: 1px;
                 background: linear-gradient(
                     90deg,
-                    rgba(232, 232, 232, 0.2) 0%,
-                    #e8e8e8 53.78%,
-                    rgba(232, 232, 232, 0.2) 100%
+                    rgba(89, 40, 36, 0.2) 0%,
+                    #a66963 53.78%,
+                    rgba(89, 40, 36, 0.2) 100%
                 );
                 opacity: 1;
                 position: absolute;
@@ -1175,44 +895,8 @@
             text-align: inherit;
             margin: 0;
             padding: 0;
-            color: var(--textDark);
+            color: var(--textLight);
             display: block;
-        }
-
-        .cs-button-transparent {
-            font-size: calc(16 / 16 * 1rem);
-            /* 46px - 56px */
-            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-            text-decoration: none;
-            font-family: var(--smallCaps);
-            font-weight: 600;
-            text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin: 0;
-            color: var(--accent500);
-            min-width: calc(150 / 16 * 1rem);
-            padding: 0 calc(24 / 16 * 1rem);
-            background-color: transparent;
-            display: inline-block;
-            position: relative;
-            z-index: 1;
-            /* prevents padding from adding to the width */
-            box-sizing: border-box;
-            transition:
-                background-color 0.3s,
-                color 0.3s;
-
-            &:hover {
-                color: var(--textLight);
-                background: var(--accent500);
-            }
-        }
-
-        .cs-button-transparent {
-            /* this is the section specific override if you choose to pull out the cs-button-transparent and place it in a global stylesheet to resue acorss the entire site */
-            /* 28px - 40px */
-            margin-top: clamp(1.75rem, 3vw, 2.5rem);
         }
 
         .cs-floater {
@@ -1247,9 +931,9 @@
 
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-    #pricing-1315 {
+    #pricing-1319 {
         .cs-container {
-            max-width: calc(1280 / 16 * 1rem);
+            max-width: calc(1440 / 16 * 1rem);
 
             .cs-card-group {
                 margin-bottom: calc(72 / 16 * 1rem);
@@ -1266,32 +950,9 @@
     }
 }
 
-/* Small Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-    #pricing-1315 {
-        .cs-container {
-            flex-direction: row;
-            justify-content: space-between;
-        }
-
-        .cs-content {
-            text-align: left;
-            align-items: flex-start;
-            /* sends it to the right in the 2nd position */
-            order: 2;
-        }
-
-        .cs-card-group {
-            width: 56.7%;
-            /* prevents flexbox from squishing it */
-            flex: none;
-        }
-    }
-}
-
-/* Large Desktop 1300px - Parallax Scroll */
+/* Large Desktop Desktop - 1300px */
 @media only screen and (min-width: 81.25rem) {
-    #pricing-1315 {
+    #pricing-1319 {
         background: url("/assets/textures/price-texture.webp");
         background-color: var(--primary600);
         background-size: cover;
@@ -1318,13 +979,31 @@
                 display: none;
             }
         }
+
+        .cs-container {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .cs-content {
+            text-align: left;
+            align-items: flex-start;
+            /* sends it to the right in the 2nd position */
+            order: 2;
+        }
+
+        .cs-card-group {
+            width: 65.7%;
+            /* prevents flexbox from squishing it */
+            flex: none;
+        }
     }
 }
 
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
-        #pricing-1315 {
+        #pricing-1319 {
             background-color: rgba(0, 0, 0, 0.2);
 
             .cs-title,
@@ -1344,10 +1023,44 @@
 
             .cs-item {
                 background-color: var(--medium);
+
+                .cs-package {
+                    color: var(--secondary200);
+                }
+
+                &.cs-popular {
+                    background-color: var(--primary);
+
+                    .cs-ul {
+                        &:before {
+                            opacity: 1;
+                            filter: grayscale(1) brightness(20%);
+                        }
+                    }
+
+                    .cs-desc,
+                    .cs-price,
+                    .cs-duration,
+                    .cs-li {
+                        color: var(--textLight);
+                    }
+                }
+            }
+
+            .nm-recommended {
+                background-color: var(--dark);
+            }
+
+            .nm-footer {
+                color: var(--textLight);
+            }
+
+            .cs-button-transparent {
+                color: var(--textLight);
             }
 
             .cs-package {
-                color: var(--secondary200);
+                color: var(--primary);
             }
 
             .cs-desc,
@@ -1366,13 +1079,11 @@
             .cs-floater {
                 opacity: 0.3;
             }
-
-            .cs-button-transparent {
-                color: var(--textLight);
-            }
         }
     }
 }
+
+                                
 
 /*-- -------------------------- -->
 <---      Why Choose Us         -->
