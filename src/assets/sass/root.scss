@@ -13,18 +13,15 @@
 @media only screen and (min-width: 0rem) {
     /* All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
     :root {
-        --primary: #ff6a3e;
-        --primaryLight: #ffba43;
-        --secondary: #ffba43;
-        --secondaryLight: #ffba43;
-        --headerColor: #1a1a1a;
-        --bodyTextColor: #4e4b66;
-        --bodyTextColorWhite: #fafbfc;
+        --primary: #000000;
+        --primaryLight: #ffffff;
+        --secondary: #ffffff;
+        --secondaryLight: #ffffff;
+        --headerColor: #000000;
+        --bodyTextColor: #ffffff;
+        --bodyTextColorWhite: #000000;
 
-        /* Dark Mode Styles */
-        --dark: #082032;
-        --medium: #2c394b;
-        --accent: #334756;
+        
 
         /* 13px - 16px */
         --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
