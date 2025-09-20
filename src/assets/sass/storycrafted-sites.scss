@@ -370,7 +370,7 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
     #services-690 {
-        padding: var(--sectionPadding);
+        padding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem 4rem 1rem;
 
         .cs-container {
             width: 100%;
@@ -407,175 +407,48 @@
             color: var(--secondary600);
         }
 
-        .cs-color {
-            color: var(--accent400);
-        }
+        .cs-text {
+            padding-bottom: 1rem;
 
-        .cs-card-group {
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            flex-direction: column;
-            row-gap: calc(16 / 16 * 1rem);
-        }
-
-        .cs-item {
-            list-style: none;
-            width: 100%;
-            /* 24px - 40px top & bottom */
-            padding: clamp(1.25rem, 4vw, 2.5rem) calc(24 / 16 * 1rem);
-            background-color: var(--secondary);
-            box-sizing: border-box;
-        }
-
-        .nm-accent {
-            background-color: var(--accent500);
-            
-            .cs-h3 {
-                color: var(--secondary);
-            }
-
-            .cs-item-text {
-                color: var(--textLight);
-            }
-
-            .cs-picture {
-                background-color: var(--secondary);
-            }
-        }
-
-        .cs-link {
-            text-decoration: none;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-
-        .cs-picture {
-            width: calc(64 / 16 * 1rem);
-            height: calc(64 / 16 * 1rem);
-            margin: 0;
-            margin-bottom: calc(24 / 16 * 1rem);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50%;
-            background-color: var(--accent500);
-            box-shadow: 0px 12px 30px rgba(26, 26, 26, 0.04);
-            position: relative;
-            z-index: 1;
-        }
-
-        .cs-icon {
-            height: calc(32 / 16 * 1rem);
-            width: auto;
-        }
-
-        .cs-h3 {
-            font-size: calc(20 / 16 * 1rem);
-            font-weight: 400;
-            text-align: center;
-            line-height: 1.2em;
-            margin: 0;
-            margin-bottom: calc(12 / 16 * 1rem);
-            color: var(--accent500);
-            transition: color 0.3s;
-        }
-
-        .cs-item-text {
-            /* 14px - 16px */
-            font-size: clamp(0.875rem, 1.5vw, 1rem);
-            font-weight: 400;
-            text-align: center;
-            line-height: 1.5em;
-            margin: 0;
-            color: var(--textDark);
-            transition: color 0.3s;
-        }
-
-        .cs-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .cs-th {
-            padding: calc(12 / 16 * 1rem) calc(16 / 16 * 1rem);
-            box-sizing: border-box;
-            font-family: var(--headerFont);
-            font-size: 1.25rem;
-            border: 1px solid var(--accent300);
-            text-align: center;
-        }
-
-        .cs-td {
-            padding: calc(8 / 16 * 1rem) calc(16 / 16 * 1rem);
-            box-sizing: border-box;
-            background-color: var(--textLight);
-            border: 1px solid var(--accent300);
-            text-align: center;
-        }
-
-        .nm-recommended {
-            font-family: var(--smallCaps);
-            font-size: .75rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-        }
-    
-        .cs-color {
-            .cs-th {
-                &:first-child {
-                    color: var(--textLight);
-                    background-color: var(--accent600);
-                }
-            }
-
-            .nm-th-accent {
-            background-color: var(--accent500);
-        }
-        }
-    
-        .cs-th:first-child, .cs-td:first-child {
-            position: sticky;
-            left: 0;
-            z-index: 100; /* Make sure it sits above the other cells */
-            background-color: var(--accent500);
-            border: 1px solid var(--accent400);
-            color: var(--textLight);
-            text-align: left;
-            font-weight: 700;
-        }
-
-        .nm-td-accent {
-            background-color: var(--secondary);
-        }
-      
-        .cs-th {
-           background-color: var(--accent400);
-           color: var(--textLight);
-        }
-
-        .cs-tr {
-            color: var(--textDark);
         }
     }
 }
 
-/* Tablet - 600px */
-@media screen and (max-width: 37.5rem) {
-    #services-690 {
-        .cs-table {
-            display: block;
-            overflow-x: auto;
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #cs-content-832 {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: calc(48 / 16 * 1rem);
+
+        .cs-flex-group {
+            width: 50%;
         }
     }
 }
 
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #cs-content-832 {
+            .cs-topper {
+                color: var(--primaryLight);
+            }
+            .cs-title,
+            .cs-text {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-text {
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+                                
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
     #services-690 {
@@ -592,23 +465,6 @@
 
         .cs-flex-group {
             width: 50%;
-        }
-
-        .cs-card-group {
-            /* pushes down the same amount the 2nd cards are translated down to maintain the even spacing at the bottom of the cs-card-group */
-            margin-bottom: calc(40 / 16 * 1rem);
-            flex-direction: row;
-            justify-content: center;
-            flex-wrap: wrap;
-            column-gap: calc(20 / 16 * 1rem);
-        }
-
-        .cs-item {
-            width: 30vw;
-            max-width: calc(413 / 16 * 1rem);
-            &:nth-of-type(2) {
-                transform: translateY(calc(40 / 16 * 1rem));
-            }
         }
     }
 }
@@ -692,6 +548,405 @@
 
             .cs-tr {
                 color: var(--textLight);
+            }
+        }
+    }
+}
+
+
+
+
+/*-- -------------------------- -->
+<---          Pricing           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #pricing-1233 {
+        padding: 0 1rem clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+
+        .cs-container {
+            width: 100%;
+            /* changes to 1280px at tablet */
+            max-width: calc(550 / 16 * 1rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+            position: relative;
+        }
+
+        .cs-card-group {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            /* 16px - 20px */
+            gap: clamp(1rem, 1.8vw, 1.25rem);
+            /* prevents flexbox from squishing it */
+            flex: none;
+        }
+
+        .cs-item {
+            text-align: left;
+            list-style: none;
+            width: 100%;
+            margin: 0;
+            /* 24px - 40px top & Bottom */
+            /* 20px - 40px left & right */
+            padding: clamp(1.5rem, 4.2vw, 2.5rem) clamp(1.25rem, 4.2vw, 2.5rem);
+            background-color: var(--secondary);
+            /* prevents padding and border from affecting height and width */
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .nm-badge {
+            background-color: var(--secondary300);
+            align-items: center;
+            display: inline-block;
+            margin-bottom: 1rem;
+            padding: .125rem;
+        }
+
+        .nm-best {
+            font-family: var(--smallCaps);
+            font-size: calc(16 / 16 * 1rem);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent700);
+            text-align: center;
+            align-self: center;
+        }
+
+        .cs-button-transparent {
+            margin-top: 1rem;
+            padding: 1rem;
+            border: 2px solid var(--accent500);
+        }
+
+        .cs-popular {
+            background-color: var(--accent500);
+            color: var(--textLight);
+            filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, .4));
+            padding: clamp(2.5rem, 4.7vw, 3.5rem) clamp(1.5rem, 4.2vw, 2.5rem);
+
+            .cs-package {
+                color: var(--textLight);
+                font-size: clamp(2.5rem, 2.7vw, 3.25rem);
+            }
+
+            .cs-desc,
+            .cs-time {
+                color: var(--textLight);
+                opacity: 0.8;
+            }
+
+            .cs-price {
+                color: var(--secondary);
+            }
+
+            .cs-includes {
+                color: var(--textLight);
+            }
+
+            .cs-includes {
+                border-color: var(--secondary300);
+            }
+
+            .cs-li {
+                color: var(--textLight);
+            }
+
+            .cs-button-transparent {
+                color: var(--textLight);
+                border: 2px solid var(--secondary200);
+
+                &:hover {
+                    background-color: var(--secondary200);
+                    color: var(--accent600);
+                }
+            }
+        }
+
+        .cs-package {
+            /* 13px - 16px */
+            font-family: var(--headerFont);
+            font-size: clamp(2rem, 2.2vw, 3rem);
+            line-height: 1.2em;
+            text-align: inherit;
+            font-weight: 400;
+            /* 4px - 8px */
+            margin: 0 0 clamp(0.25rem, 1vw, 0.5rem) 0;
+            color: var(--accent500);
+            display: block;
+        }
+
+        .cs-desc {
+            /* 13px - 16px */
+            font-size: clamp(0.8125rem, 1.4vw, 1rem);
+            font-weight: 400;
+            line-height: 1.5em;
+            text-align: left;
+            /* 12px - 24px */
+            margin: 0 0 clamp(0.75rem, 2.5vw, 1.5rem);
+            color: var(--textDark);
+            display: block;
+        }
+
+        .cs-price {
+            /* 39px - 49px */
+            font-family: var(--headerFont);
+            font-size: clamp(2.4375rem, 4vw, 3.0625rem);
+            white-space: nowrap;
+            line-height: 1.2em;
+            text-align: inherit;
+            font-weight: 400;
+            margin: 0;
+            color: var(--accent500);
+        }
+
+        .cs-time {
+            font-family: var(--smallCaps);
+            font-size: calc(14 / 16 * 1rem);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 400;
+            display: inline-block;
+            margin: 0 0 0 calc(-8 / 16 * 1rem);
+            color: var(--textDark);
+        }
+
+        .cs-includes {
+            font-family: var(--smallCaps);
+            font-size: calc(16 / 16 * 1rem);
+            line-height: 1.2em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-align: inherit;
+            font-weight: 600;
+            width: 100%;
+            color: var(--accent500);
+            margin-top: 2rem;
+            /* 16px - 24px */
+            padding: clamp(1rem, 3vw, 1.5rem) 0 0 0;
+            border-top: 1px solid var(--secondary300);
+            display: block;
+        }
+
+        .nm-recommended {
+            font-family: var(--smallCaps);
+            font-size: calc(12 / 16 * 1rem);
+            line-height: 1.2em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-align: inherit;
+        }
+
+        .cs-ul {
+            /* 16px - 24px */
+            margin: clamp(1rem, 3vw, 1.5rem) 0 clamp(1.125rem, 3.5vw, 1.75rem) 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            /* 4px - 12px */
+            gap: clamp(0.25rem, 1.3vw, 0.75rem);
+            position: relative;
+        }
+
+        .cs-li {
+            /* 14px - 16px */
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            list-style: none;
+            line-height: 1.5em;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            color: var(--textDark);
+            display: flex;
+            justify-content: flex-start;
+            /* push everything to the top so if the li goes to two lines the icon stays at the top */
+            align-items: flex-start;
+            gap: calc(8 / 16 * 1rem);
+        }
+
+        .cs-icon {
+            width: calc(24 / 16 * 1rem);
+            height: auto;
+            display: block;
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #pricing-1233 {
+        .cs-container {
+            max-width: calc(1280 / 16 * 1rem);
+        }
+
+        .cs-item {
+            flex-direction: row;
+        }
+
+        .cs-item-content {
+            width: 30%;
+            max-width: calc(228 / 16 * 1rem);
+            /* 28px - 40px */
+            margin-right: clamp(1.75rem, 4vw, 2.5rem);
+            padding-right: clamp(1.75rem, 4vw, 2.5rem);
+            /* prevents padding and border from affecting height and width */
+            box-sizing: border-box;
+            border-right: 1px solid var(--secondary300);
+        }
+
+        .cs-popular {
+            .cs-item-content {
+                border-color: var(--secondary300);
+            }
+
+            .cs-package {
+                font-size: clamp(1.6125rem, 2vw, 2rem);
+            }
+        }
+
+        .cs-package {
+            font-size: clamp(1.25rem, 1.7vw, 1.5rem);
+        }
+
+        .cs-includes {
+            padding: 0;
+            border: none;
+
+            &:first-of-type {
+                margin-top: 0;
+            }
+            
+            &:last-of-type {
+                margin-top: 3rem;
+            }
+        }
+
+        .cs-ul {
+            display: grid;
+            /* removed at desktop, added again at large desktop */
+            grid-template-columns: repeat(2, minmax(9rem, 1fr));
+        }
+
+        .cs-li {
+            grid-column: span 1;
+        }
+    }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #pricing-1233 {
+        .cs-container {
+            flex-direction: row;
+            align-items: flex-start;
+        }
+
+        .cs-content {
+            text-align: left;
+            max-width: calc(400 / 16 * 1rem);
+            align-items: flex-start;
+        }
+
+        .cs-card-group {
+            /* changes to 813px at large desktop */
+            width: 100%;
+            max-width: calc(1280 / 16 * 1rem);
+        }
+
+        .cs-item-content {
+            width: 100%;
+            flex: none;
+        }
+
+        .cs-ul {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(9rem, 1fr));
+        }
+
+        .cs-li {
+            grid-column: span 1;
+        }
+    }
+}
+
+/* Large Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+    #pricing-1233 {
+        .cs-container {
+            max-width: calc(1280 / 16 * 1rem);
+        }
+        
+        .cs-card-group {
+            width: 100%;
+        }
+        .cs-ul {
+            grid-template-columns: repeat(3, minmax(9rem, 1fr));
+        }
+
+        .cs-li {
+            grid-column: span 1;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #pricing-1233 {
+            .cs-title,
+            .cs-text,
+            .cs-package,
+            .cs-li,
+            .cs-price,
+            .cs-desc,
+            .cs-time,
+            .cs-includes {
+                color: var(--textLight);
+            }
+
+            .cs-text,
+            .cs-time,
+            .cs-desc,
+            .cs-li {
+                opacity: 0.8;
+            }
+
+            .cs-item {
+                background-color: var(--primary600);
+            }
+
+            .cs-item-content {
+                border-color: rgba(255, 255, 255, 0.3);
+            }
+
+            .cs-disabled {
+                opacity: 0.4;
+            }
+
+            .cs-popular {
+                background-color: var(--primary);
+
+                .cs-price,
+                .cs-package {
+                    color: var(--textLight);
+                }
+
+                .cs-disabled {
+                    opacity: 0.9;
+                }
             }
         }
     }
@@ -791,7 +1046,6 @@
             font-family: var(--headerFont);
             line-height: 1.2em;
             text-align: left;
-            font-weight: bold;
             /* 16px - 20px */
             padding: clamp(1rem, 1.3vw, 1.25rem);
             border: none;

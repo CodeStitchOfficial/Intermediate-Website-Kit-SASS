@@ -1,0 +1,171 @@
+<!-- A fully fleshed-out <head>, dynamically changing based on client.json and the page front matter -->
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Standard meta tags -->
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="{{ description }}" />
+        <meta name="keywords" content="" />
+        <meta name="theme-color" content="#294759">
+        <link rel="canonical" href="{{ client.domain }}{{ page.url }}" />
+
+        <!--Social Media Display-->
+        <meta property="og:title" content="{{ title }}" />
+        <meta property="og:description" content="{{ description }}" />
+        <meta property="og:url" content="{{ client.domain }}{{ page.url }}" />
+        <meta property="og:image" content="{% if social_image %}{{ client.domain }}{{ social_image }}{% else %}{{ client.domain }}/assets/images/social-share-image.webp{% endif %}" />
+        <meta
+            property="og:image:secure_url"
+            content="{% if social_image %}{{ client.domain }}{{ social_image }}{% else %}{{ client.domain }}/assets/images/social-share-image.webp{% endif %}"
+        />
+        <meta property="fb:app_id" content="9518164928251833" />
+
+        <link rel="preconnect" href="https://app.termly.io" crossorigin>
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+
+        <!--Favicons-->
+        <link rel="icon" href="/assets/favicons/favicon.ico" /> <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96"/>
+        <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png"/>
+
+        <link rel="manifest" href="/site.webmanifest">
+
+        <!-- Preloads -->
+        <link
+            rel="preload"
+            as="font"
+            type="font/woff2"
+            font-display="optional"
+            href="/assets/fonts/baskervville-v16-latin-regular.woff2"
+            crossorigin
+        />
+        <link
+            rel="preload"
+            as="font"
+            type="font/woff2"
+            font-display="optional"
+            href="/assets/fonts/ContraltoSmallDemiBold/font.woff2"
+            crossorigin
+        />
+        <link
+            rel="preload"
+            as="font"
+            type="font/woff2"
+            font-display="optional"
+            href="/assets/fonts/Montserrat/montserrat-v29-latin-regular.woff2"
+            crossorigin
+        />
+        <link
+        rel="preload"
+        as="font"
+        type="font/woff2"
+        font-display="optional"
+        href="/assets/fonts/Montserrat/montserrat-v29-latin-600.woff2"
+        crossorigin
+        />
+
+        <!-- Preload an image - tag not rendered if preloadImg is blank to stop console errors -->
+        {% if preloadImg != '' %}
+            <link rel="preload" as="image" href="{{ preloadImg }}" fetchpriority="high" />
+        {% endif %}
+
+        <!-- Sitewide Stylesheets and Scripts -->
+        <link rel="stylesheet" href="/assets/css/root.css" media="print" onload="this.media='all'; this.onload=null;" />
+        <link rel="stylesheet" href="/assets/css/dark.css" media="print" onload="this.media='all'; this.onload=null;" />
+        <link rel="stylesheet" href="/assets/css/global-styles.css" media="print" onload="this.media='all'; this.onload=null;" />
+        <noscript>
+            <link rel="stylesheet" href="/assets/css/root.css" />
+            <link rel="stylesheet" href="/assets/css/dark.css" />
+            <link rel="stylesheet" href="/assets/css/global-styles.css" />
+        </noscript>
+        <script defer src="/assets/js/dark.js"></script>
+        <script defer src="/assets/js/nav.js"></script>
+
+        
+        <script
+            type="text/javascript"
+            src="https://app.termly.io/resource-blocker/904a8651-e1e1-46e3-a489-409101c8e118?autoBlock=on"
+            async
+            onload="onTermlyLoaded()"
+        ></script>
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZDGC7QH952"></script>
+     
+        <script>
+            function onTermlyLoaded() {
+                // Termly CMP is initialized
+                Termly.on('initialized', (data) => {
+                console.log('Termly initialized:', data); // Optional: Log initialization data
+
+                // Optional: Get initial consent state
+                if (typeof Termly.getConsentState === 'function') {
+                    const consentState = Termly.getConsentState();
+                    console.log('Initial consent state:', consentState);
+                    if (consentState.analytics) {
+                    initializeGA(); // Initialize GA if consent is already given
+                    }
+                }
+                });
+
+                Termly.on('consent', (data) => {
+                console.log('Termly consent changed:', data);
+
+                // Check if analytics consent is granted
+                if (data.categories.includes('analytics')) {
+                    // User has consented, initialize GA
+                    initializeGA();
+                } else {
+                    // User has not consented to analytics
+                    console.warn('Analytics consent denied. Anonymizing IP.');
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', 'G-ZDGC7QH952', { 'anonymize_ip': true });
+                }
+                });
+            }
+
+            function initializeGA() {
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-ZDGC7QH952');
+            }
+        </script>
+
+        {% block head %}{% endblock %}
+
+        <title>{% if page.url == '/' %}{{ client.name }} | {{ title }}{% elif meta_title %}{{ meta_title }} | {{ client.name }}{% else %}{{ title }} | {{ client.name }}{% endif %}</title>
+        
+    </head>
+    <body>
+        <!--Screen reader skip main nav-->
+        <a
+            class="skip"
+            aria-label="skip to main content"
+            href="#main"
+            tabindex="0"
+            >Click To Skip To Main Content</a
+        >
+        {% include "components/header.html" %}
+        <main id="main">{% block body %}{% endblock %}</main>
+        {% include "components/footer.html" %}
+
+        <script defer>
+            if ('serviceWorker' in navigator) {
+              window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                  .then((registration) => {
+                    console.log('Service worker registered: ', registration);
+                  })
+                  .catch((registrationError) => {
+                    console.error('Service worker registration failed: ', registrationError);
+                  });
+              });
+            }
+          </script>
+    </body>
+</html>

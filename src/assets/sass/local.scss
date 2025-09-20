@@ -726,7 +726,9 @@
             align-items: center;
 
             &.cs-popular {
-                background-color: var(--secondary);
+                background-color: var(--secondary200);
+                filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, .4));
+                padding: clamp(3rem, 4.4vw, 4rem) clamp(1rem, 2.3vw, 1.5rem);
 
                 .cs-ul {
                     &:before {
@@ -773,15 +775,20 @@
             display: block;
         }
 
-        .nm-recommended {
+        .nm-badge {
+            background-color: var(--accent500);
+            align-items: center;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, .2));
+        }
+
+        .nm-best {
             font-family: var(--smallCaps);
             font-size: calc(12 / 16 * 1rem);
             text-transform: uppercase;
             letter-spacing: 2px;
-            background-color: var(--accent500);
             color: var(--textLight);
-            padding: .125rem;
-            margin-bottom: .5rem;
         }
 
         .nm-footer {

@@ -1,0 +1,127 @@
+
+
+<!-- ============================================ -->
+<!--                 Navigation                   -->
+<!-- ============================================ -->
+
+<header id="cs-navigation">
+    <div class="cs-container">
+        <!--Nav Logo-->
+        <a href="/" class="cs-logo" aria-label="back to home" tabindex="0">
+            <img
+                src="../../assets/svgs/logo-horizontal-color.svg"
+                alt="logo"
+                width="320px"
+                height="65px"
+                aria-hidden="true"
+                decoding="async"
+                class="light-mode-logo"
+            />
+            <img
+                src="../../assets/svgs/logo-horizontal-color-dark.svg"
+                alt="logo"
+                width="320px"
+                height="65px"
+                aria-hidden="true"
+                decoding="async"
+                class="dark-mode-logo"
+            />
+        </a>
+        <!--Navigation List-->
+        <nav class="cs-nav" role="navigation">
+            <!--Mobile Nav Toggle-->
+            <button class="cs-toggle" aria-label="mobile menu toggle">
+                <div class="cs-box" aria-hidden="true">
+                    <span class="cs-line cs-line1" aria-hidden="true"></span>
+                    <span class="cs-line cs-line2" aria-hidden="true"></span>
+                    <span class="cs-line cs-line3" aria-hidden="true"></span>
+                </div>
+            </button>
+            <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+            <div class="cs-ul-wrapper">
+                <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                    <li class="cs-li">
+                        <a href="/" class="cs-li-link {% if page.url == '/' %} cs-active {% endif %}">
+                            Home
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="/about/" class="cs-li-link {% if page.url == '/about/' %} cs-active {% endif %}">
+                            About
+                        </a>
+                    </li>
+                    <li class="cs-li cs-dropdown" tabindex="0">
+                        <span class="cs-li-link cs-dropdown-toggle">
+                            Services
+                            <img class="cs-drop-icon" src="../../assets/svgs/icon-down.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
+                        </span>
+                        <ul class="cs-drop-ul">
+                            <li class="cs-drop-li">
+                                <a href="/services/branding/" class="cs-li-link cs-drop-link {% if page.url == '/services/branding/' %} cs-active {% endif %}">
+                                    Branding
+                                </a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="/services/diy-disaster-detector/" class="cs-li-link cs-drop-link {% if page.url == '/services/diy-disaster-detector/' %} cs-active {% endif %}">
+                                    DIY Disaster Detector
+                                </a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="/services/prices/" class="cs-li-link cs-drop-link {% if page.url == '/prices/' %} cs-active {% endif %}">
+                                    Prices
+                                </a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="/services/support/" class="cs-li-link cs-drop-link {% if page.url == '/services/support/' %} cs-active {% endif %}">
+                                    Support
+                                </a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="/services/web-design/" class="cs-li-link cs-drop-link {% if page.url == '/services/web-design/' %} cs-active {% endif %}">
+                                    Web Design
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="cs-li">
+                        <a href="/blog/" class="cs-li-link {% if page.url == '/blog/' %} cs-active {% endif %}">
+                            Blog
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="/contact/" class="cs-li-link {% if page.url == '/contact/' %} cs-active {% endif %}">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <a href="/services/diy-disaster-detector/" class="cs-button-solid">Get Free Audit</a>
+        <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
+        <button
+            id="dark-mode-toggle"
+            aria-label="dark mode toggle"
+            tabindex="0"
+        >
+            <img
+            class="cs-moon"
+            aria-hidden="true"
+            src="../../assets/svgs/moon.svg"
+            decoding="async"
+            alt="sun"
+            width="32"
+            height="32"
+            />
+            <img
+                class="cs-sun"
+                aria-hidden="true"
+                src="../../assets/svgs/sun.svg"
+                decoding="async"
+                alt="sun"
+                width="32"
+                height="32"
+            />
+        </button>
+    </div>
+</header>
+                                

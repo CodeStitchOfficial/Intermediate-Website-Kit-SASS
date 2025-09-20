@@ -31,6 +31,11 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            text-align: center;
+        }
+
+        .cs-topper {
+            text-wrap: balance;
         }
 
         .cs-title {
@@ -148,6 +153,7 @@
             /* prevents flex-box from squishing it */
             flex: none;
             align-items: flex-start;
+            text-align: left;
 
             #button-box-838 {
                 justify-content: flex-start;

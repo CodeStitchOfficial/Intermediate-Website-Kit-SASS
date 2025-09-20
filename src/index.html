@@ -128,7 +128,7 @@ eleventyNavigation:
             </li>
             <li class="cs-item">
                 <a href="/services/support/" class="cs-link">
-                    <h2 class="cs-h3">
+                    <h2 class="cs-h2">
                         <img class="cs-icon" src="/assets/svgs/support.svg" loading="lazy" decoding="async" alt="icon" width="32" height="32" aria-hidden="true">
                         Support
                     </h2>
@@ -140,7 +140,7 @@ eleventyNavigation:
             </li>
             <li class="cs-item">
                 <a href="/services/branding/" class="cs-link">
-                    <h2 class="cs-h3">
+                    <h2 class="cs-h2">
                         <img class="cs-icon" src="/assets/svgs/branding.svg" loading="lazy" decoding="async" alt="icon" width="32" height="32" aria-hidden="true">
                         Branding
                     </h2>
@@ -305,57 +305,35 @@ eleventyNavigation:
         </div>
         <ul class="cs-card-group">
             <li class="cs-item">
-                <span class="cs-package">{{ services.stdWeb.name }} Site</span>
-                <span class="cs-desc">Built once, built strong, entirely yours to own.</span>
-                <span class="cs-price">
-                    ${{ services.stdWeb.price }}
-                </span>
-                <ul class="cs-ul">
-                    <li class="cs-li">5-page professional site</li>
-                    <li class="cs-li">Mobile-responsive design</li>
-                    <li class="cs-li">Basic SEO + SSL security</li>
-                    <li class="cs-li">Hosting (+${{ services.hosting.price }}/month)</li>
-                    <li class="cs-li">Unlimited Content Edits (+${{ services.edits.price }}/month)</li>
-                </ul>
-                <span class="nm-footer">For one-and-done launches.</span>
-                <a href="/services/storycrafted-sites/#comparison" class="cs-button-transparent">Compare Plans</a>
-            </li>
-            <li class="cs-item cs-popular">
-                <span class="nm-recommended">&nbsp;Best value&nbsp;</span>
-                <span class="cs-package">{{ services.strWeb.name }} Site</span>
-                <span class="cs-desc">Your story, your brand, built to last.</span>
-                <span class="cs-price">
-                    ${{ services.strWeb.price }}
-                    <span class="cs-duration">/Month</span>
-                </span>
-                <ul class="cs-ul">
-                    <li class="cs-li">Everything in Foundation + Forever</li>
-                    <li class="cs-li">Brand Strategy Session (identity-first)</li>
-                    <li class="cs-li">Strategic Copywriting included</li>
-                    <li class="cs-li">Quarterly strategy check-ins</li>
-                    <li class="cs-li">2 new landing pages per year</li>
-                    <li class="cs-li">Dark mode</li>
-                    <li class="cs-li">Design refresh every 2 years</li>
-                </ul>
-                <span class="nm-footer">For bold brands ready to grow.</span>
-                <a href="/services/storycrafted-sites/#comparison" class="cs-button-transparent">Compare Plans</a>
-            </li>
-            <li class="cs-item">
                 <span class="cs-package">{{ services.subWeb.name }} Site</span>
                 <span class="cs-desc">Built once, cared for always.</span>
                 <span class="cs-price">
                     ${{ services.subWeb.price }} 
                     <span class="cs-duration">/Month</span>
                 </span>
-                <ul class="cs-ul">
-                    <li class="cs-li">5 pages</li>
-                    <li class="cs-li">Personalized design</li>
-                    <li class="cs-li">Hand-coded to be fast and accessible</li>
-                    <li class="cs-li">Hosting</li>
-                    <li class="cs-li">Unlimited Content Edits</span></li>
-                    <li class="cs-li">Design refreshes every 3 years</li>
-                </ul>
                 <span class="nm-footer">For support without the stress.</span>
+                <a href="/services/storycrafted-sites/#comparison" class="cs-button-transparent">Compare Plans</a>
+            </li>
+            <li class="cs-item cs-popular">
+                <div class="nm-badge">
+                    <span class="nm-best">&nbsp;Best value&nbsp;</span>
+                </div>
+                <span class="cs-package">{{ services.strWeb.name }} Site</span>
+                <span class="cs-desc">Your story, your brand, built to last.</span>
+                <span class="cs-price">
+                    ${{ services.strWeb.price }}
+                    <span class="cs-duration">/Month</span>
+                </span>
+                <span class="nm-footer">For bold brands ready to grow.</span>
+                <a href="/services/storycrafted-sites/#comparison" class="cs-button-transparent">Compare Plans</a>
+            </li>
+            <li class="cs-item">
+                <span class="cs-package">{{ services.stdWeb.name }} Site</span>
+                <span class="cs-desc">Built once, built strong, entirely yours to own.</span>
+                <span class="cs-price">
+                    ${{ services.stdWeb.price }}
+                </span>
+                <span class="nm-footer">For one-and-done launches.</span>
                 <a href="/services/storycrafted-sites/#comparison" class="cs-button-transparent">Compare Plans</a>
             </li>
         </ul>

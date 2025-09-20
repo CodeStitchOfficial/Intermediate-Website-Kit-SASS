@@ -26,6 +26,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
+  }
+  #hero-288 .cs-topper {
+    text-wrap: balance;
   }
   #hero-288 .cs-title {
     /* 39px - 61px */
@@ -132,6 +136,7 @@
     /* prevents flex-box from squishing it */
     flex: none;
     align-items: flex-start;
+    text-align: left;
   }
   #hero-288 .cs-content #button-box-838 {
     justify-content: flex-start;
