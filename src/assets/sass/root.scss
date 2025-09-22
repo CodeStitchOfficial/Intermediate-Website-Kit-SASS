@@ -14,12 +14,12 @@
     /* All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
     :root {
         --primary: #000000;
-        --primaryLight: #ffffff;
-        --secondary: #ffffff;
-        --secondaryLight: #ffffff;
+        --primaryLight: #000000;
+        --secondary: #000000;
+        --secondaryLight: #000000;
         --headerColor: #000000;
-        --bodyTextColor: #ffffff;
-        --bodyTextColorWhite: #000000;
+        --bodyTextColor: #000000;
+        --bodyTextColorWhite: #ffffff;
 
         
 
