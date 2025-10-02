@@ -5,9 +5,8 @@
     "schedule:monthly",
     "group:allNonMajor",
     ":semanticPrefixFixDepsChoreOthers",
-    ":automergePatch",
-    ":disableDependencyDashboard"
-  ],
+    ":automergePatch"
+],
   "labels": ["dependencies"],
   "rangeStrategy": "bump",
   "postUpdateOptions": [
