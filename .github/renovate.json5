@@ -3,45 +3,39 @@
   extends: [
     'config:recommended',
     'schedule:monthly',
-    'group:allNonMajor',
     ':semanticPrefixFixDepsChoreOthers',
     ':automergePatch',
   ],
-  labels: [
-    'dependencies',
-  ],
+  labels: ['dependencies'],
   rangeStrategy: 'bump',
-  postUpdateOptions: [
-    'npmDedupe',
-  ],
+  postUpdateOptions: ['npmDedupe'],
+  minimumReleaseAge: '2 days',
   packageRules: [
     {
-      description: 'Group Eleventy ecosystem packages together',
-      groupName: 'eleventy-ecosystem',
+      description: 'Group ALL non-major updates together',
+      groupName: 'all-dependencies',
+      matchUpdateTypes: ['minor', 'patch'],
+    },
+    {
+      description: 'Group major updates by ecosystem',
+      groupName: 'eleventy-ecosystem-major',
+      matchUpdateTypes: ['major'],
+      matchPackagePatterns: [
+        '^@11ty/',
+        '^eleventy-',
+        '^@.*eleventy',
+      ],
       matchPackageNames: [
         '@quasibit/eleventy-plugin-sitemap',
-        '/^@11ty//',
-        '/^eleventy-/',
-        '/^@.*eleventy/',
       ],
     },
     {
-      description: 'Group CodeStitch packages together',
-      groupName: 'codestitch-tools',
-      matchPackageNames: [
-        '/^@codestitchofficial//',
-        '/^codestitch-/',
-      ],
-    },
-    {
-      description: 'Group build and CSS processing tools',
-      groupName: 'build-tools',
-      matchPackageNames: [
-        'autoprefixer',
-        'cssnano',
-        'postcss',
-        'esbuild',
-        'sass',
+      description: 'Group CodeStitch major updates',
+      groupName: 'codestitch-tools-major',
+      matchUpdateTypes: ['major'],
+      matchPackagePatterns: [
+        '^@codestitchofficial/',
+        '^codestitch-',
       ],
     },
   ],
