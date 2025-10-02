@@ -1,48 +1,48 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended",
-    "schedule:monthly",
-    "group:allNonMajor",
-    ":semanticPrefixFixDepsChoreOthers",
-    ":automergePatch"
-],
-  "labels": ["dependencies"],
-  "rangeStrategy": "bump",
-  "postUpdateOptions": [
-    "npmDedupe"
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  extends: [
+    'config:recommended',
+    'schedule:monthly',
+    'group:allNonMajor',
+    ':semanticPrefixFixDepsChoreOthers',
+    ':automergePatch',
   ],
-  "packageRules": [
+  labels: [
+    'dependencies',
+  ],
+  rangeStrategy: 'bump',
+  postUpdateOptions: [
+    'npmDedupe',
+  ],
+  packageRules: [
     {
-      "description": "Group Eleventy ecosystem packages together",
-      "groupName": "eleventy-ecosystem",
-      "matchPackagePatterns": [
-        "^@11ty/",
-        "^eleventy-",
-        "^@.*eleventy"
+      description: 'Group Eleventy ecosystem packages together',
+      groupName: 'eleventy-ecosystem',
+      matchPackageNames: [
+        '@quasibit/eleventy-plugin-sitemap',
+        '/^@11ty//',
+        '/^eleventy-/',
+        '/^@.*eleventy/',
       ],
-      "matchPackageNames": [
-        "@quasibit/eleventy-plugin-sitemap"
-      ]
     },
     {
-      "description": "Group CodeStitch packages together", 
-      "groupName": "codestitch-tools",
-      "matchPackagePatterns": [
-        "^@codestitchofficial/",
-        "^codestitch-"
-      ]
+      description: 'Group CodeStitch packages together',
+      groupName: 'codestitch-tools',
+      matchPackageNames: [
+        '/^@codestitchofficial//',
+        '/^codestitch-/',
+      ],
     },
     {
-      "description": "Group build and CSS processing tools",
-      "groupName": "build-tools",
-      "matchPackageNames": [
-        "autoprefixer",
-        "cssnano", 
-        "postcss",
-        "esbuild",
-        "sass"
-      ]
-    }
-  ]
+      description: 'Group build and CSS processing tools',
+      groupName: 'build-tools',
+      matchPackageNames: [
+        'autoprefixer',
+        'cssnano',
+        'postcss',
+        'esbuild',
+        'sass',
+      ],
+    },
+  ],
 }
