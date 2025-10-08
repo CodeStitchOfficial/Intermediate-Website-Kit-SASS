@@ -9,17 +9,17 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
 
 {% block head %}
     <!-- Critical styles are loaded first -->
-    <link rel="stylesheet" href="/assets/css/critical.css"/>
+    <link rel="stylesheet" href="/assets/css/critical.css" />
 
     <!-- If we're in production, defer the rest of the home page styles. In development, always load it. Otherwise the site will break when hot-reload is used. -->
-    {% if kit.isProduction %}
+    {% if client.isProduction %}
         <link rel="preload" href="/assets/css/local.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript>
             <link rel="stylesheet" href="/assets/css/local.css">
         </noscript>
 
     {% else %}
-        <link rel="stylesheet" href="/assets/css/local.css"/>
+        <link rel="stylesheet" href="/assets/css/local.css" />
     {% endif %}
 
     <!-- To ensure proper validation, prevent errors, and encourage developers to check, schema's are an opt-in feature. They're very bespoke and requires some customising  -->
@@ -36,7 +36,9 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
     <section id="hero-143">
         <div class="cs-container">
             <span class="cs-topper">CodeStitch Presents</span>
-            <h1 class="cs-title">The Intermediate Website Kit (SASS)</h1>
+            <h1 class="cs-title">
+                The Intermediate Website Kit (SASS)
+            </h1>
             <p class="cs-text">
                 Building faster websites, faster. Just clone, update _data/client.js, swap out some sections, and away you go!
             </p>
@@ -75,7 +77,9 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                 <picture class="cs-icon">
                     <img loading="lazy" decoding="async" src="/assets/svgs/s1.svg" alt="icon" width="52" height="52" aria-hidden="true">
                 </picture>
-                <h2 class="cs-title">Full Kitchen Remodel</h2>
+                <h2 class="cs-title">
+                    Full Kitchen Remodel
+                </h2>
                 <p class="cs-text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
@@ -84,7 +88,9 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                 <picture class="cs-icon">
                     <img loading="lazy" decoding="async" src="/assets/svgs/s2.svg" alt="icon" width="52" height="52" aria-hidden="true">
                 </picture>
-                <h2 class="cs-title">Exterior Repairs</h2>
+                <h2 class="cs-title">
+                    Exterior Repairs
+                </h2>
                 <p class="cs-text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
@@ -93,7 +99,9 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                 <picture class="cs-icon">
                     <img loading="lazy" decoding="async" src="/assets/svgs/s3.svg" alt="icon" width="52" height="52" aria-hidden="true">
                 </picture>
-                <h2 class="cs-title">Utility Maintenance</h2>
+                <h2 class="cs-title">
+                    Utility Maintenance
+                </h2>
                 <p class="cs-text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
@@ -102,7 +110,9 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                 <picture class="cs-icon">
                     <img loading="lazy" decoding="async" src="/assets/svgs/s4.svg" alt="icon" width="52" height="52" aria-hidden="true">
                 </picture>
-                <h2 class="cs-title">Design Consultation</h2>
+                <h2 class="cs-title">
+                    Design Consultation
+                </h2>
                 <p class="cs-text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
@@ -152,7 +162,9 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
             <!-- Right Content Section-->
             <div class="cs-content">
                 <span class="cs-topper">About Us</span>
-                <h2 class="cs-title">About Stitch Law</h2>
+                <h2 class="cs-title">
+                    About Stitch Law
+                </h2>
                 <p class="cs-text">
                     In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
                 </p>
@@ -211,7 +223,9 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
             <!-- Right Content Section-->
             <div class="cs-content">
                 <span class="cs-topper">About Us</span>
-                <h2 class="cs-title">About Stitch Law</h2>
+                <h2 class="cs-title">
+                    About Stitch Law
+                </h2>
                 <p class="cs-text">
                     In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
                 </p>
@@ -234,7 +248,9 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
         <div class="cs-container">
             <div class="cs-content">
                 <span class="cs-topper">Our Portfolio</span>
-                <h2 class="cs-title">Et orci volutpat, back up generator installations</h2>
+                <h2 class="cs-title">
+                    Et orci volutpat, back up generator installations
+                </h2>
             </div>
             <div class="cs-image-group">
                 <div class="cs-row cs-row-1">
@@ -401,18 +417,20 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
         <div class="cs-container">
             <div class="cs-content">
                 <span class="cs-topper">Our Reviews</span>
-                <h2 class="cs-title">Words From Our Customers</h2>
+                <h2 class="cs-title">
+                    Words From Our Customers
+                </h2>
                 <p class="cs-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit dolor volutpat porttitor sagittis nunc nisl. Sagittis sit pellentesque gravida viverra. Leo ut sed euismod tortor risus et. Ornare non neque, leo, ornare. Lorem ipsum dolor sit amet.
-            </p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit dolor volutpat porttitor sagittis nunc nisl. Sagittis sit pellentesque gravida viverra. Leo ut sed euismod tortor risus et. Ornare non neque, leo, ornare. Lorem ipsum dolor sit amet.
+                </p>
             </div>
             <ul class="cs-card-group">
                 <!-- Review 1 -->
                 <li class="cs-item">
                     <img class="cs-item-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/profile.svg" alt="profile picture" width="80" height="80">
                     <p class="cs-item-text">
-                    Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, debitis!
-                </p>
+                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, debitis!
+                    </p>
                     <div class="cs-info">
                         <div class="cs-flex-group">
                             <span class="cs-name">Jon Doe</span>
@@ -425,8 +443,8 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                 <li class="cs-item">
                     <img class="cs-item-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/profile.svg" alt="profile picture" width="80" height="80">
                     <p class="cs-item-text">
-                    Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget.
-                </p>
+                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget.
+                    </p>
                     <div class="cs-info">
                         <div class="cs-flex-group">
                             <span class="cs-name">Jon Doe</span>
