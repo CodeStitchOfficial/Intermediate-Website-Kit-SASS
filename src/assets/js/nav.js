@@ -4,7 +4,7 @@ const navbar = document.querySelector("#cs-navigation");
 const navbarMenu = document.getElementById("cs-expanded");
 const hamburgerToggle = document.querySelector("#cs-navigation .cs-toggle");
 
-const maxWidthMediaQuery = window.matchMedia("(max-width: 63.9375rem)");
+const maxWidthMobileMediaQuery = window.matchMedia("(max-width: 63.9375rem)");
 
 // Function to toggle the aria-expanded attribute - utility function
 function toggleAriaExpanded(element) {
@@ -87,36 +87,28 @@ dropdownElements.forEach((element) => {
       button.focus();
     }
   });
-});
 
-function preventDesktopOnClick() {
-  // Handles dropdown menus on mobile - the matching media query (max-width: 63.9375rem) is necessary so that clicking the dropdown button on desktop does not add the active class and thus interfere with the hover state
-  // we have to on every change or if user resizes broswer click will stop working for smaller sizes
-  dropdownElements.forEach((element) => {
-    if (maxWidthMediaQuery.matches) {
-      element.addEventListener("click", function () {
-        toggleDropdown(element);
-      });
+  // add onclick event but only have it activate when we are on mobile
+  element.addEventListener("click", function () {
+    if (maxWidthMobileMediaQuery.matches) {
+      toggleDropdown(element);
     }
   });
-}
+});
 
 // Toggle at breakpoint becuase we automatically open and close the menu depending on screen size
-maxWidthMediaQuery.addEventListener("change", function () {
+maxWidthMobileMediaQuery.addEventListener("change", function () {
   toggleAriaHidden(navbarMenu);
   toggleAriaExpanded(hamburgerToggle);
-  preventDesktopOnClick();
 });
 
 // Find current screen width of window size on document load so we know whether or not to added aria-hidden and aira-expand with the navbar menu
 document.addEventListener("DOMContentLoaded", function () {
   // we are on desktop open the menu
-  if (!maxWidthMediaQuery.matches) {
+  if (!maxWidthMobileMediaQuery.matches) {
     toggleAriaHidden(navbarMenu);
     toggleAriaExpanded(hamburgerToggle);
   }
-
-  preventDesktopOnClick();
 });
 
 // Pressing Enter will redirect to the href
