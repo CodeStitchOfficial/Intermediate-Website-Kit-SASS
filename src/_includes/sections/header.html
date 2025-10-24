@@ -11,7 +11,7 @@
         <!--Navigation List-->
         <nav class="cs-nav" role="navigation">
             <!--Mobile Nav Toggle-->
-            <button class="cs-toggle" aria-label="mobile menu toggle">
+            <button class="cs-toggle" aria-expanded="false" aria-label="mobile menu toggle">
                 <div class="cs-box" aria-hidden="true">
                     <span class="cs-line cs-line1" aria-hidden="true"></span>
                     <span class="cs-line cs-line2" aria-hidden="true"></span>
@@ -20,7 +20,7 @@
             </button>
             <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
             <div class="cs-ul-wrapper">
-                <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                <ul id="cs-expanded" class="cs-ul" aria-hidden="true">
                     <li class="cs-li">
                         <a href="/" class="cs-li-link {% if page.url == "/" %} cs-active {% endif %}">
                             Home
@@ -33,11 +33,11 @@
                     </li>
                     <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
                     <li class="cs-li cs-dropdown">
-                        <span class="cs-li-link {% if page.url == "/project-one/" or page.url == "/project-two/" %} cs-active {% endif %}">
+                        <button aria-expanded="false" aria-label="Submenu of projects" class="cs-li-link cs-dropdown-button {% if page.url == "/project-one/" or page.url == "/project-two/" %} cs-active {% endif %}">
                             Projects
                             <img class="cs-drop-icon" src="/assets/svgs/dropdown.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
-                        </span>
-                        <ul class="cs-drop-ul">
+                        </button>
+                        <ul class="cs-drop-ul" aria-hidden="true">
                             <li class="cs-drop-li">
                                 <a href="/project-one/" class="cs-li-link cs-drop-link">Project One</a>
                             </li>
