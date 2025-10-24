@@ -112,6 +112,16 @@ dropdownElements.forEach((element) => {
   }
 });
 
+// Pressing Enter will redirect to the href
+const dropdownLinks = document.querySelectorAll(".cs-drop-li > .cs-li-link");
+dropdownLinks.forEach((link) => {
+  link.addEventListener("keydown", function (event) {
+    if (event.key === "Enter" || event.key === " ") {
+      window.location.href = this.href;
+    }
+  });
+});
+
 // If you press Escape and the hamburger menu is open, close it
 document.addEventListener("keydown", (event) => {
   if (
