@@ -8,7 +8,8 @@
         "watch:eleventy": "cross-env ELEVENTY_ENV=DEV eleventy --serve",
         "build:eleventy": "cross-env ELEVENTY_ENV=PROD eleventy",
         "start": "run-p watch:*",
-        "build": "run-s build:*"
+        "build": "run-s build:*",
+		"preview": "cross-env ELEVENTY_ENV=PROD eleventy --serve"
     },
     "repository": {
         "type": "git",
