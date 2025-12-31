@@ -31,12 +31,12 @@
         "codestitch-sharp-image-automation": "^0.4.0",
         "cross-env": "^10.1.0",
         "cssnano": "^7.1.2",
-        "decap-server": "^3.3.1",
-        "esbuild": "^0.25.12",
-        "glob": "^11.0.3",
+        "decap-server": "^3.4.0",
+        "esbuild": "^0.27.2",
+        "glob": "^11.1.0",
         "netlify-plugin-cache": "^1.0.3",
         "npm-run-all2": "^8.0.4",
         "postcss": "^8.5.6",
-        "sass": "^1.93.3"
+        "sass": "^1.97.1"
     }
 }
