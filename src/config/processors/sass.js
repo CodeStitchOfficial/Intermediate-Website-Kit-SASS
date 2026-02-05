@@ -39,7 +39,7 @@ module.exports = async function () {
                 sourceMap: !isProduction,
                 sourceMapIncludeSources: !isProduction,
                 style: "expanded",
-                loadPaths: ["src/assets/scss"],
+                loadPaths: ["src/assets/sass"],
             });
 
             // Step 2 - Run the generated CSS through PostCSS for autoprefixer
