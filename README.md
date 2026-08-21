@@ -164,7 +164,7 @@ This documentation will explain all the files and directories in the starter kit
 │   ├── admin/
 │   │   ├── config.yml
 │   │   ├── index.html
-│   │   └── previews.jsx
+│   │   └── preview.jsx
 │   ├── assets/
 │   │   ├── favicons/
 │   │   ├── fonts/
