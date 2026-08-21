@@ -448,7 +448,7 @@ With slight modifications for usage with 11ty, this setup guide for DecapBridge 
 2. Navigate to https://decapbridge.com/ and create an account. It’s free.
 3. Navigate to the dashboard and Create New Site. You see this screen:
 
-![decapbridge.com dashboard](github/decapbridge-dashboard.png)
+![decapbridge.com dashboard](.github/decapbridge-dashboard.png)
 
 Fill in the 3 input fields:
 
@@ -466,7 +466,7 @@ Fill in the 3 input fields:
     10. Click “Generate token.”, double check the permissions and click the Generate Token button
     11. **Make sure to copy your GitHub Personal Access Token now as you will not be able to see this again.**
 
-        ![The Permissions settings](github/github-permissions.png)
+        ![The Permissions settings](.github/github-permissions.png)
 
     12. Double check your permissions before generating the token. It must have read and write access to Contents and Pull Requests.
 
