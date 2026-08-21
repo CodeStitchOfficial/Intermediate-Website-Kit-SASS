@@ -79,7 +79,8 @@ function removeDecapCore() {
 	// 2. Update .eleventy.js – remove admin passthrough
 	updateFile(".eleventy.js", [
 		{
-			pattern: /\s*eleventyConfig\.addPassthroughCopy\("\.\/src\/admin"\);\s*\/\/.*\n?/,
+			pattern:
+				/\s*eleventyConfig\.addPassthroughCopy\("\.\/src\/admin"\);\s*\/\/.*\n?/,
 			replacement: "\n",
 		},
 	]);
@@ -97,7 +98,11 @@ function removeDecapCore() {
 		}
 
 		// Simplify start script: run-p watch:* → just run watch:eleventy
-		if (pkg.scripts && pkg.scripts.start && pkg.scripts.start.includes("run-p watch:*")) {
+		if (
+			pkg.scripts &&
+			pkg.scripts.start &&
+			pkg.scripts.start.includes("run-p watch:*")
+		) {
 			pkg.scripts.start = "npm run watch:eleventy";
 			changed = true;
 		}
@@ -113,7 +118,11 @@ function removeDecapCore() {
 		}
 
 		if (changed) {
-			fs.writeFileSync(pkgPath, JSON.stringify(pkg, null, "\t") + "\n", "utf8");
+			fs.writeFileSync(
+				pkgPath,
+				JSON.stringify(pkg, null, "\t") + "\n",
+				"utf8",
+			);
 			console.log("Updated package.json");
 		} else {
 			console.log("No changes needed for package.json");
@@ -152,28 +161,44 @@ function removeBlog() {
 	moveItem("src/content/blog", path.join(destinationDir, "blog"));
 
 	// Move blog page
-	moveItem("src/content/pages/blog.html", path.join(destinationDir, "blog-page.html"));
+	moveItem(
+		"src/content/pages/blog.html",
+		path.join(destinationDir, "blog-page.html"),
+	);
 
 	// Move post layout
-	moveItem("src/_includes/layouts/post.html", path.join(destinationDir, "post-layout.html"));
+	moveItem(
+		"src/_includes/layouts/post.html",
+		path.join(destinationDir, "post-layout.html"),
+	);
 
 	// Move blog components
-	moveItem("src/_includes/components/featured-posts.html", path.join(destinationDir, "featured-posts.html"));
-	moveItem("src/_includes/components/post-schema.html", path.join(destinationDir, "post-schema.html"));
+	moveItem(
+		"src/_includes/components/featured-posts.html",
+		path.join(destinationDir, "featured-posts.html"),
+	);
+	moveItem(
+		"src/_includes/components/post-schema.html",
+		path.join(destinationDir, "post-schema.html"),
+	);
 
 	// Move blog SASS
-	moveItem("src/assets/sass/blog.scss", path.join(destinationDir, "blog.scss"));
+	moveItem(
+		"src/assets/sass/blog.scss",
+		path.join(destinationDir, "blog.scss"),
+	);
 
 	// Move blog images
-	moveItem("src/assets/images/blog", path.join(destinationDir, "images-blog"));
-
-	// Move cabinets.jpg (used as blog banner in post.html and blog.html)
-	moveItem("src/assets/images/cabinets.jpg", path.join(destinationDir, "cabinets.jpg"));
+	moveItem(
+		"src/assets/images/blog",
+		path.join(destinationDir, "images-blog"),
+	);
 
 	// Update header – remove blog <li> nav link
 	updateFile("src/_includes/sections/header.html", [
 		{
-			pattern: /\s*<li class="cs-li">\s*<a href="\/blog\/"[^>]*>[\s\S]*?Blog[\s\S]*?<\/a>\s*<\/li>/,
+			pattern:
+				/\s*<li class="cs-li">\s*<a href="\/blog\/"[^>]*>[\s\S]*?Blog[\s\S]*?<\/a>\s*<\/li>/,
 			replacement: "",
 		},
 	]);
@@ -181,7 +206,8 @@ function removeBlog() {
 	// Update footer – remove blog <li> nav link
 	updateFile("src/_includes/sections/footer.html", [
 		{
-			pattern: /\s*<li class="cs-nav-li">\s*<a class="cs-nav-link" href="\/blog\/">Blog<\/a>\s*<\/li>/,
+			pattern:
+				/\s*<li class="cs-nav-li">\s*<a class="cs-nav-link" href="\/blog\/">Blog<\/a>\s*<\/li>/,
 			replacement: "",
 		},
 	]);
@@ -213,7 +239,12 @@ async function scanForReferences(removedBlog) {
 				decapRefs.push(file);
 			}
 
-			if (removedBlog && /\/blog\/|blog\.html|blog\.scss|featured-posts|post-schema/i.test(content)) {
+			if (
+				removedBlog &&
+				/\/blog\/|blog\.html|blog\.scss|featured-posts|post-schema/i.test(
+					content,
+				)
+			) {
 				blogRefs.push(file);
 			}
 		} catch {
@@ -222,13 +253,21 @@ async function scanForReferences(removedBlog) {
 	}
 
 	if (decapRefs.length > 0) {
-		console.log(`\nFound ${decapRefs.length} file(s) with remaining Decap CMS references:`);
-		decapRefs.forEach((f) => console.log(`   - ${path.relative(process.cwd(), f)}`));
+		console.log(
+			`\nFound ${decapRefs.length} file(s) with remaining Decap CMS references:`,
+		);
+		decapRefs.forEach((f) =>
+			console.log(`   - ${path.relative(process.cwd(), f)}`),
+		);
 	}
 
 	if (blogRefs.length > 0) {
-		console.log(`\nFound ${blogRefs.length} file(s) with remaining blog references:`);
-		blogRefs.forEach((f) => console.log(`   - ${path.relative(process.cwd(), f)}`));
+		console.log(
+			`\nFound ${blogRefs.length} file(s) with remaining blog references:`,
+		);
+		blogRefs.forEach((f) =>
+			console.log(`   - ${path.relative(process.cwd(), f)}`),
+		);
 	}
 
 	return { decapRefs, blogRefs };
@@ -237,13 +276,17 @@ async function scanForReferences(removedBlog) {
 // ─── Main ────────────────────────────────────────────────────────────────────
 
 async function main() {
-	const confirmed = await ask("Are you sure you want to remove Decap CMS from this project? (y/n): ");
+	const confirmed = await ask(
+		"Are you sure you want to remove Decap CMS from this project? (y/n): ",
+	);
 	if (!confirmed) {
 		console.log("Operation cancelled.");
 		process.exit(0);
 	}
 
-	const removeBlogContent = await ask("Do you also want to remove all blog-related content? (y/n): ");
+	const removeBlogContent = await ask(
+		"Do you also want to remove all blog-related content? (y/n): ",
+	);
 
 	// Create destination directory
 	ensureDir(destinationDir);
@@ -267,10 +310,14 @@ async function main() {
 	if (decapRefs.length > 0 || (blogRefs.length > 0 && removeBlogContent)) {
 		console.log("Manual cleanup needed:");
 		if (decapRefs.length > 0) {
-			console.log("   - Review files with Decap CMS references listed above");
+			console.log(
+				"   - Review files with Decap CMS references listed above",
+			);
 		}
 		if (blogRefs.length > 0 && removeBlogContent) {
-			console.log("   - Review files with remaining blog references listed above");
+			console.log(
+				"   - Review files with remaining blog references listed above",
+			);
 		}
 		console.log();
 	}
@@ -278,11 +325,17 @@ async function main() {
 	console.log("Next steps:");
 	if (removeBlogContent) {
 		console.log("1. Run your build to ensure everything works");
-		console.log("2. All removed files are in scripts/deleted/ if you need to restore them\n");
+		console.log(
+			"2. All removed files are in scripts/deleted/ if you need to restore them\n",
+		);
 	} else {
-		console.log("1. Blog content remains intact - you can manage posts locally via markdown");
+		console.log(
+			"1. Blog content remains intact - you can manage posts locally via markdown",
+		);
 		console.log("2. Run your build to ensure everything works");
-		console.log("3. All removed files are in scripts/deleted/ if you need to restore them\n");
+		console.log(
+			"3. All removed files are in scripts/deleted/ if you need to restore them\n",
+		);
 	}
 }
 
