@@ -29,7 +29,12 @@ collections:
             }
           - { label: "Description", name: "description", widget: "string" }
           - { label: "Author", name: "author", widget: "string" }
-          - { label: "Date", name: "date", widget: "datetime" }
+          - {
+                label: "Date",
+                name: "date",
+                widget: "datetime",
+                default: "{{now}}",
+            }
           - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
           - { label: "Featured Image", name: "image", widget: "image" }
           - { label: "Image Caption", name: "imageAlt", widget: "string" }

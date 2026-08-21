@@ -113,7 +113,23 @@
 	text-decoration-color: var(--primary);
 }
 
-.frame-content .blog .markdown *:not(pre *, .admonition *, details *, blockquote *, span, a, h1, h2, h3, h4, h5, h6) {
+.frame-content
+	.blog
+	.markdown
+	*:not(
+		pre *,
+		.admonition *,
+		details *,
+		blockquote *,
+		span,
+		a,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6
+	) {
 	color: var(--bodyTextColor);
 }
 

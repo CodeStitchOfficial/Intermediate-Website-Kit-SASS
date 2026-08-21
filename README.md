@@ -4,13 +4,13 @@
     <img src="https://codestitch.app/frontend/images/icon.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Intermediate Starter Kit (SASS)</h3>
+  <h3 align="center">Intermediate Starter Kit (LESS)</h3>
 
   <p align="center">
-    Introducing the Intermediate Website Kit, presented by CodeStitch. This kit includes a pre-configured Eleventy environment with Nunjucks templating, along with seamless integration of Decap CMS. This setup allows you to quickly start a project while providing your client with a blog for content management. Everything is ready to go right from the start, offering a fantastic introduction to the advantages of a Static Site Generator, complete with SASS preprocessing.
+    Introducing the Intermediate Website Kit, presented by CodeStitch. This kit includes a pre-configured Eleventy environment with Nunjucks templating, along with seamless integration of Decap CMS. This setup allows you to quickly start a project while providing your client with a blog for content management. Everything is ready to go right from the start, offering a fantastic introduction to the advantages of a Static Site Generator, complete with LESS preprocessing.
     <br/>
     <br/>
-    <a href="https://github.com/CodeStitchOfficial/Intermediate-Website-Kit-LESS">LESS Starter Kit</a>
+    <a href="https://github.com/CodeStitchOfficial/Intermediate-Website-Kit-SASS">SASS Starter Kit</a>
     .
     <a href="https://codestitch-intermediate.netlify.app/">View Live Result</a>
     .
@@ -100,7 +100,7 @@ _Not required for light-medium kit usage, but helpful if you want to customise t
 4.  Run `npm install` to install all dependencies.
 5.  After the installation is complete, run `npm start` to start the development server.
 6.  Fill out the `./src/_data/client.js` file with the appropriate information for your client.
-7.  Adjust the `:root` variables in `./src/assets/sass/root.scss`
+7.  Adjust the `:root` variables in `./src/assets/less/root.less`
 8.  Modify the website files (use `./src`, NOT `./public`) as needed. Use the template file in `content/pages/_template.txt` to get started, or modify the existing pages.
 9.  Deploy using your preferred hosting provider.
 
@@ -135,7 +135,7 @@ npm run create-page -- "About, Services, Contact"
 For each name provided, the script will:
 
 - Create `src/content/pages/{slug}.html` pre-filled with `_template.txt`
-- Create `src/assets/scss/{slug}.scss` ready for your page-specific styles
+- Create `src/assets/less/{slug}.less` ready for your page-specific styles
 - Set the page title to `Page Name | Client | City, State` automatically using data from `_data/client.js`
 - Set the permalink to `/{slug}/`
 
@@ -163,14 +163,14 @@ This documentation will explain all the files and directories in the starter kit
 │   │   └── sections/
 │   ├── admin/
 │   │   ├── config.yml
-│   │   ├── decap-preview-styles.css
-│   │   └── index.html
+│   │   ├── index.html
+│   │   └── previews.jsx
 │   ├── assets/
 │   │   ├── favicons/
 │   │   ├── fonts/
 │   │   ├── images/
 │   │   ├── js/
-│   │   ├── sass/
+│   │   ├── less/
 │   │   └── svgs/
 │   ├── config/
 │   │   ├── filters/
@@ -201,7 +201,7 @@ The heart of the kit, the `.eleventy.js` file configures the Eleventy static sit
 
 The `.eleventy.js` file is well-documented, with all necessary extra documentation provided for extra reading if desired. A full list of functionalities added via `.eleventy.js` is given below:
 
-- Uses Eleventy build events (`eleventy.after`) to process JS and SASS files externally. JS is bundled and minified by esbuild. SASS is compiled to CSS and run through a PostCSS pipeline (autoprefixer + cssnano in production).
+- Uses Eleventy build events (`eleventy.after`) to process JS and LESS files externally. JS is bundled and minified by esbuild. LESS is compiled to CSS and run through a PostCSS pipeline (autoprefixer + cssnano in production).
 - Adds the following plugins:
     - [Eleventy Sitemap](https://github.com/quasibit/eleventy-plugin-sitemap) - Automatically generates a sitemap from all files in `./src/content`.
     - [Eleventy Minification](https://github.com/CodeStitchOfficial/eleventy-plugin-minify) - Minifies HTML, CSS, JSON, XML, XSL, and webmanifest files (only run in production - when `npm run build` is executed).
@@ -221,7 +221,7 @@ The kit is made to support deployment to Netlify out-of-the-box, enabled through
 
 Standard NodeJS package files, containing the dependencies needed for the project to work. The only things worth noting are the `watch:*` and `build:*` scripts in `package.json`. When `npm start` is used, `watch:eleventy` and `watch:cms` (a local Decap CMS proxy server) are run in parallel, with the environment variable `ELEVENTY_ENV` set to `DEV`. When `npm run build` is used, the `ELEVENTY_ENV` variable is set to `PROD`.
 
-You may notice around the project (e.g., `./src/config/processors/javascript.js`, `./src/config/processors/sass.js`, and `.eleventy.js`) that there is reference to an `isProduction` variable. This is used to control some functionality that is only run while the website is "in production". For example, when `npm run build` is used, we can assume the website is deployed to a live domain, so we can do things like minify the code. This allows comments to be shown in the dev tools while you're actively working on the site but have them removed, and the code minified, for the smallest file sizes and most efficiency when you deploy it.
+You may notice around the project (e.g., `./src/config/processors/javascript.js`, `./src/config/processors/less.js`, and `.eleventy.js`) that there is reference to an `isProduction` variable. This is used to control some functionality that is only run while the website is "in production". For example, when `npm run build` is used, we can assume the website is deployed to a live domain, so we can do things like minify the code. This allows comments to be shown in the dev tools while you're actively working on the site but have them removed, and the code minified, for the smallest file sizes and most efficiency when you deploy it.
 
 You shouldn't have to worry about this, however, as all the initial setup has been done for you. It's still good to know if you wish to expand the kit to add production-only functionality.
 
@@ -301,15 +301,17 @@ Styling the Decap preview pane This template includes custom styles for the Deca
 
 1. How it works:
 
-The preview styles are defined in /admin/decap-preview-styles.css. The CMS preview script in /admin/index.html:
+The preview styles are pulled from the same styles that are defined in your production styles, so make sure that you keep the JSX in sync for a true "live editing" experience. The CMS preview script can be found in in /admin/previews.jsx:
 
 - pulls the props from the collection
 - creates the DOM elements
 - registers these elements and styles for the preview panel to use
 
+The templates are written in JSX and compiled in the browser by @babel/standalone, which /admin/index.html loads before it loads previews.jsx. Keep them in their own .jsx file rather than inlining them in index.html to prevent formatters as treating them as HTML.
+
 2. How to update or customize:
 
-Edit /admin/decap-preview-styles.css and the preview pane script in /admin/index.html to match your site's branding or layout changes. Use Decap's documentation on [customizing the preview pane](https://decapcms.org/docs/customization/)
+Edit /admin/previews.jsx to match your site's branding or layout changes. Use Decap's documentation on [customizing the preview pane](https://decapcms.org/docs/customization/)
 
 3.Notes
 
@@ -323,10 +325,10 @@ Edit /admin/decap-preview-styles.css and the preview pane script in /admin/index
 All other non-content files are stored in `assets/`, which is set up in `.eleventy.js` to be passed through to `public/`. A brief overview of each of the folders within `assets/`, and any relevant notes, is provided below:
 
 - `favicons/` - Any favicon files can be stored here. We recommend using [this tool](https://realfavicongenerator.net/) to generate favicons for all devices.
-- `fonts/` - If you have any non-standard fonts you wish to locally host, you can put the files here. You can use [this tool](https://gwfh.mranftl.com/fonts) to download font files to be stored in `fonts/`, as well as generate the code to be put in your `root.scss` file.
+- `fonts/` - If you have any non-standard fonts you wish to locally host, you can put the files here. You can use [this tool](https://gwfh.mranftl.com/fonts) to download font files to be stored in `fonts/`, as well as generate the code to be put in your `root.less` file.
 - `images/` - Any images can go here. If the Sharp Images plugin is enabled, images referenced via `{% getUrl %}` will be resized and optimized at build time.
 - `js/` - Put any JavaScript in this directory. It will be processed, bundled, and minified by esbuild.
-- `sass/` - Your SASS/SCSS preprocessor files. SASS is compiled to CSS and output directly to `public/assets/css/` by the build event processor, which also handles autoprefixing and minification (production only) via PostCSS. Make your style changes here.
+- `less/` - Your LESS preprocessor files. LESS is compiled to CSS and output directly to `public/assets/css/` by the build event processor, which also handles autoprefixing and minification (production only) via PostCSS. Make your style changes here.
 - `svgs/` - A separate directory for SVGs. This makes it easier to bulk-compress SVGs separate from `images/` if you're using a tool like [compressor.io](https://compressor.io/).
 
 <a name="image-optimization"></a>
@@ -431,7 +433,7 @@ When you're happy with your website, you can deploy it to your hosting provider 
 
 With slight modifications for usage with 11ty, this setup guide for DecapBridge was written by Geoffrey on the [Intermediate Astro Decap kit](https://github.com/CodeStitchOfficial/Intermediate-Astro-Decap-CMS/blob/main/README.md?plain=1#deployment)
 
-> [!IMPORTANT] This kit now uses decapbridge.com for its authentication solution. If you still use Netlify Identity, please refer to [the Netlify Identity branch](https://github.com/CodeStitchOfficial/Intermediate-Website-Kit-SASS/tree/deprecated---using-Netlify-Identity)
+> [!IMPORTANT] This kit now uses decapbridge.com for its authentication solution. If you still use Netlify Identity, please refer to [the Netlify Identity branch](https://github.com/CodeStitchOfficial/Intermediate-Website-Kit-LESS/tree/deprecated---using-Netlify-Identity)
 
 > [!TIP] If you are updating your kit from Netlify Identity to decapbridge.com:
 >
