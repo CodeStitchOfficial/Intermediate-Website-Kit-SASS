@@ -34,7 +34,7 @@
 		"autoprefixer": "^10.5.4",
 		"codestitch-sharp-image-automation": "^0.5.0",
 		"cross-env": "^10.1.0",
-		"cssnano": "^7.1.9",
+		"cssnano": "^9.0.2",
 		"decap-server": "^3.10.0",
 		"esbuild": "^0.28.2",
 		"glob": "^13.0.6",
