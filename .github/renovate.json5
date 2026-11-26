@@ -38,5 +38,10 @@
         '^codestitch-',
       ],
     },
+    {
+      description: 'Hold cssnano on v7: v8+ requires Node 22.11+ (v9+ Node 22.22.3+ and ESM), which would drop Node 18/20 support for kit users',
+      matchPackageNames: ['cssnano'],
+      allowedVersions: '<8.0.0',
+    },
   ],
 }
